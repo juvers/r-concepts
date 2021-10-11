@@ -1,0 +1,48 @@
+---
+name: Home Hero Marquee
+menu: Rockefeller Center
+route: /rockefeller-center/home-hero-marquee
+---
+
+import {Props, Playground} from 'docz';
+import {Box, Button, IntrinsicImage} from '@tishman/components';
+import {getMockFluidImage} from '@tishman/docs';
+import {HomeHeroMarquee} from './HomeHeroMarquee.tsx';
+
+# Home Hero Marquee
+
+`HomeHeroMarquee` is a heading that applies a one-off introductory
+'marquee' effect to its content.
+
+Think stock ticker, but repeating the same content and then stopping.
+
+## Props
+
+<Props of={HomeHeroMarquee} />
+
+## Example
+
+<Playground>
+  <HomeHeroMarquee>New York, reinvented daily.</HomeHeroMarquee>
+  <IntrinsicImage
+    ratio={[320 / 428, 1444 / 598]}
+    fluid={getMockFluidImage({width: 540, height: 824}).childImageSharp.fluid}
+    imgStyle={{zIndex: -1}}
+  />
+</Playground>
+
+### hidden
+
+<Playground>
+  {() => {
+    const [hidden, setHidden] = React.useState(true);
+    return (
+      <React.Fragment>
+        {hidden && <Button onClick={() => setHidden(false)}>show</Button>}
+        <HomeHeroMarquee hidden={hidden}>
+          New York, reinvented daily.
+        </HomeHeroMarquee>
+      </React.Fragment>
+    );
+  }}
+</Playground>

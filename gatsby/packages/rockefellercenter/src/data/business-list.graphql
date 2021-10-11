@@ -1,0 +1,10 @@
+type DataJson implements Node @infer {
+  dineIntroText: BusinessIntroText!
+  shopIntroText: BusinessIntroText!
+  amenityIntroText: BusinessIntroText!
+}
+
+type BusinessIntroText {
+  title: String!
+  caption: String!
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="21px" viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+  <title>Group</title>
+  <desc>Created with Sketch.</desc>
+  <g id="Homepage-v2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Alert-Bars_Mobile" transform="translate(-286.000000, -15.000000)">
+      <g id="Alert-bar">
+        <g id="Group" transform="translate(287.000000, 16.000000)">
+          <circle id="Oval" stroke="#000000" cx="9.5" cy="9.5" r="9.5"></circle>
+          <text id="x" font-family="CentraNo2-Light, Centra No2" font-size="14" font-weight="300" linespacing="17" letterSpacing="-0.304347826" fill="#000000">
+            <tspan x="6" y="14">x</tspan>
+          </text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

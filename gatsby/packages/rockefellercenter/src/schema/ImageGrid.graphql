@@ -1,0 +1,13 @@
+"""
+An Image Grid object.
+
+This should be used to type most JSON fields that represent a generic Image Grid component.
+"""
+type ImageGrid {
+  cards: [ImageGridCard!]!
+}
+
+type ImageGridCard {
+  image: ImageWithAlt!
+  caption: String
+}

@@ -1,0 +1,76 @@
+{
+  "id": "menu",
+  "menuLinkGroups": [
+    {
+      "label": "Only Here",
+      "url": "/attractions",
+      "links": [
+        {
+          "url": "/attractions/top-of-the-rock-observation-deck",
+          "label": "Top of the Rock"
+        },
+        {
+          "url": "/attractions/rockefeller-center-tour",
+          "label": "Rockefeller Center Tour"
+        },
+        {
+          "url": "/attractions/the-rink-at-rockefeller-center",
+          "label": "The Rink"
+        },
+        {"url": "/attractions/rainbow-room", "label": "Rainbow Room"},
+        {"url": "/attractions/bar-sixtyfive", "label": "Bar SixtyFive"},
+        {"url": "/private-events", "label": "Private Events"},
+        {"url": "/weddings", "label": "Weddings"},
+        {"url": "/holidays", "label": "The Holidays"}
+      ]
+    },
+    {
+      "label": "Community",
+      "url": "/community",
+      "links": [
+        {"url": "/events", "label": "Public Events"},
+        {"url": "/working-community", "label": "Working Community"},
+        {
+          "url": "/accessibility",
+          "label": "Accessibilty & Inclusion"
+        },
+        {"url": "/leasing", "label": "Leasing"},
+        {"url": "/partnerships", "label": "Partnerships"},
+        {"url": "/partnerships/film-photo-locations", "label": "Film & Photo"}
+      ]
+    },
+    {
+      "label": "Culture",
+      "url": "/culture",
+      "links": [
+        {"url": "/magazine", "label": "The Center Magazine"},
+        {"url": "/art-and-history", "label": "Art & History"},
+        {"url": "/newsstand-studios", "label": "Newsstand Studios"},
+        {"url": "/audio-tour", "label": "Self-Guided Audio Tour"}
+      ]
+    },
+    {
+      "label": "Shop & Dine",
+      "url": "/shop-dine",
+      "links": [
+        {"url": "/dine", "label": "Dining"},
+        {"url": "/shops", "label": "Shops"},
+        {
+          "url": "/amenities",
+          "label": "Amenities & Services"
+        },
+        {
+          "url": "/shop-dine/special-offers",
+          "label": "Special Offers"
+        }
+      ]
+    }
+  ],
+  "menuSecondaryLinks": [
+    {"url": "/plan-visit", "label": "Plan Your Visit"},
+    {"url": "/map-directions", "label": "Map & Directions"},
+    {"url": "https://app.findyourzo.com/login", "label": "Zo. Login"},
+    {"url": "/contact", "label": "Contact Us"},
+    {"url": "/the-center-newsletter", "label": "Get Newsletter"}
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "executive",
+  "introText": {
+    "title": "Executive Management",
+    "caption": ""
+  },
+  "crossLinks": [
+    {
+      "title": "Top of the Rock",
+      "image": {
+        "src": "../images/nyc-buildings.jpg",
+        "alt": "Sunlight hitting the skyscrapers of Manhattan at sunset."
+      },
+      "caption": "3 decks, 360-degree must see views, a city that's all yours.",
+      "link": {
+        "label": "Visit Top of the Rock",
+        "url": "/attractions/top-of-the-rock-observation-deck"
+      }
+    },
+    {
+      "title": "Plan your Visit",
+      "image": {
+        "src": "../images/rockefeller-plaza-winter.jpg",
+        "alt": "Rockefeller Center Tree and ice skating rink during winter in NYC."
+      },
+      "caption": "All the info you need to create the perfect Rockefeller Center holiday memories.",
+      "link": {
+        "label": "Let's Plan Your Visit",
+        "url": "/plan-visit"
+      }
+    }
+  ]
+}

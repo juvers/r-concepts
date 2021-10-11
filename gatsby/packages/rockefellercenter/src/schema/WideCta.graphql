@@ -1,0 +1,10 @@
+"""
+A WideCta object.
+
+This should be used to type most JSON fields that represent a generic WideCta component.
+"""
+type WideCta {
+  title: String!
+  caption: String!
+  link: Link!
+}

@@ -1,0 +1,56 @@
+{
+  "id": "culture",
+  "cultureHero": {
+    "title": "Showcasing the culture of the city",
+    "caption": "The art and entertainment you’ll find here does more than spark the imagination. Through sculpture, through architecture, through performance––Rockefeller Center serves as a catalyst, bringing together a community of people looking to be inspired and to inspire others.",
+    "image": {
+      "src": "../images/Culture_hero.jpg",
+      "alt": "People admiring the Behind the Walls sculpture at Rockefeller Center."
+    }
+  },
+  "calloutGrid": {
+    "cards": [
+      {
+        "image": {
+          "src": "../images/art-history.jpg",
+          "alt": "Rockefeller Center mosaic of two men in a field."
+        },
+        "title": "Art & History",
+        "description": "From permanent works of art to significant architecture to important and exciting art exhibitions and galleries, Rockefeller Center never fails to fascinate. This is the art and history that defines the city’s past and present, and points the way to its future.",
+        "links": [{"url": "/art-and-history", "label": "View Art & History"}]
+      },
+      {
+        "image": {
+          "src": "../images/frieze-sculpture-2020.jpg",
+          "alt": "Frieze sculpture 2020"
+        },
+        "title": "Public Art",
+        "description": "Rockefeller Center brings art to everyone with installations throughout our campus.",
+        "links": [{"url": "/art", "label": "Explore Public Art"}]
+      },
+      {
+        "image": {
+          "src": "../images/masked-prometheus-rink.jpg",
+          "alt": "The Prometheus statue, wearing a mask, overlooking the sunken plaza."
+        },
+        "title": "News & Updates",
+        "description": "With a full calendar of events and exhibitions, this is how you stay on top of everything that happened, and everything that’s going to happen.",
+        "links": [{"url": "/news", "label": "Read our Latest"}]
+      },
+      {
+        "image": {
+          "src": "../images/newsstand-studios.jpg",
+          "alt": "A studio mic in Newstand Studios at Rockefeller Center."
+        },
+        "title": "Newsstand Studios",
+        "description": "Original, compelling, must-hear content is being produced in our podcast studio, Newsstand Studios. Take a listen, then contact us about renting the space to create your own unique programming.",
+        "links": [{"url": "/newsstand-studios", "label": "Explore the Studios"}]
+      }
+    ]
+  },
+  "featuredStories": {
+    "title": "The Center Magazine",
+    "caption": "Enter the world of Rockefeller Center through The Center Blog & Magazine. These are the lives, the stories, and the events that shape, define, and influence this iconic destination and the city beyond.",
+    "link": {"url": "/magazine", "label": "Read the Stories"}
+  }
+}

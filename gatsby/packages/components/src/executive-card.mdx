@@ -1,0 +1,33 @@
+---
+name: Executive Card
+menu: Components
+route: /components/executive-card
+---
+
+import {Props, Playground} from 'docz';
+
+import {ExecutiveCard} from '@tishman/components';
+import {getMockFluidImage} from '@tishman/docs';
+
+# Executive Card
+
+```ts
+import {ExecutiveCard} from '@tishman/components';
+```
+
+### Properties
+
+<Props of={ExecutiveCard} />
+
+<Playground>
+  <ExecutiveCard
+    fluid={getMockFluidImage({width: 529, height: 360}).childImageSharp.fluid}
+    alt="placeholder"
+    name="Rob Speyer"
+    title="President & Chief Executive Officer"
+    link={{
+      label: 'Learn more about rob',
+      url: '#',
+    }}
+  />
+</Playground>

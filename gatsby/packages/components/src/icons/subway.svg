@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="37px" viewBox="0 0 34 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>subway</title>
+    <desc>Created with Sketch.</desc>
+    <g id="subway" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" stroke="#000000" stroke-width="2" x="13.75" y="12" width="8" height="18"></rect>
+        <rect id="Rectangle" stroke="#000000" stroke-width="2" x="3.75" y="12" width="6.5" height="6.5"></rect>
+        <circle id="Oval" stroke="#000000" stroke-width="2" cx="7" cy="24" r="1"></circle>
+        <circle id="Oval" stroke="#000000" stroke-width="2" cx="27" cy="24" r="1"></circle>
+        <line x1="6" y1="37" x2="8.5" y2="30" id="Path-10" stroke="#000000" stroke-width="2"></line>
+        <line x1="25.5" y1="37" x2="28" y2="30" id="Path-10-Copy" stroke="#000000" stroke-width="2" transform="translate(26.750000, 33.500000) scale(-1, 1) translate(-26.750000, -33.500000) "></line>
+        <line x1="7" y1="34.5" x2="27" y2="34.5" id="Path-9-Copy" stroke="#000000" stroke-width="2"></line>
+        <polygon id="Path-17" stroke="#000000" stroke-width="2" points="33 30 33 8 29 1 5 1 1 7 1 30"></polygon>
+        <circle id="Oval" stroke="#000000" stroke-width="2" cx="17" cy="7" r="2"></circle>
+    </g>
+</svg>

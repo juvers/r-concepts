@@ -1,0 +1,50 @@
+type DataJson implements Node @infer {
+  hero: Hero!
+  torComparisonTool: TorComparisonTool!
+  ticketOfferings: [TicketOfferingCard!]!
+  torTicketInfo: [TorTicketInfoItem!]!
+  wideCta: WideCta!
+  featuredGallery: FeaturedGallery!
+  torJourneyToTheTopItems: [TorJourneyToTheTopItem!]!
+  crossLinks: [CrossLink!]!
+}
+
+type TorComparisonTool {
+  title: String!
+  subTitle: String!
+  passes: TorPasses!
+  ticketFeatures: TicketFeaturesDescription!
+}
+
+type TorPasses {
+  caption: String!
+  link: Link!
+}
+
+type TicketFeaturesDescription {
+  admission: String!
+  views: String!
+  levels: String!
+  timeLimit: String!
+  entry: String!
+  elevator: String!
+  merchandise: String!
+  schedule: String!
+  visit: String!
+  save: String!
+  valid: String!
+  choice: String!
+  saveUpTo: String!
+}
+
+type TorJourneyToTheTopItem {
+  title: String!
+  caption: String!
+  image: ImageWithAlt!
+}
+
+type TorTicketInfoItem {
+  title: String!
+  copy: String!
+  icon: String!
+}

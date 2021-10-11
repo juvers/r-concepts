@@ -1,0 +1,26 @@
+type DataJson implements Node @infer {
+  meta: Meta!
+  hero: Hero!
+  imageCallout: ImageCallout!
+  calloutGrid: CalloutGrid!
+  imageCallout2: ImageCallout!
+  featuredStories: FeaturedStories!
+  crossLinks: [CrossLink!]!
+  capacity: [CapacityGroups!]!
+  subNavigationTabs: [Tabs!]!
+}
+
+type CapacityGroups {
+  title: String!
+  capacities: [Capacities!]!
+}
+
+type Capacities {
+  label: String!
+  value: Int!
+}
+
+type Tabs {
+  label: String!
+  slug: String!
+}

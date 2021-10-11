@@ -1,0 +1,107 @@
+---
+name: History Cards
+menu: Components
+route: /components/history-cards
+---
+
+import {HistoryCard} from '@tishman/components';
+
+import {Props, Playground} from 'docz';
+
+import {getMockFluidImage} from '@tishman/docs';
+
+# History Card
+
+### Properties
+
+<Props of={HistoryCard} />
+
+### Portrait Image Card
+
+In designs, there are two types of History cards
+
+Portrait cards have a narrower box wrapper so they can scale
+
+proportionally to the landscape image cards
+
+This is mainly to ensure the lines do not cross when narrowing the window
+
+<Playground>
+  <HistoryCard
+    type="PORTRAIT"
+    title="1900"
+    caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+    image={{
+      fluid: getMockFluidImage({width: 315, height: 440}).childImageSharp.fluid,
+      alt: 'mock image',
+    }}
+    isEven={false}
+  />
+</Playground>
+
+### Landscape Image Card
+
+Landcape Card have a wider box wrapper so they can be proportionally sized to the
+taller portrait cards
+
+<Playground>
+  <HistoryCard
+    type="LANDSCAPE"
+    title="1900"
+    caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+    image={{
+      fluid: getMockFluidImage({width: 400, height: 284}).childImageSharp.fluid,
+      alt: 'mock image',
+    }}
+    isEven={false}
+  />
+</Playground>
+
+### With Did You Know Card
+
+If card data includes didYouKnow prop,
+a did you know card will be attached to the history card
+
+Best practice is if left card has a did you know,
+the right one should also have it or hearHistory to balance out
+the vertical spacing else it will have a large empty space
+
+<Playground>
+  <HistoryCard
+    type="LANDSCAPE"
+    title="1900"
+    caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+    image={{
+      fluid: getMockFluidImage({width: 400, height: 284}).childImageSharp.fluid,
+      alt: 'mock image',
+    }}
+    isEven={false}
+    didYouKnow="The Rink features in the NBC shows taped at 30 Rock—having made cameos on Saturday Night Live's Christmas shows and during NBC News’ coverage of past presidential elections."
+  />
+</Playground>
+
+### With Hear History Card
+
+If card data includes hearHistory prop,
+a hear history card will be attached to the history card
+
+Best practice is if left card has a did you know,
+the right one should also have it or did you know card to balance out
+the vertical spacing else it will have a large empty space
+
+(Note we currently dont have audio so hearHistory is of string type.
+That will likely need to be updated if they want to use this component)
+
+<Playground>
+  <HistoryCard
+    type="LANDSCAPE"
+    title="1900"
+    caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+    image={{
+      fluid: getMockFluidImage({width: 400, height: 284}).childImageSharp.fluid,
+      alt: 'mock image',
+    }}
+    isEven={false}
+    hearHistory="The Rink features in the NBC shows taped at 30 Rock—having made cameos on Saturday Night Live's Christmas shows and during NBC News’ coverage of past presidential elections."
+  />
+</Playground>

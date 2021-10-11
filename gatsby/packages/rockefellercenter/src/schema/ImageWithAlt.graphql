@@ -1,0 +1,9 @@
+"""
+An Image with alt text object.
+
+This should be used to type most JSON fields that represent images with cooresponding alt text.
+"""
+type ImageWithAlt @infer {
+  src: Image! @imageByRelativePath
+  alt: String!
+}

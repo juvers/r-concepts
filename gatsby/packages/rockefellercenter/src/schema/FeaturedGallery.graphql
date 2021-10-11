@@ -1,0 +1,21 @@
+"""
+A Featured Gallery object.
+
+This should be used to type most JSON fields that represent a generic FeaturedGallery component.
+"""
+type FeaturedGallery {
+  title: String!
+  content: [FeaturedGalleryContent!]!
+}
+
+"""
+A FeaturedGalleryContent object.
+
+This object consists of types needed to render each featured gallery content card.
+"""
+type FeaturedGalleryContent {
+  category: String!
+  image: ImageWithAlt!
+  caption: String!
+  links: [Link!]
+}

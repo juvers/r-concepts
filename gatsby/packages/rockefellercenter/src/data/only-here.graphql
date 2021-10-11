@@ -1,0 +1,31 @@
+type DataJson implements Node @infer {
+  meta: Meta!
+  onlyHereHero: OnlyHereHero!
+  crossLinks: [CrossLink!]!
+  onlyHereCalloutGridOne: OnlyHereCallout!
+  onlyHereCalloutGridTwo: OnlyHereCallout!
+  onlyHereCalloutGridThree: OnlyHereCallout!
+  onlyHereCalloutGridFour: OnlyHereCalloutFull!
+}
+
+type OnlyHereHero {
+  title: String!
+  caption: String!
+}
+
+type OnlyHereCard {
+  image: ImageWithAlt!
+  title: String!
+  caption: String!
+  url: String!
+  width: Int
+  height: Int
+}
+
+type OnlyHereCallout {
+  cards: [OnlyHereCard!]!
+}
+
+type OnlyHereCalloutFull {
+  fullCard: CalloutGridCard!
+}

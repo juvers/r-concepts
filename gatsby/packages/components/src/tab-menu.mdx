@@ -1,0 +1,46 @@
+---
+name: TabMenu
+menu: Components
+route: /components/tabmenu
+---
+
+import {Playground, Props} from 'docz';
+import {TabMenu, Text, usePagination} from '@tishman/components';
+import {useState} from 'react';
+
+# TabMenu
+
+TabMenu takes a list of tab objects and displays them in a scrollable list with an active state animation. It takes a callback funtion and passes in the index of the active tab.
+
+### Properties
+
+<Props of={TabMenu} />
+
+## Basic usage
+
+```ts
+import {TabMenu} from '@tishman/components';
+
+<TabMenu />;
+```
+
+### Playground
+
+<Playground>
+  {() => {
+    const {page, goto} = usePagination({pages: 3});
+    return (
+      <div>
+        <TabMenu
+          tab={page}
+          labels={['Subject 1', 'Subject 2', 'Subject 3']}
+          onTabChange={goto}
+        />
+        <Text
+          style={{paddingTop: '1em', fontSize: '2em'}}
+        >{`Current index tab is ${page}`}</Text>
+      </div>
+    );
+}}
+
+</Playground>

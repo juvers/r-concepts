@@ -1,0 +1,42 @@
+---
+name: Layouts
+menu: Rockefeller Center
+route: /rockefeller-center/layouts
+---
+
+import {Props, Playground} from 'docz';
+import {Text} from '@tishman/components';
+import {Layout} from './Layout';
+
+# Layouts
+
+A Layout describes features that are common across one or more [pages],
+such as a common [theme], shared [styled] components, a shared navigation,
+page transitions, etc.
+
+> For more on pages and layouts, see the [Overview].
+
+## TODO: Using Layouts
+
+## TODO: Creating Layouts
+
+## Layout (Default)
+
+This is the default Layout, used on most pages on the site.
+
+### Props
+
+<Props of={Layout} />
+
+### Example
+
+<Playground>
+  <Layout>
+    <Text>Hello, Default World!</Text>
+  </Layout>
+</Playground>
+
+[pages]: /rockefeller-center#pages
+[overview]: /rockefeller-center
+[styled]: /components/styled
+[theme]: /style-guide#themes

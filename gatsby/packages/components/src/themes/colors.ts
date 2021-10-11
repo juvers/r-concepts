@@ -1,0 +1,19 @@
+// COLORS PULLED FROM RC STYLE GUIDE
+export const BLACK = '#000000';
+export const WHITE = '#FFFFFF';
+export const GRAY = '#B2B2B2';
+export const BLUE = '#89CBDB';
+export const NAVY = '#001932';
+export const OLIVE = '#9EC28E';
+export const GREEN = '#08302E';
+export const ROMAN_COFFEE = '#8D594C';
+export const LAVENDER = '#BEB1D7';
+export const CREAM = '#F8E9DB';
+export const YELLOW = '#FFD758';
+export const TUSSOCK = '#A98363';
+export const CONCRETE = '#7D7369';
+export const RED = '#EC104E';
+export const GOLD = '#A98363';
+export const RUST = '#97554A';
+export const MEDIUM_YELLOW = '#E9DC95';
+export const DARK_GREEN = '#1e371e';

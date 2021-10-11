@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="55px" height="34px" viewBox="0 0 55 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>bike</title>
+    <desc>Created with Sketch.</desc>
+    <g id="bike" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" stroke="#000000" stroke-width="2" cx="9.65909091" cy="23.9545455" r="8.65909091"></circle>
+        <circle id="Oval-Copy" stroke="#000000" stroke-width="2" cx="44.4318182" cy="23.9545455" r="8.65909091"></circle>
+        <polyline id="Path-11" stroke="#000000" stroke-width="2" stroke-linecap="square" points="18.5 13 10.6590909 24.3409091 24.4242424 24.3409091 39.5681818 9.34090909"></polyline>
+        <line x1="44.4318182" y1="23.9545455" x2="38.6363636" y2="0.386363636" id="Path-12" stroke="#000000" stroke-width="2"></line>
+        <line x1="24.7272727" y1="24.3409091" x2="17" y2="8.88636364" id="Path-13" stroke="#000000" stroke-width="2"></line>
+        <rect id="Rectangle" stroke="#000000" stroke-width="2" x="13.3636364" y="5.65909091" width="8.04545455" height="3"></rect>
+        <path d="M45.8718012,4.55400508 L37.8718012,4.55400508 L37.8718012,7.55400508 L45.8718012,7.55400508 L45.8718012,4.55400508 Z" id="Rectangle-Copy" stroke="#000000" stroke-width="2" transform="translate(41.871801, 6.054005) rotate(77.000000) translate(-41.871801, -6.054005) "></path>
+        <line x1="39.4090909" y1="0.386363636" x2="34" y2="0.386363636" id="Path-16" stroke="#000000" stroke-width="2"></line>
+        <line x1="1.93181818" y1="20.4772727" x2="17.7727273" y2="20.4772727" id="Path-15" stroke="#000000" stroke-width="2"></line>
+    </g>
+</svg>

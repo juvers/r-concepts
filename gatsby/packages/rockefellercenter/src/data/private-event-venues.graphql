@@ -1,0 +1,4 @@
+type PrivateEventVenuesJson implements Node @infer {
+  meta: Meta!
+  link: Link!
+}

@@ -1,0 +1,77 @@
+---
+name: Cross Link
+menu: Components
+route: /components/cross-link
+---
+
+import {Props, Playground} from 'docz';
+
+import {CrossLink, Container, Flex} from '@tishman/components';
+import {getMockFluidImage} from '@tishman/docs';
+
+# Atlas Block
+
+```ts
+import {CrossLink} from '@tishman/components';
+```
+
+### Properties
+
+<Props of={CrossLink} />
+
+<Playground>
+  <CrossLink
+    title={'Sponsorship'}
+    fluid={getMockFluidImage({width: 425, height: 270}).childImageSharp.fluid}
+    alt={'mock image'}
+    caption={
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
+    }
+    link={{
+      url: '#',
+      label: 'Learn More',
+    }}
+  />
+</Playground>
+
+## Cross Link Block example
+
+<Playground>
+  <Container sx={{maxWidth: 1200, my: 4}}>
+    <Flex
+      sx={{
+        justifyContent: 'space-between',
+        flexDirection: ['column', null, 'row'],
+      }}
+    >
+      <CrossLink
+        title={'Sponsorship'}
+        fluid={
+          getMockFluidImage({width: 425, height: 270}).childImageSharp.fluid
+        }
+        alt={'mock image'}
+        caption={
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
+        }
+        link={{
+          url: '#',
+          label: 'Learn More',
+        }}
+      />
+      <CrossLink
+        title={'Sponsorship'}
+        fluid={
+          getMockFluidImage({width: 425, height: 270}).childImageSharp.fluid
+        }
+        alt={'mock image'}
+        caption={
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
+        }
+        link={{
+          url: '#',
+          label: 'Learn More',
+        }}
+      />
+    </Flex>
+  </Container>
+</Playground>

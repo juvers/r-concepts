@@ -1,0 +1,114 @@
+---
+name: MenuBar
+menu: Rockefeller Center
+route: /rockefeller-center/menu-bar
+---
+
+import {Playground, Props} from 'docz';
+import {Button, Link, ArrowLink, Text, Modal} from '@tishman/components';
+import {
+  Link as RouterLink,
+  createHistory,
+  createMemorySource,
+  LocationProvider,
+} from '@reach/router';
+import {Link as GatsbyLink} from 'gatsby';
+import {MenuBar} from './MenuBar.tsx';
+
+# MenuBar
+
+The RC `MenuBar` is a grid row with:
+
+- Left aligned grid row of navigation with:
+  - A menu toggle button (hamburger)
+    - The menu toggle button may replaced with a navigation item
+      via the `leftNav` prop.
+- The current page logo, optionally with the current page name
+  via the `pageName` prop
+- Right aligned grid row of navigation with:
+  - Optional nav item via the `rightNav` prop
+  - A search button
+  - Optional nav item via the `cta` prop
+
+It typically appears at the top of a page.
+
+<Props of={MenuBar} />
+
+## Usage
+
+<Playground>
+  <MenuBar logoLink={null} />
+  <MenuBar logoLink={null} pageName="The Christmas Tree Lighting" />
+  <MenuBar logoLink={null} logo="Rockefeller Center Tour" />
+  <MenuBar logoLink={null} logo="Top of the Rock" />
+  <MenuBar logoLink={null} logo="Observation Deck" />
+  <MenuBar logoLink={null} logo="The Rink" />
+  <MenuBar logoLink={null} logo="620 Loft and Garden" />
+  <MenuBar logoLink={null} logo="Rainbow Room" />
+  <MenuBar logoLink={null} logo="Rainbow Room" pageName="Bar SixtyFive" />
+</Playground>
+
+## With CTA
+
+<Playground>
+  <MenuBar
+    cta={
+      <Link variant="button" to="#">
+        Buy Tickets
+      </Link>
+    }
+  />
+</Playground>
+
+## With Back Link
+
+<Playground>
+  <MenuBar leftNav={<ArrowLink reverse href="#" label="Back" />} />
+</Playground>
+
+## With right nav
+
+<Playground>
+  <MenuBar
+    logo="Rainbow Room"
+    pageName="Bar SixtyFive"
+    rightNav={
+      <Link variant="underline" to="#">
+        Dining Club
+      </Link>
+    }
+    cta={
+      <Link variant="button" to="#">
+        Plan an Event
+      </Link>
+    }
+  />
+</Playground>
+
+## With overlays
+
+<Playground>
+  {() => {
+    const [isOpen, dispatch] = React.useReducer(
+      (_, action) => (action === 'close' ? false : action),
+      false,
+    );
+    const close = React.useCallback(() => dispatch('close'), []);
+    return (
+      <React.Fragment>
+        <MenuBar isOpen={isOpen} onOpen={dispatch} onClose={close} />
+        <Modal
+          isOpen={Boolean(isOpen)}
+          onClose={close}
+          sx={{flex: 1, display: 'grid', placeItems: 'center center'}}
+        >
+          <Button
+            bg="background"
+            onClick={close}
+            children={`Close ${isOpen}`}
+          />
+        </Modal>
+      </React.Fragment>
+    );
+  }}
+</Playground>

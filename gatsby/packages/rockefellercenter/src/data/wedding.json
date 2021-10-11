@@ -1,0 +1,155 @@
+{
+  "id": "wedding",
+  "hero": {
+    "links": [
+      {
+        "url": "/contact/private-events",
+        "label": "Plan your wedding"
+      }
+    ]
+  },
+  "weddingFeaturedGallery": {
+    "introHeading": "Rainbow Room",
+    "introCopy": "Surrounded by shimmering crystals and endless views, the elegance of the Rainbow Room sets the standard for unforgettable.",
+    "title": "Say your vows from 65 stories above the city",
+    "content": [
+      {
+        "category": "Rainbow Room",
+        "image": {
+          "src": "../images/rainbow-room-wedding-space.jpg",
+          "alt": "Rainbow Room wedding space with views of the Empire State Building and Manhattan skyline."
+        },
+        "caption": "With its domed ceiling, rotating dance floor, and sparkling chandeliers - all 65 stories above Rockefeller Center - the Rainbow Room is an idyllic venue for your most special moment.",
+        "links": [
+          {"url": "/private-events/rainbow-room", "label": "Learn More"}
+        ]
+      },
+      {
+        "category": "The Gallery",
+        "image": {
+          "src": "../images/dining-nyc-view-2.jpg",
+          "alt": "Rainbow Room wedding space with views of the Empire State Building and Manhattan skyline."
+        },
+        "caption": "Next to Rainbow Room on the 65th floor, The Gallery is a spectacular spot for your cocktail hour.",
+        "links": [{"url": "/private-events/the-gallery", "label": "Learn More"}]
+      },
+      {
+        "category": "Bar SixtyFive",
+        "image": {
+          "src": "../images/rooftop-bar-nyc-views.jpg",
+          "alt": "Rainbow Room wedding space with views of the Empire State Building and Manhattan skyline."
+        },
+        "caption": "Look out over Central Park and enjoy western and southern views of Manhattan from the 65th floor's window-lined Bar SixtyFive.",
+        "links": [
+          {"url": "/private-events/bar-sixtyfive", "label": "Learn More"}
+        ]
+      }
+    ]
+  },
+  "imageGrid": {
+    "cards": [
+      {
+        "image": {
+          "src": "../images/rainbow-room-wedding.jpg",
+          "alt": "Wedding ceremony with a view at Rock Center's Rainbow Room."
+        },
+        "caption": "(c) Ira Lippke"
+      },
+      {
+        "image": {
+          "src": "../images/wedding-rainbow-room.jpg",
+          "alt": "Bride and groom entering Rainbow Room for their wedding reception."
+        },
+        "caption": "(c) Ira Lippke"
+      }
+    ]
+  },
+  "weddingFeaturedGallery2": {
+    "introHeading": "620 Loft & Garden",
+    "introCopy": "Extraordinary loft space and expertly manicured rooftop garden with up-close views of St. Patrick's Cathedral and Fifth Avenue.",
+    "title": "A place for one of the best days of your life.",
+    "content": [
+      {
+        "category": "Interior Loft Space",
+        "image": {
+          "src": "../images/loft-wedding-venue.jpg",
+          "alt": "Elegant wedding space decorated for reception."
+        },
+         "caption": "Wall-to-wall windows surround this completely customizable lofted space, flooding the interior with natural light while offering views ofthe Prometheus statue, the Channel Gardens, and Radio City Music Hall.",
+        "links": [{"url": "/private-events/620-loft-garden", "label": "Learn More"}]
+      },
+      {
+        "category": "Intimate Rooftop Garden",
+        "image": {
+          "src": "../images/garden-wedding-venue.jpg",
+          "alt": "Elegant wedding space decorated for reception."
+        },
+         "caption": "Featuring a historic manicured garden and sparkling reflective pool, this intimate, serene, open-air venue is framed by dramatic cityscapes and St. Patrick's Cathedral.",
+        "links": [{"url": "/private-events/620-loft-garden", "label": "Learn More"}]
+      }
+    ]
+  },
+  "imageGrid2": {
+    "cards": [
+      {
+        "image": {
+          "src": "../images/620-loft-garden-wedding.jpg",
+          "alt": "620 Loft & Garden, unique NYC rooftop event venue with a view of St. Patrick's Cathedral."
+        },
+        "caption": "(c) Pura Soul Photo"
+      },
+      {
+        "image": {
+          "src": "../images/rooftop-private-event-nyc.jpg",
+          "alt": "Luxury outdoor private event on the rooftop at NYC's 620 Loft & Garden."
+        },
+        "caption": "(c) Pura Soul Photo"
+      }
+    ]
+  },
+  "imageCallout": {
+    "title": "Elopement Packages",
+    "description": "Our Elopememt Packages offer small scale, simply detailed, and elegantly presented ceremonies. If you're looking to have the wedding of your dreams right away, we have the intimate setting to meet your expectations.",
+    "link": {
+      "url": "/documents/weddingPackage-2020.pdf",
+      "label": "learn more"
+    },
+    "image": {
+      "src": "../images/Elopement-Garden.jpg",
+      "alt": "Outdoor rooftop garden wedding at Rainbow Room with the view of St. Patrick's Cathedral."
+    },
+    "caption": "(c) Bashful Captures"
+  },
+  "calloutGrid": {
+    "title": "Engagement Packages",
+    "caption": "Take the next step in your relationship right in the center of New York City.",
+    "cards": [
+      {
+        "image": {
+          "src": "../images/bride-groom-rooftop-garden.jpg",
+          "alt": "Just married, bride and groom celebrate at Rockefeller Center's rooftop garden."
+        },
+
+        "title": "Engagements at 620 Loft & Garden",
+        "caption": "(c) Wandermore Photography",
+        "description": "Ask the most important question of your life surrounded by the city you love.",
+        "links": [{"url": "/contact/private-events", "label": "Inquire Now"}]
+      },
+      {
+        "image": {
+          "src": "../images/engagement-rock-center.jpg",
+          "alt": "Rockefeller Center is a popular engagement spot in NYC."
+        },
+        "title": "Engagements at The Rink",
+        "caption": "(c) Wandermore Photography",
+        "description": "These packages will help make your special moment even more memorable.",
+        "links": [{"url": "/documents/rink-package.pdf", "label": "learn more"}]
+      }
+    ]
+  },
+  "featuredStories": {
+    "title": "The Center Magazine",
+    "caption": "Exploring the style, food, and culture from the heart of New York City.",
+    "link": {"url": "/magazine", "label": "Read Our Stories"}
+  }
+}

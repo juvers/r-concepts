@@ -1,0 +1,65 @@
+{
+  "id": "buy-tickets",
+  "meta": {
+    "title": "Buy Tickets | Rockefeller Center & NYC Tourist Passes",
+    "description": "Visiting Top of the Rock and taking the Rockefeller Center Tour are must-do NYC attractions. Get tickets here, or combine your visit by purchasing NYC tourist passes."
+  },
+  "confirmation": {
+    "deck": {
+      "title": "We'll see you at the top.",
+      "description": "You've been sent a confirmation email and can use that for entry to Top of the Rock, or you can print your ticket(s) below. Please be sure you arrive at the correct time as there is no entry before your designated time."
+    },
+    "vip": {
+      "title": "We’ll see you at the top.",
+      "description": "You’ve been sent a confirmation email and can use that for entry to Top of the Rock, or you can print your ticket(s) below. You can come at any time and will receive expedited entry and priority elevator access."
+    },
+    "tour": {
+      "title": "We’ll see you on the tour.",
+      "description": "You’ve been sent a confirmation email and can use that for entry to the Rockefeller Center Tour, or you can print your ticket(s) below. Please be sure you arrive at the correct time as there is no entry before your designated time."
+    },
+    "rockPass": {
+      "title": "We’ll see you at the top.",
+      "description": "You’ve been sent a confirmation email and can use that for entry, or you can print your ticket(s) below. Please be sure you arrive at the correct time as there is no entry before your designated time."
+    },
+    "cityPassRedemption": {
+      "title": "CityPASS redeemed.",
+      "description": "You’ve been sent a confirmation email and can use that for entry to Top of the Rock. Or you can print your ticket(s) below. Please be sure you arrive at the correct time as there is no entry before your designated time."
+    },
+    "refund": {
+      "title": "Your refund was a success.",
+      "description": "Please allow 5-7 days for the refund to appear on your credit card statement. If you need further assistance, please contact us at 212.698.2000 or 877.692.7625."
+    }
+  },
+  "printTickets": {
+    "image": {
+      "src": "../images/folding_instructions.png",
+      "alt": "Folding ticket instructions"
+    }
+  },
+  "crossLinks": [
+    {
+      "title": "Gift Shop",
+      "image": {
+        "src": "../images/rockefeller-center-christmas-ornament.jpg",
+        "alt": "Commemorative ornament created from a lighbulb from the Rockefeller Center Christmas tree."
+      },
+      "caption": "Special Rockefeller Center gifts that make your home, tree, or holiday one-of-a-kind.",
+      "link": {
+        "label": "Visit Our Gift Shop",
+        "url": "https://topoftherockshop.com/"
+      }
+    },
+    {
+      "title": "Plan Your Visit",
+      "image": {
+        "src": "../images/wisdom-art-deco-scupture.jpg",
+        "alt": "Rockefeller Center's Wisdom sculpture is part of the art deco motifs and sculptures collection."
+      },
+      "caption": "All the info you need to create the perfect Rockefeller Center holiday memories.",
+      "link": {
+        "label": "Let’s Plan Your Visit",
+        "url": "/plan-visit"
+      }
+    }
+  ]
+}

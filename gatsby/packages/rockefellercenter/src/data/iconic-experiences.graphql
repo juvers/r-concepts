@@ -1,0 +1,15 @@
+type DataJson implements Node @infer {
+  meta: Meta!
+  iconicExperiencesCarousel: IconicExperiencesCarouselType!
+}
+
+type IconicExperiencesCarouselType {
+  cards: [IconicExperienceCard!]!
+}
+
+type IconicExperienceCard {
+  title: String!
+  description: String!
+  url: String!
+  image: ImageWithAlt!
+}

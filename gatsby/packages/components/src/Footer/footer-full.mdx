@@ -1,0 +1,133 @@
+---
+name: Footer
+menu: Components
+route: /components/footer
+---
+
+import {Props, Playground} from 'docz';
+import {Heading, Text} from 'theme-ui';
+import {Footer, FooterContact, FooterSubNav} from './index.tsx';
+import {
+  linkData,
+  footerContactData,
+  footerFollowUsData,
+  footerAppDownloadData,
+} from './data.tsx';
+import {getMockFixedImage, getMockFluidImage} from '@tishman/docs';
+
+# Footer
+
+The Footer. All the components documented underneath the footer are
+used to compose the footer component.
+
+---
+
+### Properties
+
+<Props of={Footer} />
+
+### Basic usage
+
+```ts
+import {Footer} from '@tishman/components';
+```
+
+<Playground>
+  <Footer
+    links={linkData}
+    menuLinks={[
+      {
+        label: 'Only Here',
+        to: '/only-here',
+        links: [
+          {to: '/top-of-the-rock', label: 'Top of the Rock'},
+          {to: '/rockefeller-center-tour', label: 'Rockefeller Center Tour'},
+          {to: '/the-rink', label: 'The Rink'},
+          {to: '/rainbow-room', label: 'Rainbow Room'},
+          {to: '/bar-sixtyfive', label: 'Bar SixtyFive'},
+          {to: '/private-events', label: 'Private Events'},
+          {to: '/weddings', label: 'Weddings'},
+          {to: '/the-holidays', label: 'The Holidays'},
+        ],
+      },
+      {
+        label: 'Community',
+        to: '/community',
+        links: [
+          {to: '/public-events', label: 'Public Events'},
+          {to: '/our-working-community', label: 'Our Working Community'},
+          {to: '/accessibility-inclusion', label: 'Accessibilty & Inclusion'},
+          {to: '/leasing', label: 'Leasing'},
+          {to: '/sponsorship', label: 'Sponsorship Opportunities'},
+        ],
+      },
+      {
+        label: 'Culture',
+        to: '/culture',
+        links: [
+          {to: '/magazine', label: 'The Center Magazine'},
+          {to: '/art-history', label: 'Art & History'},
+          {to: '/news-updates', label: 'News & Updates'},
+          {to: '/newsstand-studios', label: 'Newsstand Studios'},
+        ],
+      },
+      {
+        label: 'Shop & Dine',
+        to: '/shop-dine',
+        links: [
+          {to: '/dining', label: 'Dining'},
+          {to: '/shops', label: 'Shops'},
+          {
+            to: '/amenities',
+            label: 'Amenities & Services',
+          },
+        ],
+      },
+    ]}
+    appStore={{
+      link: footerAppDownloadData.appStoreLink,
+      image: getMockFluidImage({width: 181, height: 69}),
+    }}
+    googlePlay={{
+      link: footerAppDownloadData.googlePlayLink,
+      image: getMockFluidImage({width: 181, height: 69}),
+    }}
+    logo={{
+      src: getMockFixedImage({width: 88, height: 47}),
+      alt: 'Mock Logo',
+    }}
+    {...footerContactData}
+    {...footerFollowUsData}
+  />
+</Playground>
+
+## FooterSubNav
+
+### Properties
+
+<Props of={FooterSubNav} />
+
+<Playground sx={{bg: 'background'}}>
+  <FooterSubNav
+    links={linkData}
+    logo={{
+      src: getMockFixedImage({width: 88, height: 47}),
+      alt: 'Mock Logo',
+    }}
+  />
+</Playground>
+
+## FooterContact
+
+### Properties
+
+<Props of={FooterContact} />
+
+<Playground sx={{bg: 'background'}}>
+  <FooterContact
+    address="45 ROCKEFELLER PLAZA NEW YORK, NY 10111"
+    copyright="© Rockefeller Center 2020 ALL RIGHTS RESERVED"
+    phoneNumberOne="212.588.8601"
+    phoneNumberTwo="1.877.NYC.ROCK"
+  />
+</Playground>

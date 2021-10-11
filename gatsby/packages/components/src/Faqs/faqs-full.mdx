@@ -1,0 +1,1599 @@
+---
+name: Faqs
+menu: Components
+route: /components/faqs
+---
+
+import {Props, Playground} from 'docz';
+import {HoursAndAddress, Faqs, FaqItem, Flex} from '@tishman/components';
+
+# Faqs
+
+## Properties
+
+<Props of={Faqs} />
+
+## Basic usage
+
+```ts
+import {Faqs} from '@tishman/components';
+```
+
+<Playground>
+  {() => {
+    const categories = [
+      {category: 'Arrival/Accessibility'},
+      {category: 'Prohibited items'},
+      {category: 'Category 3'},
+    ];
+    return (
+      <Faqs
+        title="The Rink FAQs"
+        categories={categories}
+        faqs={[
+          {
+            _key: '335e9da7694a',
+            _type: 'faq',
+            category: 'Arrival/Accessibility',
+            faqs: [
+              {
+                _key: '24fd815dee1a',
+                _type: 'faqItem',
+                answer: [
+                  {
+                    _key: '9a5877ae344b',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: '9e46dea2cd79',
+                        _type: 'span',
+                        marks: [],
+                        text:
+                          'The Rink opens on October 9 and the skating runs through mid-April, weather permitting.',
+                      },
+                    ],
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                ],
+                question: 'When does The Rink open and close for the season?',
+              },
+              {
+                _key: '70ed89ea2bac',
+                _type: 'faqItem',
+                answer: [
+                  {
+                    _key: '1e5f61e1c02f',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: '10f526e41834',
+                        _type: 'span',
+                        marks: [],
+                        text:
+                          'You must purchase a ticket either online or on-site for access to the venue and the ice. One non-paying adult supervisor is permitted inside the venue, but not on the ice, for children under the age of 12. Children under the age of 6 must be accompanied on the ice by a paying adult. Tickets may be purchased online beginning September 14.',
+                      },
+                    ],
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                  {
+                    _key: '0271b4af43d7',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: 'c75c44b69b660',
+                        _type: 'span',
+                        marks: [],
+                        text:
+                          'Please note that skate time may be limited to 90 minutes during times of high volume.',
+                      },
+                    ],
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                ],
+                question: 'How do I gain admission to The Rink?',
+              },
+              {
+                _key: '815b37640874',
+                _type: 'faqItem',
+                answer: [
+                  {
+                    _key: '9cd74b857a8a',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: '5df0993c3bfa',
+                        _type: 'span',
+                        marks: [],
+                        text:
+                          'Children under the age of 6 must be accompanied on the ice by an adult. Children under the age of 12 must be supervised by an adult.',
+                      },
+                    ],
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                ],
+                question: 'What is your children’s skating policy?',
+              },
+              {
+                _key: '45fc7b09fd66',
+                _type: 'faqItem',
+                answer: [
+                  {
+                    _key: '2fb17b7fb0b1',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: '6abb0d601f74',
+                        _type: 'span',
+                        marks: [],
+                        text:
+                          'The Rink at Rockefeller Center is an ADA-compliant facility. Wheelchair users are welcome to participate on the ice and staff assistance is available if needed. Elevator access is located inside 620 5th Avenue.',
+                      },
+                    ],
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                ],
+                question: 'Is the Rink wheelchair accessible?',
+              },
+              {
+                _key: '6ebade7f3406',
+                _type: 'faqItem',
+                answer: [
+                  {
+                    _key: 'f15f9fc3179c',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: 'a492fcc05df9',
+                        _type: 'span',
+                        marks: [],
+                        text:
+                          'Only trained and licensed service or guide animals are permitted at The Rink at Rockefeller Center.',
+                      },
+                    ],
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                ],
+                question: 'Can I bring my pet to The Rink?',
+              },
+              {
+                _key: 'c4a9d749743f',
+                _type: 'faqItem',
+                answer: [
+                  {
+                    _key: '8bb9fdceff8e',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: '92510f8b8a08',
+                        _type: 'span',
+                        marks: [],
+                        text:
+                          'For access to The Rink, use the Rockefeller Center parking garage located on the north side of 48th Street between 5th and 6th Avenues. The Rink is a short walking distance from the garage.',
+                      },
+                    ],
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                ],
+                question: 'Is there parking at The Rink?',
+              },
+              {
+                _key: '977dee9fe0c5',
+                _type: 'faqItem',
+                answer: [
+                  {
+                    _key: '8ccb68315f4f',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: '593235b8dd90',
+                        _type: 'span',
+                        marks: [],
+                        text:
+                          'The Rink at Rockefeller Center is an outdoor venue, so please dress accordingly. The Rink may close during inclement weather.',
+                      },
+                    ],
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                ],
+                question: 'Are there any weather considerations?',
+              },
+            ],
+          },
+          {
+            _key: '1cecaaa6b7e3',
+            _type: 'faq',
+            category: 'Prohibited items',
+            faqs: [
+              {
+                _key: '0f008170ced6',
+                _type: 'faqItem',
+                answer: [
+                  {
+                    _key: 'b9260d331284',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: 'eeadff8cfc60',
+                        _type: 'span',
+                        marks: [],
+                        text: 'Strollers are not permitted inside the venue.',
+                      },
+                    ],
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                ],
+                question: 'Can I bring a stroller?',
+              },
+              {
+                _key: 'e356aa035a81',
+                _type: 'faqItem',
+                answer: [
+                  {
+                    _key: '9ff81a98a3d2',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: '5139848ff131',
+                        _type: 'span',
+                        marks: [],
+                        text:
+                          'The Rink at Rockefeller Center strongly discourages guests from bringing unnecessary bags and backpacks into the venue. No bags will be permitted on the ice. Oversize bags and luggage will not be permitted at any time. All bags will be subject to search, which may delay your entry. The Rink at Rockefeller Center assumes no responsibility for unattended bags, which may be removed from the premises and destroyed. Lockers are available free of charge inside the Skate Hut and the Art Deco Lounge.',
+                      },
+                    ],
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                ],
+                question: 'What is your bag and luggage policy?',
+              },
+              {
+                _key: '735d481e86d9',
+                _type: 'faqItem',
+                answer: [
+                  {
+                    _key: 'd56922a801b2',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: '2b13163fe92e',
+                        _type: 'span',
+                        marks: [],
+                        text:
+                          'Food and beverages are not permitted inside the venue or on the ice.',
+                      },
+                    ],
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                ],
+                question: 'Can I bring in food or drink?',
+              },
+              {
+                _key: '4aef01db82ae',
+                _type: 'faqItem',
+                answer: [
+                  {
+                    _key: '157ad06042d3',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: '9a5ae9b286c7',
+                        _type: 'span',
+                        marks: [],
+                        text:
+                          'The Rink at Rockefeller Center is committed to a safe and enjoyable experience for all guests. No drugs, alcohol, or smoking, including electronic cigarettes, are permitted. Guests who appear intoxicated or under the influence will not be permitted to skate. Our staff reserves the right to eject or deny entry to any guest who appears to be impaired or is causing a disturbance to other guests.',
+                      },
+                    ],
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                ],
+                question: 'Do you have a policy on smoking, alcohol, or drugs?',
+              },
+              {
+                _key: '41cb3776fab1',
+                _type: 'faqItem',
+                answer: [
+                  {
+                    _key: '9037fe8de90c',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: 'ab310ece82d7',
+                        _type: 'span',
+                        marks: [],
+                        text:
+                          'For safety reasons, guests will be refused entry if they are in possession of any prohibited items. If found inside the venue with a prohibited item, the item will be confiscated and the guest may be ejected. The following items are not permitted:',
+                      },
+                    ],
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                  {
+                    _key: '3dc982c3ef2a',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: '9ec077cdfeba0',
+                        _type: 'span',
+                        marks: [],
+                        text:
+                          'Alcohol, bottles, cans, coolers, Thermoses, etc.',
+                      },
+                    ],
+                    level: 1,
+                    listItem: 'bullet',
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                  {
+                    _key: '44ed5c39b50e',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: 'ffbcafe8fc380',
+                        _type: 'span',
+                        marks: [],
+                        text: 'Animals other than trained service animals.',
+                      },
+                    ],
+                    level: 1,
+                    listItem: 'bullet',
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                  {
+                    _key: 'edff6418939a',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: 'e4bf3fbca2910',
+                        _type: 'span',
+                        marks: [],
+                        text: 'Balls of any kind.',
+                      },
+                    ],
+                    level: 1,
+                    listItem: 'bullet',
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                  {
+                    _key: '3c504c969752',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: '8dc28d73b7490',
+                        _type: 'span',
+                        marks: [],
+                        text: 'Illegal substances.',
+                      },
+                    ],
+                    level: 1,
+                    listItem: 'bullet',
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                  {
+                    _key: '40bddcfde200',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: '32ab445963b40',
+                        _type: 'span',
+                        marks: [],
+                        text: 'Laser pens.',
+                      },
+                    ],
+                    level: 1,
+                    listItem: 'bullet',
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                  {
+                    _key: '5887d3d24b45',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: '15de690e2bfa0',
+                        _type: 'span',
+                        marks: [],
+                        text: 'Oversize bags or luggage.',
+                      },
+                    ],
+                    level: 1,
+                    listItem: 'bullet',
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                  {
+                    _key: '59144a78199f',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: '1ff62961fb8f0',
+                        _type: 'span',
+                        marks: [],
+                        text: 'Projectiles.',
+                      },
+                    ],
+                    level: 1,
+                    listItem: 'bullet',
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                  {
+                    _key: '1054374f49b6',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: '86896af676b90',
+                        _type: 'span',
+                        marks: [],
+                        text: 'Signs and banners.',
+                      },
+                    ],
+                    level: 1,
+                    listItem: 'bullet',
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                  {
+                    _key: '5b5d1c92fb43',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: 'ab40353476910',
+                        _type: 'span',
+                        marks: [],
+                        text:
+                          'Weapons of any kind, including pocket and pen knives.',
+                      },
+                    ],
+                    level: 1,
+                    listItem: 'bullet',
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                  {
+                    _key: 'f2d334acabb3',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: '6d5382a264ca0',
+                        _type: 'span',
+                        marks: [],
+                        text:
+                          'Any other item deemed inappropriate or unsafe by management.',
+                      },
+                    ],
+                    level: 1,
+                    listItem: 'bullet',
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                ],
+                question: 'What items are prohibited at The Rink?',
+              },
+            ],
+          },
+          {
+            _key: '676cc8ef49d2',
+            _type: 'faq',
+            category: 'Category 3',
+            faqs: [
+              {
+                _key: 'e7810fdd140c',
+                _type: 'faqItem',
+                answer: [
+                  {
+                    _key: 'ba07786584f4',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: '05af0a82feb9',
+                        _type: 'span',
+                        marks: [],
+                        text: 'answer',
+                      },
+                    ],
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                ],
+                question: 'Question',
+              },
+              {
+                _key: 'f324011bb737',
+                _type: 'faqItem',
+                answer: [
+                  {
+                    _key: '73d7f731ecb5',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: '1321caf29921',
+                        _type: 'span',
+                        marks: [],
+                        text: 'yes please',
+                      },
+                    ],
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                ],
+                question: 'Another One',
+              },
+              {
+                _key: '1587fa8296f4',
+                _type: 'faqItem',
+                answer: [
+                  {
+                    _key: 'a7d4c80759f9',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: 'c4bf5f79c898',
+                        _type: 'span',
+                        marks: [],
+                        text: 'akdjflkasdfaf',
+                      },
+                    ],
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                ],
+                question: 'Another one again',
+              },
+              {
+                _key: '762ab936d71a',
+                _type: 'faqItem',
+                answer: [
+                  {
+                    _key: 'ec35bb8a6dd2',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: '4370775a3439',
+                        _type: 'span',
+                        marks: [],
+                        text: 'fjalsdkjfl;kadjs fl;jaskld;f asdlfkads jf',
+                      },
+                    ],
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                ],
+                question: 'Djlakjd;l ;aljksd f;alksdjf ',
+              },
+              {
+                _key: '187d9044ff77',
+                _type: 'faqItem',
+                answer: [
+                  {
+                    _key: 'e9f9a0417d7f',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: '1cc874dda13d',
+                        _type: 'span',
+                        marks: [],
+                        text: 'djfa;lsdf',
+                      },
+                    ],
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                ],
+                question: 'adfja;sdfj',
+              },
+              {
+                _key: 'bfb4df7f8fcc',
+                _type: 'faqItem',
+                answer: [
+                  {
+                    _key: 'ebf3f1bffe3d',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: 'bcc8e5945e17',
+                        _type: 'span',
+                        marks: [],
+                        text: 'kldjf;alfj',
+                      },
+                    ],
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                ],
+                question: 'dlj;ljafdsf',
+              },
+              {
+                _key: '1ea6aba054ff',
+                _type: 'faqItem',
+                answer: [
+                  {
+                    _key: 'fc8476a377c6',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: 'd9147dbc14a2',
+                        _type: 'span',
+                        marks: [],
+                        text: "dkflk'ads",
+                      },
+                    ],
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                ],
+                question: 'adfa',
+              },
+              {
+                _key: 'f1eaaa8d50a0',
+                _type: 'faqItem',
+                answer: [
+                  {
+                    _key: '373202138007',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: '965783252638',
+                        _type: 'span',
+                        marks: [],
+                        text: 'fja;lks',
+                      },
+                    ],
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                ],
+                question: 'kj;ljklajsdf',
+              },
+              {
+                _key: 'b14552d27a0b',
+                _type: 'faqItem',
+                answer: [
+                  {
+                    _key: '459e8ee417df',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: 'abe188866f56',
+                        _type: 'span',
+                        marks: [],
+                        text: 'asdfasdfa',
+                      },
+                    ],
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                ],
+                question: 'Rkk;a j;lks d',
+              },
+              {
+                _key: '9ceb4452ffd9',
+                _type: 'faqItem',
+                answer: [
+                  {
+                    _key: 'f94c8bb0988f',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: '25bbb65911f8',
+                        _type: 'span',
+                        marks: [],
+                        text: 'akldjfa;ldfas',
+                      },
+                    ],
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                ],
+                question: 'ldkj;l ',
+              },
+              {
+                _key: '56979ba8a6e7',
+                _type: 'faqItem',
+                answer: [
+                  {
+                    _key: 'ba50a14f2847',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: '9494b4e53163',
+                        _type: 'span',
+                        marks: [],
+                        text: 'kjdf;alf kldf',
+                      },
+                    ],
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                ],
+                question: 'Hkjakdf lkja ld',
+              },
+              {
+                _key: '9b474ce8eafd',
+                _type: 'faqItem',
+                answer: [
+                  {
+                    _key: '0ae4dcb2ce4f',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: '6a743fdc19b4',
+                        _type: 'span',
+                        marks: [],
+                        text: 'fkasklfa;sj',
+                      },
+                    ],
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                ],
+                question: 'Wka;dka',
+              },
+              {
+                _key: '9870c85009d1',
+                _type: 'faqItem',
+                answer: [
+                  {
+                    _key: '7bc3804b7a7c',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: 'ef4de7d9cab1',
+                        _type: 'span',
+                        marks: [],
+                        text: 'ldskjfa;lkdf',
+                      },
+                    ],
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                ],
+                question: 'Oksjalfk',
+              },
+              {
+                _key: 'f342c919b4ee',
+                _type: 'faqItem',
+                answer: [
+                  {
+                    _key: 'af00b7d9a904',
+                    _type: 'block',
+                    children: [
+                      {
+                        _key: '8157a6e734cf',
+                        _type: 'span',
+                        marks: [],
+                        text: 'lkasdjf;lakfsdf',
+                      },
+                    ],
+                    markDefs: [],
+                    style: 'normal',
+                  },
+                ],
+                question: 'Casdflj',
+              },
+            ],
+          },
+        ]}
+      />
+    );
+  }}
+</Playground>
+
+## With Hours and Address
+
+<Playground>
+  {() => {
+    const categories = [
+      {category: 'Arrival/Accessibility'},
+      {category: 'Prohibited items'},
+      {category: 'Category 3'},
+    ];
+    return (
+      <Flex
+        sx={{
+          flexDirection: ['column', null, 'row'],
+          justifyContent: 'space-between',
+        }}
+      >
+        <Faqs
+          title="The Rink FAQs"
+          categories={categories}
+          faqs={[
+            {
+              _key: '335e9da7694a',
+              _type: 'faq',
+              category: 'Arrival/Accessibility',
+              faqs: [
+                {
+                  _key: '24fd815dee1a',
+                  _type: 'faqItem',
+                  answer: [
+                    {
+                      _key: '9a5877ae344b',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: '9e46dea2cd79',
+                          _type: 'span',
+                          marks: [],
+                          text:
+                            'The Rink opens on October 9 and the skating runs through mid-April, weather permitting.',
+                        },
+                      ],
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                  ],
+                  question: 'When does The Rink open and close for the season?',
+                },
+                {
+                  _key: '70ed89ea2bac',
+                  _type: 'faqItem',
+                  answer: [
+                    {
+                      _key: '1e5f61e1c02f',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: '10f526e41834',
+                          _type: 'span',
+                          marks: [],
+                          text:
+                            'You must purchase a ticket either online or on-site for access to the venue and the ice. One non-paying adult supervisor is permitted inside the venue, but not on the ice, for children under the age of 12. Children under the age of 6 must be accompanied on the ice by a paying adult. Tickets may be purchased online beginning September 14.',
+                        },
+                      ],
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                    {
+                      _key: '0271b4af43d7',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: 'c75c44b69b660',
+                          _type: 'span',
+                          marks: [],
+                          text:
+                            'Please note that skate time may be limited to 90 minutes during times of high volume.',
+                        },
+                      ],
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                  ],
+                  question: 'How do I gain admission to The Rink?',
+                },
+                {
+                  _key: '815b37640874',
+                  _type: 'faqItem',
+                  answer: [
+                    {
+                      _key: '9cd74b857a8a',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: '5df0993c3bfa',
+                          _type: 'span',
+                          marks: [],
+                          text:
+                            'Children under the age of 6 must be accompanied on the ice by an adult. Children under the age of 12 must be supervised by an adult.',
+                        },
+                      ],
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                  ],
+                  question: 'What is your children’s skating policy?',
+                },
+                {
+                  _key: '45fc7b09fd66',
+                  _type: 'faqItem',
+                  answer: [
+                    {
+                      _key: '2fb17b7fb0b1',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: '6abb0d601f74',
+                          _type: 'span',
+                          marks: [],
+                          text:
+                            'The Rink at Rockefeller Center is an ADA-compliant facility. Wheelchair users are welcome to participate on the ice and staff assistance is available if needed. Elevator access is located inside 620 5th Avenue.',
+                        },
+                      ],
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                  ],
+                  question: 'Is the Rink wheelchair accessible?',
+                },
+                {
+                  _key: '6ebade7f3406',
+                  _type: 'faqItem',
+                  answer: [
+                    {
+                      _key: 'f15f9fc3179c',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: 'a492fcc05df9',
+                          _type: 'span',
+                          marks: [],
+                          text:
+                            'Only trained and licensed service or guide animals are permitted at The Rink at Rockefeller Center.',
+                        },
+                      ],
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                  ],
+                  question: 'Can I bring my pet to The Rink?',
+                },
+                {
+                  _key: 'c4a9d749743f',
+                  _type: 'faqItem',
+                  answer: [
+                    {
+                      _key: '8bb9fdceff8e',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: '92510f8b8a08',
+                          _type: 'span',
+                          marks: [],
+                          text:
+                            'For access to The Rink, use the Rockefeller Center parking garage located on the north side of 48th Street between 5th and 6th Avenues. The Rink is a short walking distance from the garage.',
+                        },
+                      ],
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                  ],
+                  question: 'Is there parking at The Rink?',
+                },
+                {
+                  _key: '977dee9fe0c5',
+                  _type: 'faqItem',
+                  answer: [
+                    {
+                      _key: '8ccb68315f4f',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: '593235b8dd90',
+                          _type: 'span',
+                          marks: [],
+                          text:
+                            'The Rink at Rockefeller Center is an outdoor venue, so please dress accordingly. The Rink may close during inclement weather.',
+                        },
+                      ],
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                  ],
+                  question: 'Are there any weather considerations?',
+                },
+              ],
+            },
+            {
+              _key: '1cecaaa6b7e3',
+              _type: 'faq',
+              category: 'Prohibited items',
+              faqs: [
+                {
+                  _key: '0f008170ced6',
+                  _type: 'faqItem',
+                  answer: [
+                    {
+                      _key: 'b9260d331284',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: 'eeadff8cfc60',
+                          _type: 'span',
+                          marks: [],
+                          text: 'Strollers are not permitted inside the venue.',
+                        },
+                      ],
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                  ],
+                  question: 'Can I bring a stroller?',
+                },
+                {
+                  _key: 'e356aa035a81',
+                  _type: 'faqItem',
+                  answer: [
+                    {
+                      _key: '9ff81a98a3d2',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: '5139848ff131',
+                          _type: 'span',
+                          marks: [],
+                          text:
+                            'The Rink at Rockefeller Center strongly discourages guests from bringing unnecessary bags and backpacks into the venue. No bags will be permitted on the ice. Oversize bags and luggage will not be permitted at any time. All bags will be subject to search, which may delay your entry. The Rink at Rockefeller Center assumes no responsibility for unattended bags, which may be removed from the premises and destroyed. Lockers are available free of charge inside the Skate Hut and the Art Deco Lounge.',
+                        },
+                      ],
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                  ],
+                  question: 'What is your bag and luggage policy?',
+                },
+                {
+                  _key: '735d481e86d9',
+                  _type: 'faqItem',
+                  answer: [
+                    {
+                      _key: 'd56922a801b2',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: '2b13163fe92e',
+                          _type: 'span',
+                          marks: [],
+                          text:
+                            'Food and beverages are not permitted inside the venue or on the ice.',
+                        },
+                      ],
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                  ],
+                  question: 'Can I bring in food or drink?',
+                },
+                {
+                  _key: '4aef01db82ae',
+                  _type: 'faqItem',
+                  answer: [
+                    {
+                      _key: '157ad06042d3',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: '9a5ae9b286c7',
+                          _type: 'span',
+                          marks: [],
+                          text:
+                            'The Rink at Rockefeller Center is committed to a safe and enjoyable experience for all guests. No drugs, alcohol, or smoking, including electronic cigarettes, are permitted. Guests who appear intoxicated or under the influence will not be permitted to skate. Our staff reserves the right to eject or deny entry to any guest who appears to be impaired or is causing a disturbance to other guests.',
+                        },
+                      ],
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                  ],
+                  question:
+                    'Do you have a policy on smoking, alcohol, or drugs?',
+                },
+                {
+                  _key: '41cb3776fab1',
+                  _type: 'faqItem',
+                  answer: [
+                    {
+                      _key: '9037fe8de90c',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: 'ab310ece82d7',
+                          _type: 'span',
+                          marks: [],
+                          text:
+                            'For safety reasons, guests will be refused entry if they are in possession of any prohibited items. If found inside the venue with a prohibited item, the item will be confiscated and the guest may be ejected. The following items are not permitted:',
+                        },
+                      ],
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                    {
+                      _key: '3dc982c3ef2a',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: '9ec077cdfeba0',
+                          _type: 'span',
+                          marks: [],
+                          text:
+                            'Alcohol, bottles, cans, coolers, Thermoses, etc.',
+                        },
+                      ],
+                      level: 1,
+                      listItem: 'bullet',
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                    {
+                      _key: '44ed5c39b50e',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: 'ffbcafe8fc380',
+                          _type: 'span',
+                          marks: [],
+                          text: 'Animals other than trained service animals.',
+                        },
+                      ],
+                      level: 1,
+                      listItem: 'bullet',
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                    {
+                      _key: 'edff6418939a',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: 'e4bf3fbca2910',
+                          _type: 'span',
+                          marks: [],
+                          text: 'Balls of any kind.',
+                        },
+                      ],
+                      level: 1,
+                      listItem: 'bullet',
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                    {
+                      _key: '3c504c969752',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: '8dc28d73b7490',
+                          _type: 'span',
+                          marks: [],
+                          text: 'Illegal substances.',
+                        },
+                      ],
+                      level: 1,
+                      listItem: 'bullet',
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                    {
+                      _key: '40bddcfde200',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: '32ab445963b40',
+                          _type: 'span',
+                          marks: [],
+                          text: 'Laser pens.',
+                        },
+                      ],
+                      level: 1,
+                      listItem: 'bullet',
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                    {
+                      _key: '5887d3d24b45',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: '15de690e2bfa0',
+                          _type: 'span',
+                          marks: [],
+                          text: 'Oversize bags or luggage.',
+                        },
+                      ],
+                      level: 1,
+                      listItem: 'bullet',
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                    {
+                      _key: '59144a78199f',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: '1ff62961fb8f0',
+                          _type: 'span',
+                          marks: [],
+                          text: 'Projectiles.',
+                        },
+                      ],
+                      level: 1,
+                      listItem: 'bullet',
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                    {
+                      _key: '1054374f49b6',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: '86896af676b90',
+                          _type: 'span',
+                          marks: [],
+                          text: 'Signs and banners.',
+                        },
+                      ],
+                      level: 1,
+                      listItem: 'bullet',
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                    {
+                      _key: '5b5d1c92fb43',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: 'ab40353476910',
+                          _type: 'span',
+                          marks: [],
+                          text:
+                            'Weapons of any kind, including pocket and pen knives.',
+                        },
+                      ],
+                      level: 1,
+                      listItem: 'bullet',
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                    {
+                      _key: 'f2d334acabb3',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: '6d5382a264ca0',
+                          _type: 'span',
+                          marks: [],
+                          text:
+                            'Any other item deemed inappropriate or unsafe by management.',
+                        },
+                      ],
+                      level: 1,
+                      listItem: 'bullet',
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                  ],
+                  question: 'What items are prohibited at The Rink?',
+                },
+              ],
+            },
+            {
+              _key: '676cc8ef49d2',
+              _type: 'faq',
+              category: 'Category 3',
+              faqs: [
+                {
+                  _key: 'e7810fdd140c',
+                  _type: 'faqItem',
+                  answer: [
+                    {
+                      _key: 'ba07786584f4',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: '05af0a82feb9',
+                          _type: 'span',
+                          marks: [],
+                          text: 'answer',
+                        },
+                      ],
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                  ],
+                  question: 'Question',
+                },
+                {
+                  _key: 'f324011bb737',
+                  _type: 'faqItem',
+                  answer: [
+                    {
+                      _key: '73d7f731ecb5',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: '1321caf29921',
+                          _type: 'span',
+                          marks: [],
+                          text: 'yes please',
+                        },
+                      ],
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                  ],
+                  question: 'Another One',
+                },
+                {
+                  _key: '1587fa8296f4',
+                  _type: 'faqItem',
+                  answer: [
+                    {
+                      _key: 'a7d4c80759f9',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: 'c4bf5f79c898',
+                          _type: 'span',
+                          marks: [],
+                          text: 'akdjflkasdfaf',
+                        },
+                      ],
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                  ],
+                  question: 'Another one again',
+                },
+                {
+                  _key: '762ab936d71a',
+                  _type: 'faqItem',
+                  answer: [
+                    {
+                      _key: 'ec35bb8a6dd2',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: '4370775a3439',
+                          _type: 'span',
+                          marks: [],
+                          text: 'fjalsdkjfl;kadjs fl;jaskld;f asdlfkads jf',
+                        },
+                      ],
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                  ],
+                  question: 'Djlakjd;l ;aljksd f;alksdjf ',
+                },
+                {
+                  _key: '187d9044ff77',
+                  _type: 'faqItem',
+                  answer: [
+                    {
+                      _key: 'e9f9a0417d7f',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: '1cc874dda13d',
+                          _type: 'span',
+                          marks: [],
+                          text: 'djfa;lsdf',
+                        },
+                      ],
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                  ],
+                  question: 'adfja;sdfj',
+                },
+                {
+                  _key: 'bfb4df7f8fcc',
+                  _type: 'faqItem',
+                  answer: [
+                    {
+                      _key: 'ebf3f1bffe3d',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: 'bcc8e5945e17',
+                          _type: 'span',
+                          marks: [],
+                          text: 'kldjf;alfj',
+                        },
+                      ],
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                  ],
+                  question: 'dlj;ljafdsf',
+                },
+                {
+                  _key: '1ea6aba054ff',
+                  _type: 'faqItem',
+                  answer: [
+                    {
+                      _key: 'fc8476a377c6',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: 'd9147dbc14a2',
+                          _type: 'span',
+                          marks: [],
+                          text: "dkflk'ads",
+                        },
+                      ],
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                  ],
+                  question: 'adfa',
+                },
+                {
+                  _key: 'f1eaaa8d50a0',
+                  _type: 'faqItem',
+                  answer: [
+                    {
+                      _key: '373202138007',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: '965783252638',
+                          _type: 'span',
+                          marks: [],
+                          text: 'fja;lks',
+                        },
+                      ],
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                  ],
+                  question: 'kj;ljklajsdf',
+                },
+                {
+                  _key: 'b14552d27a0b',
+                  _type: 'faqItem',
+                  answer: [
+                    {
+                      _key: '459e8ee417df',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: 'abe188866f56',
+                          _type: 'span',
+                          marks: [],
+                          text: 'asdfasdfa',
+                        },
+                      ],
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                  ],
+                  question: 'Rkk;a j;lks d',
+                },
+                {
+                  _key: '9ceb4452ffd9',
+                  _type: 'faqItem',
+                  answer: [
+                    {
+                      _key: 'f94c8bb0988f',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: '25bbb65911f8',
+                          _type: 'span',
+                          marks: [],
+                          text: 'akldjfa;ldfas',
+                        },
+                      ],
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                  ],
+                  question: 'ldkj;l ',
+                },
+                {
+                  _key: '56979ba8a6e7',
+                  _type: 'faqItem',
+                  answer: [
+                    {
+                      _key: 'ba50a14f2847',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: '9494b4e53163',
+                          _type: 'span',
+                          marks: [],
+                          text: 'kjdf;alf kldf',
+                        },
+                      ],
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                  ],
+                  question: 'Hkjakdf lkja ld',
+                },
+                {
+                  _key: '9b474ce8eafd',
+                  _type: 'faqItem',
+                  answer: [
+                    {
+                      _key: '0ae4dcb2ce4f',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: '6a743fdc19b4',
+                          _type: 'span',
+                          marks: [],
+                          text: 'fkasklfa;sj',
+                        },
+                      ],
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                  ],
+                  question: 'Wka;dka',
+                },
+                {
+                  _key: '9870c85009d1',
+                  _type: 'faqItem',
+                  answer: [
+                    {
+                      _key: '7bc3804b7a7c',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: 'ef4de7d9cab1',
+                          _type: 'span',
+                          marks: [],
+                          text: 'ldskjfa;lkdf',
+                        },
+                      ],
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                  ],
+                  question: 'Oksjalfk',
+                },
+                {
+                  _key: 'f342c919b4ee',
+                  _type: 'faqItem',
+                  answer: [
+                    {
+                      _key: 'af00b7d9a904',
+                      _type: 'block',
+                      children: [
+                        {
+                          _key: '8157a6e734cf',
+                          _type: 'span',
+                          marks: [],
+                          text: 'lkasdjf;lakfsdf',
+                        },
+                      ],
+                      markDefs: [],
+                      style: 'normal',
+                    },
+                  ],
+                  question: 'Casdflj',
+                },
+              ],
+            },
+          ]}
+        />
+        <HoursAndAddress
+          hoursHeading="Hours"
+          days="Sunday-Saturday"
+          time="8:00am-Midnight"
+          addressHeading="Directions & Contact"
+          directions="5th Ave between 49th & 50th St"
+          city="New York"
+          state="NY"
+          zip="10020"
+          phone="212.332.7655"
+          email="therink@rockefellercenter.com"
+          contactLink="https://rinkatrockcenter.typeform.com/to/atJ79toI"
+        />
+      </Flex>
+    );
+  }}
+</Playground>
+
+## Faq Item
+
+<Playground>
+  <FaqItem question="Do you have a question?">
+    Look for the answer on google.
+  </FaqItem>
+</Playground>

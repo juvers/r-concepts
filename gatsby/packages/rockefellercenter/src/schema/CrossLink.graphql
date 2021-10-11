@@ -1,0 +1,11 @@
+"""
+A Cross Link object.
+
+This should be used to type most JSON fields that represent a generic Cross link component.
+"""
+type CrossLink @infer {
+  image: ImageWithAlt!
+  title: String!
+  caption: String!
+  link: Link!
+}

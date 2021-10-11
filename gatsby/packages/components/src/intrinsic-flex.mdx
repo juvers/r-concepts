@@ -1,0 +1,87 @@
+---
+name: IntrinsicFlex
+menu: Components
+route: /components/intrinsic-flex
+---
+
+import {Props, Playground} from 'docz';
+import {Heading, Text} from 'theme-ui';
+import {IntrinsicFlex} from './IntrinsicFlex';
+
+# IntrinsicFlex
+
+This is just like [IntrinsicBox], but using a ThemeUI [Flex] instead of Box.
+
+## Properties
+
+In addition to properties available on [Flex], `IntrinsicBox` accepts:
+
+<Props of={IntrinsicFlex} />
+
+## Basic usage
+
+```ts
+import {IntrinsicFlex} from '@tishman/components';
+```
+
+### With `ratio`:
+
+<Playground>
+  <IntrinsicFlex
+    ratio={16 / 9}
+    sx={{
+      justifyContent: 'space-between',
+      flexWrap: 'wrap',
+      border: '1px solid',
+      borderColor: 'accentSecondary',
+    }}
+  >
+    <Heading>Intrinsic Flex</Heading>
+    <Text>This box keeps its intrinsic ratio when resizing</Text>
+    <Text>But it will allow overflow to be visible</Text>
+  </IntrinsicFlex>
+</Playground>
+
+### With `minWidth` and `maxWidth`:
+
+<Playground>
+  <IntrinsicFlex
+    ratio={16 / 9}
+    minWidth={350}
+    maxWidth={500}
+    sx={{
+      border: '1px solid',
+      borderColor: 'accentSecondary',
+      justifyContent: 'space-between',
+      flexWrap: 'wrap',
+    }}
+  >
+    <Heading>Intrinsic Box</Heading>
+    <Text>This box keeps its intrinsic ratio when resizing</Text>
+    <Text>But it will allow overflow to be visible</Text>
+  </IntrinsicFlex>
+</Playground>
+
+### With [Flex] properties:
+
+<Playground>
+  <IntrinsicFlex
+    ratio={16 / 9}
+    p={4}
+    color="primary"
+    bg="accent"
+    sx={{
+      justifyContent: 'space-between',
+      flexWrap: 'wrap',
+      border: '1px solid',
+      borderColor: 'currentColor',
+    }}
+  >
+    <Heading>Intrinsic Box</Heading>
+    <Text>This box keeps its intrinsic ratio when resizing</Text>
+    <Text>But it will allow overflow to be visible</Text>
+  </IntrinsicFlex>
+</Playground>
+
+[flex]: https://theme-ui.com/components/flex/
+[intrinsicbox]: /components/intrinsic-box

@@ -1,0 +1,291 @@
+[
+  {
+    "id": "buy-tickets-tor",
+    "meta": {
+      "title": "Buy Top of the Rock Observation Deck Tickets | Rockefeller Center",
+      "description": "Tickets for Top of the Rock let you have the experience you want. Whether general admission, VIP, or combined with a tourist pass, the views will be all yours. "
+    },
+    "hero": {
+      "title": "General Admission",
+      "link": {
+        "label": "GET THE VIP ACCESS PASS",
+        "modal": "CARD"
+      }
+    },
+    "ticketStep": {
+      "title": "Ticket Quantity",
+      "description": "Ages 6-12. Children under 6 admitted free. Senior tickets are for ages 62 and older.",
+      "ticketTypes": [
+        {"ticketTypeId": 1, "label": "Adult"},
+        {"ticketTypeId": 2, "label": "Child"},
+        {"ticketTypeId": 3, "label": "Senior"}
+      ]
+    },
+    "dateStep": {
+      "title": "Date",
+      "description": "If there is poor weather or visibility on the day of your visit, we will gladly reissue your ticket for a later time or date."
+    },
+    "timeStep": {
+      "title": "Time",
+      "description": "Sunset is the most popular time to enjoy Top of the Rock. Visiting during sunset is an additional $10 per ticket."
+    },
+    "purchaseStep": {
+      "title": "Contact & Billing Info"
+    },
+    "modalCard": {
+      "title": "Upgrade to VIP Access Pass",
+      "description": "For just $75, the VIP Access pass allows expedited entry to Top of the Rock at any time on your selected date, even if the time is sold out. If you’d like to take advantage of these benefits, click here to get VIP access.",
+      "cta": {
+        "label": "Get the vip access pass",
+        "url": "/buy-tickets/vip/"
+      },
+      "image": {
+        "src": "../images/romantic-nyc-views.jpg",
+        "alt": "A couple enjoys a sunset view from the Top of the Rock Observation Deck at Rockefeller Center."
+      }
+    },
+    "modalCard2": {
+      "title": "See 6 NYC attractions with CityPASS",
+      "subTitle": "$136 per adult | $112 per child",
+      "description": "Getting a CityPASS lets you bundle 6 major NYC attractions, including your visit to Top of the Rock, into one package––and save 42%.",
+      "cta": {
+        "label": "Upgrade all tickets to CityPASS",
+        "url": "https://www.citypass.com/new-york?mv_source=topoftherock&campaign=buy-tickets"
+      },
+      "image": {
+        "src": "../images/citypass.jpg",
+        "alt": "A hand holds a CityPass ticket over the New York skyline."
+      }
+    },
+    "modalCard3": {
+      "title": "Desired time sold out?",
+      "description": "Upgrade to VIP and come at this time, even though it is sold out.",
+      "cta": {
+        "label": "Get the vip access pass",
+        "url": "/buy-tickets/vip/"
+      }
+    }
+  },
+  {
+    "id": "buy-tickets-vip",
+    "meta": {
+      "title": "Top of the Rock Observation Deck | VIP Tickets",
+      "description": "Elevate your experience with Top of the Rock ticket VIP tickets. You get expedited entry and priority elevator access along with 360-degree views of NYC."
+    },
+    "hero": {
+      "title": "VIP Access Pass"
+    },
+    "ticketStep": {
+      "title": "Ticket Quantity",
+      "description": "Child Tickets are ages 6 to 12, 6 and under is free. Senior Tickets ages 62+.",
+      "ticketTypes": [{"ticketTypeId": 100, "label": "Adult"}]
+    },
+    "dateStep": {
+      "title": "Date",
+      "description": "If there is poor weather or visibility on the day of your visit, we will gladly reissue your ticket for a later time or date."
+    },
+    "purchaseStep": {
+      "title": "Contact & Billing Info"
+    }
+  },
+  {
+    "id": "buy-tickets-tour",
+    "meta": {
+      "title": "Rockefeller Center Tour Tickets | NYC Culture, Art & History",
+      "description": "Join an extraordinary tour by an expert historian, and learn about the rich history, architecture, and breathtaking artistry of New York's most famous landmark."
+    },
+    "hero": {
+      "title": "Rockefeller Center Tour",
+      "link": {
+        "label": "UPGRADE To THE ROCK PASS",
+        "modal": "CARD"
+      }
+    },
+    "ticketStep": {
+      "title": "Ticket Quantity",
+      "ticketTypes": [{"ticketTypeId": 57, "label": "Rockefeller Center Tour"}]
+    },
+    "dateStep": {
+      "title": "Date"
+    },
+    "timeStep": {
+      "title": "Time"
+    },
+    "purchaseStep": {
+      "title": "Contact & Billing Info"
+    },
+    "modalCard": {
+      "title": "See it all. And learn it all.",
+      "subTitle": "$56 per Adult",
+      "description": "Take the Rockefeller Center Tour, and learn about its incredible art and history, with a visit to all its major landmarks and artworks. Then visit Top of the Rock for the incredible 360-degree views of the NYC skyline. It’s two one-of-a-kind Rockefeller Center experiences in one.",
+      "cta": {
+        "label": "Upgrade to rock pass",
+        "url": "/buy-tickets/rock-pass/"
+      },
+      "link": {
+        "label": "Learn more",
+        "url": "https://www.topoftherocknyc.com/special-offers/combo-tickets/rock-pass/"
+      },
+      "image": {
+        "src": "../images/statue-left-top-rock-right.jpg",
+        "alt": "A man looks out at a view of the Empire State Building from Top of the Rock."
+      }
+    },
+    "modalCard2": {
+      "title": "See it all. And learn it all.",
+      "subTitle": "$56 per Adult",
+      "description": "Take the Rockefeller Center Tour, and learn about its incredible art and history, with a visit to all its major landmarks and artworks. Then visit Top of the Rock for the incredible 360-degree views of the NYC skyline. It’s two one-of-a-kind Rockefeller Center experiences in one.",
+      "cta": {
+        "label": "Upgrade to rock pass",
+        "url": "/buy-tickets/rock-pass/"
+      },
+      "link": {
+        "label": "Learn more",
+        "url": "#"
+      },
+      "image": {
+        "src": "../images/statue-left-top-rock-right.jpg",
+        "alt": "A man looks out at a view of the Empire State Building from Top of the Rock."
+      }
+    },
+    "modalCard3": {
+      "title": "Desired time sold out?",
+      "description": "Upgrade to VIP and come at this time, even though it is sold out.",
+      "cta": {
+        "label": "Get the vip access pass",
+        "url": "/buy-tickets/vip/"
+      }
+    }
+  },
+  {
+    "id": "buy-tickets-rock-pass",
+    "meta": {
+      "title": "Buy Rock Pass Tickets | Discount to Top of the Rock & Rock Center Tour",
+      "description": "The Rock Pass combines discounted admission to the Rock Center Tour & Top of the Rock Observation Deck. Grab your pass today to marvel at the art and NYC views."
+    },
+    "hero": {
+      "title": "Rock Pass"
+    },
+    "ticketStep": {
+      "title": "Rock Pass Quantity",
+      "ticketTypes": [{"ticketTypeId": 1, "label": "Rock Pass"}]
+    },
+    "dateStep": {
+      "title": "Date",
+      "description": "If there is poor weather or visibility on the day of your visit, we will gladly reissue your ticket for a later time or date."
+    },
+    "comboStep": {
+      "tour": {
+        "title": "Tour Time",
+        "description": "Select an entry time for the Rockefeller Center Tour. We recommend allowing an hour and a half from the start of the Rockefeller Center tour prior to your entrance to the Top of the Rock."
+      },
+      "deck": {
+        "title": "Observation Deck Time",
+        "description": "Select an entry time for the Rockefeller Center Tour. We recommend allowing an hour and a half from the start of the Rockefeller Center tour prior to your entrance to the Top of the Rock."
+      }
+    },
+    "purchaseStep": {
+      "title": "Contact & Billing Info"
+    }
+  },
+  {
+    "id": "buy-tickets-city-pass",
+    "meta": {
+      "title": "Buy CityPASS Tickets | Save 42% on Top NYC Tourist Attractions",
+      "description": "Visit six NYC attractions and save 42% with CityPASS. Includes Top of the Rock with 360-degree, unobstructed NYC views."
+    },
+    "hero": {
+      "title": "CityPASS"
+    },
+    "ticketStep": {
+      "title": "CityPASS Quantity",
+      "description": "A Child CityPASS is ages 6 to 17, under 6 is free.",
+      "ticketTypes": [
+        {"ticketTypeId": 72, "label": "Adult"},
+        {"ticketTypeId": 73, "label": "Child"}
+      ]
+    },
+    "dateStep": {
+      "title": "Date",
+      "description": "If there is poor weather or visibility on the day of your visit, we will gladly reissue your ticket for a later time or date."
+    },
+    "timeStep": {
+      "title": "Time"
+    },
+    "purchaseStep": {
+      "title": "Contact & Billing Info"
+    }
+  },
+  {
+    "id": "buy-tickets-c3",
+    "meta": {
+      "title": "Buy New York C3 Pass Tickets | Up to 32% Discounts",
+      "description": "Save up to 32% on combined attraction prices—and you can select your attractions as you go. The New York C3 Pass is the perfect way to create your own NYC experience."
+    },
+    "hero": {
+      "title": "C3"
+    },
+    "ticketStep": {
+      "title": "C3 Quantity",
+      "description": "A Child C3 Pass is ages 6 to 17, under 6 is free.",
+      "ticketTypes": [
+        {"ticketTypeId": 98, "label": "Adult"},
+        {"ticketTypeId": 99, "label": "Child"}
+      ]
+    },
+    "dateStep": {
+      "title": "Date",
+      "description": "If there is poor weather or visibility on the day of your visit, we will gladly reissue your ticket for a later time or date."
+    },
+    "timeStep": {
+      "title": "Time"
+    },
+    "purchaseStep": {
+      "title": "Contact & Billing Info"
+    }
+  },
+  {
+    "id": "buy-tickets-city-pass-redemption",
+    "meta": {
+      "title": "Redeem Your CityPass",
+      "description": "Redeem your CityPass to catch the sights at Rockefeller Center. You can see if your CityPass is valid without redeeming it."
+    },
+    "hero": {
+      "title": "Redeem your CityPASS"
+    },
+    "ticketStep": {
+      "title": "Redeem your CityPASS",
+      "description": "Enter CityPASS Number (limit 10 passes) Enter numbers only; no spaces.",
+      "ticketTypes": [
+        {"ticketTypeId": 72, "label": "Adult CityPass"},
+        {"ticketTypeId": 73, "label": "Child CityPass"},
+        {"ticketTypeId": 98, "label": "Adult C3 CityPass"},
+        {"ticketTypeId": 99, "label": "Child C3 CityPass"}
+      ]
+    },
+    "dateStep": {
+      "title": "Date",
+      "description": "If there is poor weather or visibility on the day of your visit, we will gladly reissue your ticket for a later time or date."
+    },
+    "timeStep": {
+      "title": "Time"
+    },
+    "purchaseStep": {
+      "title": "Contact & Billing Info"
+    }
+  },
+  {
+    "id": "buy-tickets-refunds",
+    "meta": {
+      "title": "Ticket Refunds | Top of the Rock",
+      "description": "Submit a request for a ticket refund. Refunds typically show up on credit card statements within 5-7 business days."
+    },
+    "hero": {
+      "title": "Refund Request"
+    },
+    "ticketStep": {
+      "title": "Please provide your purchase information.",
+      "description": "Please allow 5-7 days for the refund to appear on your credit card statement."
+    }
+  }
+]

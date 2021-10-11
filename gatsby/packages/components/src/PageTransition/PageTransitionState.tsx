@@ -1,0 +1,341 @@
+/** @jsx jsx */
+import invariant from 'invariant';
+import type {ReactChild, ReactElement, ReactPortal, RefObject} from 'react';
+import type {AnimationResult} from '@react-spring/web';
+import type {State, StateCreator} from '@tishman/components';
+
+/** This transition is being mounted. */
+export const MOUNT = 'mount';
+/** This transition is entering or has entered. */
+export const ENTER = 'enter';
+/** This transition will expire after animating. */
+export const LEAVE = 'leave';
+
+/** A phase of a page transition. */
+export type PageTransitionPhase = typeof MOUNT | typeof ENTER | typeof LEAVE;
+
+export interface TransitionHandle<T = unknown> {
+  pause(): void;
+  update(
+    phase: typeof ENTER | typeof LEAVE,
+    fromPhase: PageTransitionPhase,
+  ): Promise<AnimationResult<T>>;
+}
+
+/** A valid page element. */
+type PageTransitionElement = ReactChild | ReactPortal;
+
+/** A data object representing a transition for a page. */
+export interface PageTransitionRecord {
+  /** A unique key identifiying this page. */
+  readonly key: string;
+  /** The current page transition phase. */
+  readonly phase: PageTransitionPhase;
+}
+
+/** A token for a running or previously run transition. */
+export class PageTransitionToken {
+  private _cancelled = false;
+  private _finished = false;
+  constructor(
+    init: (finish: () => void) => void,
+    private _onCancel?: () => void,
+  ) {
+    init(() => {
+      invariant(!this._cancelled, `Cannot finish a cancelled transition!`);
+      this._finished = true;
+    });
+  }
+  get finished(): boolean {
+    return this._finished;
+  }
+  get cancelled(): boolean {
+    return this._cancelled;
+  }
+  cancel(): void {
+    invariant(!this._finished, `Cannot cancel a finished transition!`);
+    this._cancelled = true;
+    this._onCancel?.();
+  }
+}
+
+/** The current state of a transition managed by `PageTransition`. */
+export interface PageTransitionState extends State {
+  /** The stack of page transition records, indexed by transition key. */
+  readonly stack: ReadonlyMap<string, PageTransitionRecord>;
+  /** The newest page on the stack. */
+  readonly head: PageTransitionRecord | null;
+  /** The second newest page on the stack. */
+  readonly previous: PageTransitionRecord | null;
+  /** Whether or not a transition is currently running. */
+  readonly atRest: boolean;
+  /** All of the pages on the stack older than `head`. */
+  tail: () => ReadonlyArray<PageTransitionRecord>;
+  /**
+   * Moves the `PageTransitionRecord` for the given `element`
+   * to the head of the transition stack, or creates and pushes
+   * a new record, if one cannot be found.
+   */
+  push: (element: PageTransitionElement | boolean | null | undefined) => void;
+  /** Gets a `PageTransitionRecord` for the given `element`. */
+  get: (
+    element: PageTransitionElement | boolean | null | undefined,
+  ) => PageTransitionRecord | null;
+  /** Gets the element for the given `PageTransitionRecord`. */
+  getElement: (key: string) => PageTransitionElement | null;
+  /** Add a ref to a transition handle for the given transition key. */
+  addTransition: (key: string, handle: RefObject<TransitionHandle>) => void;
+  /** Remove a ref to a transition handle for the given transition key. */
+  removeTransition: (key: string, handle: RefObject<TransitionHandle>) => void;
+  /**
+   * Triggers the appropriate transition animation for the given state.
+   *
+   * Returns a cancel token that can be used to prevent the state
+   * from updating after animations.
+   *
+   * If the animation completes, and the transition has not been cancelled,
+   * the 'tail' of records is removed from state, leavng only the 'head' record.
+   */
+  runTransition: (
+    /** A cancel token from a previous transition.
+     *
+     * The previous transition will be cancelled
+     * if a new transition token is going to be returned.
+     * otherwise the previous token will be returned.
+     */
+    previousTransition?: PageTransitionToken | null,
+  ) => PageTransitionToken | null;
+}
+
+/**
+ * Creates a new `PageTransitionState`.
+ */
+export const createPageTransitionState = (
+  /** The `set` function for the associated store, provided by `createStore`. */
+  set: Parameters<StateCreator<PageTransitionState>>[0],
+  /** The `get` function for the associated store, provided by `createStore`. */
+  get: Parameters<StateCreator<PageTransitionState>>[1],
+): PageTransitionState => {
+  /**
+   * A map of transition keys to sets of transition handle refs.
+   * This is used to keep track of transitions that should be run
+   * when the element transitions.
+   */
+  const transitionMap = new Map<string, Set<RefObject<TransitionHandle>>>();
+
+  /**
+   * A map of transition keys to elements.
+   * This is used to lookup elements by key when rendering.
+   */
+  const elementMap = new Map<string, PageTransitionElement>();
+
+  /** A weak map of elements to keys.
+   * This is used to keep track of keys that are autogenerated so
+   * that new keys aren't subsequently being generated for existing elements.
+   */
+  const keyMap = new WeakMap<ReactElement | ReactPortal, string>();
+
+  /**
+   * A a number that will be incremented
+   * whenever a record is created for an element
+   * that does not have a transition key.
+   */
+  let autoKey = 0;
+
+  /**
+   * Gets a string key for the given element.
+   *
+   * The key is determined via the following order of precedence:
+   *   - If the element is a primitive type like `string` or `number`,
+   *     the element value is used.
+   *   - If the element has a `pageTransitionKey` prop, that value is used.
+   *   - If the element has a React `key`, that value is used.
+   *   - Failing all of the above, an auto-incrementing key is used.
+   */
+  const getPageTransitionKey = (
+    /** The element from which to extract a key string. */
+    element: PageTransitionElement,
+  ): string => {
+    if (typeof element === 'object') {
+      let key =
+        (element.props?.pageTransitionKey as string) ??
+        (element.key as string) ??
+        keyMap.get(element) ??
+        null;
+
+      if (key === null) {
+        key = String(autoKey++);
+        keyMap.set(element, key);
+      }
+
+      return key;
+    }
+    return String(element);
+  };
+
+  return {
+    stack: new Map(),
+    head: null,
+    previous: null,
+    atRest: false,
+    tail: () => {
+      const state = get();
+      const tail = Array.from(state.stack.values());
+      return state.head ? tail.slice(0, -1) : tail;
+    },
+    get: (element) => {
+      if (element == null || typeof element === 'boolean') {
+        return null;
+      } else {
+        const key = getPageTransitionKey(element);
+        return get().stack.get(key) ?? null;
+      }
+    },
+    getElement: (key) => {
+      const recordToGet = get().stack.get(key);
+      if (recordToGet) return elementMap.get(key) ?? null;
+      return null;
+    },
+    push: (element) => {
+      const state = get();
+      if (element == null || typeof element === 'boolean') {
+        if (state.head !== null) {
+          set((nextState) => {
+            nextState.previous = nextState.head;
+            nextState.head = null;
+          });
+        }
+      } else {
+        const key = getPageTransitionKey(element);
+        const record = state.stack.get(key) ?? {key, phase: MOUNT};
+        elementMap.set(key, element);
+        if (record !== state.head) {
+          set((nextState) => {
+            nextState.previous = state.head;
+            nextState.head = record;
+            nextState.stack.delete(key);
+            nextState.stack.set(key, record);
+          });
+        }
+      }
+    },
+    addTransition: (key, handle) => {
+      const transitionSet = transitionMap.get(key) ?? new Set();
+      transitionSet.add(handle);
+      transitionMap.set(key, transitionSet);
+    },
+    removeTransition: (key, handle) => {
+      const transitionSet = transitionMap.get(key);
+      if (transitionSet) transitionSet.delete(handle);
+      if (!transitionSet?.size) transitionMap.delete(key);
+    },
+    runTransition: (previousTransition?: PageTransitionToken | null) => {
+      let state = get();
+      /** Whether or not the stack of records is mutated. */
+      let changed = false;
+      let fromHeadPhase: PageTransitionPhase;
+      if (state.head) {
+        fromHeadPhase = state.head.phase;
+        changed = changed || fromHeadPhase !== ENTER;
+      }
+
+      /** An array of records that should POP after the transition completes. */
+      const fromTailPhase: PageTransitionPhase[] = [];
+      state.tail().forEach((record) => {
+        fromTailPhase.push(record.phase);
+        changed = changed || record.phase !== LEAVE;
+      });
+
+      // If nothing has changed about the state by this point,
+      // then we don't need to cancel or run any transitions,
+      // so just bail early.
+      if (!changed) {
+        if (!previousTransition && !state.atRest) {
+          set((nextState) => void (nextState.atRest = true));
+        }
+        return previousTransition ?? null;
+      }
+
+      set((nextState) => {
+        nextState.stack.forEach((record) => {
+          if (record.key === nextState.head?.key) {
+            record.phase = ENTER;
+            nextState.head = record;
+          } else {
+            record.phase = LEAVE;
+            if (record.key === nextState.previous?.key) {
+              nextState.previous = record;
+            }
+          }
+        });
+      });
+
+      // Cancel the previous transition, if necessary.
+      if (!previousTransition?.finished) previousTransition?.cancel();
+
+      // Get updated state.
+      state = get();
+
+      const animations: Promise<AnimationResult | undefined>[] = [];
+
+      if (state.head) {
+        transitionMap.get(state.head.key)?.forEach((handle) => {
+          if (handle.current) {
+            animations.push(handle.current.update(ENTER, fromHeadPhase));
+          }
+        });
+      }
+
+      state.tail().forEach((record, i) => {
+        transitionMap.get(record.key)?.forEach((handle) => {
+          if (handle.current) {
+            animations.push(handle.current.update(LEAVE, fromTailPhase[i]));
+          }
+        });
+      });
+
+      /** Pops the tail of stale records off the stack. */
+      const popTail = () => {
+        set((nextState) => {
+          nextState.tail().forEach(({key}) => {
+            elementMap.delete(key);
+            transitionMap.delete(key);
+          });
+          nextState.stack = new Map<string, PageTransitionRecord>();
+          nextState.previous = null;
+          nextState.atRest = true;
+          if (state.head) nextState.stack.set(state.head.key, state.head);
+        });
+      };
+
+      // If there are no animations to run,
+      // pop the tail records and bail early.
+      if (!animations.length) {
+        popTail();
+        return null;
+      }
+
+      // If we made it this far, we have animations to run,
+      // so create a token for this new transition.
+      set((nextState) => void (nextState.atRest = false));
+      const transitionToken = new PageTransitionToken(
+        function initToken(finish) {
+          // Run the transition animations
+          // and pop the tail records when they complete.
+          void Promise.all(animations).then(() => {
+            if (!transitionToken.cancelled) {
+              finish();
+              popTail();
+            }
+          });
+        },
+        function onCancel() {
+          state.stack.forEach(({key}) =>
+            transitionMap.get(key)?.forEach(({current}) => current?.pause()),
+          );
+        },
+      );
+      return transitionToken;
+    },
+  };
+};

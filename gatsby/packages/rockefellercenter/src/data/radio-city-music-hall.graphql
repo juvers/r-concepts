@@ -1,0 +1,32 @@
+type DataJson implements Node @infer {
+  meta: Meta!
+  radioCityHero: RadioCityMusicHallHero!
+  heroCTA: RadioCityMusicHallHeroCTA!
+
+  location: RadioCityMusicHallHeroLocation!
+  contactsInfo: [RadioCityMusicHallContact!]!
+
+  imageCallout: ImageCallout!
+  calloutGrid: CalloutGrid!
+  crossLinks: [CrossLink!]!
+}
+type RadioCityMusicHallHero {
+  image: ImageWithAlt!
+  links: [Link!]
+  contactLinkUrl: String
+}
+type RadioCityMusicHallHeroCTA {
+  title: String!
+  bodyCopy: String!
+}
+
+type RadioCityMusicHallHeroLocation {
+  title: String!
+  address1: String!
+  address2: String!
+}
+
+type RadioCityMusicHallContact {
+  type: String!
+  value: String!
+}

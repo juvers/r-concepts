@@ -1,0 +1,102 @@
+{
+  "id": "radio-city-music-hall",
+  "meta": {
+    "title": "Radio City Music Hall | Iconic NYC Attractions",
+    "description": "Rock Center has the best things to do in NYC. Top attractions, best skyline views from the Top of the Rock, The Rink, Rainbow Room, art, history, great dining and shopping."
+  },
+  "heroCTA": {
+    "title": "Hall of fame.",
+    "bodyCopy": "Famous for its history, its architecture, its entertainment — no trip to Rockefeller Center is complete without visiting Radio City Music Hall."
+  },
+  "radioCityHero": {
+    "links": [
+      {
+        "label": "Buy Tickets",
+        "url": "https://www.ticketmaster.com/radio-city-music-hall-tickets-new-york/venue/491523"
+      }
+    ],
+    "contactLinkUrl": "/contact/general-inquiries/",
+    "image": {
+      "src": "../images/rc-radiocity-hero.jpg",
+      "alt": "Radio City Music Hall"
+    }
+  },
+  "location": {
+    "title": "Radio City Music Hall",
+    "address1": "1260 Avenue of the Americas",
+    "address2": "New York, NY 10020"
+  },
+  "contactsInfo": [
+    {
+      "type": "phone",
+      "value": "1.866.858.0007"
+    }
+  ],
+
+  "crossLinks": [
+    {
+      "title": "The Holidays",
+      "image": {
+        "src": "../images/rockefeller-christmas-tree-horizontal.jpg",
+        "alt": "The famous Rockefeller Center Christmas Tree and Prometheus sculpture by The Rink."
+      },
+      "caption": "Celebrate the holidays with us. It's a tradition that's become as familiar as 'ho, ho, ho!'",
+      "link": {
+        "label": "Explore the Holidays",
+        "url": "/holidays"
+      }
+    },
+    {
+      "image": {
+        "src": "../images/PE_Rink.jpg",
+        "alt": "Ice skaters on the rink at Rockefeller Center"
+      },
+      "title": "The Rink",
+      "caption": "Nothing says “Holidays in New York” quite like a trip around the iconic rink underneath the Christmas Tree and the Prometheus statue.",
+      "link": {
+        "url": "/attractions/the-rink-at-rockefeller-center",
+        "label": "Visit The Rink"
+      }
+    }
+  ],
+  "imageCallout": {
+    "title": "Christmas Spectacular",
+    "description": "Christmas Spectacular Starring the Radio City Rockettes presented by Chase is a one-of-a-kind holiday celebration that brings together family, friends, and loved ones. You’ll be dazzled by the Rockettes’ brilliant dance numbers and by Radio City aglow with the joy of the season. Currently canceled for the 2020 holiday season, the Christmas Spectacular hopes to return in 2021.",
+    "link": {
+      "url": "https://www.rockettes.com/christmas",
+      "label": "Visit the Rockettes"
+    },
+    "image": {
+      "src": "../images/christmas-spectacular.jpg",
+      "alt": "Christmas Spectacular"
+    },
+    "caption": ""
+  },
+  "calloutGrid": {
+    "title": "",
+    "cards": [
+      {
+      "image": {
+        "src": "../images/stage-door-tour.jpg",
+        "alt": "Holidays"
+      },
+        "title": "Radio City Stage Door Tour",
+        "description": "Go behind-the-scenes at Radio City Music Hall, and discover why it’s called the “Showplace of the Nation.” This 75-minute comprehensive tour even includes meeting a Rockette.",
+        "links":[
+          { "url": "https://www.msg.com/venue-tours/radio-city-music-hall", "label": "Buy Tickets" }
+        ]
+      },
+      {
+      "image": {
+        "src": "../images/sweets-gifts.jpg",
+        "alt": "Radio City Sweets & Gifts"
+      },
+        "title": "Radio City Sweets & Gifts",
+        "description": "The show never ends with keepsakes, souvenirs, and sweets you can bring home to enjoy anytime you want.",
+      "links":[
+        { "url": "/dine/radio-city-music-hall-gifts", "label": "Shop Now" }
+      ]
+      }
+    ]
+  }
+}

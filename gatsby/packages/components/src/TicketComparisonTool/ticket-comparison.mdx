@@ -1,0 +1,117 @@
+---
+name: Ticket Comparison Tool
+menu: Components
+route: /components/ticket-comparison-tool
+---
+
+import {Props, Playground} from 'docz';
+import {useState} from 'react';
+import {getMockFluidImage} from '@tishman/docs';
+import {TicketComparisonTool} from '@tishman/components';
+
+# Ticket Comparison Tool
+
+Used on the Top of the Rock page to compare each ticket offering.
+
+## Properties
+
+<Props of={TicketComparisonTool} />
+
+## Basic Usage
+
+```ts
+import {TicketComparisonTool} from '@tishman/components';
+```
+
+<Playground>
+  {() => {
+    const ticketFeatures = {
+      admission: 'Admission to Top of the Rock.',
+      views: '360-degree unobstructed views.',
+      levels: '3 levels of indoor and outdoor observation decks.',
+      timeLimit: 'No time limit––stay as long as you like during operating hours.',
+      entry: 'Immediate entry, even if sold out.',
+      elevator: 'Priority elevator access.',
+      merchandise: '20% Off Top of the Rock merchandise.',
+      schedule: 'Schedule your date, come anytime.',
+      visit: 'Visit 6 NYC attractions, including Top of the Rock Observation Deck.',
+      save: 'Save 42%.',
+      valid: 'Valid for 30 days.',
+      choice: 'Have your choice of 3 out of 12 top NYC attractions, including Top of the Rock Observation Deck, to visit over a 9-day period.',
+      saveUpTo: 'Save up to 30%.'
+    };
+    const tickets = [
+      {
+        src: getMockFluidImage({width: 316, height: 212}).childImageSharp.fluid,
+        title: 'Top of the Rock General Admission',
+        label: 'Buy Tickets',
+        price:'$39',
+        ticketFeatures: {
+          admission: true,
+          views: true,
+          levels: true,
+          timeLimit: true,
+        }
+      },
+      {
+        src: getMockFluidImage({width: 316, height: 212}).childImageSharp.fluid,
+        title: 'Top of the Rock VIP Access Pass',
+        label: 'Buy Tickets',
+        price:'$39',
+        ticketFeatures: {
+          admission: true,
+          views: true,
+          levels: true,
+          timeLimit: true,
+          entry: true,
+          elevator: true,
+          merchandise: true,
+          schedule: true,
+        }
+      },
+      {
+        src: getMockFluidImage({width: 316, height: 212}).childImageSharp.fluid,
+        title: 'CityPASS',
+        label: 'Buy Tickets',
+        price:'$39',
+        ticketFeatures: {
+          admission: true,
+          views: true,
+          levels: true,
+          timeLimit: true,
+          visit: true,
+          save: true,
+          valid: true
+        }
+      },
+      {
+        src: getMockFluidImage({width: 316, height: 212}).childImageSharp.fluid,
+        title: 'C3',
+        label: 'Buy Tickets',
+        price:'$39',
+        ticketFeatures: {
+          admission: true,
+          views: true,
+          levels: true,
+          timeLimit: true,
+          valid: true,
+          choice: true,
+          saveUpTo: true
+        }
+      },
+    ];
+    return <TicketComparisonTool title="Compare our offerings."
+  subTitle="Choose two to compare"
+  passes={{
+    caption: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+    eiusmod tempor.`,
+    link: {
+      url: '#',
+      label: 'learn more',
+    },
+  }} ticketFeatures={ticketFeatures} tickets={tickets} />
+}}
+
+
+</Playground>
+

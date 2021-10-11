@@ -1,0 +1,38 @@
+{
+  "id": "business-detail",
+  "wideCta": {
+    "title": "The Center Newsletter",
+    "caption": "Receive important seasonal news and updates, learn about store openings, and get special offers.",
+    "link": {
+      "url": "/the-center-newsletter/",
+      "label": "Subscribe"
+    }
+  },
+  "featuredStories": {
+    "title": "The Center Magazine.",
+    "caption": "See the style, the details, and the smiles from events across Rockefeller Center.",
+    "link": {"url": "/magazine/", "label": "Read the Stories"}
+  },
+  "calloutGrid": {
+    "cards": [
+      {
+        "image": {
+          "src": "../images/Dine-module.jpg",
+          "alt": "A person's hands preparing lobster to eat."
+        },
+        "title": "Dine",
+        "description": "Whether you’re looking for a quick bite, fast casual, or haute cuisine, the dining options at Rockefeller Center reflect the incredibly diverse world of food and flavors you’ll find in New York City.",
+        "links": [{"url": "/dine", "label": "Explore Dining"}]
+      },
+      {
+        "image": {
+          "src": "../images/shop-callout.jpg",
+          "alt": "A rack of clothes in a store at Rockefeller Center."
+        },
+        "title": "Shop",
+        "description": "From up-and-coming local brands to the most iconic names in fashion, Rockefeller Center is a world-renowned destination for those who seek style.",
+        "links": [{"url": "/shops", "label": "Explore Shops"}]
+      }
+    ]
+  }
+}

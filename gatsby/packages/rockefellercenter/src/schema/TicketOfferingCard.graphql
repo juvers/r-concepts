@@ -1,0 +1,34 @@
+"""
+A Ticket Offering Card object.
+
+This should be used to type most JSON fields that represent a generic Ticket Offering Card component.
+"""
+type TicketOfferingCard {
+  image: ImageWithAlt!
+  title: String!
+  description: String
+  price: String
+  link: Link
+  ticketFeatures: TicketFeatures
+}
+
+"""
+A TicketFeatures object.
+
+Some Ticket Offering card implimentations include a list of Ticket Features
+"""
+type TicketFeatures {
+  admission: Boolean
+  views: Boolean
+  levels: Boolean
+  timeLimit: Boolean
+  entry: Boolean
+  elevator: Boolean
+  merchandise: Boolean
+  schedule: Boolean
+  visit: Boolean
+  save: Boolean
+  valid: Boolean
+  choice: Boolean
+  saveUpTo: Boolean
+}

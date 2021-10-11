@@ -1,0 +1,8 @@
+dist
+
+node_modules/
+*.tar.gz
+.env.development
+.env.production
+schemas/migrations/*/*.csv
+schemas/migrations/*/images

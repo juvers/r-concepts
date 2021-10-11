@@ -1,0 +1,57 @@
+[
+  {
+    "id": "620-loft-garden",
+    "meta": {
+      "title": "Outdoor Wedding and Event Space | 620 Loft & Garden at Rockefeller Center",
+      "description": "620 Loft & Garden at Rockefeller Center is one of NYC's most sought-after outdoor event spaces. Enjoy an exquisite rooftop setting framed by Manhattan landmarks."
+    },
+    "link": {
+      "url": "/contact/private-events",
+      "label": "Plan an event"
+    }
+  },
+  {
+    "id": "bar-sixtyfive",
+    "meta": {
+      "title": "Private Event Rooftop Venue with Incredible NYC Views | Bar SixtyFive",
+      "description": "Reserve this unique private party space, and enjoy Manhattan's most elevated lounge experience with breathtaking NYC views at the historic Bar SixtyFive."
+    },
+    "link": {
+      "url": "/contact/private-events",
+      "label": "Plan an event"
+    }
+  },
+  {
+    "id": "private-dining-room",
+    "meta": {
+      "title": "Private Dining Room at Rainbow Room | NYC Private Event Space",
+      "description": "Hold your special event 65 stories above NYC in the exclusive Private Dining Room. Impress your guests with personalized attention, walls of windows, and striking views."
+    },
+    "link": {
+      "url": "/contact/private-events",
+      "label": "Plan an event"
+    }
+  },
+  {
+    "id": "rainbow-room",
+    "meta": {
+      "title": "Glamorous Private Dining Room for Unique Events | Rainbow Room",
+      "description": "Plan your special event at the magical Rainbow Room, Rock Center's private dining room unlike any other. Celebrate at a legendary event venue with incredible NYC views."
+    },
+    "link": {
+      "url": "/contact/private-events",
+      "label": "Plan an event"
+    }
+  },
+  {
+    "id": "the-gallery",
+    "meta": {
+      "title": "The Gallery at Rockefeller Center | Midtown Party Venue",
+      "description": "Adjacent to the Rainbow Room, The Gallery is an intimate Rockefeller Center party venue. With views of the Empire State Building, every moment here is larger than life."
+    },
+    "link": {
+      "url": "/contact/private-events",
+      "label": "Plan an event"
+    }
+  }
+]

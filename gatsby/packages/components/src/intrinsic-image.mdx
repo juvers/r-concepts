@@ -1,0 +1,86 @@
+---
+name: IntrinsicImage
+menu: Components
+route: /components/intrinsic-image
+---
+
+import {Props, Playground} from 'docz';
+import {Heading, Text} from 'theme-ui';
+import {IntrinsicImage} from './IntrinsicImage';
+import {getMockFluidImage} from '@tishman/docs';
+
+# IntrinsicImage
+
+This is just like [IntrinsicBox], but using [GatsbyImage] props
+instead of children.
+
+## Properties
+
+In addition to properties available on [GatsbyImage], `IntrinsicBox` accepts:
+
+<Props of={IntrinsicImage} />
+
+## Basic usage
+
+```ts
+import {IntrinsicImage} from '@tishman/components';
+```
+
+### With `ratio`:
+
+<Playground>
+  <IntrinsicImage
+    ratio={16 / 9}
+    fluid={getMockFluidImage({width: 768, height: 1440}).childImageSharp.fluid}
+  />
+</Playground>
+
+### With responsive `ratio` and `minWidth` and `maxWidth`:
+
+<Playground>
+  <IntrinsicImage
+    ratio={[4 / 3, 16 / 9]}
+    minWidth={350}
+    maxWidth={500}
+    fluid={getMockFluidImage({width: 768, height: 1440}).childImageSharp.fluid}
+  />
+</Playground>
+
+### With [GatsbyImage] properties:
+
+<Playground>
+  <IntrinsicImage
+    ratio={16 / 9}
+    fluid={getMockFluidImage({width: 768, height: 1440}).childImageSharp.fluid}
+    Tag="span"
+    durationFadeIn={3000}
+    title="mock image title"
+    alt="A mock image"
+  />
+</Playground>
+
+## FAQ
+
+### GatsbyImage has [aspect ratio], why not use that directly?
+
+You certainly can, but it comes with a few tradeoffs:
+
+- multiple aspect ratios require multiple fluid objects ([Art Direction]
+  in `GatsbyImage` terms), which more tightly couples your image display
+  to the data query, and requires preprocessing of the queried data to
+  apply the correct media queries and/or aspect ratios.
+
+- In responsive scenarios, `GatsbyImage` does not currently render the correct
+  aspect ratio image until after Javascript loads. (See [#24748]).
+
+- When using the same image src multiple times (which you would do to add
+  responsive aspect ratios for the same image), `GatsbyImage` duplicates
+  the keys for distinguishing between `picture` sources, resulting in
+  noisy React warnings (See [#16762]).
+
+[intrinsicbox]: /components/intrinsic-box
+[gatsbyimage]: https://www.gatsbyjs.org/docs/gatsby-image/#gatsby-image-props
+[aspect ratio]: https://www.gatsbyjs.org/tutorial/gatsby-image-tutorial/#aspect-ratio
+[art direction]: https://www.gatsbyjs.org/packages/gatsby-image/#art-directing-multiple-images
+[#24748]: https://github.com/gatsbyjs/gatsby/issues/24748
+[#16762]: https://github.com/gatsbyjs/gatsby/issues/16762

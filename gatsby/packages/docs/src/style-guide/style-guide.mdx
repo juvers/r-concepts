@@ -1,0 +1,275 @@
+---
+name: Style Guide
+route: /style-guide
+---
+
+import {
+  jsx,
+  Styled,
+  Flex,
+  Field,
+  Box,
+  Close,
+  Text,
+  Heading,
+  Link,
+  Button,
+  useThemeUI,
+  Label,
+  Input,
+  Select,
+  Textarea,
+  Radio,
+  Checkbox,
+  Slider,
+  Badge,
+  Alert,
+  Message,
+  Card,
+  Image,
+  NavLink,
+  IconButton,
+  MenuButton,
+  Progress,
+  Donut,
+  Spinner,
+  Avatar,
+  Divider,
+  Container,
+  Grid,
+} from 'theme-ui';
+import {ColorPalette} from '@theme-ui/style-guide';
+import {Typography} from './Typography.tsx';
+import {ComponentGrid} from './ComponentGrid.tsx';
+import ThemeSelect from './ThemeSelect.tsx';
+
+# Style Guide
+
+Tishman projects all share a design language, and this style guide
+describes the grammar of that language.
+
+## Themes
+
+Every component is adaptable to multiple Tishman themes. This means that
+themes can be applied to whole sites, individual pages, or specific components.
+
+Tishman theme names follow the pattern `"<Attraction> [Variant]"`,
+where `"<Attraction>"` refers to one of the primary Tishman properties, like
+"Rockefeller Center", "Top of the Rock", "The Rink", and `"[Variant]"`
+optionally refers to the dominant color or feature of the theme,
+usually the theme's background color.
+
+### Available Themes
+
+Select a theme to see how the details of style guide adapt.
+
+<ThemeSelect />
+
+<Typography />
+
+## Colors
+
+<ColorPalette
+  omit={[
+    'modes',
+    'sidebar',
+    'header',
+    'props',
+    'playground',
+    'blockquote',
+    'link',
+    'border',
+  ]}
+/>
+
+## Components
+
+Examples of how [ThemeUI Components] and their [variants]
+are styled by the selected theme.
+
+### Heading
+
+<ComponentGrid>{() => <Heading key="heading">heading</Heading>}</ComponentGrid>
+
+### Text
+
+<ComponentGrid variants="text" omit={['default']}>
+  {(variant = 'default') => (
+    <Text key={variant} variant={variant}>
+      {variant}
+    </Text>
+  )}
+</ComponentGrid>
+
+### NavLink
+
+<ComponentGrid>{() => <NavLink key="nav">nav</NavLink>}</ComponentGrid>
+
+### Link
+
+<ComponentGrid variants="links" omit={['nav']}>
+  {(variant = 'styles.a') => (
+    <Link key={variant} variant={variant}>
+      {variant}
+    </Link>
+  )}
+</ComponentGrid>
+
+### CloseButton
+
+<ComponentGrid>{() => <Close key="close" title="close" />}</ComponentGrid>
+
+### MenuButton
+
+<ComponentGrid>{() => <MenuButton key="menu" title="menu" />}</ComponentGrid>
+
+### IconButton
+
+<ComponentGrid>
+  {() => (
+    <IconButton key="icon" title="icon">
+      icon
+    </IconButton>
+  )}
+</ComponentGrid>
+
+### Button
+
+<ComponentGrid variants="buttons" omit={['primary', 'close', 'icon', 'menu']}>
+  {(variant = 'primary') => (
+    <Button key={variant} variant={variant}>
+      {variant}
+    </Button>
+  )}
+</ComponentGrid>
+
+### Field
+
+<ComponentGrid>
+  {() => <Field name="field" label="field" placeholder="field" />}
+</ComponentGrid>
+
+### Label
+
+<ComponentGrid>{() => <Label>label</Label>}</ComponentGrid>
+
+### Input
+
+<ComponentGrid>{() => <Input placeholder="input" />}</ComponentGrid>
+
+### Select
+
+<ComponentGrid>
+  {() => (
+    <Select>
+      <option>select</option>
+    </Select>
+  )}
+</ComponentGrid>
+
+### Textarea
+
+<ComponentGrid>{() => <Textarea placeholder="textarea" />}</ComponentGrid>
+
+### Radio
+
+<ComponentGrid>
+  {() => (
+    <Label>
+      <Radio />
+      radio
+    </Label>
+  )}
+</ComponentGrid>
+
+### Checkbox
+
+<ComponentGrid>
+  {() => (
+    <Label>
+      <Checkbox />
+      checkbox
+    </Label>
+  )}
+</ComponentGrid>
+
+### Slider
+
+<ComponentGrid>{() => <Slider />}</ComponentGrid>
+
+### Badge
+
+<ComponentGrid variants="badges" omit={['primary']}>
+  {(variant = 'primary') => (
+    <Badge key={variant} variant={variant}>
+      {variant}
+    </Badge>
+  )}
+</ComponentGrid>
+
+### Alert
+
+<ComponentGrid variants="alerts" omit={['primary']}>
+  {(variant = 'primary') => (
+    <Alert key={variant} variant={variant}>
+      {variant}
+    </Alert>
+  )}
+</ComponentGrid>
+
+### Message
+
+<ComponentGrid variants="messages">
+  {(variant = 'message') => (
+    <Message key={variant} variant={variant}>
+      {variant}
+    </Message>
+  )}
+</ComponentGrid>
+
+### Card
+
+<ComponentGrid variants="cards" omit={['primary']}>
+  {(variant = 'primary') => (
+    <Card key={variant} variant={variant}>
+      {variant}
+    </Card>
+  )}
+</ComponentGrid>
+
+### Avatar
+
+<ComponentGrid>
+  {() => <Avatar src={`https://via.placeholder.com/480x480.png?text=avatar`} />}
+</ComponentGrid>
+
+### Image
+
+<ComponentGrid variants="images" omit={['avatar']}>
+  {(variant = 'image') => (
+    <Image
+      key={variant}
+      variant={variant}
+      src={`https://via.placeholder.com/640x480.png?text=${variant}`}
+    />
+  )}
+</ComponentGrid>
+
+### Progress
+
+<ComponentGrid>{() => <Progress max={1} value={1 / 2} />}</ComponentGrid>
+
+### Donut
+
+<ComponentGrid>{() => <Donut value={1 / 3} />}</ComponentGrid>
+
+### Spinner
+
+<ComponentGrid>{() => <Spinner />}</ComponentGrid>
+
+### Divider
+
+<ComponentGrid>{() => <Divider />}</ComponentGrid>
+
+[themeui components]: https://theme-ui.com/components
+[variants]: https://theme-ui.com/components/variants

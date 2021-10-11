@@ -1,0 +1,18 @@
+{
+  "extends": "../../tsconfig",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~*": ["src/*", "../components/src/*"],
+      "*": ["*", "../types/*"]
+    },
+    "plugins": [
+      {
+        "name": "ts-graphql-plugin",
+        "schema": "./__generated__/gatsby-introspection.graphql",
+        "tag": "graphql"
+      }
+    ]
+  },
+  "include": ["**/*", "../components/**/*", ".eslintrc.js"]
+}

@@ -1,0 +1,61 @@
+---
+name: Text Variants
+menu: Components
+route: /components/text-variants
+---
+
+import {Heading, Text, Styled} from 'theme-ui';
+import {Playground} from 'docz';
+
+# Text Variants
+
+### Example using ThemeUi Heading component
+
+(Primitive heading component, defaults to `h2`.)
+
+```ts
+import {Heading, Styled} from 'theme-ui';
+
+<Heading variant="heroTitle">heroTitle</Heading>;
+
+<Styled.h1>Using Styled syntax</Styled.h1>;
+<Heading variant="styles.h1">Using styles.h1 syntax</Heading>;
+```
+
+### Example using ThemeUi Text component
+
+(Primitive typographic component.)
+
+```ts
+import {Text} from 'theme-ui';
+
+<Text variant="mediumP">mediumP</Text>;
+```
+
+### Example using ThemeUi Styled component
+
+(Styled.h1 to Styled.h5 + Styled.p)
+
+```ts
+import {Styled} from 'theme-ui';
+
+<Styled.h1>Using Styled syntax</Styled.h1>;
+```
+
+## Playground
+
+<Playground>
+  <Heading variant="heroTitle">heroTitle</Heading>
+  <Heading variant="heroTitleSmall">heroTitleSmall</Heading>
+  <Heading variant="styles.h1">styles.h1</Heading>
+  <Heading variant="styles.h2">styles.h2</Heading>
+  <Heading variant="styles.h3">styles.h3</Heading>
+  <Heading variant="styles.h4">styles.h4</Heading>
+  <Text variant="largeP">largeP</Text>
+  <Text variant="mediumP">mediumP</Text>
+  <Text variant="smallP">smallP</Text>
+  <Text variant="styles.p">styles.p</Text>
+  <Styled.h1>Using Styled.h1 syntax</Styled.h1>
+  <Heading variant="styles.h1">Using styles.h1 syntax</Heading>;
+
+</Playground>

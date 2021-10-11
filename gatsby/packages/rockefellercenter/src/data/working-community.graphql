@@ -1,0 +1,45 @@
+type DataJson implements Node @infer {
+  meta: Meta!
+  workingCommunityHero: WorkingCommunityHero!
+  workingCommunityFullCard: WorkingCommunityFullCard!
+  workingCommunityCalloutGrid: WorkingCommunityCalloutGrid!
+  workingCommunityFeaturedGallery: FeaturedGallery!
+  crosslinks: CrossLink!
+}
+
+type WorkingCommunityHero {
+  title: String!
+  caption: String!
+  image: ImageWithAlt!
+}
+
+type WorkingCommunityFullCard {
+  image: ImageWithAlt!
+  title: String!
+  caption: String
+  description: String!
+  links: [Link!]!
+}
+
+type WorkingCommunityCalloutGrid {
+  cards: [CalloutGridCard!]!
+  appDownloadCard: AppDownloadCard!
+}
+
+type AppDownloadCard {
+  title: String!
+  caption: String!
+  downloadText: String!
+  link: Link!
+  appDownloadData: AppDownloadData!
+}
+
+type AppDownloadData {
+  appStore: AppDownloadDataItem!
+  googlePlay: AppDownloadDataItem!
+}
+
+type AppDownloadDataItem {
+  link: String!
+  image: ImageWithAlt!
+}

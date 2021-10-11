@@ -1,0 +1,9 @@
+type DataJson implements Node @infer {
+  meta: Meta!
+  artHero: ArtHero!
+}
+
+type ArtHero {
+  title: String!
+  bodyCopy: String!
+}

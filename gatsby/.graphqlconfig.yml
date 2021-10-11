@@ -1,0 +1,10 @@
+projects:
+  rockefellercenter:
+    schemaPath: "./packages/rockefellercenter/__generated__/gatsby-introspection.json"
+    documents:
+      - "./packages/rockefellercenter/__generated__/gatsby-plugin-documents.graphql"
+    includes:
+      - "./packages/rockefellercenter/src/**/*.{graphql,js,jsx,ts,tsx}"
+    extensions:
+      endpoints:
+        default: "http://localhost:5000/___graphql"

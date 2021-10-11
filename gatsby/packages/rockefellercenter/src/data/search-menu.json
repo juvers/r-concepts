@@ -1,0 +1,10 @@
+{
+  "id": "search-menu",
+  "searchSuggestionLinks": [
+    {"url": "/attractions/top-of-the-rock-observation-deck", "label": "Top of the Rock"},
+    {
+      "url": "/holidays/rockefeller-center-christmas-tree-lighting",
+      "label": "Christmas Tree"
+    }
+  ]
+}

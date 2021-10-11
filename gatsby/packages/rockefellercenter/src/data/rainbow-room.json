@@ -1,0 +1,302 @@
+{
+  "id": "rainbow-room",
+  "hero": {
+    "links": [
+      {
+        "url": "/contact/rainbow-room",
+        "label": "Plan an Event"
+      }
+    ],
+    "contactLinkUrl": "/contact/rainbow-room"
+  },
+  "featuredGallery": {
+    "title": "Event Spaces",
+    "content": [
+      {
+        "category": "Rainbow Room",
+        "image": {
+          "src": "../images/RR_gallery_rr.jpg",
+          "alt": "Historic private event space at Rainbow Room with NYC skyline views."
+        },
+        "caption": "Rainbow Room is known for legendary occasions. Graced by presidents, dignitaries, and the brightest stars in entertainment, events held here have defined what it means to celebrate in NYC. And you can add yours to the list.",
+        "links": [
+          {"url": "/private-events/rainbow-room", "label": "Learn more"}
+        ]
+      },
+      {
+        "category": "The Gallery",
+        "image": {
+          "src": "../images/GAL_RR_Barlow D3X5681_90.jpg",
+          "alt": "Historic private event space at Rainbow Room with NYC skyline views."
+        },
+        "caption": "With the Empire State Building serving as your backdrop, The Gallery, adjacent to the Rainbow Room, is perfect for pre-event space or intimate gatherings.",
+        "links": [{"url": "/private-events/the-gallery", "label": "Learn more"}]
+      },
+      {
+        "category": "Private Dining Room",
+        "image": {
+          "src": "../images/RR_Private Dining Room.jpg",
+          "alt": "Historic private event space at Rainbow Room with NYC skyline views."
+        },
+        "caption": "Sixty-five stories above Midtown Manhattan, the Private Dining Room offers personalized attention and walls of windows with striking views to the south and west.",
+        "links": [
+          {"url": "/private-events/private-dining-room", "label": "Learn more"}
+        ]
+      },
+      {
+        "category": "Bar SixtyFive",
+        "image": {
+          "src": "../images/B65_RR_Barlow_Sept_27_2014_D3X4960-Revised_20.jpg",
+          "alt": "Historic private event space at Rainbow Room with NYC skyline views."
+        },
+        "caption": "Enjoy a rooftop bar experience above the rest. Offering a modern twist on old-world glamour for cocktails and American bistro fare, Bar SixtyFive is perfect for post-work gatherings, celebrations, or a night out with friends.",
+        "links": [
+          {"url": "/private-events/bar-sixtyfive", "label": "Learn more"}
+        ]
+      }
+    ]
+  },
+  "history": {
+    "title": "History",
+    "caption": "Created to be the pinnacle of New York dining and nightlife, the history of the Rainbow Room is as dazzling as the city lights that surround it.",
+    "cards": [
+      {
+        "type": "PORTRAIT",
+        "title": "Aug. 22, 1934",
+        "caption": "The New York Times headline announced “Nightclub to open atop RCA Building.” The article went on to report, “The dining room two stories high, will be known as the ‘Stratosphere’ and will open with an extensive array of entertainment.”",
+        "image": {
+          "src": "../images/rainbow-room-1934_August.jpg",
+          "alt": "Private event with live music and dance at Rainbow Room in August 1934."
+        }
+      },
+      {
+        "type": "PORTRAIT",
+        "title": "Sept. 14, 1934",
+        "caption": "The opening of the Rainbow Room was officially announced. The name was changed from “Stratosphere” because, according to The New Yorker, “the Rockefellers decided that it (the name) ... sounded too much like an ordinary nightclub.”",
+        "image": {
+          "src": "../images/rainbow-room-1934_September.jpg",
+          "alt": "Rainbow Room high dining on the Rockefeller Center roof card from 1934."
+        }
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "July 26, 1938",
+        "caption": "The Rainbow Room offers salmon for dinner that was caught on Canada’s Gaspe Peninsula in the morning, shipped, and served that night––a New York first.",
+        "image": {
+          "src": "../images/rainbow-room-1938_July.jpg",
+          "alt": "Busy chefs cooking in the Rainbow Room kitchen in July 1938."
+        }
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "Dec. 31, 1942-Oct. 10, 1950",
+        "caption": "Following Pearl Harbor, as the nation’s energies went into the war effort, the dancing at the Rainbow Room stopped and its restaurant closed. In the image above, Mayor F.H. LaGuardia tests out the new super-siren on the Rockefeller Center Observation Deck in preparation for wartime emergencies.",
+        "image": {
+          "src": "../images/victory-siren-1942-1950.jpg",
+          "alt": "The Victory Siren getting installed at the top of the RCA building in Rockefeller Center in 1942."
+        },
+        "didYouKnow": "May 12, 1964. The Rainbow Room hosts the opening-night party for the cast and crew of Funny Girl, starring the 21-year-old Barbra Streisand."
+      },
+      {
+        "type": "PORTRAIT",
+        "title": "Nov. 16, 1965",
+        "caption": "Le Cercle d'Or presents The Mod Ball at the Rainbow Room. In attendance were the King Bees, the Losers, the Rainmakers, the Tyree Glenn, Jrs., the Berets, and the Toys, as well as Andy Warhol.",
+        "image": {
+          "src": "../images/rainbow-room-1965_November.jpg",
+          "alt": "Poster of the MOD Ball at the Rainbow Room in November 1965."
+        }
+      },
+      {
+        "type": "PORTRAIT",
+        "title": "1979",
+        "caption": " The newly-designed South Lounge of the Rainbow Room/Rainbow Grill featured an elevated dining area enhancing the sweeping skyline view of Manhattan. The renovations began on July 31, 1979 for completion in September of the same year.",
+        "image": {
+          "src": "../images/rainbow-room-1979.jpg",
+          "alt": "A sketch of a lively restaurant scene."
+        }
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "Jan. 31, 1984",
+        "caption": "On this night, the Rainbow Room kicked off a year-long celebration of its 50th Year with the famed Woody Herman and His All Stars. This was the first of many gala events featuring the Big Band Sounds of the ‘30s and ‘40s.",
+        "image": {
+          "src": "../images/rainbow-room-1984_January.jpg",
+          "alt": "Sign prepared for the Rainblow Room's 50th Year celebration in January 1984."
+        }
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "Dec. 9, 1987",
+        "caption": "The first night of a two-night black-tie gala bash marking the restoration and reopening of the Rainbow Room. The guest list on night #1 was said to have more glamour than the official opening on October 3, 1934. It included Brooke Astor, Judy and Samuel Peabody, James Nederlander, Donald Marron, John V. Lindsay, Barbara Walters, Michael and Diandre Douglas, Liza Minnelli, and Mikhail Baryshnikov.",
+        "image": {
+          "src": "../images/mikhail-baryshnikov.jpg",
+          "alt": "Mikhail Baryshnikov photographed at a NYC event in 1987."
+        }
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "Feb. 1995",
+        "caption": "Dale DeGroff, the father of the cocktail renaissance, managed the Rainbow Room bar for 12 years, and orchestrated the first ever cocktail dinners where each course of the meal was complimented by a custom cocktail.",
+        "image": {
+          "src": "../images/martini-glass.jpg",
+          "alt": "Fruity martini with blueberry garnish."
+        },
+        "didYouKnow": "It was at the Rainbow Room where the Cosmopolitan’s superstardom began. Its popularity skyrocketed when Madonna was pictured sipping one at the Rainbow Room Grammy party."
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "1998-2009",
+        "caption": "The Cipriani family assumes operation of the Rainbow Room. Prior to reopening in 2014, Rainbow Room was last open to the public as a nightclub on June 5, 2009 and a final brunch was served on Father’s Day, 2009.",
+        "image": {
+          "src": "../images/rainbow-room-neon-sign.jpg",
+          "alt": "Neon sign outside NBC Studios, Rainbow Room, and Top of the Rock observation deck."
+        }
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "Oct. 13, 2012",
+        "caption": "Rainbow Room is declared a New York City landmark by the New York Landmarks Commission.",
+        "image": {
+          "src": "../images/chandelier-rainbow-room.jpg",
+          "alt": "Detail of the largest of the three chandeliers in the Rainbow Room at Rock Center."
+        }
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "Oct. 5, 2014",
+        "caption": "Rainbow Room reopens after undergoing a multi-million dollar renovation and restoration led by architect Michael Gabellini.",
+        "image": {
+          "src": "../images/rainbow-room-space-dance-floor.jpg",
+          "alt": "Beautifully decorated Rainbow Room with the chandelier and dance floor, ready for a party."
+        }
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "Feb. 9, 2019",
+        "caption": "Alexander Wang threw the party of the season with his Big Trouble in Little China(town) all-nighter.",
+        "image": {
+          "src": "../images/rainbow-room-2019_February.jpg",
+          "alt": "Chinese New Year celebration party at the Rainblow Room."
+        }
+      }
+    ]
+  },
+  "calloutGrid": {
+    "cards": [
+      {
+        "image": {
+          "src": "../images/unique-dining.jpg",
+          "alt": "Seasonal meal at Rainbow Room."
+        },
+        "title": "Our Menus",
+        "description": "Seasonal, locally sourced, always unique––the menus we offer will delight every palate and enhance every moment.",
+        "links": [
+          {
+            "url": "/private-events/rainbow-room#sample-menus",
+            "label": "View sample event menu"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "../images/wedding-dance-rainbow-room.jpg",
+          "alt": "Bride and groom dancing in Rainbow Room's beautiful wedding venue."
+        },
+        "title": "Weddings at Rainbow Room",
+        "description": "The endless cityscapes of the Rainbow Room offer a once-in-a-lifetime backdrop to your “I do’s.” And our expertise lends an expert touch to make your celebration truly your own.",
+        "links": [{"url": "/weddings", "label": "Learn more"}]
+      },
+      {
+        "image": {
+          "src": "../images/bar-65-cocktails.jpg",
+          "alt": "Classic cocktails at Bar SixtyFive, Rockefeller Center's rooftop cocktail bar."
+        },
+        "title": "Bar SixtyFive",
+        "description": "Enjoy drinks with a view at one of the most influential cocktail bars in America, sixty-five floors above Manhattan.",
+        "links": [{"url": "/attractions/bar-sixtyfive", "label": "Learn more"}]
+      },
+      {
+        "image": {
+          "src": "../images/dining-table-nyc-view.jpg",
+          "alt": "Dining table with views of the Empire State Building and NYC skyline."
+        },
+        "title": "Private Dining Room",
+        "description": "Adjoining the Rainbow Room, our Private Dining Room offers a more intimate setting, where guests can enjoy each other’s company while taking in striking Manhattan views.",
+        "links": [
+          {"url": "/contact/private-events", "label": "Book now"},
+          {"url": "/private-events/private-dining-room", "label": "Learn more"}
+        ]
+      }
+    ]
+  },
+  "imageCallout": {
+    "title": "Nationwide Shipping",
+    "description": "Soon you can bring Rainbow Room to your dining room. Select Rainbow Room menu items will be available for nationwide delivery later this year, so you can enjoy your favorites wherever you are.",
+    "link": {"url": "/rainbow-room-newsletter", "label": "Coming soon"},
+    "image": {
+      "src": "../images/takeout-rainbow-room.jpg",
+      "alt": "Delicious cuisine at the Rainbow Room is available for shipping orders."
+    }
+  },
+  "featuredGallery2": {
+    "title": "Kitchen Chef’s Table",
+    "content": [
+      {
+        "category": "Chef’s Table",
+        "image": {
+          "src": "../images/chefstable_gallery_rr.jpg",
+          "alt": "A NYC culinary experience with the Rainbow Room chef."
+        },
+        "caption": "This is a culinary experience unlike any other in New York City, with a four-course tasting menu tailored to your requests at a table framed by sweeping views of Central Park in the vibrant Rainbow Room kitchen.",
+        "links": [
+          {"url": "/contact/private-events", "label": "Book now"},
+          {
+            "url": "/private-events/rainbow-room/#sample-menus",
+            "label": "View sample menu"
+          }
+        ]
+      },
+      {
+        "category": "Immersive Culinary Experience",
+        "image": {
+          "src": "../images/ImmersiveChefExp_gallery_rr.jpg",
+          "alt": "A NYC culinary experience with the Rainbow Room chef."
+        },
+        "caption": "Truly immersive: You’ll cook side-by-side with our expert culinary team, then enjoy your dishes while taking in sweeping views of Central Park. Reservations must be made three weeks in advance with a maximum of 12 people.",
+        "links": [
+          {"url": "/contact/private-events", "label": "Book now"},
+          {
+            "url": "/private-events/rainbow-room/#sample-menus",
+            "label": "View sample menu"
+          }
+        ]
+      }
+    ]
+  },
+  "crossLinks": [
+    {
+      "title": "620 Loft & Garden",
+      "image": {
+        "src": "../images/rooftop-garden-event-space.jpg",
+        "alt": "Unique NYC event space with skyline views from a manicured historic rooftop garden."
+      },
+      "caption": "Expansive rooftop garden with up-close views of St. Patrick’s Cathedral and Fifth Avenue.",
+      "link": {
+        "label": "Learn more",
+        "url": "/private-events/620-loft-garden"
+      }
+    },
+    {
+      "title": "Newsletter",
+      "image": {
+        "src": "../images/private-party-performance.jpg",
+        "alt": "Performance at a private event at NYC's Rainbow Room."
+      },
+      "caption": "Always know about everything happening at the Rainbow Room. Sign up for our newsletter.",
+      "link": {
+        "label": "Subscribe",
+        "url": "/rainbow-room-newsletter"
+      }
+    }
+  ]
+}

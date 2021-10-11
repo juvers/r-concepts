@@ -1,0 +1,35 @@
+{
+  "id": "accessibility",
+  "meta": {
+    "title": "Accessibility & Inclusion | Rockefeller Center",
+    "description": "Rockefeller Center is for everyone. Discover all the ways we're ensuring every New Yorker's voice is celebrated."
+  },
+  "title": "Here for all.",
+  "caption": "Rockefeller Center was created for everyone. And we’re committed to ensuring that this “city within a city” is an open, accessible, and inclusive environment that celebrates the unique voices that make NYC so great.",
+  "image": {
+    "src": "../images/accessibility-community.jpg",
+    "alt": "Accessible view from the Top of the Rock."
+  },
+  "accessibilityItems": [
+    {
+      "title": "Wheelchairs",
+      "caption": "Both Top of the Rock and the Rockefeller Center Tour are fully wheelchair accessible. Entrances with power-assist doors are located at the main entrance on 50th Street between Fifth and Sixth Avenues. All floors of Top of the Rock have elevator access, beginning at street level and continuing up to the open-air observation deck on the 70th floor. And every public restroom at Top of the Rock has wheelchair accessible stalls. In addition, our Rockefeller Center Tour guides are trained to accommodate everyone and are able to guide the tour along wheelchair accessible routes at a pace that is wheelchair-friendly."
+    },
+    {
+      "title": "Transcripts",
+      "caption": "Printed transcript for all short films played throughout the Top of the Rock experience are available upon request. Just ask any Top of the Rock team member for assistance."
+    },
+    {
+      "title": "Audio Headsets",
+      "caption": "Personal headsets are given to all guests during the Rockefeller Center Tour to ensure optimal audio clarity. In addition, if you would like a guide to speak at a higher volume or different speed, they are trained to accommodate your request."
+    },
+    {
+      "title": "Service Animals",
+      "caption": "We welcome service dogs in all public areas of Top of the Rock and Rockefeller Center."
+    },
+    {
+      "title": "Strollers",
+      "caption": "We welcome strollers; however, they must be collapsible."
+    }
+  ]
+}

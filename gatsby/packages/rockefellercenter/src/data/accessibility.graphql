@@ -1,0 +1,17 @@
+type DataJson implements Node @infer {
+  meta: Meta!
+  title: String!
+  caption: String!
+  image: AccessibilityImage!
+  accessibilityItems: [AccessibilityItem!]!
+}
+
+type AccessibilityImage {
+  src: Image! @imageByRelativePath
+  alt: String!
+}
+
+type AccessibilityItem {
+  title: String!
+  caption: String!
+}

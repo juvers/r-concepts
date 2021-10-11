@@ -1,0 +1,44 @@
+{
+  "id": "rock-group-sales",
+  "general": {
+    "formIntro": {
+      "title": "A great experience for every group.",
+      "caption": "Your visit to Top of the Rock begins here. We offer discounted ticket prices to groups of 10 or more. Please fill out the form and a Group Sales specialist will reach out with next steps."
+    },
+    "contactInformation": {
+      "title": "Contact Information",
+      "caption": "We have a variety of ways to make your group’s spring visit to Top of the Rock unforgettable. Contact us today about purchasing options and for information on special offers.",
+      "phone": "Phone: 212.698.2000 ext. 3",
+      "tollFree": "Toll Free: 877.692.7625",
+      "fax": "Fax: 212.896.9577",
+      "email": "Email: groups@topoftherocknyc.com"
+    }
+  },
+  "travelProfessionals": {
+    "title": "Travel Professionals",
+    "caption": "Use our easy online reservation and ticketing tool to book your visits to Top of the Rock up to 365 days in advance of the visit date. Whether you are scheduling a visit for a pair, family, or large group, we are always available to help you and your clients.",
+    "link": {
+      "url": "https://secure.topoftherocknyc.com/ODTInternet/Web/agent/agentlogin.aspx",
+      "label": "Sign In"
+    }
+  },
+  "studentGroups": {
+    "title": "Student Groups",
+    "captionOne": "Top of the Rock excels at opening students’ minds as well as their eyes. Because while there are incredible things to see at Top of the Rock, there are equally incredible things to learn. Rockefeller Center is the most architecturally important site of the 20th century, and your students will learn about how John D. Rockefeller Jr. achieved his vision in the context of New York City’s past and present. It’s a lesson in civic pride unlike any other, in a “classroom” 70 stories above the city.",
+    "captionTwo": "Groups of 10 or more are eligible for discounted ticket prices, and our reservation and ticketing process is fast and easy. Simply call 212.698.2000, or call toll-free at 877.692.7625. You can also email us at groups@topoftherocknyc.com for more information on rates and reservations. To help you plan your lessons during your visit, we’ve created a Top of the Rock Teacher’s Guide and a Student Guide.",
+    "link": {
+      "url": "/documents/TopoftheRockTeachersGuide.pdf",
+      "label": "Download Teacher's Guide"
+    },
+    "pdf": {
+      "url": "/documents/TopoftheRockStudentGuide.pdf",
+      "label": "Download Student's Guide"
+    }
+    
+  },
+  "corporateGroups": {
+    "title": "Corporate Groups",
+    "captionOne": "Top of the Rock is a natural fit for corporate groups. It provides the perfect vantage point to marvel at the world’s capital of commerce while learning about the history of the city. It’s an unparalleled team-building experience, 70 floors up.",
+    "captionTwo": "Groups of 10 or more are eligible for discounted ticket prices, and our reservation and ticketing process is fast and easy. Simply call 212.698.2000, or call toll-free at 877.692.7625. You can also email us at groups@topoftherocknyc.com for more information on rates and reservations."
+  }
+}

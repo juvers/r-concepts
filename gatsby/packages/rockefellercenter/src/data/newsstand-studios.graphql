@@ -1,0 +1,13 @@
+type DataJson implements Node @infer {
+  meta: Meta!
+  heroCluster: NewstandStudiosHeroCluster!
+  calloutGrid: CalloutGrid!
+  podcastIntroTitle: String!
+  podcastIntroCaption: String!
+}
+
+type NewstandStudiosHeroCluster {
+  image: ImageWithAlt!
+  title: String
+  caption: String
+}

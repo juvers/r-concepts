@@ -1,0 +1,34 @@
+---
+name: usePageTransition
+menu: Hooks
+route: /hooks/use-page-transition
+---
+
+# usePageTransition
+
+`usePageTransition` configures `enter` and `leave` react-spring
+animations to be run when an ancestor React element is added or removed
+as a child of a `PageTransition`.
+
+If no `PageTransition` ancestor is present, the `enter` animation
+will be run when the React element using this hook mounts.
+
+## Usage
+
+```tsx
+import {animated} from 'react-spring';
+import {usePageTransition} from '@tishman/components';
+
+const SlideFromLeft = (props) => {
+  const style = usePageTransition({
+    initial: {x: '-100%'},
+    leave: {x: '100%'},
+    enter: {x: '0%'},
+  });
+  return <animated.div style={style}>{props.children}</animated.div>;
+};
+```
+
+See [PageTransition] for examples and more.
+
+[pagetransition]: /components/page-transition

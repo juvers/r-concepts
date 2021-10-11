@@ -1,0 +1,58 @@
+---
+name: SearchMenu
+menu: Rockefeller Center
+route: /rockefeller-center/search-menu
+---
+
+import {Playground, Props} from 'docz';
+import {
+  createHistory,
+  createMemorySource,
+  LocationProvider,
+} from '@reach/router';
+import {SearchMenu} from './SearchMenu.tsx';
+
+# SearchMenu
+
+This is the search menu for the Rockefeller Center app. In the app,
+it is hidden by default, and revealed by clicking on the search button
+in the [MenuBar].
+
+## UX and A11y Affordances
+
+The search menu itself does nothing to trap focus with the menu,
+as it should be displayed in a [Modal] which will move and trap focus
+in the menu and restore focus to the triggering element on close.
+
+The search menu is rendered as a form with an input and submit button,
+followed by a [nav] of suggested 'quick' links.
+
+## Props
+
+<Props of={SearchMenu} />
+
+## Usage
+
+```ts
+import {Menu} from '~menu';
+```
+
+<Playground>
+  <LocationProvider route="/" history={createHistory(createMemorySource('/'))}>
+    <SearchMenu
+      to="#"
+      suggestions={[
+        {label: 'Top of the Rock', to: '#'},
+        {label: 'Christmas Tree', to: '#'},
+        {label: 'Top of the Rock', to: '#'},
+        {label: 'Christmas Tree', to: '#'},
+        {label: 'Top of the Rock', to: '#'},
+        {label: 'Christmas Tree', to: '#'},
+      ]}
+    />
+  </LocationProvider>
+</Playground>
+
+[menubar]: /rockefeller-center/menu-bar
+[modal]: /components/layers#modal
+[nav]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav

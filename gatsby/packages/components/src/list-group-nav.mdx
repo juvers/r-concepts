@@ -1,0 +1,136 @@
+---
+name: ListGroupNav
+menu: Components
+route: /components/list-group-nav
+---
+
+import {Props, Playground} from 'docz';
+import {
+  jsx,
+  Box,
+  Flex,
+  Grid,
+  Text,
+  Section,
+  createListView,
+  AnchorSection,
+  ListGroupNav,
+  IntersectionSection,
+  Fixed,
+  getThemeByName,
+  useScrollTo,
+  Select,
+} from '@tishman/components';
+
+# ListGroupNav
+
+A single column grid of navigation buttons, one button per group.
+
+Buttons will be active whenever their group matches the `activeGroup`.
+Groups that have no items will be 'disabled'.
+
+This component supports groups as defined by [createListView].
+
+Use this Component in combination with [createListView] and [IntersectionSection]
+to create long list views.
+
+> For more on creating list views, see the [List Views guide].
+
+## Props
+
+<Props of={ListGroupNav} />
+
+## Usage
+
+```typescript
+import {ListGroupNav} from '@tishman/components';
+```
+
+<Playground>
+  {() => {
+    // Note: wrapped in `useState` to avoid recreating `useListView`.
+    const [useListView] = React.useState(() =>
+      createListView({
+        items: [
+          {color: 'White', attraction: 'Rock Center'},
+          {color: 'Black', attraction: 'Rock Center'},
+          {color: 'Green', attraction: 'Rock Center'},
+          {color: 'Navy', attraction: 'Rock Center'},
+          {color: 'Cream', attraction: 'Rock Center'},
+          {color: 'White', attraction: 'The Rink'},
+          {color: 'Navy', attraction: 'The Rink'},
+          {color: 'Blue', attraction: 'The Rink'},
+          {color: 'White', attraction: 'Top of the Rock'},
+          {color: 'Yellow', attraction: 'Top of the Rock'},
+          {color: 'Blue', attraction: 'Top of the Rock'},
+          {color: 'Olive', attraction: 'Top of the Rock'},
+          {color: 'Navy', attraction: 'Top of the Rock'},
+          {color: 'Green', attraction: 'Top of the Rock'},
+        ],
+        groupBy: 'color',
+      }),
+    );
+    const groups = useListView((state) => state.groups);
+    const activeGroup = useListView((state) => state.activeGroup);
+    const setActiveGroup = useListView((state) => state.setActiveGroup);
+    return (
+      <React.Fragment>
+        <Select
+          value={activeGroup ? activeGroup.name : undefined}
+          onChange={(event) =>
+            setActiveGroup(
+              groups.find((group) => group.name === event.currentTarget.value),
+            )
+          }
+        >
+          {groups.map((group) => (
+            <option key={group.name} value={group.name} label={group.name} />
+          ))}
+        </Select>
+        <Box sx={{overflowY: 'scroll', height: '61.8vw'}}>
+          <ListGroupNav
+            groups={groups}
+            activeGroup={activeGroup}
+            onActiveGroupChange={setActiveGroup}
+            sx={{position: 'fixed', top: 0, right: 0, bottom: 0}}
+          />
+          <Box sx={{flex: 1}}>
+            <Section sx={{px: 4}}>
+              {activeGroup && activeGroup.name ? (
+                <Grid columns="50px 1fr">
+                  <Text
+                    sx={{variant: 'styles.h1'}}
+                    children={activeGroup.name}
+                  />
+                  {activeGroup.items ? (
+                    <Box as="ol">
+                      {activeGroup.items.map(({color, attraction}, index) => (
+                        <Section key={index} theme={`${attraction} ${color}`}>
+                          <Text p={6}>
+                            {attraction} {color}
+                          </Text>
+                        </Section>
+                      ))}
+                    </Box>
+                  ) : (
+                    <Section sx={{px: 4}}>
+                      <Text
+                        sx={{variant: 'styles.h1', color: 'muted'}}
+                        children={activeGroup.name}
+                      />
+                    </Section>
+                  )}
+                </Grid>
+              ) : null}
+            </Section>
+          </Box>
+        </Box>
+      </React.Fragment>
+    );
+  }}
+</Playground>
+
+[createlistview]: /hooks/create-list-view
+[list views guide]: /guide/list-views
+[intersectionsection]: /components/intersection-section
+[list views guide]: /guides/list-views

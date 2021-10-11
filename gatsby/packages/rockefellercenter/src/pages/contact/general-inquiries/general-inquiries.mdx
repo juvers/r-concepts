@@ -1,0 +1,68 @@
+---
+name: General Inquiries Form
+menu: Rockefeller Center
+route: /rockefeller-center/general-inquiries
+---
+
+import {Props, Playground} from 'docz';
+import {Grid, Flex} from 'theme-ui';
+import {RequiredLabel, Textarea, Select, Date, Input, Form} from '../../../../../components/src/Form';
+
+
+
+# General Inquiries Form
+
+### Properties
+
+
+
+### Basic usage
+
+```ts
+import {GeneralInquiriesForm} from '@tishman/components';
+```
+
+
+<Playground>
+  <Form>
+      <Grid columns={1} gap={4}>
+        <Input
+          text="Full Name"
+          name="fullname"
+          placeholder="Enter Full Name"
+          required
+          onChange={() => {
+            console.log('Bark');
+          }}
+        />
+        <Input
+          text="Email"
+          name="email"
+          placeholder="jsmith@gmail.com"
+          required
+          onChange={() => {
+            console.log('Bark');
+          }}
+        />
+        <Input
+          text="Phone"
+          name="phone"
+          placeholder="000.000.0000"
+          onChange={() => {
+            console.log('Bark');
+          }}
+        />
+        <Textarea
+          text="Message"
+          name="message"
+          placeholder="Please enter your message here..."
+          onChange={() => {
+            console.log('Bark');
+          }}
+        />
+        <Flex>
+          <RequiredLabel labelText="Required*" />
+        </Flex>
+      </Grid>
+    </Form>
+</Playground>

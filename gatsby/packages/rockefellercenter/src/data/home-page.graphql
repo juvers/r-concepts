@@ -1,0 +1,15 @@
+type DataJson implements Node @infer {
+  homeHero: HomeHero!
+  featuredStories: FeaturedStories!
+}
+
+"""
+A Home Hero object.
+
+This is a special hero implimentation that includes title, caption image and a list of links
+"""
+type HomeHero {
+  title: String!
+  image: ImageWithAlt
+  movieUrl: String
+}

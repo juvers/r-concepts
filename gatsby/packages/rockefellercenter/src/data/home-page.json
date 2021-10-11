@@ -1,0 +1,16 @@
+{
+  "id": "home-page",
+  "homeHero": {
+    "title": "New York, reinvented daily.",
+    "image": {
+      "src": "../images/homepage.png",
+      "alt": "Rockefeller Center"
+    },
+    "movieUrl": "/documents/RC_Evergreen_Campus_12D_112020.mp4"
+  },
+  "featuredStories": {
+    "title": "The Center Magazine",
+    "caption": "Never miss a beat with our go-to guide for all that's happening at Rockefeller Center, including the best in fashion, art, design, and dining.",
+    "link": {"url": "/magazine", "label": "Read the Stories"}
+  }
+}

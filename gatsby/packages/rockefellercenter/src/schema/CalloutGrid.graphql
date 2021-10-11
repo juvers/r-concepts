@@ -1,0 +1,12 @@
+"""
+A Callout Grid object.
+
+This should be used to type most JSON fields that represent a generic Callout Grid component.
+"""
+type CalloutGrid {
+  title: String
+  caption: String
+  links: [Link!]
+  fullCard: CalloutGridCard
+  cards: [CalloutGridCard!]!
+}

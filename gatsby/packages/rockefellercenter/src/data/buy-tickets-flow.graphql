@@ -1,0 +1,53 @@
+type DataJson implements Node @infer {
+  meta: Meta!
+  hero: BuyTicketsHero!
+  ticketStep: BuyTicketsTicketQuantitySection!
+  dateStep: BuyTicketsSection!
+  timeStep: BuyTicketsSection
+  comboStep: BuyTicketsComboSection
+  purchaseStep: BuyTicketsSection
+  modalCard: BuyTicketsModal!
+  modalCard2: BuyTicketsModal
+  modalCard3: BuyTicketsModal
+}
+
+type BuyTicketsHero {
+  title: String!
+  link: HeroLink
+}
+
+type BuyTicketsTicketQuantitySection {
+  title: String!
+  description: String
+  ticketTypes: BuyTicketsAttractionTickets
+}
+
+type BuyTicketsSection {
+  title: String!
+  description: String
+}
+
+type BuyTicketsComboSection {
+  tour: BuyTicketsSection!
+  deck: BuyTicketsSection!
+}
+
+type HeroLink {
+  label: String!
+  modal: String!
+}
+
+type BuyTicketsModal {
+  title: String!
+  subTitle: String
+  description: String!
+  cta: Link
+  link: Link
+  image: ImageWithAlt
+  showCloseLink: Boolean
+}
+
+type BuyTicketsAttractionTickets {
+  ticketTypeId: Int!
+  label: String!
+}

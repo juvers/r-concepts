@@ -1,0 +1,236 @@
+---
+name: Overview
+menu: Rockefeller Center
+route: /rockefeller-center
+---
+
+import {Props, Playground} from 'docz';
+import {Grid, Box, Text, RockefellerCenterLogoSvg} from '@tishman/components';
+
+# Overview
+
+The Rockefeller Center site is a [Hybrid Single Page Application], with each
+page standing alone at its own static url, but with navigation between pages
+performed partially or entirely on the client side.
+
+As such, the site is composed as a tree of related layout node types,
+starting at the root with the [App], and branching to multiple [Pages]
+(one for each URL), with each page being composed of one of the [Layouts],
+and one or more [Blocks].
+
+When looking at an individual page on the site, the basic outline
+of its composition is:
+
+<Box m={4} sx={{width: '340px', border: '1px solid gray'}}>
+  <Grid p={2} gap={1} bg="white" color="black" sx={{placeItems: 'center'}}>
+    <RockefellerCenterLogoSvg height="30px" />
+    <Text>App > MenuBar</Text>
+  </Grid>
+  <Box p={2} sx={{borderTop: '1px solid gray'}}>
+    <Text p={2}>App > Page > Layout</Text>
+    <Text p={5} bg="primary" color="textInverted">
+      App > Page > Layout > Block
+    </Text>
+    <Text p={5}>App > Page > Layout > Block</Text>
+    <Text p={5} bg="secondary" color="textInverted">
+      App > Page > Layout > Block
+    </Text>
+  </Box>
+  <Box bg="black" p={5}>
+    <Text color="white">App > Footer</Text>
+  </Box>
+</Box>
+
+When creating pages, most of the effort will typically go into creating
+and composing [Blocks] with data, and wrapping that composition with
+one of the [Layouts].
+
+## App
+
+The App is a singleton that automatically wraps every page, which means
+pages should never need to provide any of the 'global' features of the site,
+such as the [MenuBar], overlay [Layers], or the [Footer].
+
+Though pages aren't responsible for rendering these 'global' elements,
+they can modify aspects of them through [Page Config].
+
+See the [App src], [gatsby-browser] and [gatsby-ssr] for more.
+
+## Pages
+
+Pages are composed from one of the [Layouts] together with
+one or more content [Blocks].
+
+Common examples of pages are 'landing' or 'index' pages, like [home]
+or [events]. These types of pages are typically not generated from data
+(though the content they display may be). They are defined in the [pages
+src directory], and they always map **1-to-1** to URLs.
+
+Pages that have the same Layout and same Blocks,
+but different URLs and data are called [Templates].
+
+## Templates
+
+Templates are like [Pages], except they are parameterized by some context,
+such as a _slug_ or _id_, which allows them to use the same page layout
+and blocks with different content, depending on the context.
+
+Common examples of templates are 'detail' pages, like [event]. These types
+of pages are typically generated from data (i.e., a page is created for every
+event using the [event] template). They are defined in the [templates src
+directory], and they can map **1-to-many** to URLs.
+
+## Page Config
+
+Pages (and templates) can export configuration that will be incorporated
+into [page context] and used by the [App] when rendering the 'global'
+features of the site, like the [MenuBar].
+
+Pages can define configuration by exporting a `config` object that conforms
+to the [PageConfig interface]. For example:
+
+```tsx
+/** @jsx jsx */
+import {jsx} from '@tishman/components';
+import {Layout} from '~layouts';
+
+import type {PageConfig} from '~PageConfig';
+
+export const config: PageConfig = {
+  // Theme the global elements of app.
+  theme: 'Rock Center Black',
+  // Change the MenuBar logo.
+  logo: 'Rainbow Room',
+  // Show a short page name below the logo.
+  pageName: 'Bar SixtyFive',
+  // Define a CTA to be shown in the menubar.
+  cta: {to: '/plan-an-event', label: 'Plan an Event'},
+  // Define a nav element to appear to the right of the logo.
+  rightNav: {to: '/dining-club', label: 'Dining Club'},
+  // Define a nav element to replace them menu toggle button.
+  leftNav: {to: '/', label: 'Back'},
+};
+
+export default function Page(): JSX.Element {
+  return <Layout>{/* render blocks here */}</Layout>;
+}
+```
+
+Though page config is optional, most pages will probably want to define
+at least a minimal bit of configuration.
+
+## Meta
+
+Every page should define the basic meta data, including a title and description.
+
+There are two ways to provide the metadata for your page:
+
+### Metadata from a page query
+
+This is the preferred method, as it allows the content of the metadata to be
+maintained along side other content for the page (i.e., through the CMS or
+JSON).
+
+The basic idea of how to do this is as follows:
+
+- your page defines a [page query]
+- your query has a top-level field named (or aliased to) `meta`
+- somewhere within the `meta` field query, there is a _string_ field named
+  (or aliased to) `title`
+- somewhere within the `meta` field query, there is a _string_ field named
+  (or aliased to) `description`
+
+With these criteria met, the app will automatically update
+the title and description meta tags when the page loads.
+
+Here's an example of a page query for fetching meta from the CMS:
+
+```graphql
+export const HomeMetaQuery = graphql`
+  query HomeMeta {
+    meta: sanityHomePage {
+      seo {
+        title: metaTitle
+        description: metaDescription
+      }
+    }
+  }
+`;
+```
+
+And fetching meta from JSON:
+
+```graphql
+export const query = graphql`
+  query SearchMeta {
+    meta: dataJson(id: {eq: "search"}) {
+      meta {
+        title
+        description
+      }
+    }
+  }
+`;
+```
+
+### Metadata from page config
+
+> Note: it is generally preferable to use the previous method rather than
+> page config, since it allows the meta data to be managed alongside other
+> page data.
+
+Meta data can also be provided on [page config], like so:
+
+```ts
+export const config: PageConfig = {
+  /* ...other page config here */
+  meta: {
+    title: 'Some page!',
+    description: 'A description. Not too short, not too long. juuuust right!',
+  },
+};
+```
+
+## Layouts
+
+A Layout describes features that are common across one or more pages,
+such as a common theme, shared [styled] components, a shared navigation,
+page transitions, etc.
+
+Every page should render a Layout.
+
+See the [Layouts documentation] for more.
+
+## Blocks
+
+A Block is kind of 'glue' component that connects some data to a component
+or list of components. It may include static data queries, or code that
+validates and sanitizes data props that may be passed to it from a Page.
+
+See the [Blocks documentation] for more.
+
+[hybrid single page application]: https://www.gatsbyjs.org/docs/glossary/hydration/
+[page context]: https://www.gatsbyjs.com/docs/creating-and-modifying-pages/#pass-context-to-pages
+[page query]: https://www.gatsbyjs.com/docs/page-query/
+[pageconfig interface]: https://github.com/hzdg/tishman/tree/master/gatsby/packages/rockefellercenter/src/PageContext.ts
+[gatsby-browser]: https://github.com/hzdg/tishman/tree/master/gatsby/packages/rockefellercenter/gatsby-browser.js
+[gatsby-ssr]: https://github.com/hzdg/tishman/tree/master/gatsby/packages/rockefellercenter/gatsby-ssr.js
+[home]: https://github.com/hzdg/tishman/tree/master/gatsby/packages/rockefellercenter/src/pages/index.tsx
+[events]: https://github.com/hzdg/tishman/tree/master/gatsby/packages/rockefellercenter/src/pages/events.tsx
+[event]: https://github.com/hzdg/tishman/tree/master/gatsby/packages/rockefellercenter/src/templates/event.tsx
+[pages src directory]: https://github.com/hzdg/tishman/tree/master/gatsby/packages/rockefellercenter/src/pages
+[templates src directory]: https://github.com/hzdg/tishman/tree/master/gatsby/packages/rockefellercenter/src/templates
+[app src]: https://github.com/hzdg/tishman/tree/master/gatsby/packages/rockefellercenter/src/App.tsx
+[app]: #app
+[pages]: #pages
+[templates]: #templates
+[page config]: #page-config
+[meta]: #meta
+[layouts]: #layouts
+[blocks]: #blocks
+[layers]: /components/layers
+[footer]: /components/footer
+[styled]: /components/styled
+[menubar]: /rockefeller-center/menu-bar
+[layouts documentation]: /rockefeller-center/layouts
+[blocks documentation]: /rockefeller-center/blocks

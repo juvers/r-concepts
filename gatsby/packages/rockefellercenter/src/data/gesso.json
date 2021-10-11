@@ -1,0 +1,44 @@
+{
+  "id": "gesso",
+  "footerAppDownloadData": {
+    "appStore": {
+      "link": "https://apps.apple.com/us/app/gesso-immersive-audio-walks/id1458855777",
+      "image": "../images/app_store.png"
+    },
+    "googlePlay": {
+      "link": "https://play.google.com/store/apps/details?id=app.gesso.android&hl=en_US&gl=US",
+      "image": "../images/play_store.png"
+    }
+  },
+  "featuredStories": {
+    "title": "The Center Magazine.",
+    "caption": "Enter the world of Rockefeller Center through The Center Blog & Magazine. These are the lives, the stories, and the events that shape, define, and influence this iconic destination and the city beyond.",
+    "link": {"url": "/magazine", "label": "Read Our Stories"}
+  },
+  "crossLinks": [
+    {
+      "title": "Rock Center Tour",
+      "image": {
+        "src": "../images/wisdom-art-deco-scupture.jpg",
+        "alt": "Rockefeller Center's Wisdom sculpture is part of the art deco motifs and sculptures collection."
+      },
+      "caption": "Take the guided tour and go in-depth into the incredible art and history of Rockefeller Center.",
+      "link": {
+        "label": "Explore the Tour",
+        "url": "https://www.topoftherocknyc.com/buy-tickets/top-of-the-rock/"
+      }
+    },
+    {
+      "title": "Top of the Rock",
+      "image": {
+        "src": "../images/nyc-sklyine-view.jpg",
+        "alt": "Sunlight hitting the skyscrapers of Manhattan at sunset."
+      },
+      "caption": "3 decks, 360-degree must see views, a city that's all yours.",
+      "link": {
+        "label": "Buy Tickets",
+        "url": "/buy-tickets#top-of-the-rock"
+      }
+    }
+  ]
+}

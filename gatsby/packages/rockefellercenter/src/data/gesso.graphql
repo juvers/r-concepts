@@ -1,0 +1,15 @@
+type DataJson implements Node @infer {
+  footerAppDownloadData: FooterAppDownloadData!
+  featuredStories: FeaturedStories!
+  crossLinks: [CrossLink!]!
+}
+
+type FooterAppDownloadData {
+  appStore: AppStoreLink!
+  googlePlay: AppStoreLink!
+}
+
+type AppStoreLink {
+  link: String!
+  image: Image! @imageByRelativePath
+}

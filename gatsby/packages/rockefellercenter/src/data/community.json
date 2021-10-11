@@ -1,0 +1,55 @@
+{
+  "id": "community",
+  "communityHero": {
+    "title": "Be a part of it",
+    "caption": "You’ll find a diverse community at Rockefeller Center, created through a mix of New Yorkers and visitors coming together to experience “only here” events and exhibits and activities. Most importantly, it’s a welcoming community that you too can be a part of, and help create, every day.",
+    "image": {
+      "src": "../images/2000x2000_0000_Rockefeller.Spring.Art.Sundae314.jpg",
+      "alt": "A group poses for a photo at Rockefeller Center."
+    }
+  },
+  "imageCallout": {
+    "title": "Accessibility & Inclusion",
+    "description": "We’re committed to providing an inclusive experience for everyone. From physical spaces to digital interactions, we want everyone to be able to enjoy Rockefeller Center to the fullest.",
+    "link": {"url": "/accessibility", "label": "Accessibility Details"},
+    "image": {
+      "src": "../images/accessibility-community.jpg",
+      "alt": "Accessible view from the Top of the Rock."
+    }
+  },
+  "calloutGrid": {
+    "fullCard": {
+      "image": {
+        "src": "../images/CommunityPage_RCCommunity_resized2x.jpg",
+        "alt": "Group of people on balcony at Rockefeller Center"
+      },
+      "title": "Our RC Community",
+      "description": "When you’re a part of the Rockefeller Center Community, you have access to an incredible array of amenities and perks.",
+      "links": [{"url": "/working-community", "label": "Learn More"}]
+    },
+    "cards": [
+      {
+        "image": {
+          "src": "../images/2000x2000_0009_communal-work-space.jpg",
+          "alt": "Hallway in artistic office setting with seating that leads to a cubicle area."
+        },
+        "title": "Leasing",
+        "description": "The leasing opportunities at Rockefeller Center are designed to help businesses thrive, providing access to functional spaces in a campus environment known for innovation.",
+        "links": [
+          {"url": "/leasing", "label": "See Commercial Leasing Opportunities"}
+        ]
+      },
+      {
+        "image": {
+          "src": "../images/community-flags.png",
+          "alt": "Flags flying over Rockefeller Plaza."
+        },
+        "title": "Partnerships",
+        "description": "From partnering with us on programming to “only here” marketing and branding opportunities, Rockefeller Center will help you get your brand in the right places, in front of the right people.",
+        "links": [
+          {"url": "/partnerships", "label": "Partner With Us"}
+        ]
+      }
+    ]
+  }
+}

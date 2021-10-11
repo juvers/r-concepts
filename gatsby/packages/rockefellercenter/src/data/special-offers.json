@@ -1,0 +1,46 @@
+{
+  "id": "special-offers",
+  "shopAndDineCalloutGridOne": {
+    "cards": [
+      {
+        "image": {
+          "src": "../images/shop-dine-dine.jpg",
+          "alt": "An array of food surrounding a menu."
+        },
+        "title": "Dine",
+        "description": "The finest restaurants, the most exciting food trends, and the culinary talent that drives the industry forward––Rockefeller Center has the dining options to satisfy everyone.",
+        "links": [{"url": "/dine", "label": "Explore Dining"}],
+        "width": 475,
+        "height": 502
+      },
+      {
+        "image": {
+          "src": "../images/shop-dine-shop.jpg",
+          "alt": "Clothing store in Rockefeller Center."
+        },
+        "title": "Shop",
+        "description": "From up-and-coming local brands to the most iconic names in fashion, Rockefeller Center is a world-renowned destination for those who seek style. ",
+        "links": [{"url": "/shops", "label": "Explore Shops"}],
+        "width": 475,
+        "height": 502
+      }
+    ],
+    "fullCard": {
+      "image": {
+        "src": "../images/amenity-barbers.jpg",
+        "alt": "A barber shop at Rockefeller Center."
+      },
+      "title": "Amenities & Services",
+      "description": "Rockefeller Center has a wide array of amenities and services to meet your needs. From barbers and salons to niche retailers, you’re sure to find what you need right here.",
+      "links": [{"url": "/amenities", "label": "View Amenities & Services"}]
+    }
+  },
+  "wideCta": {
+    "title": "The Center Newsletter",
+    "caption": "Receive important seasonal news and updates, learn about store openings, and get special offers.",
+    "link": {
+      "url": "/the-center-newsletter/",
+      "label": "Subscribe"
+    }
+  }
+}

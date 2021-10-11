@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Icons / Check</title>
+    <desc>Created with Sketch.</desc>
+    <g id="TOR-GA" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="TOR_GA_date" transform="translate(-31.000000, -147.000000)">
+            <g id="Icons-/-Check" transform="translate(31.000000, 147.000000)">
+                <g id="Group-2">
+                    <!-- Commenting out this Oval, since the Gatsby setFillAndStrokeToCurrentColor() filter overrides stroke and fill. -->
+                    <!-- The Gatsby filter forces all SVGs to be monochromatic. This Oval will be drawn with CSS outside the SVG -->
+                    <!-- <circle id="Oval" fill="#9EC28E" cx="9" cy="9" r="9"></circle> -->
+                    <polyline id="Path-2" stroke="#FFFFFF" points="3.871875 8.6350828 6.84765975 12.1359375 13.471875 4.9359375"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

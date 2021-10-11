@@ -1,0 +1,21 @@
+[build]
+  functions = "built-lambda/"
+  ignore = "exit 1"
+
+[build.environment]
+  YARN_VERSION = "1.22.10"
+  GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES = "true"
+  TOPIC = "rockcenter"
+  WORKER_TOPIC = "tishman-gatsby-parallel"
+
+[[plugins]]
+package = "@tishman/netlify-plugin"
+
+[context.production.environment]
+  GATSBY_BUY_TICKETS_API_URL = "https://secure.topoftherocknyc.com/TopoftheRockWebAPI/API/"
+  
+[context.branch-deploy.environment]
+  GATSBY_BUY_TICKETS_API_URL = "https://secure2.topoftherocknyc.com/TopoftheRockWebAPI/API/"
+
+[context.deploy-preview.environment]
+  GATSBY_BUY_TICKETS_API_URL = "https://secure2.topoftherocknyc.com/TopoftheRockWebAPI/API/"

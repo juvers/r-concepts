@@ -1,0 +1,68 @@
+---
+name: Event Dot
+menu: Rockefeller Center
+route: /rockefeller-center/event-dot
+---
+
+import {Flex, Text} from '@tishman/components';
+import EventDot from '~components/EventDot';
+import {Props, Playground} from 'docz';
+
+# Event Dot
+
+### Props
+
+<Props of={EventDot} />
+
+#### Basic Usage
+
+Event Dot absolutely positions a colored dot next to a text or div
+
+Its default positioning is veritally aligned in the center and to the left
+16px
+
+An sx prop is available if additional styling is needed.
+
+In the stacked dot example you can see we pass in a different left styling to
+allow it to match designs
+
+##### Free Dot
+
+<Playground>
+  <Text sx={{position: 'relative'}}>
+    <EventDot type={'FREE'} />
+    {`= Free Event`}
+  </Text>
+</Playground>
+
+##### Ongoing Dot
+
+<Playground>
+  <Text sx={{position: 'relative'}}>
+    <EventDot type={'ONGOING'} />
+    {`= Ongoing Event`}
+  </Text>
+</Playground>
+
+##### Stacked Dot Abolutely positioned
+
+Note free comes after ongoing so it overlays to match designs
+
+<Playground>
+  {/* ml: 3 is just to move the Text over in docs */}
+  <Text sx={{position: 'relative', ml: 3}}>
+    <EventDot
+      type={'ONGOING'}
+    />
+    <EventDot
+      type={'FREE'}
+      sx={{
+        left:  '-22px',
+      }}
+    />
+    EVENT TYPE
+
+
+  </Text>
+</Playground>
+

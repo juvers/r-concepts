@@ -1,0 +1,12 @@
+"""
+An Image Callout object.
+
+This should be used to type most JSON fields that represent a generic Image Callout component.
+"""
+type ImageCallout {
+  title: String!
+  caption: String
+  description: String!
+  link: Link!
+  image: ImageWithAlt!
+}

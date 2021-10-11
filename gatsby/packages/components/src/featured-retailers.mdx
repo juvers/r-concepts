@@ -1,0 +1,52 @@
+---
+name: Featured Retailers
+menu: Components
+route: /components/featured-retailers
+---
+
+import {Props, Playground} from 'docz';
+
+import {FeaturedRetailers} from '@tishman/components';
+import {getMockFluidImage} from '@tishman/docs';
+
+# Featured Retailers
+
+```ts
+import {FeaturedRetailers} from '@tishman/components';
+```
+
+Displays two cms selected retailers with a title. Used in the ListView of the directory pages for shop, dine, and amenities.
+
+### Properties
+
+<Props of={FeaturedRetailers} />
+
+<Playground>
+  {() => {
+    const retailers = [
+      {
+        eyebrow: 'Featured Retailer',
+        title: 'CÔTE À COAST',
+        url: '#',
+        caption: 'Learn More',
+        alt: 'a picture or retailer',
+        fluid: getMockFluidImage({width: 489, height: 480, usePhoto: true}).childImageSharp.fluid
+      },
+      {
+        eyebrow: 'New Opening',
+        title: 'Michael Kors',
+        url: '#',
+        caption: 'Learn More',
+        alt: 'a picture or retailer',
+        fluid: getMockFluidImage({width: 489, height: 480, usePhoto: true}).childImageSharp.fluid
+      },
+    ]
+    return (
+        <FeaturedRetailers
+          title="Headline to go here..."
+          retailers={retailers}
+        />
+    );
+  }}
+
+</Playground>

@@ -1,0 +1,25 @@
+"""
+A Callout Grid Card object.
+
+This should be used to type most JSON fields that represent a generic Callout Grid Card component.
+"""
+type CalloutGridCard {
+  image: ImageWithAlt!
+  title: String!
+  caption: String
+  description: String!
+  links: [Link!]
+  width: Int
+  height: Int
+  customCardType: CALLOUT_GRID_CARD_TYPES
+}
+
+enum CALLOUT_GRID_CARD_TYPES {
+  HOLIDAY_MR
+  HOLIDAY_ML
+  HOLIDAY_NARROW
+  HOLIDAY_FULL_WIDTH_NARROW
+  RINK_TOP
+  RINK_BOTTOM
+  LAST_CARD
+}

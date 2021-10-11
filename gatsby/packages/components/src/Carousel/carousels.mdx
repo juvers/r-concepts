@@ -1,0 +1,770 @@
+---
+name: Carousels
+menu: Components
+route: /components/carousels
+---
+
+import {Props, Playground} from 'docz';
+import {Box, Flex, Text} from 'theme-ui';
+import {Carousel} from './Carousel.tsx';
+import {
+  CarouselContextProvider,
+  useCarouselContext,
+} from './CarouselContext.tsx';
+import {CarouselList} from './CarouselList.tsx';
+import {CarouselNavigation} from './CarouselNavigation.tsx';
+import {TicketCarousel} from './TicketCarousel.tsx';
+import {EventCarousel} from './EventCarousel.tsx';
+import {IconicExperiencesCarousel} from './IconicExperiencesCarousel.tsx';
+import {SocialCarousel} from './SocialCarousel.tsx';
+import {GalleryCarousel} from './GalleryCarousel.tsx';
+import {ReviewCarousel} from './ReviewCarousel.tsx';
+import {PressCarousel} from './PressCarousel.tsx';
+import {TicketComparisonCarousel} from './TicketComparisonCarousel.tsx';
+import {ImageCardCarousel} from './ImageCardCarousel.tsx';
+import {DetailImageCardCarousel} from './DetailImageCardCarousel.tsx';
+import {getMockFluidImage} from '@tishman/docs';
+
+# Carousels
+
+Components for showing collections of [Cards](card).
+
+Below are some of the pre-built carousels for use on Tishman projects.
+To create a new carousel, see [Creating a Carousel].
+
+## Carousel
+
+This is a generic carousel that simply displays its children as items.
+
+<Props of={CarouselList} />
+
+<Playground>
+  <Carousel color="background" gap="5%" autoSize="90%" initialPage={3}>
+    <Text p={5} bg="primary" children="item 1" />
+    <Text p={5} bg="secondary" children="item 2" />
+    <Text p={5} bg="muted" children="item 3" />
+    <Text p={5} bg="accent" children="item 4" />
+    <Text p={5} bg="accentSecondary" children="item 5" />
+  </Carousel>
+</Playground>
+
+## TicketCarousel
+
+This is a carousel that shows Ticket Offerings
+
+See [TicketCarouselCard](/components/carousel-cards#ticketcarouselcard)
+
+### Props
+
+<Props of={TicketCarousel} />
+
+<Playground>
+  <TicketCarousel
+    data={[
+      {
+        src: getMockFluidImage({width: 290, height: 263}).childImageSharp.fluid,
+        title: 'General Admission',
+        description:
+          'Take a spin on The Rink at Rockefeller Center this upcoming season. Your General Admission ticket guarantees your spot on the ice on the date and time you select.',
+        label: 'Buy Tickets',
+        price: '$39',
+        href: '#',
+      },
+      {
+        src: getMockFluidImage({width: 290, height: 263}).childImageSharp.fluid,
+        title: 'VIP Access',
+        description:
+          'Elevate your skating experience with VIP Access. You’ll enjoy expedited entry and access to our cozy, indoor Art Deco Lounge that provides a comfortable spot to relax and warm up before or after your skate.',
+        label: 'Buy Tickets',
+        price: '$39',
+        href: '#',
+      },
+      {
+        src: getMockFluidImage({width: 290, height: 263}).childImageSharp.fluid,
+        title: 'VIP Flex Pass',
+        description:
+          'Experience VIP Access—with the flexibility to arrive at any time on the date of your ticket. You also have access to the perks of our Art Deco Lounge to make your experience even more enjoyable.',
+        label: 'Buy Tickets',
+        price: '$39',
+        href: '#',
+      },
+      {
+        src: getMockFluidImage({width: 290, height: 263}).childImageSharp.fluid,
+        title: 'Seasonal Membership',
+        description:
+          'Secure a coveted membership and enjoy skating, and priority access to events and activities, at The Rink all season long.',
+        label: 'Buy Tickets',
+        price: '$39',
+        href: '#',
+      },
+      {
+        src: getMockFluidImage({width: 290, height: 263}).childImageSharp.fluid,
+        title: 'Group Sales',
+        description:
+          'The more the merrier. We have special rates for groups of 20 or more.',
+        label: 'Buy Tickets',
+        price: '$39',
+        href: '#',
+      },
+    ]}
+  />
+</Playground>
+
+## EventCarousel
+
+This is a carousel that shows Events
+
+See [EventCarouselCard](/components/carousel-cards#eventCarouselCard)
+
+### Props
+
+<Props of={TicketCarousel} />
+
+<Playground>
+  <EventCarousel
+    seeAllLink="/events/"
+    seeAllText="View All Events"
+    data={[
+      {
+        fluid: getMockFluidImage({width: 276, height: 388}).childImageSharp
+          .fluid,
+        category: 'Kids',
+        title: "Rock Center Kid's Dress Up",
+        formattedStartDateTime: 'April 4',
+        time: '2pm',
+        location: {title: '30 Rockefeller'},
+        href: '#',
+      },
+      {
+        fluid: getMockFluidImage({width: 276, height: 388}).childImageSharp
+          .fluid,
+        category: 'Kids',
+        title: "Rock Center Kid's Dress Up",
+        formattedStartDateTime: 'April 4',
+        time: '2pm',
+        location: {title: '30 Rockefeller'},
+        href: '#',
+      },
+      {
+        fluid: getMockFluidImage({width: 276, height: 388}).childImageSharp
+          .fluid,
+        category: 'Kids',
+        title: "Rock Center Kid's Dress Up",
+        formattedStartDateTime: 'April 4',
+        time: '2pm',
+        location: {title: '30 Rockefeller'},
+        href: '#',
+      },
+      {
+        fluid: getMockFluidImage({width: 276, height: 388}).childImageSharp
+          .fluid,
+        category: 'Kids',
+        title: "Rock Center Kid's Dress Up",
+        formattedStartDateTime: 'April 4',
+        time: '2pm',
+        location: {title: '30 Rockefeller'},
+        href: '#',
+      },
+      {
+        fluid: getMockFluidImage({width: 276, height: 388}).childImageSharp
+          .fluid,
+        category: 'Kids',
+        title: "Rock Center Kid's Dress Up",
+        formattedStartDateTime: 'April 4',
+        time: '2pm',
+        location: {title: '30 Rockefeller'},
+        href: '#',
+      },
+      {
+        fluid: getMockFluidImage({width: 276, height: 388}).childImageSharp
+          .fluid,
+        category: 'Kids',
+        title: "Rock Center Kid's Dress Up",
+        formattedStartDateTime: 'April 4',
+        time: '2pm',
+        location: {title: '30 Rockefeller'},
+        href: '#',
+      },
+    ]}
+  />
+</Playground>
+
+## IconicExperiencesCarousel
+
+This is a carousel that shows Tishman attractions and experiences
+
+See [IconicExperiencesCarouselCard](/components/carousel-cards#iconicexperiencescarouselcard)
+
+### Props
+
+<Props of={IconicExperiencesCarousel} />
+
+<Playground>
+  <IconicExperiencesCarousel
+    title={'Iconic experiences.'}
+    link={{url: '#', label: 'Explore Them All'}}
+    data={[
+      {
+        title: 'Top of the Rock',
+        description: 'Take in 360-degree views of the NYC skyline',
+        fluid: getMockFluidImage({width: 320, height: 450}).childImageSharp
+          .fluid,
+        alt: 'alt text',
+        url: '/',
+      },
+      {
+        title: 'The Rink',
+        description:
+          'Skate under the Christmas Tree and the Prometheus statue.',
+        fluid: getMockFluidImage({width: 320, height: 450}).childImageSharp
+          .fluid,
+        alt: 'alt text',
+        url: '/',
+      },
+      {
+        title: 'Rockefeller Center Tour',
+        description: 'A unique look at a place unlike any other.',
+        fluid: getMockFluidImage({width: 320, height: 450}).childImageSharp
+          .fluid,
+        alt: 'alt text',
+        url: '',
+      },
+      {
+        title: 'Rainbow Room',
+        description: 'A timeless setting for private and special events.',
+        fluid: getMockFluidImage({width: 320, height: 450}).childImageSharp
+          .fluid,
+        alt: 'alt text',
+        url: '/',
+      },
+    ]}
+  />
+</Playground>
+
+## SocialCarousel
+
+This is a carousel that shows Tishman social media. currently powered by Tradable Bits
+
+See [SocialCarouselCard](/components/carousel-cards#SocialCarouselCard)
+
+### Props
+
+<Props of={SocialCarousel} />
+
+<Playground>
+  {/* Box only to add padding in preview */}
+  <Box sx={{pt: 3, pb: 5}}>
+    <SocialCarousel
+      cards={[
+        {
+          image: getMockFluidImage({width: 320, height: 320}).childImageSharp
+            .fluid.src,
+          caption: 'social media caption',
+          url: 'http://twitter.com/15949204/status/image-status',
+        },
+        {
+          image: getMockFluidImage({width: 320, height: 320}).childImageSharp
+            .fluid.src,
+          caption: 'social media caption',
+          url: 'http://twitter.com/15949204/status/image-status',
+        },
+        {
+          image: getMockFluidImage({width: 320, height: 320}).childImageSharp
+            .fluid.src,
+          caption: 'social media caption',
+          url: 'http://twitter.com/15949204/status/image-status',
+        },
+        {
+          image: getMockFluidImage({width: 320, height: 320}).childImageSharp
+            .fluid.src,
+          caption: 'social media caption',
+          url: 'http://twitter.com/15949204/status/image-status',
+        },
+      ]}
+    />
+  </Box>
+</Playground>
+
+## GalleryCarousel
+
+This is a carousel that shows media cards in full width.
+At mobile breakpoint, the arrows drop below gallery and
+cards go to full width of container.
+
+See [GalleryCarouselCard](/components/carousel-cards#GalleryCarouselCard)
+
+#### Special case
+
+This carousel is built to allow rendering of a single media card
+If an array of a single card is passed to `<GalleryCarousel/>`
+instead of rendering a carousel, it will render a single GalleryCarouselCard
+
+### Props
+
+<Props of={GalleryCarousel} />
+
+<Playground>
+  <GalleryCarousel
+    // TODO: ADD A TISHMAN VIDEO
+    cards={[
+      {
+        fluid: getMockFluidImage({width: 1280, height: 680}).childImageSharp
+          .fluid,
+        caption: 'Optional image 1 Caption',
+        alt: 'Mock image 1 alt',
+      },
+      {
+        movieUrl:
+          'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4',
+        caption: 'TODO: ADD A TISHMAN VIDEO',
+      },
+      {
+        fluid: getMockFluidImage({width: 1280, height: 680}).childImageSharp
+          .fluid,
+        caption: 'Optional image 2 Caption',
+        alt: 'Mock image 2 alt',
+      },
+      {
+        movieUrl:
+          'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4',
+        caption: 'TODO: ADD A TISHMAN VIDEO',
+      },
+    ]}
+  />
+</Playground>
+
+## Ticket Comparison Carousel
+
+This is a carousel that shows tickets with listsed features. Takes two tickets that are
+chosen by the select dropdown
+
+See [TicketComparisonCard](/components/carousel-cards#TicketComparisonCard)
+
+### Props
+
+<Props of={TicketComparisonCarousel} />
+
+<Playground>
+  <TicketComparisonCarousel
+    tickets={[
+      {
+        src: getMockFluidImage({width: 316, height: 212}).childImageSharp.fluid,
+        title: 'Top of the Rock General Admission',
+        label: 'Buy Tickets',
+        price: '$39',
+        url: '#',
+        ticketFeatures: {
+          admission: true,
+          views: true,
+          levels: true,
+          timeLimit: true,
+        },
+      },
+      {
+        src: getMockFluidImage({width: 316, height: 212}).childImageSharp.fluid,
+        title: 'Top of the Rock VIP Access Pass',
+        label: 'Buy Tickets',
+        price: '$39',
+        url: '#',
+        ticketFeatures: {
+          admission: true,
+          views: true,
+          levels: true,
+          timeLimit: true,
+          entry: true,
+          elevator: true,
+          merchandise: true,
+          schedule: true,
+        },
+      },
+      {
+        src: getMockFluidImage({width: 316, height: 212}).childImageSharp.fluid,
+        title: 'CityPASS',
+        label: 'Buy Tickets',
+        price: '$39',
+        url: '#',
+        ticketFeatures: {
+          admission: true,
+          views: true,
+          levels: true,
+          timeLimit: true,
+          visit: true,
+          save: true,
+          valid: true,
+        },
+      },
+      {
+        src: getMockFluidImage({width: 316, height: 212}).childImageSharp.fluid,
+        title: 'C3',
+        label: 'Buy Tickets',
+        price: '$39',
+        url: '#',
+        ticketFeatures: {
+          admission: true,
+          views: true,
+          levels: true,
+          timeLimit: true,
+          valid: true,
+          choice: true,
+          saveUpTo: true,
+        },
+      },
+    ]}
+    featureList={{
+      admission: 'Admission to Top of the Rock.',
+      views: '360-degree unobstructed views.',
+      levels: '3 levels of indoor and outdoor observation decks.',
+      timeLimit:
+        'No time limit––stay as long as you like during operating hours.',
+      entry: 'Immediate entry, even if sold out.',
+      elevator: 'Priority elevator access.',
+      merchandise: '20% Off Top of the Rock merchandise.',
+      schedule: 'Schedule your date, come anytime.',
+      visit:
+        'Visit 6 NYC attractions, including Top of the Rock Observation Deck.',
+      save: 'Save 42%.',
+      valid: 'Valid for 30 days.',
+      choice:
+        'Have your choice of 3 out of 12 top NYC attractions, including Top of the Rock Observation Deck, to visit over a 9-day period.',
+      saveUpTo: 'Save up to 30%.',
+    }}
+  />
+</Playground>
+
+## Review Carousel
+
+This is a carousel that shows review quotes.
+
+The quotes will be manually entered in the cms and pulled from there.
+
+See [GalleryCarouselCard](/components/carousel-cards#GalleryCarouselCard)
+
+### Props
+
+<Props of={ReviewCarousel} />
+
+<Playground>
+  <ReviewCarousel
+    cards={[
+      {
+        quote:
+          'Stunning views over the park and the city, with some good information on the way up about the building of the centre.',
+        author: 'Amy M',
+      },
+      {
+        quote:
+          'Stunning views over the park and the city, with some good information on the way up about the building of the centre.',
+        author: 'Amy M',
+      },
+      {
+        quote:
+          'Stunning views over the park and the city, with some good information on the way up about the building of the centre.',
+        author: 'Amy M',
+      },
+    ]}
+  />
+</Playground>
+
+## Press Carousel
+
+This is a carousel that shows press excerpts.
+
+The excerpts will be manually entered in the cms and pulled from there.
+
+See [GalleryCarouselCard](/components/carousel-cards#GalleryCarouselCard)
+
+### Props
+
+<Props of={PressCarousel} />
+
+<Playground>
+  <PressCarousel
+    cards={[
+      {
+        excerpt:
+          'Stunning views over the park and the city, with some good information on the way up about the building of the centre.',
+        source: 'NYCGo.com',
+        links: [
+          {
+            label: 'Read full article',
+            url: '#',
+          },
+        ],
+      },
+      {
+        excerpt:
+          'Stunning views over the park and the city, with some good information on the way up about the building of the centre.',
+        source: 'Food & Wine',
+      },
+      {
+        excerpt:
+          'Stunning views over the park and the city, with some good information on the way up about the building of the centre.',
+        source: 'Zagat',
+        links: [
+          {
+            label: 'Read full article',
+            url: '#',
+          },
+        ],
+      },
+      {
+        excerpt:
+          'Stunning views over the park and the city, with some good information on the way up about the building of the centre.',
+        source: 'Conde Nast Traveler',
+      },
+      {
+        excerpt:
+          'Stunning views over the park and the city, with some good information on the way up about the building of the centre.',
+        source: 'Brides',
+        links: [
+          {
+            label: 'Read full article',
+            url: '#',
+          },
+        ],
+      },
+      {
+        excerpt:
+          'Stunning views over the park and the city, with some good information on the way up about the building of the centre.',
+        source: 'Beyond Times Square',
+      },
+    ]}
+  />
+</Playground>
+
+## Image Card Carousel
+
+This is a carousel that shows generic cards with images.
+
+### Props
+
+<Props of={ImageCardCarousel} />
+
+<Playground>
+  <ImageCardCarousel
+    carouselTitleSx={{
+      fontSize: 7,
+    }}
+    title="Shopping"
+    seeAllLink={{
+      url: '/shopping/all/',
+      label: 'See All Shopping',
+    }}
+    data={[
+      {
+        alt: 'A cool photo',
+        title: 'Cole Haan',
+        fluid: getMockFluidImage({width: 290, height: 390, usePhoto: true})
+          .childImageSharp.fluid,
+        href: 'https://www.colehaan.com/',
+      },
+      {
+        alt: 'A cool photo',
+        title: 'Aldo',
+        description: 'Find your style at Aldo',
+        fluid: getMockFluidImage({width: 290, height: 390, usePhoto: true})
+          .childImageSharp.fluid,
+        href: 'https://www.aldoshoes.com/',
+      },
+      {
+        alt: 'Aritzia',
+        title: 'Aritzia',
+        description: "They're handbags, not purses.",
+        fluid: getMockFluidImage({width: 290, height: 390, usePhoto: true})
+          .childImageSharp.fluid,
+        href: 'https://www.aritzia.com/',
+      },
+      {
+        alt: 'Meeting of the Minds',
+        title: 'Meeting of the Minds',
+        description:
+          "Yes, this is apparently a retail store. What it sells is anybody's guess",
+        fluid: getMockFluidImage({width: 290, height: 390, usePhoto: true})
+          .childImageSharp.fluid,
+      },
+      {
+        alt: 'Walmart',
+        title: 'Walmart',
+        description: 'Nah, this would never be at 30 Rock, right?',
+        fluid: getMockFluidImage({width: 290, height: 390, usePhoto: true})
+          .childImageSharp.fluid,
+      },
+    ]}
+  />
+</Playground>
+
+## Detail Image Card Carousel
+
+This is a carousel that shows generic cards with images, bold title, description and optional cta link.
+
+### Props
+
+<Props of={DetailImageCardCarousel} />
+
+<Playground>
+  <DetailImageCardCarousel
+    carouselTitleSx={{
+      fontSize: 7,
+    }}
+    data={[
+      {
+        alt: 'A cool photo',
+        title: 'Cole Haan',
+        fluid: getMockFluidImage({width: 290, height: 390, usePhoto: true})
+          .childImageSharp.fluid,
+        link: {
+          label: 'Explore',
+          url: '#',
+        },
+      },
+      {
+        alt: 'A cool photo',
+        title: 'Aldo',
+        description: 'Find your style at Aldo',
+        fluid: getMockFluidImage({width: 290, height: 390, usePhoto: true})
+          .childImageSharp.fluid,
+        link: {
+          label: 'Explore',
+          url: '#',
+        },
+      },
+      {
+        alt: 'Aritzia',
+        title: 'Aritzia',
+        description: "They're handbags, not purses.",
+        fluid: getMockFluidImage({width: 290, height: 390, usePhoto: true})
+          .childImageSharp.fluid,
+        link: {
+          label: 'Explore',
+          url: '#',
+        },
+      },
+      {
+        alt: 'Meeting of the Minds',
+        title: 'Meeting of the Minds',
+        description:
+          "Yes, this is apparently a retail store. What it sells is anybody's guess",
+        fluid: getMockFluidImage({width: 290, height: 390, usePhoto: true})
+          .childImageSharp.fluid,
+        link: {
+          label: 'Explore',
+          url: '#',
+        },
+      },
+      {
+        alt: 'Walmart',
+        title: 'Walmart',
+        description: 'Nah, this would never be at 30 Rock, right?',
+        fluid: getMockFluidImage({width: 290, height: 390, usePhoto: true})
+          .childImageSharp.fluid,
+        link: {
+          label: 'Explore',
+          url: '#',
+        },
+      },
+    ]}
+  />
+</Playground>
+
+## Creating a Carousel
+
+A carousel consists of two building blocks: a [CarouselContextProvider]
+and the [useCarouselContext] hook. In many cases, a carousel can be composed
+from the existing [CarouselList] and [CarouselNavigation] components.
+
+For example, here is the implementation of [Carousel]:
+
+```jsx
+const Carousel = (props) => (
+  <CarouselContextProvider>
+    <CarouselList {...props} />
+  </CarouselContextProvider>
+);
+```
+
+### CarouselContextProvider
+
+Provides a [Pagination] object (from [usePagination]) as context.
+
+### useCarouselContext
+
+A hook for the component parts of a carousel. receives a [Pagination]
+object from the nearest [CarouselContextProvider].
+
+<Playground>
+  {() => {
+    const color = ['text', 'primary', 'secondary', 'accent', 'muted'];
+    const Item = ({index}) => {
+      const {page, pages} = useCarouselContext();
+      const delta = index - page;
+      return (
+        <Box py={9} bg={color[index % color.length]} sx={{textAlign: 'center'}}>
+          <Text>{`page ${index + 1} of ${pages}`}</Text>
+          <Text>
+            {delta
+              ? `${delta} from ${delta > 0 ? 'right' : 'left'}`
+              : 'active!'}
+          </Text>
+        </Box>
+      );
+    };
+    return (
+      <CarouselContextProvider>
+        <CarouselNavigation />
+        <CarouselList
+          __debug
+          color="background"
+          gap={0}
+          autoSize="max(20%, 180px)"
+          maxWidth="max(20%, 180px)"
+        >
+          {Array.from(Array(10).keys(), (index) => (
+            <Item key={index} index={index} />
+          ))}
+        </CarouselList>
+      </CarouselContextProvider>
+    );
+  }}
+</Playground>
+
+### CarouselList
+
+A [CSS Scroll Snap] implementation of a carousel.
+
+Receives the same props as [Carousel].
+
+Requires a [CarouselContextProvider] ancestor.
+
+### CarouselNavigation
+
+A simple navigation component with next and previous buttons.
+
+Requires a [CarouselContextProvider] ancestor.
+
+<Playground>
+  {() => {
+    return (
+      <CarouselContextProvider>
+        <CarouselNavigation />
+        <CarouselList color="background" gap={0} autoSize="100%">
+          <Text p={9} bg="primary" children="item 1" />
+          <Text p={9} bg="secondary" children="item 2" />
+          <Text p={9} bg="muted" children="item 3" />
+          <Text p={9} bg="accent" children="item 4" />
+          <Text p={9} bg="accentSecondary" children="item 5" />
+        </CarouselList>
+      </CarouselContextProvider>
+    );
+  }}
+</Playground>
+
+[card]: https://theme-ui.com/components/card
+[css scroll snap]: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scroll_Snap
+[usepagination]: /hooks/use-pagination
+[pagination]: /hooks/use-pagination#pagestate
+[creating a carousel]: #creating-a-carousel
+[carousel]: #carousel
+[carouselcontextprovider]: #carouselcontextprovider
+[carousellist]: #carousellist
+[carouselnavigation]: #carouselnavigation
+[usecarouselcontext]: #usecarouselcontext

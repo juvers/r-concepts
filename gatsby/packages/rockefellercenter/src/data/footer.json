@@ -1,0 +1,67 @@
+{
+  "id": "footer",
+  "footerContactData": {
+    "address": "45 ROCKEFELLER PLAZA NEW YORK, NY 10111",
+    "copyright": "© Rockefeller Center 2020 ALL RIGHTS RESERVED",
+    "phoneNumberOne": "212.588.8601",
+    "phoneNumberTwo": "1.877.NYC.ROCK"
+  },
+  "footerFollowUsData": {
+    "instagram": "https://www.instagram.com/rockefellercenter",
+    "facebook": "https://www.facebook.com/rockefellercenternyc",
+    "twitter": "https://twitter.com/rockcenternyc",
+    "rocklistUrl": "/the-center-newsletter"
+  },
+  "footerAppDownloadData": {
+    "appStore": {
+      "link": "https://apps.apple.com/us/app/top-of-the-rock/id481755325",
+      "image": "../images/app_store.png"
+    },
+    "googlePlay": {
+      "link": "https://play.google.com/store/apps/details?id=com.topoftherocknyc.android&hl=en_CA",
+      "image": "../images/play_store.png"
+    }
+  },
+  "subNavLinks": [
+    {
+      "label": "Plan Your Visit",
+      "url": "/plan-visit"
+    },
+    {
+      "label": "Map & Directions",
+      "url": "/map-directions"
+    },
+    { "label": "News & Updates",
+      "url": "/news"},
+    {
+      "label": "Contact Us",
+      "url": "/contact"
+    },
+    {
+      "label": "Gift Shop",
+      "url": "https://topoftherockshop.com/"
+    },
+    {
+      "label": "FAQs",
+      "url": "/faq"
+    },
+    {
+      "label": "Accessibility Statement",
+      "url": "/accessibility"
+    },
+    {
+      "label": "Executive Team",
+      "url": "/executive-team"
+    }
+  ],
+  "footerContactSubNavLinks": [
+    {
+      "label": "Privacy Policy",
+      "url": "/documents/RC_PrivacyPolicy.pdf"
+    },
+    {
+      "label": "Terms & Conditions",
+      "url": "/documents/RC_TermsAndConditions.pdf"
+    }
+  ]
+}

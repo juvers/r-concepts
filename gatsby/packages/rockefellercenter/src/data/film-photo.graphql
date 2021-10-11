@@ -1,0 +1,21 @@
+type DataJson implements Node @infer {
+  meta: Meta!
+  filmPhotoHero: FilmPhotoHero!
+  filmPhotoCalloutGrid: FilmPhotoCalloutGrid!
+  featuredGallery: featuredGallery!
+  imageCallout: ImageCallout!
+  wideCta: WideCta!
+}
+
+type FilmPhotoHero {
+  title: String!
+  caption: String!
+  image: ImageWithAlt!
+}
+
+type FilmPhotoCalloutGrid {
+  title: String!
+  caption: String!
+  links: [Link!]!
+  cards: [ImageGridCard!]!
+}

@@ -1,0 +1,20 @@
+type FormJson implements Node @infer {
+  meta: Meta!
+  integrationId: String!
+  name: String!
+  slug: String!
+  description: FormJsonDescription!
+  thankYouMessage: FormThankYouMessage!
+  formSubmissionNotice: [String!]!
+}
+
+type FormJsonDescription {
+  text: [String!]!
+  image: Image! @imageByRelativePath
+}
+
+type FormThankYouMessage {
+  title: String!
+  caption: String!
+  links: [Link!]!
+}

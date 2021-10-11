@@ -1,0 +1,278 @@
+{
+  "id": "history",
+  "meta": {
+    "title": "History at Rockefeller Center | NYC's Historical Landmark",
+    "description": "Learn the incredible history of NYC's most famous landmark. From John D. Rockefeller's extraordinary vision to the creation of the Plaza, explore the history of this legendary attraction."
+  },
+  "historyHero": {
+    "title": "History in the Making.",
+    "caption": "From its planning to its inception right down to the present day, Rockefeller Center has been a place that makes history, and where history is made. Filled with interesting characters, incredible moments, and defining events, getting a historical perspective and understanding of Rockefeller Center is always rewarding.",
+    "image": {
+      "src": "../images/tor-guided-tour-1960s.jpg",
+      "alt": "A guided tour at the Top of the Rock overlooking the Empire State Building and lower Manhattan."
+    }
+  },
+  "history": {
+    "cards": [
+      {
+        "type": "PORTRAIT",
+        "title": "Oct. 1, 1928",
+        "caption": "John D. Rockefeller leases land from Columbia University for the future site of Rockefeller Center. The land covered nearly all of the area in the three square blocks bordered by Fifth Avenue, the Avenue of the Americas (Sixth Avenue), and 48th and 51st Streets.",
+        "image": {
+          "src": "../images/future-site-rock-center-1928.jpg",
+          "alt": "The future site of the Rockefeller Center in 1928 was planned for the Metropolitan Opera House."
+        }
+      },
+      {
+        "type": "PORTRAIT",
+        "title": "Dec. 1931",
+        "caption": "The first Rockefeller Center Christmas Tree. During the Great Depression, workers at Rockefeller Center pooled their money to purchase the original Rockefeller Center Christmas Tree, a 20-foot balsam fir, adorned it with home-made garlands, and stood it at the Rockefeller Center construction site as a symbol of hope and optimism. Two years later, in 1933, Rockefeller Center made the tree an annual tradition.",
+        "image": {
+          "src": "../images/first-rockefeller-christmas-tree-1931.jpg",
+          "alt": "The first Rockefeller Center Christmas Tree in 1931 with workers collecting their paychecks."
+        }
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "March 1932.",
+        "caption": "Construction begins at 30 Rockefeller Plaza. Construction on Radio City Music Hall was also underway.",
+        "image": {
+          "src": "../images/rock-center-construction-1932.jpg",
+          "alt": "The early stage of the Rockefeller Center construction in 1932."
+        },
+        "didYouKnow": "The Tree at the first official lighting ceremony was 50 feet tall and adorned with 700 twinkling lights."
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "Dec. 27, 1932.",
+        "caption": "Opening night at Radio City Music Hall. Originally intended for vaudeville-style shows, these proved to be a failure in the cavernous 6,000 seat hall. Within a year, Radio City Music Hall became a movie house, with films presented with stage shows, including a performance by a group of female dancers, The Rockettes, who, along with the annual Christmas Spectacular, have been the most popular attraction at the hall ever since.",
+        "image": {
+          "src": "../images/radio-city-music-hall-1932.jpg",
+          "alt": "Radio City Music Hall and Manhattan streets with people in December of 1932."
+        },
+        "didYouKnow": "More than 700 films have premiered at Radio City Music Hall since 1933, including King Kong, Breakfast at Tiffany’s, To Kill a Mockingbird (starring former Radio City usher, Gregory Peck), Mary Poppins, 101 Dalmatians, and The Lion King."
+      },
+      {
+        "type": "PORTRAIT",
+        "title": "Oct. 1934",
+        "caption": "The opening of the Rainbow Room. At the time of its unveiling, the Rainbow Room, towering 65 stories above Manhattan, was the highest elevated restaurant in the entire country. The stunning views, along with the luxurious atmosphere, attracted socialites and celebrities like Bette Davis, Joan Crawford, and Sir Lawrence Olivier. With its Art Deco design, two-story tall windows, revolving dance floor and big band orchestra, the Rainbow Room was the place to be seen in New York.",
+        "image": {
+          "src": "../images/rainbow-room-1934.jpg",
+          "alt": "Rainbow Room in 1934 set up for an event."
+        },
+        "didYouKnow": "The Rainbow Room got its name from an organ that illuminated with colored lights that changed based on the music played by a specially designed Wurlitzer organ."
+      },
+      {
+        "type": "PORTRAIT",
+        "title": "Dec. 25, 1936",
+        "caption": "The opening of the Rockefeller Center skating pond. Despite the draw of the Christmas Tree and the year-round shops, enticing guests to walk down the stairs and into the sunken plaza proved difficult. The idea of a temporary “skating pond” was eventually proposed. It became an instant hit and was soon a permanent addition delighting city residents and tourists alike.",
+        "image": {
+          "src": "../images/rock-center-rink-1936.jpg",
+          "alt": "Ice skaters and spectators at the Rockefeller Center Rink in 1936."
+        },
+        "didYouKnow": "According to legend, the idea for a skating rink came from a Depression-era skate salesman, who, as a sales pitch, demonstrated his skates on the ice in the Rockefeller Plaza fountain. It’s thought that seeing this man skate on the makeshift rink inspired the Rockefeller’s to build a proper one."
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "Nov. 7, 1938",
+        "caption": "The opening of the Sidewalk Superintendant’s Club. Building construction was something of a spectator sport in the 1930s. Most sites were closed off to people hoping to catch a glimpse of a skyscraper’s progress but not at Rockefeller Center. A 100-foot-long, screen enclosed shed was built between 48th and 49th Streets so that onlookers, or the Sidewalk Superintendant’s Club as they were called, could see the complex take shape.",
+        "image": {
+          "src": "../images/sidewalk-superintendents-club-1938.jpg",
+          "alt": "The 100-foot-long, screen-enclosed Sidewalk Superintendents' Club between 48th and 49th St with people watching the Rock Center excavation in 1938."
+        }
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "Nov. 1, 1939",
+        "caption": "The completion of Rockefeller Center. John D. Rockefeller Jr. installed the ceremonial final rivet in the building that was to become the home of the U.S. Rubber Company, marking the “official” completion of the original Rockefeller Center complex, The entire project employed between 40,000 and 60,000 people and was the largest private building project in contemporary times.",
+        "image": {
+          "src": "../images/rock-center-completion-ceremony-1939.jpg",
+          "alt": "John D. Rockefeller installing the ceremonial final rivet for the completion of the Rockefeller Center complex in 1939."
+        },
+        "didYouKnow": "When designs for Rockefeller Center were first unveiled, the influential critic and historian Lewis Mumford said they were “bad with an almost juvenile badness.” Yet, as the project neared completion it became increasingly popular with the public, prompting Ira Gershwin to pen “They all laughed at Rockefeller Center, now they’re fighting to get in…Ha, ha, ha! Who’s got the last laugh now?”"
+      },
+      {
+        "type": "PORTRAIT",
+        "title": "June, 1942",
+        "caption": "Victory Gardens at Rockefeller Center. During WWII, our country’s food production and distribution networks were focused on feeding the 16 million servicemen and women stationed abroad, so citizens were urged to plant Victory Gardens to prevent shortages on the home-front. At Rockefeller Center Victory Gardens were planted with tomatoes, cabbage and corn were grown.",
+        "image": {
+          "src": "../images/victory-gardens-rock-center-1942.jpg",
+          "alt": "A gardener tends to Vicotry Gardens of the Rockefeller Center gardens during WWII in 1942."
+        },
+        "didYouKnow": "At the peak of the effort, there were more than 400,000 Victory Gardens in NYC cultivating more than 200 million pounds of produce on more than 6,000 acres, the equivalent of seven Central Parks."
+      },
+      {
+        "type": "PORTRAIT",
+        "title": "Jan. 14, 1952",
+        "caption": "The beginning of The Today Show. The Today Show debuts, becoming the first of its genre on American television and in the world. Blending national news headlines, interviews, lifestyle features, and other light news and gimmicks, the show has spawned numerous others, and has been copied in other countries including the United Kingdom and Canada.",
+        "image": {
+          "src": "../images/todayshow-timeline.jpg",
+          "alt": "The Rink & Tuba Christmas"
+        },
+        "didYouKnow": "In pre-production, The Today Show’s working title was The Rise and Shine Revue."
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "Dec. 1955",
+        "caption": "The debut of the Clarebout Angels in The Channel Gardens. Created by the English artist Valerie Clarebout, the 12 luminous Angels that line the Channel Gardens at Christmas time are crafted from 18 miles of aluminum wire and brass, along with miniature lights. Each of the Angels holds a six-foot trumpet heralding the holiday season.",
+        "image": {
+          "src": "../images/creating-christmas-angel-1955.jpg",
+          "alt": "English artist, Valerie Clarebout working on the Rockefeller Christmas Angels in 1955."
+        },
+        "didYouKnow": "Prior to the Clarebout Angels, previous iterations of the holiday display included snowmen, forest creatures, and jack-in-the-boxes."
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "1961-1970s",
+        "caption": "Rockefeller Center stockpiling during The Cold War. With the rise of the Cold War, Rockefeller Center initiated a shelter program, stocking the basements with supplies.",
+        "image": {
+          "src": "../images/coldwarstockpile-timeline.jpg",
+          "alt": "Olympians"
+        }
+      },
+      {
+        "type": "PORTRAIT",
+        "title": "1985",
+        "caption": "Rockefeller Center receives NYC Landmark status.",
+        "image": {
+          "src": "../images/RC_Hist_1985.jpg",
+          "alt": "The Rockefeller Center was declared a New York City landmark in 1985."
+        }
+      },
+      {
+        "type": "PORTRAIT",
+        "title": "1987",
+        "caption": "Rockefeller Center is recognized as a National Historic Landmark.",
+        "image": {
+          "src": "../images/RC_Hist_1987.jpg",
+          "alt": "News is an Art Deco sculpture above the entrance to 50 Rockefeller Plaza."
+        }
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "1996",
+        "caption": "Rockefeller Center revitalization begins. By the mid-1990s, Rockefeller Center fell into bankruptcy. Seeing a tremendous opportunity, Tishman Speyer, along with four other prominent investors,  acquired the Center, and immediately embarked on an ambitious redevelopment program to restore the property to its former glory.",
+        "image": {
+          "src": "../images/rc-revitalization-timeline.jpg",
+          "alt": "Olympians"
+        }
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "1998",
+        "caption": "Christie’s moves to Rockefeller Center. This move provides the general public incredible opportunities to see world famous artworks on display before they’re sold in private auction.",
+        "image": {
+          "src": "../images/christies-entrance-rock-center.jpg",
+          "alt": "Christie's auction house entrance at Rockefeller Plaza."
+        }
+      },
+      {
+        "type": "PORTRAIT",
+        "title": "June 6, 2000",
+        "caption": "Jeff Koons’ Puppy exhibit opens on the Plaza. The artistic tradition of Rockefeller Center, with its architecture, sculpture, mosaics and murals, continued in 2000 with Jeff Koons’ Puppy. Rising 43 feet from its paws to its ears, over 70,000 multi-hued flowering plants grew from its steel and soil structure, including marigolds, begonias, impatiens, petunias, and lobelias. Subsequent years saw additional works of public art featured on the Plaza for all to enjoy, including Louise Bourgeois’ bronze Spiders spectacle, Agnes Winter’s Monument to Smile exhibition, and Takashi Murakami’s Reverse Double Helix display.",
+        "image": {
+          "src": "../images/puppy-public-art-scupture-2000.jpg",
+          "alt": "The 43 foot public art scupture Puppy, by Jeff Koons at Rockefeller Center in 2000."
+        },
+        "didYouKnow": "First created in 1992 for a temporary exhibition in the German city of Arolson, Puppy embodies Koons’ sculptural imagination and is a symbol of “love, warmth and happiness”."
+      },
+      {
+        "type": "PORTRAIT",
+        "title": "Dec. 2004",
+        "caption": "First Swarovski Star atop The Tree. Designed by Michael Hammers, the “Swarovski Star” from Austrian crystal company Swarovski, was composed of 25,000 sparkling crystals featuring over one million radiant facets. Lit with LED bulbs, it twinkled with the help of a customized light sequence via a state-of-the-art computer program.",
+        "image": {
+          "src": "../images/2004-christmas-tree.jpg",
+          "alt": "The 71 feet tall and 40 feet wide 2004 Rockefeller Center Christmas Tree with the lights and start at the top."
+        },
+        "didYouKnow": "Designed by famed architect Daniel Libeskind, the current Swarovski Star, which debuted in 2018, is a 9-foot-4-inch topper, backlit by LEDs and dazzles with 3 million Swarovski crystals adorned across 70 triangular spikes."
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "Nov. 1, 2005",
+        "caption": "Top of the Rock reopens. After nearly 20 years, Top of the Rock Observation Deck re-opened its doors to the public. The observation deck was designed to mimic the deck of a cruise ship, and sought to create the sensation that visitors were sailing across a “metropolitan ocean”.",
+        "image": {
+          "src": "../images/top-of-the-rock-opening-2005.jpg",
+          "alt": "NYC skyline view from the Top of the Rock, which reopened in 2005 after 20 years."
+        },
+        "didYouKnow": "Top of the Rock Observation Deck was the first attraction to open to the public when the RCA Building (30 Rockefeller Plaza) debuted in 1933. Almost immediately it  became a popular destination among New Yorkers and tourists alike."
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "Dec. 10, 2007",
+        "caption": "Rockefeller Center Penny Harvest. Students from more than 800 schools spent the weeks from October 22 through Thanksgiving gathering pennies to be given to organizations of their choice. The giving season culminated at the Penny Harvest Field, a massive display of an estimated one hundred million pennies at Rockefeller Center.",
+        "image": {
+          "src": "../images/penny-harvest-students-2007.jpg",
+          "alt": "Students from more than 800 schools at the Penny Harvest Field at Rock Center."
+        },
+        "didYouKnow": "In 2006, 448,768 Penny Harvest students in New York City collected $643,840.83 in pennies, with the money going to make 1,361 grants and support 315 neighborhood service projects."
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "Feb. 17, 2014",
+        "caption": "The Tonight Show returns to Rockefeller Center. After having been moved to Burbank, California by Johnny Carson 42 years earlier, The Tonight Show, starring new host and longtime SNL cast member Jimmy Fallon, returned home to Rockefeller Center. It set up shop in Studio 6B, the same studio where Jack Paar and Johnny Carson had previously hosted from 1957 until 1972.",
+        "image": {
+          "src": "../images/tonight-show-jimmy-fallon-2014.jpg",
+          "alt": "The Tonight Show returns to Rockefeller Center with Jimmy Fallon in 2014."
+        },
+        "didYouKnow": "One the most entertaining recurring bits on The Tonight Show was the lip sync battle, in which Fallon and his guests would square off to see who could perform the best lip syncing routine. The bit was so popular, it was spun off into its own show on Paramount Network."
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "Feb. 15, 2015",
+        "caption": "SNL 40th Anniversary Special. Broadcast live from Studio 8H in Rockefeller Plaza, the special followed the format of a typical Saturday Night Live episode, extended to 3½ hours instead of the usual 1½, and included a cold open, a monologue, sketches, a short film, commercial parodies, and musical performances. Show creator and executive producer Lorne Michaels stated that every host and most musical guests were invited, plus any cast member or writer who had been on the show more than a year. Ultimately, over a hundred in all appeared.",
+        "image": {
+          "src": "../images/snl-40th-anniversary-2015.jpg",
+          "alt": "SNL 40th Anniversary Special broadcast live from Studio 8H in Rockefeller Plaza in 2015."
+        },
+        "didYouKnow": "The special generated 23.1 million viewers, becoming NBC's most-watched prime-time, non-sports, entertainment telecast since the Friends series finale in 2004."
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "April 25, 2019",
+        "caption": "Frieze Sculpture at Rockefeller Center. Rockefeller Center and Tishman Speyer brought Frieze Sculpture across the pond for the very first time. Situated throughout the Rockefeller Center campus, the public was invited to explore new and significant sculptures by 14 international artists including Goshka Macuga, Ibrahim Mahama, Joan Miró, Paulo Nazareth, Sarah Sze, and Hank Willis Thomas, among many others.",
+        "image": {
+          "src": "../images/behind-the-walls-frieze-sculpture.jpg",
+          "alt": "Behind the Wall by Jaume Plensa, part of the 2019 Frieze Sculpture show at Rock Center."
+        },
+        "didYouKnow": "Frieze returned to Rockefeller Center in September of 2020 featuring work by six contemporary artists: Ghada Amer, Beatriz Cortez, Thaddeus Mosley, Lena Henke, Camille Henrot and Andy Goldsworthy."
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "June 28, 2019",
+        "caption": "Pride at Rockefeller Center. World Pride came to NYC during the summer of 2019. This was the 50th anniversary of the Stonewall uprising and served not only as a time to reflect on the activism and heritage of the LQBTQIA+ community, but also to dance, celebrate, and to look ahead to the future. 109 Pride flags flew in Rockefeller Plaza, alternating colors beautifully illuminated the façade of 30 Rock, and events such the inaugural Love Above All Ball, which was hosted in the Rainbow Room sought to highlight the most rainbow-colored weekend of the year.",
+        "image": {
+          "src": "../images/pride-flags-2019.jpg",
+          "alt": "109 Pride flags at the Rockefeller Plaza in June 2019."
+        },
+        "didYouKnow": "The WorldPride NYC 2019 celebration was the largest LGBTQIA+ event in history, with an official estimate of five million attending Pride weekend in Manhattan alone."
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "Aug. 1, 2020",
+        "caption": "The Flag Project. Hopeful, provocative and spirited, the core of the display featured flags from 13 artists including Faith Ringgold, Carmen Herrera, Marina Abramović, Sanford Biggers, Jenny Holzer, Christian Siriano, Shantell Martin, Laurie Anderson, Sarah Sze, Hank Willis Thomas, Stephen Powers, KAWS and Jeff Koons. With 193 flags in all, 180 flag designs were selected from works submitted by the public.",
+        "image": {
+          "src": "../images/flag-project-rock-center-2020.jpg",
+          "alt": "The Flag Project at Rock Center in 2020 displaying 180 flag designs."
+        },
+        "didYouKnow": "While the majority of participants hailed from NYC, New Jersey also represented in a big way, and a number of the flags hailed from as far away as Toronto, Houston, and Buenos Aires."
+      }
+    ]
+  },
+  "wideCta": {
+    "title": "Take the Tour",
+    "caption": "Take our guided tour and go in-depth into the incredible art and history of Rockefeller Center.",
+    "link": {
+      "url": "/buy-tickets/#rockefeller-center-tour",
+      "label": "Buy Tickets"
+    }
+  },
+  "imageCallout": {
+    "title": "Art at Rockefeller Center",
+    "description": "See the varied public artworks that make Rockefeller Center a masterpiece of composition.",
+    "link": {"url": "/art", "label": "Explore the Art"},
+    "image": {
+      "src": "../images/news-art-deco-scupture.jpg",
+      "alt": "News is an Art Deco sculpture above the entrance to 50 Rockefeller Plaza."
+    }
+  }
+}

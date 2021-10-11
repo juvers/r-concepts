@@ -1,0 +1,117 @@
+---
+name: IntrinsicBox
+menu: Components
+route: /components/intrinsic-box
+---
+
+import {Props, Playground} from 'docz';
+import {Heading, Text} from 'theme-ui';
+import {IntrinsicBox} from './IntrinsicBox';
+
+# IntrinsicBox
+
+A ThemeUI [Box], but with a `ratio` prop like ThemeUI [AspectRatio].
+
+The differences between this component and [AspectRatio] are:
+
+- [AspectRatio] hides overflow (and thus requires content to be positioned),
+  while this component shows overflow, and content is allowed to flow.
+
+- [AspectRatio] only supports one `ratio` value, while this component supports
+  multiple for responsive designs
+
+- It supports `minWidth` and `maxWidth` props, which can also be responsive
+
+It also maintains the ratio differently, by sandwiching content
+between floated `::before` and cleared `::after` [pseudo elements]
+rather than [padding and positioning].
+
+> To use [Flex] instead of [Box], see [IntrinsicFlex].
+
+> For displaying images with intrinsic ratio, see [IntrinsicImage].
+
+## Properties
+
+In addition to properties available on [Box], `IntrinsicBox` accepts:
+
+<Props of={IntrinsicBox} />
+
+## Basic usage
+
+```ts
+import {IntrinsicBox} from '@tishman/components';
+```
+
+### With `ratio`:
+
+<Playground>
+  <IntrinsicBox
+    ratio={16 / 9}
+    sx={{border: '1px solid', borderColor: 'accentSecondary'}}
+  >
+    <Heading>Intrinsic Box</Heading>
+    <Text>This box keeps its intrinsic ratio when resizing</Text>
+    <Text>But it will allow overflow to be visible</Text>
+  </IntrinsicBox>
+</Playground>
+
+### With `minWidth` and `maxWidth`:
+
+<Playground>
+  <IntrinsicBox
+    ratio={16 / 9}
+    minWidth={350}
+    maxWidth={500}
+    sx={{border: '1px solid', borderColor: 'accentSecondary'}}
+  >
+    <Heading>Intrinsic Box</Heading>
+    <Text>This box keeps its intrinsic ratio when resizing</Text>
+    <Text>But it will allow overflow to be visible</Text>
+  </IntrinsicBox>
+</Playground>
+
+### With [Box] properties:
+
+<Playground>
+  <IntrinsicBox
+    ratio={16 / 9}
+    p={4}
+    color="primary"
+    bg="accent"
+    sx={{
+      border: '1px solid',
+      borderColor: 'currentColor',
+    }}
+  >
+    <Heading>Intrinsic Box</Heading>
+    <Text>This box keeps its intrinsic ratio when resizing</Text>
+    <Text>But it will allow overflow to be visible</Text>
+  </IntrinsicBox>
+</Playground>
+
+### With responsive ratio
+
+<Playground>
+  <IntrinsicBox
+    ratio={[1, 4 / 3, 16 / 9]}
+    p={4}
+    color="primary"
+    bg="accent"
+    sx={{
+      border: '1px solid',
+      borderColor: 'currentColor',
+    }}
+  >
+    <Heading>Intrinsic Box</Heading>
+    <Text>This box keeps its intrinsic ratio when resizing</Text>
+    <Text>But it will allow overflow to be visible</Text>
+  </IntrinsicBox>
+</Playground>
+
+[flex]: https://theme-ui.com/components/flex/
+[box]: https://theme-ui.com/components/box/
+[aspectratio]: https://theme-ui.com/components/aspect-ratio/
+[padding and positioning]: https://css-tricks.com/aspect-ratio-boxes/#article-header-id-3
+[pseudo elements]: https://css-tricks.com/aspect-ratio-boxes/#article-header-id-6
+[intrinsicflex]: /components/intrinsic-flex
+[intrinsicimage]: /components/intrinsic-image

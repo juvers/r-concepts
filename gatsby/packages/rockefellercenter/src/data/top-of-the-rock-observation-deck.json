@@ -1,0 +1,278 @@
+{
+  "id": "top-of-the-rock-observation-deck",
+  "hero": {
+    "links": [
+      {
+        "url": "/buy-tickets",
+        "label": "Buy Tickets"
+      }
+    ],
+    "contactLinkUrl": "/contact/top-of-the-rock"
+  },
+  "torComparisonTool": {
+    "title": "Compare our offerings.",
+    "subTitle": "Choose two to compare",
+    "passes": {
+      "caption": "Find the perfect way to enjoy Top of the Rock, Rockefeller Center, and the city beyond.",
+      "link": {
+        "url": "/buy-tickets/#citypass",
+        "label": "learn more"
+      }
+    },
+    "ticketFeatures": {
+      "admission": "Admission to Top of the Rock.",
+      "views": "360-degree unobstructed views.",
+      "levels": "3 levels of indoor and outdoor observation decks.",
+      "timeLimit": "No time limit––stay as long as you like during operating hours.",
+      "entry": "Immediate entry, even if sold out.",
+      "elevator": "Priority elevator access.",
+      "merchandise": "20% Off Top of the Rock merchandise.",
+      "schedule": "Schedule your date, come anytime.",
+      "visit": "Visit 6 NYC attractions, including Top of the Rock Observation Deck.",
+      "save": "Save 42%.",
+      "valid": "Valid for 30 days.",
+      "choice": "Have your choice of 3 out of 12 top NYC attractions, including Top of the Rock Observation Deck, to visit over a 9-day period.",
+      "saveUpTo": "Save up to 30%."
+    }
+  },
+  "ticketOfferings": [
+    {
+      "image": {
+        "src": "../images/nyc-sklyline-sunset-view.jpg",
+        "alt": "Sunset view of Manhattan from the Top of the Rock observatory."
+      },
+      "title": "General Admission",
+      "description": "Take in the 360-degree views of NYC from 70 floors up on three observation decks, both indoor and outdoor.",
+      "price": "$32-$38",
+      "link": {
+        "url": "https://www.topoftherocknyc.com/buy-tickets/top-of-the-rock/",
+        "label": "Buy Tickets"
+      },
+      "ticketFeatures": {
+        "admission": true,
+        "views": true,
+        "levels": true,
+        "timeLimit": true
+      }
+    },
+    {
+      "image": {
+        "src": "../images/romantic-nyc-views.jpg",
+        "alt": "Couple enjoying the romantic spot at the Top of the Rock observation deck overlooking Manhattan."
+      },
+      "title": "VIP Access Pass",
+      "description": "Get immediate entry, priority elevator access, special VIP viewing areas, and shopping discounts.",
+      "price": "$75",
+      "link": {
+        "url": "https://www.topoftherocknyc.com/buy-tickets/vip/",
+        "label": "Buy Tickets"
+      },
+      "ticketFeatures": {
+        "admission": true,
+        "views": true,
+        "levels": true,
+        "timeLimit": true,
+        "entry": true,
+        "elevator": true,
+        "merchandise": true,
+        "schedule": true
+      }
+    },
+    {
+      "image": {
+        "src": "../images/citypass-top-of-the-rock.jpg",
+        "alt": "Maginficent Manhattan sklyline views from Rock Center, include in CityPass."
+      },
+      "title": "CityPASS",
+      "description": "Visit 6 NYC attractions, including Top of the Rock, and save 42%",
+      "price": "$112–$136",
+      "link": {
+        "url": "https://www.citypass.com/new-york?mv_source=topoftherock&campaign=rockefellercenter-buytickets",
+        "label": "Buy Tickets"
+      },
+      "ticketFeatures": {
+        "admission": true,
+        "views": true,
+        "levels": true,
+        "timeLimit": true,
+        "visit": true,
+        "save": true,
+        "valid": true
+      }
+    },
+    {
+      "image": {
+        "src": "../images/nyc-skyline-view-binoculars.jpg",
+        "alt": "Visitor taking in the Manhattan sklyline view with the coin-operated binoculars at TOR."
+      },
+      "title": "CityPASS C3",
+      "description": "Pick any 3 of 12 top NYC attractions, including Top of the Rock Observation Deck, to visit over a 9-day period.",
+      "price": "$67–$87",
+      "link": {
+        "url": "https://www.citypass.com/new-york-comparison?mv_source=topoftherock&campaign=rockefellercenter-c3",
+        "label": "Buy Tickets"
+      },
+      "ticketFeatures": {
+        "admission": true,
+        "views": true,
+        "levels": true,
+        "timeLimit": true,
+        "valid": true,
+        "choice": true,
+        "saveUpTo": true
+      }
+    }
+  ],
+  "torTicketInfo": [
+    {
+      "title": "Timed Ticketing",
+      "copy": "You won’t wait in long lines to enter Top of the Rock. Our timed ticketing means you are granted immediate entry at your scheduled time.",
+      "icon": "time"
+    },
+    {
+      "title": "Weather Guarantee",
+      "copy": "If poor weather or visibility affect the day of your visit, we will gladly reissue your ticket for a later time or date.",
+      "icon": "umbrella"
+    },
+    {
+      "title": "Re-Issue Guarantee",
+      "copy": "If your plans change, please contact us 24 hours prior to your scheduled visit and we will reissue your ticket for a different date.",
+      "icon": "issue"
+    },
+    {
+      "title": "No Hidden Fees",
+      "copy": "Top of the Rock has no hidden convenience fees, so there are no surprises at checkout.",
+      "icon": "hidden"
+    }
+  ],
+  "wideCta": {
+    "title": "Group Sales",
+    "caption": "Bringing a large group to Top of the Rock? We have special packages for groups of 20 or more.",
+    "link": {
+      "url": "/buy-tickets/group-sales",
+      "label": "Buy Group Tickets"
+    }
+  },
+  "featuredGallery": {
+    "title": "Nothing beats the Top",
+    "content": [
+      {
+        "category": "South View",
+        "image": {
+          "src": "../images/SKYLINE-EAST.jpg",
+          "alt": "South View from the Top of the Rock observatory."
+        },
+        "caption": "Enjoy this incredible view of the Empire State Building, NYC’s midtown and downtown skyscrapers, and farther on to the Brooklyn Bridge, and the Statue of Liberty and New York Harbor."
+      },
+      {
+        "category": "North View",
+        "image": {
+          "src": "../images/SKYLINE_AM_0202_2220x976.jpg",
+          "alt": "North View from the Top of the Rock observatory."
+        },
+        "caption": "See Central Park and the Upper East and West Sides, the 57th Street skyscrapers, and Harlem, all the way to Yankee Stadium in the Bronx and beyond. We are the ONLY deck with Central Park views."
+      },
+      {
+        "category": "West View",
+        "image": {
+          "src": "../images/West_2560x1362.jpg",
+          "alt": "View of Midtown and Lower Manhattan and greater NYC from the observatory at Top of the Rock."
+        },
+        "caption": "Take in the beautiful sunset, along with the towers of Manhattan’s growing west side, the Hudson River, and across to New Jersey."
+      },
+      {
+        "category": "East View",
+        "image": {
+          "src": "../images/East_2560x1362.jpg",
+          "alt": "View of Midtown and Lower Manhattan and greater NYC from the observatory at Top of the Rock."
+        },
+        "caption": "Look out across sweeping Midtown East vistas that include the Chrysler and MetLife Buildings, and on to Queens in the background."
+      }
+    ]
+  },
+  "torJourneyToTheTopItems": [
+    {
+      "title": "Joie Chandelier",
+      "caption": "Made of 14,000 crystals, the Joie Chandelier was created by Swarovski exclusively for Top of the Rock. The largest of its kind, it soars 3 stories above the Grand Atrium lobby. And when you look at it upside down, you’ll see it’s in the shape of 30 Rock.",
+      "image": {
+        "src": "../images/joie-chandelier-min.jpg",
+        "alt": "Joie Chandelier"
+      }
+    },
+    {
+      "title": "Mezzanine Exhibit",
+      "caption": "Filled with fascinating photos, information, and artifacts, the Mezzanine Exhibit walks you through the planning and creation of Rockefeller Center. And our theatre provides a quick video on the history of NBC and Rockefeller Center.",
+      "image": {
+        "src": "../images/mezzanine-exhibit-min.jpg",
+        "alt": "Mezzanine Exhibit"
+      }
+    },
+    {
+      "title": "Beam Walk",
+      "caption": "The iconic photo of construction workers taking a lunch break high above Manhattan was taken right here. And with our interactive Beam Walk, you can follow in their footsteps, and even take your own tribute photo.",
+      "image": {
+        "src": "../images/beam-walk-min.jpg",
+        "alt": "Beam Walk"
+      }
+    },
+    {
+      "title": "Sky Shuttle",
+      "caption": "It takes less than a minute, but it’s an elevator ride you’ll remember forever, especially if you look up as you go. You’ll be heading 850 feet (260 meters) above sea level to your destination at Top of the Rock.",
+      "image": {
+        "src": "../images/sky-shuttle-min.jpg",
+        "alt": "Sky Shuttle"
+      }
+    },
+    {
+      "title": "Radiance Wall",
+      "caption": "Another Swarovski creation exclusively for Top of the Rock, the Radiance Wall consists of glass panels, blown glass, crystal clusters, and fiber-optic lighting. And if you look closely you’ll find tiny crystal figurines and animals hidden within it.",
+      "image": {
+        "src": "../images/radiance-wall-min.jpg",
+        "alt": "Radiance Wall"
+      }
+    },
+    {
+      "title": "Indoor and Outdoor Viewing",
+      "caption": "Enjoy three levels of unobstructed views––from the 67th and 69th floors, and on the 70th floor open-air roof deck.",
+      "image": {
+        "src": "../images/indoor-outdoor-viewing-min.jpg",
+        "alt": "Indoor and outdoor viewing from Top of the Rock Observation Deck"
+      }
+    },
+    {
+      "title": "70th Floor Open Air Roof Deck",
+      "caption": "The 70th Floor, which has no metal or glass enclosures, is perfect for photos. Take incredible skyline pictures. Or use the skyline as a backdrop for photos of you and your friends and family.",
+      "image": {
+        "src": "../images/70th-floor-min.jpg",
+        "alt": "70th floor open air roof deck at the Top of the Rock Observation Deck"
+      }
+    }
+  ],
+  "faqTitle": "FAQs",
+  "crossLinks": [
+    {
+      "title": "Gift Shop",
+      "image": {
+        "src": "../images/rockefeller-center-christmas-ornament.jpg",
+        "alt": "Commemorative ornament created from a lighbulb from the Rockefeller Center Christmas tree."
+      },
+      "caption": "Share the Top of the Rock experience with family and friends. Or find a keepsake for yourself.",
+      "link": {
+        "label": "Shop Now",
+        "url": "https://topoftherockshop.com/"
+      }
+    },
+    {
+      "title": "Rock Center Tour",
+      "image": {
+        "src": "../images/wisdom-art-deco-scupture.jpg",
+        "alt": "Rockefeller Center's Wisdom sculpture is part of the art deco motifs and sculptures collection."
+      },
+      "caption": "Take the guided tour and go in-depth into the incredible art and history of Rockefeller Center.",
+      "link": {
+        "label": "Explore the Tour",
+        "url": "https://www.topoftherocknyc.com/buy-tickets/top-of-the-rock/"
+      }
+    }
+  ]
+}

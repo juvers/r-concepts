@@ -1,0 +1,110 @@
+---
+name: Hours and Address
+menu: Components
+route: /components/hours-and-address
+---
+
+import {Props, Playground} from 'docz';
+import {HoursAndAddress, Box} from '@tishman/components';
+
+# Intro
+
+## Properties
+
+<Props of={HoursAndAddress} />
+
+## Basic usage
+
+```ts
+import {HoursAndAddress} from '@tishman/components';
+```
+
+### With openingSoonMessage props
+
+<Playground>
+  <HoursAndAddress
+    hoursHeading="Hours"
+    hours={['Opening Fall 2020']}
+    addressHeading="Directions & Contact"
+    location={{
+      url:
+        'https://www.google.com/maps/place/The+Rink+At+Rockefeller+Center/@40.7586996,-73.9805637,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258fe901288f9:0x9f97f605544e772!8m2!3d40.7586996!4d-73.978375',
+      address1: '5th Ave between 49th & 50th St',
+      address2: 'New York, NY, 10020',
+    }}
+    contactsInfo={[
+      {
+        type: 'phone',
+        value: '212.332.7655',
+      },
+      {
+        type: 'email',
+        value: 'therink@rockefellercenter.com',
+      },
+    ]}
+    contactLinkUrl="https://rinkatrockcenter.typeform.com/to/atJ79toI"
+  />
+</Playground>
+
+### With days and time props
+
+<Playground>
+  <HoursAndAddress
+    hoursHeading="Hours"
+    hours={['Sunday-Saturday', '8:00am-Midnight']}
+    addressHeading="Directions & Contact"
+    location={{
+      url:
+        'https://www.google.com/maps/place/The+Rink+At+Rockefeller+Center/@40.7586996,-73.9805637,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258fe901288f9:0x9f97f605544e772!8m2!3d40.7586996!4d-73.978375',
+      address1: '5th Ave between 49th & 50th St',
+      address2: 'New York, NY, 10020',
+    }}
+    contactsInfo={[
+      {
+        type: 'phone',
+        value: '212.332.7655',
+      },
+      {
+        type: 'email',
+        value: 'therink@rockefellercenter.com',
+      },
+    ]}
+    contactLinkUrl="https://rinkatrockcenter.typeform.com/to/atJ79toI"
+  />
+</Playground>
+
+### Only Directions
+
+<Playground>
+  <HoursAndAddress
+    addressHeading="Directions & Contact"
+    location={{
+      url:
+        'https://www.google.com/maps/place/The+Rink+At+Rockefeller+Center/@40.7586996,-73.9805637,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258fe901288f9:0x9f97f605544e772!8m2!3d40.7586996!4d-73.978375',
+      address1: '5th Ave between 49th & 50th St',
+      address2: 'New York, NY, 10020',
+    }}
+    contactsInfo={[
+      {
+        type: 'phone',
+        value: '212.332.7655',
+      },
+      {
+        type: 'email',
+        value: 'therink@rockefellercenter.com',
+      },
+    ]}
+    contactLinkUrl="https://rinkatrockcenter.typeform.com/to/atJ79toI"
+  />
+</Playground>
+
+### Only Hours
+
+<Playground>
+  <HoursAndAddress
+    hoursHeading="Hours"
+    hours={["Sunday-Saturday","8:00am-Midnight"]}
+    contactLinkUrl="https://rinkatrockcenter.typeform.com/to/atJ79toI"
+/>
+
+</Playground>

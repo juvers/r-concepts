@@ -1,0 +1,77 @@
+---
+name: Home Hero
+menu: Rockefeller Center
+route: /rockefeller-center/home-hero
+---
+
+import HomeHero from '~components/home-hero/index.tsx';
+import MiddleNav from '~components/home-hero/middle-nav.tsx';
+import {Props, Playground} from 'docz';
+import {Box} from 'theme-ui';
+import {getMockFluidImage} from '@tishman/docs';
+import * as movieUrl from '../../videos/home-hero-placeholder.mp4';
+
+# Home Hero
+
+### Props
+
+<Props of={HomeHero} />
+
+### Usage
+
+#### With Image
+
+<Playground>
+  <HomeHero
+    title="New York, reinvented daily."
+    caption="Rockefeller Center is where you can experience the best of the city, from top to bottom. It’s an ever changing source of inspiration. And you can be a part of it, every day."
+    fluid={getMockFluidImage({width: 540, height: 824}).childImageSharp.fluid}
+    alt={'alt text'}
+    links={[
+      {
+        url: '#only-here',
+        label: 'Only Here',
+      },
+      {
+        url: '#community',
+        label: 'Community',
+      },
+      {
+        url: '#culture',
+        label: 'Culture',
+      },
+      {
+        url: '#shop-dine',
+        label: 'Shop & Dine',
+      },
+    ]}
+  />
+</Playground>
+
+#### With video
+
+<Playground>
+  <HomeHero
+    title="New York, reinvented daily."
+    caption="Rockefeller Center is where you can experience the best of the city, from top to bottom. It’s an ever changing source of inspiration. And you can be a part of it, every day."
+    movieUrl={movieUrl}
+    links={[
+      {
+        url: '#only-here',
+        label: 'Only Here',
+      },
+      {
+        url: '#community',
+        label: 'Community',
+      },
+      {
+        url: '#culture',
+        label: 'Culture',
+      },
+      {
+        url: '#shop-dine',
+        label: 'Shop & Dine',
+      },
+    ]}
+  />
+</Playground>

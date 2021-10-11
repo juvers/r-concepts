@@ -1,0 +1,23 @@
+"""
+A History object.
+
+This should be used to type most JSON fields that represent a generic History Block component.
+"""
+type History {
+  title: String
+  caption: String
+  cards: [HistoryCard!]!
+}
+
+"""
+A History Card object.
+
+This should be used to type most JSON fields that represent a generic History Card component.
+"""
+type HistoryCard {
+  type: String!
+  title: String!
+  caption: String!
+  image: ImageWithAlt!
+  didYouKnow: String
+}

@@ -1,0 +1,79 @@
+{
+  "id": "iconic-experiences",
+  "iconicExperiencesCarousel": {
+    "cards": [
+      {
+        "title": "Top of the Rock",
+        "description": "See 360-degree views of the NYC skyline",
+        "image": {
+          "src": "../images/torv2_644x906.jpg",
+          "alt": "Girl looks through a viewfinder at the Top of the Rock"
+        },
+        "url": "/attractions/top-of-the-rock-observation-deck"
+      },
+      {
+        "title": "The Rink",
+        "description": "Skate under the Christmas Tree and the glittering gold Prometheus statue.",
+        "image": {
+          "src": "../images/rink_home.jpg",
+          "alt": "tbd"
+        },
+        "url": "/attractions/the-rink-at-rockefeller-center"
+      },
+      {
+        "title": "Rockefeller Center Tour",
+        "description": "A unique look at a place unlike any other.",
+        "image": {
+          "src": "../images/rc-enterance-cropped.jpg",
+          "alt": "Noguchi News Enterance"
+        },
+        "url": "/attractions/rockefeller-center-tour"
+      },
+      {
+        "title": "Rainbow Room",
+        "description": "A timeless setting for private and special events.",
+        "image": {
+          "src": "../images/keh_644x906.jpg",
+          "alt": "tbd"
+        },
+        "url": "/attractions/rainbow-room"
+      },
+      {
+        "title": "Bar SixtyFive",
+        "description": "Come for drinks and a view.",
+        "image": {
+          "src": "../images/bar65-small.jpg",
+          "alt": "Rooftop cocktail bar with a NYC skyline view."
+        },
+        "url": "/attractions/bar-sixtyfive"
+      },
+      {
+        "title": "Private Events",
+        "description": "Every event here is a landmark occasion.",
+        "image": {
+          "src": "../images/rainbowroomdj_644x906.jpg",
+          "alt": "Music performance at a luxury private event venue in Rockefeller Center."
+        },
+        "url": "/private-events"
+      },
+      {
+        "title": "Weddings",
+        "description": "This is the height of romance.",
+        "image": {
+          "src": "../images/weddingwlt1_644x906.jpg",
+          "alt": "Rock Center has unique NYC wedding venues with the best Manhattan views."
+        },
+        "url": "/weddings"
+      },
+      {
+        "title": "Holidays",
+        "description": "Celebrate the Holidays with us.",
+        "image": {
+          "src": "../images/rockefeller-tree.jpg",
+          "alt": "The famous Rockefeller Center Christmas Tree and Prometheus scupture by The Rink."
+        },
+        "url": "/holidays"
+      }
+    ]
+  }
+}

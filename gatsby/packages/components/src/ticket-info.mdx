@@ -1,0 +1,59 @@
+---
+name: Ticket Info
+menu: Components
+route: /components/ticket-info
+---
+
+import {Playground, Props} from 'docz';
+import {TicketInfo, Text, usePagination} from '@tishman/components';
+import {useState} from 'react';
+
+# TicketInfo
+
+TicketInfo shows a 4 icons with a title and text. **NOTE** this component is not themeable. All colors for text, background, and icons is hardcoded.
+
+### Properties
+
+<Props of={TicketInfo} />
+
+## Basic usage
+
+```ts
+import {TicketInfo} from '@tishman/components';
+
+<TicketInfo />;
+```
+
+### Playground
+
+<Playground>
+  {() => {
+    const items = [
+      {
+        title: 'Timed Ticketing',
+        copy:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.',
+        icon: 'time',
+      },
+      {
+        title: 'Weather Guarantee',
+        copy:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.',
+        icon: 'umbrella',
+      },
+      {
+        title: 'Re-Issue Guarantee',
+        copy:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.',
+        icon: 'issue',
+      },
+      {
+        title: 'No Hidden Fees',
+        copy:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.',
+        icon: 'hidden',
+      },
+    ];
+    return <TicketInfo items={items} />;
+  }}
+</Playground>

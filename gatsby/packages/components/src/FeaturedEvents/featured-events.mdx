@@ -1,0 +1,134 @@
+---
+name: Featured Events
+menu: Components
+route: /components/featured-events
+---
+
+import {Props, Playground} from 'docz';
+import {
+  EventDetails,
+  FeaturedEvents,
+  FeaturedEventsWithCarousel,
+} from '@tishman/components';
+import {getMockFluidImage} from '@tishman/docs';
+
+# Featured Events
+
+### Properties
+
+<Props of={FeaturedEvents} />
+
+<Playground>
+  <FeaturedEvents
+    data={[
+      {
+        category: 'Happy Hour',
+        title: 'Food & Drink at Rockefeller Center',
+        formattedStartDateTime: 'Jan 1, 1 am',
+        formattedEndDateTime: 'Jan 6, 5 am',
+        location: {title: 'Bar SixtyFive'},
+        admissionType: 'Free and open to the public',
+        fluid: getMockFluidImage({width: 475, height: 666}).childImageSharp
+          .fluid,
+      },
+      {
+        category: 'Happy Hour',
+        title: 'Rockefeller Center',
+        formattedStartDateTime: 'Feb 14, 8 am',
+        formattedEndDateTime: 'Feb 14, 4 pm',
+        location: {title: 'Bar SixtyFive'},
+        admissionType: 'Free and open to the public',
+        fluid: getMockFluidImage({width: 475, height: 666}).childImageSharp
+          .fluid,
+      },
+    ]}
+  />
+</Playground>
+
+# Featured Events With Event Carousel
+
+### Properties
+
+<Props of={FeaturedEventsWithCarousel} />
+
+<Playground>
+  <FeaturedEventsWithCarousel
+    featuredData={[
+      {
+        category: 'Happy Hour',
+        title: 'Food & Drink at Rockefeller Center',
+        formattedStartDateTime: 'Jan 1, 1 am',
+        formattedEndDateTime: 'Jan 6, 5 am',
+        location: {title: 'Bar SixtyFive'},
+        admissionType: 'Free and open to the public',
+        fluid: getMockFluidImage({width: 475, height: 666}).childImageSharp
+          .fluid,
+      },
+      {
+        category: 'Happy Hour',
+        title: 'Rockefeller Center',
+        formattedStartDateTime: 'Feb 14, 8 am',
+        formattedEndDateTime: 'Feb 14, 4 pm',
+        location: {title: 'Bar SixtyFive'},
+        admissionType: 'Free and open to the public',
+        fluid: getMockFluidImage({width: 475, height: 666}).childImageSharp
+          .fluid,
+      },
+    ]}
+    eventsData={[
+      {
+        category: 'Happy Hour',
+        title: 'Food & Drink at Rockefeller Center',
+        formattedStartDateTime: 'Jan 1, 1 am',
+        formattedEndDateTime: 'Jan 6, 5 am',
+        location: {title: 'Bar SixtyFive'},
+        admissionType: 'Free and open to the public',
+        fluid: getMockFluidImage({width: 475, height: 666}).childImageSharp
+          .fluid,
+      },
+      {
+        category: 'Happy Hour',
+        title: 'Rockefeller Center',
+        formattedStartDateTime: 'Feb 14, 8 am',
+        formattedEndDateTime: 'Feb 14, 4 pm',
+        location: {title: 'Bar SixtyFive'},
+        admissionType: 'Free and open to the public',
+        fluid: getMockFluidImage({width: 475, height: 666}).childImageSharp
+          .fluid,
+      },
+      {
+        category: 'Happy Hour',
+        title: 'Birthday Party',
+        formattedStartDateTime: 'Feb 14, 8 am',
+        formattedEndDateTime: 'Feb 14, 4 pm',
+        location: {title: 'Bar SixtyFive'},
+        admissionType: 'Free and open to the public',
+        fluid: getMockFluidImage({width: 475, height: 666}).childImageSharp
+          .fluid,
+      },
+    ]}
+  />
+</Playground>
+
+## EventDetails
+
+### Properties
+
+<Props of={EventDetails} />
+
+### Basic usage
+
+```ts
+import {EventDetails} from '@tishman/components';
+```
+
+<Playground>
+  <EventDetails
+    category={'Happy Hour'}
+    title={'Food & Drink at Rockefeller Center'}
+    formattedStartDateTime={'Jan 1, 1 am'}
+    formattedEndDateTime={'Jan 1, 10 pm'}
+    location={{title: 'Bar SixtyFive'}}
+    admissionType={'Free and open to the public'}
+  />
+</Playground>

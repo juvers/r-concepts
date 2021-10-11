@@ -1,0 +1,92 @@
+---
+name: IntersectionSection
+menu: Components
+route: /components/intersection-section
+---
+
+import {Props, Playground} from 'docz';
+import {
+  jsx,
+  Box,
+  Flex,
+  Grid,
+  Text,
+  Section,
+  createListView,
+  AnchorSection,
+  IntersectionSection,
+  Fixed,
+  getThemeByName,
+  useScrollTo,
+  Select,
+} from '@tishman/components';
+
+# IntersectionSection
+
+`IntersectionSection` is a special case of [Section] that
+calls an `onIntersection` callback whenever the section element intersects
+the root element.
+
+> How does this differ from [AnchorSection]? The main difference is that
+> `AnchorSection` requires an `id`, and **binds to the location hash**
+> such that the hash updates when the section intersects the root,
+> and the section is scrolled into view when the location hash changes.
+
+## Props
+
+<Props of={IntersectionSection} />
+
+## Usage
+
+```typescript
+import {IntersectionSection} from '@tishman/components';
+```
+
+<Playground>
+  {() => {
+    const [section, setSection] = React.useState(null);
+    return (
+      <Box sx={{position: 'relative', overflowY: 'scroll', height: '61.8vw'}}>
+        <Flex
+          as="nav"
+          bg="white"
+          sx={{
+            p: 3,
+            justifyContent: 'space-around',
+            top: 0,
+            position: 'sticky',
+          }}
+        >
+          <Text variant="styles.h1" children={section} />
+        </Flex>
+        <IntersectionSection
+          id="a"
+          theme="Rock Center Cream"
+          sx={{height: '61.8vw'}}
+          onIntersection={setSection}
+        >
+          <Text>A</Text>
+        </IntersectionSection>
+        <IntersectionSection
+          id="b"
+          theme="Rock Center Black"
+          sx={{height: '61.8vw'}}
+          onIntersection={setSection}
+        >
+          <Text>B</Text>
+        </IntersectionSection>
+        <IntersectionSection
+          id="c"
+          theme="Rock Center Navy"
+          sx={{height: '61.8vw'}}
+          onIntersection={setSection}
+        >
+          <Text>C</Text>
+        </IntersectionSection>
+      </Box>
+    );
+  }}
+</Playground>
+
+[section]: /components/section
+[anchorsection]: /components/anchor-section

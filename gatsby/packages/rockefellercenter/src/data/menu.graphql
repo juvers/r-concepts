@@ -1,0 +1,10 @@
+type DataJson implements Node @infer {
+  menuLinkGroups: [MenuLinkGroup!]!
+  menuSecondaryLinks: [Link!]!
+}
+
+type MenuLinkGroup {
+  label: String!
+  url: String!
+  links: [Link!]!
+}

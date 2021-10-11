@@ -1,0 +1,114 @@
+---
+name: Journey To The Top
+menu: Rockefeller Center
+route: /rockefeller-center/journey-to-the-top
+---
+
+import {Props, Playground} from 'docz';
+import {useState} from 'react';
+import {getMockFluidImage} from '@tishman/docs';
+import JourneyToTheTop from './index.tsx';
+import {JourneyItem} from './JourneyItem.tsx';
+
+# Journey To The Top
+
+Used on the Top of the Rock page to detail all the things you can experienceas you ascend the building.
+
+## Properties
+
+<Props of={JourneyToTheTop} />
+
+## Basic Usage
+
+```ts
+import JourneyToTheTop from '~components/JourneyToTheTop.tsx';
+```
+
+<Playground>
+  {() => {
+    const items = [
+      {
+        title: 'Item 1',
+        alt: '',
+        caption:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        fluid: getMockFluidImage({width: 635, height: 879}).childImageSharp
+          .fluid,
+      },
+      {
+        title: 'Item 2',
+        alt: '',
+        caption:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        fluid: getMockFluidImage({width: 635, height: 879}).childImageSharp
+          .fluid,
+      },
+      {
+        title: 'Item 3',
+        alt: '',
+        caption:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        fluid: getMockFluidImage({width: 635, height: 879}).childImageSharp
+          .fluid,
+      },
+      {
+        title: 'Item 4',
+        alt: '',
+        caption:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        fluid: getMockFluidImage({width: 635, height: 879}).childImageSharp
+          .fluid,
+      },
+      {
+        title: 'Item 5',
+        alt: '',
+        caption:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        fluid: getMockFluidImage({width: 635, height: 879}).childImageSharp
+          .fluid,
+      },
+      {
+        title: 'Item 6',
+        alt: '',
+        caption:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        fluid: getMockFluidImage({width: 635, height: 879}).childImageSharp
+          .fluid,
+      },
+      {
+        title: 'Item 7',
+        alt: '',
+        caption:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        fluid: getMockFluidImage({width: 635, height: 879}).childImageSharp
+          .fluid,
+      },
+    ];
+    return <JourneyToTheTop items={items} />;
+  }}
+</Playground>
+
+## Journey Item
+
+<Props of={JourneyItem} />
+
+<Playground>
+  {() => {
+    const [active, setActive] = useState(true);
+    return (
+      <JourneyItem
+        title="Item Name"
+        caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        fluid={
+          getMockFluidImage({width: 635, height: 879}).childImageSharp.fluid
+        }
+        alt="alt text"
+        index={0}
+        active={active}
+        onClick={() => {
+          setActive(!active);
+        }}
+      />
+    );
+  }}
+</Playground>

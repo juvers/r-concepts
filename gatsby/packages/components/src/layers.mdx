@@ -1,0 +1,341 @@
+---
+name: Layers
+menu: Components
+route: /components/layers
+---
+
+import {Props, Playground} from 'docz';
+import {
+  jsx,
+  Box,
+  Flex,
+  Grid,
+  Text,
+  Button,
+  ThemeProvider,
+  getThemeByName,
+} from '@tishman/components';
+import {H} from '@hzdg/sectioning';
+import {Sticky} from './Sticky';
+import {Fixed} from './Fixed';
+import {Overlay} from './Overlay';
+import {Modal} from './Modal';
+import {useOverlayTriggerState} from '@react-stately/overlays';
+
+# Layers
+
+These components are useful to achieving layered layouts
+without having to manually manage complex behaviors and corner cases
+like z-index conflicts, focus traps, pointer event leaks, and others.
+
+## Fixed
+
+`Fixed` positions its content fixed relative to the nearest flow root
+(usually the viewport).
+
+Some reasons why this component is preferable to a `position: fixed` style:
+
+- It automatically uses the theme's 'sticky' z-index to make sure it appears
+  above content, but below overlays.
+- It supports 'auto' position properties, which means multiple elements
+  that are fixed (or [Sticky]!) to the same root will be automatically
+  offset to avoid overlap.
+
+### Props
+
+<Props of={Fixed} />
+
+### Usage
+
+```typescript
+import {Fixed} from '@tishman/components';
+```
+
+<Playground>
+  <Box
+    sx={{
+      height: 500,
+      background: 'linear-gradient(to right, #ffffff, #d0d0d0)',
+    }}
+  >
+    <Fixed left="auto" top="auto" sx={{color: 'text', bg: 'background'}}>
+      <Text p={4} variant="styles.h3" children="left: auto, top: auto" />
+    </Fixed>
+    <Fixed left="0" top="auto" sx={{color: 'text', bg: 'background'}}>
+      <Text p={4} variant="styles.h3" children="left: 0, top: auto" />
+    </Fixed>
+    <Fixed left="auto" top="12%" sx={{color: 'text', bg: 'background'}}>
+      <Text p={4} variant="styles.h3" children="left: auto, top: 12%" />
+    </Fixed>
+    <Fixed left="100px" top="auto" sx={{color: 'text', bg: 'background'}}>
+      <Text p={4} variant="styles.h3" children="left: 100px, top: auto" />
+    </Fixed>
+  </Box>
+</Playground>
+
+## Sticky
+
+`Sticky` positions its content within the normal flow of the document,
+but offest relative to the nearest scrolling container when the content
+exceeds the threshold defined by the position props.
+
+Some reasons why this component is preferable to a `position: sticky` style:
+
+- It automatically uses the theme's 'sticky' z-index to make sure it appears
+  above content, but below overlays.
+- It supports styling elements differently when they are stuck via the
+  `stickyClassName` (defaults to `'sticky'`) and `stickyStyle` props.
+- It supports 'auto' position properties, which means multiple elements
+  that are sticky (or [Fixed]!) to the same root will be automatically
+  offset to avoid overlap.
+
+### Props
+
+<Props of={Sticky} />
+
+### Usage
+
+```typescript
+import {Sticky} from '@tishman/components';
+```
+
+<Playground>
+  {() => {
+    const yellowGradient = 'linear-gradient(#00000000, #ffcf37)';
+    const stickyStyle = {
+      color: 'text',
+      bg: 'background',
+      '& > *:after': {content: '" STICKY"'},
+      '&.sticky': {zIndex: 'sticky', bg: 'text'},
+      '&.sticky > *': {color: 'background'},
+      '&.sticky > *:after': {content: '" STUCK"'},
+    };
+    return (
+      <ThemeProvider theme={getThemeByName('Rock Center')}>
+        <Box sx={{width: '100%', height: 500, overflowY: 'scroll'}}>
+          <Text variant="styles.h3" children="scroll!" />
+          <Box sx={{background: 'linear-gradient(#ffffff, #d0d0d0)'}}>
+            <Box sx={{height: 250}} />
+            <Sticky top="auto" sx={stickyStyle}>
+              <Text p={4} variant="styles.h3" children="top auto" />
+            </Sticky>
+            <Box sx={{height: 250}} />
+            <Box sx={{height: 350, background: yellowGradient}}>
+              <Sticky top="auto" sx={stickyStyle}>
+                <Text p={4} variant="styles.h3" children="top auto" />
+              </Sticky>
+            </Box>
+            <Box sx={{height: 350, background: yellowGradient}}>
+              <Sticky top="auto" sx={stickyStyle}>
+                <Text p={4} variant="styles.h3" children="top auto" />
+              </Sticky>
+            </Box>
+            <Box sx={{height: 250}} />
+            <Sticky bottom={0} sx={stickyStyle}>
+              <Text p={4} variant="styles.h3" children="bottom 0" />
+            </Sticky>
+            <Box sx={{height: 500}} />
+          </Box>
+        </Box>
+      </ThemeProvider>
+    );
+  }}
+</Playground>
+
+Here's a horizontal example that incorporates [Fixed] elements:
+
+<Playground>
+  {() => {
+    const stickyStyle = {
+      color: 'text',
+      bg: 'background',
+      '& > *:after': {content: '" STICKY"'},
+      '&.sticky': {zIndex: 'sticky', bg: 'text'},
+      '&.sticky > *': {color: 'background'},
+      '&.sticky > *:after': {content: '" STUCK"'},
+    };
+    return (
+      <ThemeProvider theme={getThemeByName('Rock Center')}>
+        <Grid
+          sx={{
+            overflow: 'scroll',
+            whiteSpace: 'nowrap',
+            gridAutoFlow: 'column',
+            background: 'linear-gradient(to right, #ffffff, #d0d0d0)',
+          }}
+        >
+          <Box sx={{height: 500, width: '100vw'}} />
+          <Fixed left="auto" sx={{width: 150, bg: 'background'}}>
+            <Text p={4} variant="styles.h3" children="fixed" />
+          </Fixed>
+          <Sticky left="auto" right="auto" sx={{width: 200, ...stickyStyle}}>
+            <Text p={4} variant="styles.h3" children="auto" />
+          </Sticky>
+          <Box sx={{height: 500, width: '100vw'}} />
+          <Sticky left="auto" right="auto" sx={{width: 200, ...stickyStyle}}>
+            <Text p={4} variant="styles.h3" children="auto" />
+          </Sticky>
+          <Fixed right="auto" sx={{width: 150, bg: 'background'}}>
+            <Text p={4} variant="styles.h3" children="fixed" />
+          </Fixed>
+          <Box sx={{height: 500, width: '100vw'}} />
+        </Grid>
+      </ThemeProvider>
+    );
+  }}
+</Playground>
+
+## Overlay
+
+`Overlay` covers the viewport with a dark, semi-transparent color
+and displays its content on top of the background. It also
+blocks scrolling and pointer events for the content underneath,
+unless `allowPointerEvents` is `true`.
+
+### Props
+
+<Props of={Overlay} />
+
+### Usage
+
+<Playground>
+  <Box sx={{position: 'relative', height: '25vw', minHeight: 276}}>
+    <Box sx={{height: '100%', overflow: 'scroll'}}>
+      <Overlay />
+      {Array.from(Array(20).keys()).map((key) => (
+        <Text key={key}>This content will be covered by the overlay</Text>
+      ))}
+    </Box>
+  </Box>
+</Playground>
+
+### Advanced Usage
+
+<Playground>
+  {() => {
+    const [showOverlay, setShowOverlay] = React.useState(false);
+    const [allowPointerEvents, setAllowPointerEvents] = React.useState(false);
+    return (
+      <Box sx={{position: 'relative', height: '25vw', minHeight: 276}}>
+        <Box sx={{height: '100%', overflow: 'scroll'}}>
+          <Box sx={{position: 'relative'}}>
+            {showOverlay ? (
+              <Overlay allowPointerEvents={allowPointerEvents}>
+                <Button
+                  bg="background"
+                  onClick={() => setAllowPointerEvents((v) => !v)}
+                >
+                  {`${
+                    allowPointerEvents ? 'Disallow' : 'Allow'
+                  } Pointer Events`}
+                </Button>
+              </Overlay>
+            ) : null}
+          </Box>
+          {Array.from(Array(20).keys()).map((key) => (
+            <Text key={key}>This content will be covered by the overlay</Text>
+          ))}
+          <Button
+            sx={{position: 'absolute', top: 0, bg: 'background'}}
+            onClick={() => setShowOverlay((v) => !v)}
+          >
+            {`${showOverlay ? 'Hide' : 'Show'} Overlay`}
+          </Button>
+        </Box>
+      </Box>
+    );
+  }}
+</Playground>
+
+### Positioning content
+
+Overlay content is presented in a grid layout,
+with items placed in the center.
+
+To adjust how content is positioned within the Overlay, you can use
+[Box Alignment] properties on the children:
+
+<Playground>
+  <Box sx={{position: 'relative', height: '25vw', minHeight: 276}}>
+    <Overlay>
+      <Text bg="background" p={4} sx={{placeSelf: 'stretch center'}}>
+        This box stretches vertically
+      </Text>
+      <Text bg="background" p={4}>
+        While this box does not
+      </Text>
+    </Overlay>
+  </Box>
+</Playground>
+
+You can also use positioning:
+
+<Playground>
+  <Box sx={{position: 'relative', height: '25vw', minHeight: 276}}>
+    <Overlay>
+      <Text bg="background" p={4} sx={{position: 'absolute', right: 0}}>
+        This box is positioned right
+      </Text>
+      <Text bg="background" p={4}>
+        This box is not positioned
+      </Text>
+    </Overlay>
+  </Box>
+</Playground>
+
+## Modal
+
+`Modal` covers the viewport with an overlay
+and displays modal content on top of the overlay
+with accessible affordances baked in, such as:
+
+- traps focus within the modal content
+- automatically focuses on the modal content
+- restores focus to the previously focused element on close
+- closes when the ESC key is pressed
+- closes when a click is detected outside of the modal content
+
+Its open state is controlled via the `isOpen` and `onClose` props.
+
+### Props
+
+<Props of={Modal} />
+
+### Usage
+
+<Playground>
+  {() => {
+    // import {useOverlayTriggerState} from '@react-stately/overlays';
+    const {isOpen, open, close} = useOverlayTriggerState({});
+    return (
+      <Box sx={{height: '25vw', minHeight: 276}}>
+        <Button onClick={open} children="Show Modal" />
+        <Box sx={{height: '100%', overflow: 'scroll'}}>
+          {Array.from(Array(20).keys()).map((key) => (
+            <Text key={key}>This content will be covered by the modal</Text>
+          ))}
+        </Box>
+        <Modal isOpen={isOpen} onClose={close}>
+          <Box
+            bg="background"
+            p={6}
+            m={3}
+            sx={{
+              placeSelf: 'stretch center',
+              display: 'grid',
+              placeItems: 'center center',
+            }}
+          >
+            <Text>Notice that focus is trapped in this modal.</Text>
+            <Text>Click outside of the modal, or press the Escape key!</Text>
+            <Button bg="background" onClick={close} children="Dismiss" />
+          </Box>
+        </Modal>
+      </Box>
+    );
+  }}
+</Playground>
+
+[box alignment]: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout
+[fixed]: #fixed
+[sticky]: #sticky

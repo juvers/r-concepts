@@ -1,0 +1,34 @@
+type DataJson implements Node @infer {
+  meta: Meta!
+  partnershipIntroText: PartnershipIntro!
+  partnershipCalloutGrid: CalloutGrid!
+  partnershipImageCallout: ImageCallout!
+  partnershipThreeColGrid: PartnershipThreeColGrid!
+  wideCta: WideCta!
+}
+
+type PartnershipIntro {
+  title: String!
+  caption: String!
+  image: ImageWithAlt!
+}
+
+type PartnershipThreeColGrid {
+  gridName: String
+  rows: [PartnershipThreeColGridRow!]!
+}
+
+type PartnershipThreeColGridRow {
+  rowName: String
+  cards: [PartnershipThreeColGridCard!]!
+}
+
+type PartnershipThreeColGridCard {
+  cardType: String!
+  title: String
+  caption: String
+  links: [Link!]
+  image: ImageWithAlt
+  imageHeight: Int
+  imageWidth: Int
+}

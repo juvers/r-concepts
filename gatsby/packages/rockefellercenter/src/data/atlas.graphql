@@ -1,0 +1,4 @@
+type DataJson implements Node @infer {
+  meta: Meta!
+  intro: String!
+}

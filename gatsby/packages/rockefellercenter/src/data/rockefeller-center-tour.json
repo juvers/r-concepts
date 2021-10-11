@@ -1,0 +1,142 @@
+{
+  "id": "rockefeller-center-tour",
+  "hero": {
+    "links": [
+      {
+        "url": "/buy-tickets/#rockefeller-center-tour",
+        "label": "Buy Tickets"
+      }
+    ],
+    "contactLinkUrl": "/contact"
+  },
+  "history": {
+    "title": "History",
+    "caption": "Over 100 years ago, John D. Rockefeller Jr. had a vision to create a “city within a city,” and the story of how Rockefeller Center came to be is a fascinating one. Filled with art, style, and entertainment, it’s a story that is being added to every day.",
+    "cards": [
+      {
+        "type": "PORTRAIT",
+        "title": "1929",
+        "caption": "John D. Rockefeller Jr leases land from Columbia University. Rockefeller’s original vision was was to create a commercial office building community and a new home for the Metropolitan Opera Company. The stock market crash of 1929 thwarted these plans however, as investors withdrew from the project. A determined Rockefeller chose to move forward with the project, opting to create an exclusively commercial business complex.",
+        "image": {
+          "src": "../images/tour-1929.jpg",
+          "alt": "The future site of the Rockefeller Center across from St. Patrick's Cathedral on Fifty Avenue."
+        }
+      },
+      {
+        "type": "PORTRAIT",
+        "title": "1931",
+        "caption": "Construction begins on America's largest privately owned business and entertainment complex of the pre-war period. Throughout the Depression, the construction of the center provided jobs for tens of thousands of laborers and helped boost the building industry in New York City. The fourteen original buildings and their accompanying attractions were completed in 1940.",
+        "image": {
+          "src": "../images/tour-1931.jpg",
+          "alt": "The early stage of the Rockefeller Center construction in 1932."
+        }
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "1932",
+        "caption": "Center Theatre opens. Originally called the RKO Roxy Theatre when it opened, the Center Theatre featured both live stage shows and screened films. During the height of its popularity in the 1940s, its understated Art Deco–inspired design stood in stark contrast to the lavish Radio City Music Hall nearby. It is the only building from the original Rockefeller Center plan that has been torn down.",
+        "image": {
+          "src": "../images/tour-1932.jpg",
+          "alt": "An image of a 1932 Rockefeller Center sign."
+        }
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "1938",
+        "caption": "Associated Press Building Completed. Soaring above the entrance to the Associated Press Building is News, the first heroic-sized sculpture ever cast in stainless steel. One of the major Art Deco works in the Center, it depicts five journalists focused on getting a scoop. AP’s worldwide network is symbolized by diagonal radiating lines extending across the plaque. Intense angles and smooth planes create the fast-paced rhythm and energy of a newsroom.",
+        "image": {
+          "src": "../images/tour-1938.jpg",
+          "alt": "News is an Art Deco scupture above the entrance to 50 Rockefeller Plaza."
+        }
+      }
+    ]
+  },
+  "faqTitle": "Rockefeller Center Tour FAQs",
+  "wideCta": {
+    "title": "Top of the Rock",
+    "caption": "Top of the Rock – 70 floors up, 3 decks, 360-degree must see views, and a city that’s all yours.",
+    "link":{
+      "url": "/buy-tickets/#top-of-the-rock-observation-deck",
+      "label": "Buy Tickets"
+    }
+  },
+  "tourThreeColGrid": {
+    "rows": [
+      {
+        "gridOrder": ["'text' 'image' 'didYouKnow'", "'text image''text didYouKnow'", null, "'text image didYouKnow'"],
+        "textCard": {
+          "title": "Art",
+          "caption": "Rockefeller Center is home to a remarkable collection of art deco motifs and sculptures signifying man’s development in spirit, science, industry and more. You’ll see the Center’s most famous artworks, including Four Periods in Italian History, Atlas, Intelligence Awakening Mankind, Prometheus, Sound and Light, and The Joy of Life and many others. And along the way, you’ll learn about how Rockefeller’s vision to create a cultural center was ultimately realized."
+        },
+        "imageCard": {
+          "image": {
+            "src": "../images/story-of-mankind-gridded-sculpture.jpg",
+            "alt": "Detail of Lee Lawrie's The Story of Mankind, a carved polychromed and gilded openwork limestone Art Deco sculpture."
+          },
+          "height": 535,
+          "width": 380
+        },
+        "didYouKnowCard": {
+          "image": {
+            "src": "../images/drama-hildreth-meiere-art-deco.jpg",
+            "alt": "Detaol of Hildreth Meière's Dance, Drama, and Song Art Deco metal and enamel on the Radio City Music Hall facade."
+          },
+          "height": 280,
+          "width": 200,
+          "title": "DID YOU KNOW?",
+          "caption": "Abby Aldrich Rockefeller was a visionary art collector and patron who not only played a decisive role in making Rockefeller Center a haven for public art, but who also co-founded MoMA in 1929 with two other women, Lillie Bliss and May Quinn Sullivan."
+        }
+      },
+      {
+        "gridOrder": ["'text' 'image' 'didYouKnow'", "'image text' 'didYouKnow text'", null, "'image didYouKnow text'"],
+        "textCard": {
+          "title": "Architecture",
+          "caption": "You’ll learn about the conception and design of Rockefeller Center, the National Landmark and Art-Deco marvel, that has been referred to as a \"city-within-a-city.\" This visionary center combines private with public, and design with a community purpose. The Center was designed by a team of renowned architects, headed by the most celebrated architect of the decade, Raymond Hood, of Hood, Godley & Fouilhoux."
+          },
+        "imageCard": {
+          "image": {
+            "src": "../images/architectural-newel-post.jpg",
+            "alt": "This newel post is a historic architectual detail visited during the Rockefeller Center Tour."
+          },
+          "height": 535,
+          "width": 380
+        },
+        "didYouKnowCard": {
+          "image": {
+            "src": "../images/time-ceiling-mural-sert.jpg",
+            "alt": "Detail from the massive Time ceiling mural by Jose Maria Sert in the Rockefeller Center lobby."
+          },
+          "height": 220,
+          "width": 315,
+          "title": "DID YOU KNOW?",
+          "caption": "Gertrude Stein once said that the view of Rockefeller Center from Fifth Avenue was “the most beautiful thing I have ever seen.”"
+        }
+      },
+      {
+        "gridOrder": ["'text' 'image' 'didYouKnow'", "'text image''text didYouKnow'", null, "'text didYouKnow image'"],
+        "textCard": {
+          "title": "Points of Interest",
+          "caption": "On your tour you’ll see Rockefeller Center’s most significant buildings, gardens, and spaces. Some highlights are stops at the Associated Press Building and where the TODAY Show is filmed. Make sure you bring some comfortable shoes, there’s a lot to see."
+        },
+        "imageCard": {
+          "image": {
+            "src": "../images/POI_Doors_tour.jpg",
+            "alt": "St. Patrick's Cathedral on Fifth Avenue, across from the Rock Center."
+          },
+          "height": 330,
+          "width": 235
+        },
+        "didYouKnowCard": {
+          "image": {
+            "src": "../images/POI_Channel gardens_tour.jpg",
+            "alt": "The Channel Gardens with seasonal flowers, sculptures and fountains at Rockefeller Center."
+          },
+          "height": 310,
+          "width": 445,
+          "title": "DID YOU KNOW?",
+          "caption": "The aptly named Channel Gardens sits between the French and British Empire buildings on Fifth Avenue."
+        }
+      }
+    ]
+  }
+}

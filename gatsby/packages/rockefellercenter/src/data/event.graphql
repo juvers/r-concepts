@@ -1,0 +1,5 @@
+type DataJson implements Node @infer {
+  intro: String!
+  crossLinks: [CrossLink!]!
+  crossLinks2: [CrossLink!]!
+}

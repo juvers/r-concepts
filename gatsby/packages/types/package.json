@@ -1,0 +1,19 @@
+{
+  "name": "@tishman/types",
+  "description": "Shared types for tishman projects",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hzdg/tishman",
+    "directory": "gatsby/packages/types"
+  },
+  "bugs": {
+    "url": "https://github.com/hzdg/tishman/issues"
+  },
+  "publishConfig": {
+    "access": "restricted",
+    "registry": "https://npm.pkg.github.com/"
+  }
+}

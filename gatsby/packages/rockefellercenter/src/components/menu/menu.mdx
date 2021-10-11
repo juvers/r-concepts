@@ -1,0 +1,138 @@
+---
+name: Menu
+menu: Rockefeller Center
+route: /rockefeller-center/menu
+---
+
+import {Playground, Props} from 'docz';
+import {Grid} from '@tishman/components';
+import {Menu} from './Menu.tsx';
+
+# Menu
+
+This is the main menu for the Rockefeller Center app. In the app,
+it is hidden by default, and revealed by the [MenuToggleButton]
+in the [MenuBar].
+
+## UX and A11y Affordances
+
+The menu itself does nothing to trap focus within the menu, as it should
+be displayed in a [Modal] which will move and trap focus in the menu
+and restore focus to the triggering element on close.
+
+The menu is rendered as two [nav] elements, the first labeled "main menu"
+and the second labeled "secondary menu".
+
+### Main Menu
+
+The main menu is rendered as a list of lists, with each nested list
+corresponding to a thematically grouped of menu links. While structurally,
+this creates two levels of navigation, the UX for the main menu diverges
+from this structure on large screens.
+
+#### Main Menu on Large Screens
+
+On large screens, the main menu is displayed as a grid of groups of
+navigation links, each with a heading. Focus flows naturally through the
+items in group-item order.
+
+#### Main Menu on Small Screens
+
+On small screens, the main menu is reduced to a list of buttons,
+one for each group of navigation links.
+
+Each button reveals a slide overlay with a nested list of
+the grouped navigation links. While the overlay is open,
+it traps focus within the list.
+
+The overlay list supports dismissal via a swipe gesture,
+or via a close button. Upon close, focus will be returned to
+the triggering menu group button.
+
+### Secondary Menu
+
+The secondary menu behaves as a standard list of navigation links
+on small and large screens.
+
+## Props
+
+<Props of={Menu} />
+
+## Usage
+
+```ts
+import {Menu} from '~menu';
+```
+
+<Playground>
+  <Grid sx={{height: ['calc(568 / 320 * 100vw)', 'calc(1080 / 1440 * 100vw)']}}>
+    <Menu
+      linkGroups={[
+        {
+          label: 'Only Here',
+          to: '/only-here',
+          links: [
+            {to: '/top-of-the-rock', label: 'Top of the Rock'},
+            {to: '/rockefeller-center-tour', label: 'Rockefeller Center Tour'},
+            {to: '/the-rink', label: 'The Rink'},
+            {to: '/rainbow-room', label: 'Rainbow Room'},
+            {to: '/bar-sixtyfive', label: 'Bar SixtyFive'},
+            {to: '/private-events', label: 'Private Events'},
+            {to: '/weddings', label: 'Weddings'},
+            {to: '/the-holidays', label: 'The Holidays'},
+          ],
+        },
+        {
+          label: 'Community',
+          to: '/community',
+          links: [
+            {to: '/public-events', label: 'Public Events'},
+            {to: '/our-working-community', label: 'Our Working Community'},
+            {
+              to: '/accessibility-and-inclusion',
+              label: 'Accessibilty & Inclusion',
+            },
+            {to: '/leasing', label: 'Leasing'},
+            {
+              to: '/sponsorship-opportunities',
+              label: 'Sponsorship Opportunities',
+            },
+          ],
+        },
+        {
+          label: 'Culture',
+          to: '/culture',
+          links: [
+            {
+              to: '/magazine',
+              label: 'The Center Magazine',
+            },
+            {to: '/art-and-history', label: 'Art & History'},
+            {to: '/news-and-updates', label: 'News & Updates'},
+            {to: '/newsstand-studios', label: 'Newsstand Studios'},
+          ],
+        },
+        {
+          label: 'Shop & Dine',
+          to: '/shop-and-dine',
+          links: [
+            {to: '/dining', label: 'Dining'},
+            {to: '/shops', label: 'Shops'},
+            {to: '/amenities-and-services', label: 'Amenities & Services'},
+          ],
+        },
+      ]}
+      secondaryLinks={[
+        {to: '/plan-your-visit', label: 'Plan Your Visit'},
+        {to: '/map-and-directions', label: 'Map & Directions'},
+        {to: 'zo-login', label: 'Zo. Login'},
+        {to: '/contact', label: 'Contact'},
+      ]}
+    />
+  </Grid>
+</Playground>
+
+[menutogglebutton]: /components/menu-toggle-button
+[menubar]: /rockefeller-center/menu-bar
+[modal]: /components/layers#modal
+[nav]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav

@@ -1,0 +1,48 @@
+{
+  "name": "@tishman/docs",
+  "version": "1.0.0",
+  "description": "Component browser and style guide for Tishman projects",
+  "scripts": {
+    "build": "gatsby build",
+    "clean": "gatsby clean && rm -rf .docz && rm -rf __generated__",
+    "develop": "gatsby develop --port 3000",
+    "serve": "gatsby build && gatsby serve",
+    "lint": "eslint .",
+    "fix": "eslint --fix .",
+    "typecheck": "tsc --noEmit --pretty"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hzdg/tishman",
+    "directory": "gatsby/packages/docs"
+  },
+  "bugs": {
+    "url": "https://github.com/hzdg/tishman/issues"
+  },
+  "publishConfig": {
+    "access": "restricted",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "@babel/preset-env": "7.12.7",
+    "@emotion/core": "10.0.28",
+    "@emotion/styled": "10.0.27",
+    "@hzdg/use-size": "4.0.15",
+    "@theme-ui/style-guide": "0.4.0-rc.13",
+    "@tishman/components": "*",
+    "@tishman/rockefellercenter": "*",
+    "docz": "2.3.1",
+    "dotenv": "8.2.0",
+    "gatsby": "2.21.17",
+    "gatsby-plugin-force-trailing-slashes": "1.0.4",
+    "gatsby-plugin-netlify": "2.3.2",
+    "gatsby-plugin-robots-txt": "1.5.0",
+    "gatsby-plugin-typegen": "2.2.0",
+    "gatsby-theme-docz": "2.3.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "theme-ui": "0.4.0-rc.13"
+  }
+}

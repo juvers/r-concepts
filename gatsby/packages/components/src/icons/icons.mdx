@@ -1,0 +1,109 @@
+---
+name: Icons
+menu: Components
+route: /components/icons
+---
+
+import {Props, Playground} from 'docz';
+import {jsx, Container, Text, Flex, Box, Grid, Button} from 'theme-ui';
+import * as icons from '.';
+import {ArrowSvg} from '.';
+
+# Icons
+
+A number of icons are provided as React components for use in Tishman projects.
+
+They have the following features:
+
+- Default reasonable width and height, which can be overridden
+  with props/styles.
+- Monotone stroke and fill colors using [currentColor], so the icon color
+  can be changed just by setting the 'color' style on the icon or an ancestor.
+
+If you need to add an icon, see [Adding Icons].
+
+## Usage
+
+To use an icon, you can just import and render it:
+
+```tsx
+import {ArrowSvg} from '@tishman/components';
+```
+
+<Playground>
+  <ArrowSvg />
+</Playground>
+
+### Inverted
+
+<Playground>
+  <Box p={5} color="background" bg="text">
+    <ArrowSvg />
+  </Box>
+</Playground>
+
+### Autosize
+
+<Playground>
+  <Box sx={{p: 5, width: '50vw', minWidth: 20, maxWidth: 500}}>
+    <ArrowSvg width="100%" height="100%" />
+  </Box>
+</Playground>
+
+### Button
+
+<Playground>
+  <Button
+    variant="icon"
+    sx={{
+      '> svg': {transition: 'transform 0.3s ease-in-out'},
+      ':not(:disabled):hover > svg': {transform: 'translateX(5px)'},
+    }}
+  >
+    <Text mr={2}>clicky clicky!</Text>
+    <ArrowSvg />
+  </Button>
+</Playground>
+
+## Icon Components
+
+All of these icons are currently provided as components:
+
+<Container>
+  <Flex sx={{flexWrap: 'wrap', justifyContent: 'center'}}>
+    {Object.entries(icons)
+      .sort()
+      .map(([iconName, IconComponent]) => (
+        <Flex
+          key={iconName}
+          sx={{m: 4, flexDirection: 'column', alignItems: 'center'}}
+        >
+          <Text m={4}>{iconName}</Text>
+          <IconComponent />
+        </Flex>
+      ))}
+  </Flex>
+</Container>
+
+## Adding Icons
+
+> Note: Be sure to export your icon from [icons/index.ts]!
+
+Any icons in the [icons directory] will be automatically converted to
+React components. Note the following assumptions and constraints apply:
+
+- The svgs should be monotone, with negative space being transparent.
+- The color of the icons will not be preserved;
+  stroke and fill colors will be replaced with [currentColor].
+- Icons will be automatically sized with default width and height to match
+  their [viewBox].
+
+See the [gatsby config] for the [gatsby-plugin-react-svg] for more.
+
+[currentcolor]: https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#currentColor
+[viewbox]: https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/viewBox
+[icons/index.ts]: https://github.com/hzdg/tishman/tree/master/gatsby/packages/components/src/icons/index.ts
+[icons directory]: https://github.com/hzdg/tishman/tree/master/gatsby/packages/components/src/icons
+[gatsby config]: https://github.com/hzdg/tishman/tree/master/gatsby/packages/components/gatsby-config.js
+[gatsby-plugin-react-svg]: https://www.gatsbyjs.org/packages/gatsby-plugin-react-svg/
+[adding icons]: #adding-icons

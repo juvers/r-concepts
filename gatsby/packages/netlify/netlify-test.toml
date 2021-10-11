@@ -1,0 +1,10 @@
+# THIS IS A TEST CONFIG.
+# It is not used to configure a real Netlify app.
+
+[[plugins]]
+  package = "@tishman/netlify-plugin"
+
+[build]
+# Dummy build command
+  base = "gatsby/packages/rockefellercenter/public/"
+  command = "echo onBuild"

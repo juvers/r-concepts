@@ -1,0 +1,44 @@
+---
+name: useMaxIntersection
+menu: Hooks
+route: /hooks/use-max-intersection
+---
+
+import {Props, Playground} from 'docz';
+import {Text, Label, Input, Button, Box, Flex, Grid} from 'theme-ui';
+import {useMaxIntersection} from './useMaxIntersection.ts';
+
+# useMaxIntersection
+
+`useMaxIntersection` is a React hook for components that care about
+when their intersection with a root element has the
+**highest intersection ratio** compared to other `useMaxIntersection`
+elements that are also intersecting the same root.
+
+Returns a callback ref that should be passed to the observed element.
+
+## Differences from useIntersection
+
+This is similar to the [useIntersection] hook found in @hz-core,
+but differs in that it only updates when the observed element is intersecting
+with the highest interesction ratio, whereas [useIntersection] updates
+whenever the intersection ratio changes, regardless of other elements.
+
+This is generally better than a naive `useIntersection` in some scenarios,
+such as when the intersection state is used to detect the 'active' section
+in the viewport. In this scenario, `useIntersection` can result in sections
+not being detected correctly when the root margin and
+the average section size are not relatively similar.
+
+For cases like this `useMaxIntersection` is better because it is biased
+toward the section that is occupying **more of the viewport** than
+other sections, rather than being based on the most recent intersection
+with a fixed root margin.
+
+## Usage
+
+```typescript
+import {useMaxIntersection} from '@tishman/components';
+```
+
+[useintersection]: https://hz-core.netlify.app/use-intersection

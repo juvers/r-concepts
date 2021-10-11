@@ -1,0 +1,589 @@
+[
+  {
+    "id": "general-inquiry-form",
+    "meta": {
+      "title": "Contact Us | Rockefeller Center Inquiries",
+      "description": "Questions or comments about Rockefeller Center? Contact us today and we'll be in touch very soon."
+    },
+    "integrationId": "generalInquiry",
+    "name": "General Inquiries",
+    "slug": "general-inquiries",
+    "description": {
+      "text": ["45 ROCKEFELLER PLAZA", "NEW YORK, NY 10111", "212.588.8601", "1.877.NYC.ROCK"],
+      "image": "../images/general-form.jpg"
+    },
+    "thankYouMessage": {
+      "title": "Thank you for contacting us.",
+      "caption": "Your message is important to us. We'll be in touch soon with answers or further information.",
+      "links": [{
+          "url": "/",
+          "label": "Go Back Home"
+        },
+        {
+          "url": "/buy-tickets/",
+          "label": "Buy Tickets"
+        }
+      ]
+    },
+    "formSubmissionNotice": []
+  },
+  {
+    "id": "private-events-form",
+    "meta": {
+      "title": "Private Events Inquiries | Rockefeller Center",
+      "description": "Interested in Private Events at Rockefeller Center? Contact us today for answers and information about your event."
+    },
+    "integrationId": "privateEventsInquiry",
+    "name": "Private Events",
+    "slug": "private-events",
+    "description": {
+      "text": [
+        "Please note:",
+        "",
+        "620 Loft & Garden has a maximum reception capacity of 165.",
+        "",
+        "Rainbow Room has a maximum reception capacity of 300 for seated dinner, and 250 for seated dinner with dancing."
+      ],
+      "image": "../images/private-events.jpg"
+    },
+    "thankYouMessage": {
+      "title": "Thank you for your request.",
+      "caption": "Your message is important to us. We'll be in touch soon with answers or further information.",
+      "links": [{
+          "url": "/",
+          "label": "Go Back Home"
+        },
+        {
+          "url": "/buy-tickets/",
+          "label": "Buy Tickets"
+        }
+      ]
+    },
+    "formSubmissionNotice": []
+  },
+  {
+    "id": "rink-private-events-form",
+    "meta": {
+      "title": "The Rink Inquiries | Rockefeller Center",
+      "description": "We'd be glad to answer any question you may have about The Rink. Contact us today and we'll be in touch about this beloved NYC tradition."
+    },
+    "integrationId": "rinkPrivateEventsInquiry",
+    "name": "Private Events At The Rink",
+    "slug": "rink-private-events",
+    "description": {
+      "text": [],
+      "image": "../images/private-events-rink.jpg"
+    },
+    "thankYouMessage": {
+      "title": "Thank you for your request.",
+      "caption": "Your message is important to us. We'll be in touch soon with answers or further information.",
+      "links": [{
+          "url": "/",
+          "label": "Go Back Home"
+        },
+        {
+          "url": "/buy-tickets/",
+          "label": "Buy Tickets"
+        }
+      ]
+    },
+    "formSubmissionNotice": []
+  },
+  {
+    "id": "private-events-newsletter-form",
+    "meta": {
+      "title": "Sign Up for Rock Center's Private Event Newsletter",
+      "description": "Stay updated on the private event spaces and resources that will help you plan your unforgettable event in Manhattan."
+    },
+    "name": "Private Events Newsletter",
+    "integrationId": "privateEventsNewsletter",
+    "slug": "private-events-newsletter/",
+    "description": {
+      "text": [],
+      "image": "../images/press.jpg"
+    },
+    "thankYouMessage": {
+      "title": "Thank you",
+      "caption": "Thank you for signing up for the newsletter. We will see you in your inbox soon!",
+      "links": [{
+          "url": "/",
+          "label": "Go Back Home"
+        },
+        {
+          "url": "/buy-tickets/",
+          "label": "Buy Tickets"
+        }
+      ]
+    },
+    "formSubmissionNotice": []
+  },
+  {
+    "id": "film-photo-inquiry-form",
+    "meta": {
+      "title": "Film & Photo Inquiries | Rockefeller Center",
+      "description": "Interested in Film & Photo shoots? Contact us today about locations at Rockefeller Center."
+    },
+    "name": "Film & Photo Inquiry",
+    "integrationId": "filmPhotoInquiry",
+    "slug": "film-photo",
+    "description": {
+      "text": [],
+      "image": "../images/film-photo.jpg"
+    },
+    "thankYouMessage": {
+      "title": "Thank you for your request.",
+      "caption": "Your message is important to us. We'll be in touch soon with answers or further information.",
+      "links": [{
+          "url": "/",
+          "label": "Go Back Home"
+        },
+        {
+          "url": "/buy-tickets/",
+          "label": "Buy Tickets"
+        }
+      ]
+    },
+    "formSubmissionNotice": []
+  },
+  {
+    "id": "leasing-newsletter-form",
+    "meta": {
+      "title": "Join The Center Insider Commercial Space & Leasing Newsletter | Rockefeller Center",
+      "description": "Stay current on all the information pertaining to commercial spaces at Rockefeller Center."
+    },
+    "name": "Leasing Newsletter",
+    "integrationId": "leasingNewsletter",
+    "slug": "leasing-newsletter",
+    "description": {
+      "text": [],
+      "image": "../images/rainbow_room_iconic.jpg"
+    },
+    "thankYouMessage": {
+      "title": "Thank you",
+      "caption": "You’re now a Center Insider. Look for us in your inbox soon.",
+      "links": [{
+          "url": "/",
+          "label": "Go Back Home"
+        }
+      ]
+    },
+    "formSubmissionNotice": []
+  },
+  {
+    "id": "film-and-photo-form",
+    "meta": {
+      "title": "Join The Film & Photo Newsletter | Stay Up-to-Date on Photo Shoot Opportunities",
+      "description": "Be the first to know about film and photo opportunities at Rockefeller Center. Subscribe to the Film & Photo Newsletter."
+    },
+    "name": "Film And Photo Newsletter",
+    "integrationId": "filmAndPhotoNewsletter",
+    "slug": "film-and-photo-newsletter",
+    "description": {
+      "text": [],
+      "image": "../images/rainbow_room_iconic.jpg"
+    },
+    "thankYouMessage": {
+      "title": "Thank you",
+      "caption": "You’re now a Center Insider. Look for us in your inbox soon.",
+      "links": [{
+          "url": "/",
+          "label": "Go Back Home"
+        }
+      ]
+    },
+    "formSubmissionNotice": []
+  },
+  {
+    "id": "rink-inquiry-form",
+    "meta": {
+      "title": "The Rink Inquiries | Rockefeller Center",
+      "description": "We'd be glad to answer any question you may have about The Rink. Contact us today and we'll be in touch about this beloved NYC tradition."
+    },
+    "name": "Rink",
+    "integrationId": "theRinkInquiry",
+    "slug": "rink-inquiries",
+    "description": {
+      "text": [],
+      "image": "../images/rink-inquiry.jpg"
+    },
+    "thankYouMessage": {
+      "title": "Thank you for your request.",
+      "caption": "Your message is important to us. We'll be in touch soon with answers or further information.",
+      "links": [{
+          "url": "/",
+          "label": "Go Back Home"
+        },
+        {
+          "url": "/buy-tickets/",
+          "label": "Buy Tickets"
+        }
+      ]
+    },
+    "formSubmissionNotice": []
+  },
+  {
+    "id": "newsstand-studio-inquiry-form",
+    "meta": {
+      "title": "Newsstand Studio Inquiries | Rockefeller Center",
+      "description": "We'd be glad to answer any question you may have about Newsstand Studios. Contact us today and we'll be in touch."
+    },
+    "name": "Newsstand Studios",
+    "integrationId": "newsStandStudioInquiry",
+    "slug": "newsstand-studio-inquiries",
+    "description": {
+      "text": [],
+      "image": "../images/news-stand.jpg"
+    },
+    "thankYouMessage": {
+      "title": "Thank you for your request.",
+      "caption": "Your message is important to us. We'll be in touch soon with answers or further information.",
+      "links": [{
+          "url": "/",
+          "label": "Go Back Home"
+        },
+        {
+          "url": "/buy-tickets/",
+          "label": "Buy Tickets"
+        }
+      ]
+    },
+    "formSubmissionNotice": []
+  },
+  {
+    "id": "press-inquiry-form",
+    "meta": {
+      "title": "Press Inquiries | Rockefeller Center",
+      "description": "We're happy to help with any Press Inquiries you may have. Please contact us to start the conversation."
+    },
+    "name": "Press Inquiry",
+    "integrationId": "pressInquiry",
+    "slug": "press-inquiry",
+    "description": {
+      "text": [],
+      "image": "../images/press.jpg"
+    },
+    "thankYouMessage": {
+      "title": "Thank you for your request.",
+      "caption": "Your message is important to us. We'll be in touch soon with answers or further information.",
+      "links": [{
+          "url": "/",
+          "label": "Go Back Home"
+        },
+        {
+          "url": "/buy-tickets/",
+          "label": "Buy Tickets"
+        }
+      ]
+    },
+    "formSubmissionNotice": []
+  },
+  {
+    "id": "sixty-five-newsletter-form",
+    "meta": {
+      "title": "Rainbow Room Newsletter | Rockefeller Center",
+      "description": "Don’t miss an event. Always know about everything happening at NYC's legendary Rainbow Room and Bar SixtyFive."
+    },
+    "name": "Sixty Five Newsletter",
+    "integrationId": "rrBarSixtyFiveNewsletter",
+    "slug": "sixty-five-newsletter",
+    "description": {
+      "text": [],
+      "image": "../images/rainbow_room_iconic.jpg"
+    },
+    "thankYouMessage": {
+      "title": "Thank you",
+      "caption": "Thank you for signing up for the newsletter. We will see you in your inbox soon!",
+      "links": [{
+          "url": "/",
+          "label": "Go Back Home"
+        },
+        {
+          "url": "/buy-tickets/",
+          "label": "Buy Tickets"
+        }
+      ]
+    },
+    "formSubmissionNotice": []
+  },
+  {
+    "id": "partnership-inquiry-form",
+    "meta": {
+      "title": "Partnership Inquiries | Rockefeller Center",
+      "description": "We have a wide range of partnership opportunities. Contact us today to discover opportunities for your brand."
+    },
+    "name": "Partnerships",
+    "integrationId": "partnershipInquirySection",
+    "slug": "partnerships",
+    "description": {
+      "text": [],
+      "image": "../images/sponsorships.jpg"
+    },
+    "thankYouMessage": {
+      "title": "Thank you for your request.",
+      "caption": "Your message is important to us. We'll be in touch soon with answers or further information.",
+      "links": [{
+          "url": "/",
+          "label": "Go Back Home"
+        },
+        {
+          "url": "/buy-tickets/",
+          "label": "Buy Tickets"
+        }
+      ]
+    },
+    "formSubmissionNotice": []
+  },
+  {
+    "id": "submit-your-tree-form",
+    "meta": {
+      "title": "Submit Your Tree Inquiries | Rockefeller Center",
+      "description": "Questions about the Rockefeller Center Christmas Tree? Have a tree you would like us to consider for this this beloved holiday tradition? Contact us today."
+    },
+    "name": "Submit Your Tree",
+    "integrationId": "submitYourTreeInquiry",
+    "slug": "submit-your-tree",
+    "description": {
+      "text": [],
+      "image": "../images/submit-tree.jpg"
+    },
+    "thankYouMessage": {
+      "title": "Thank you",
+      "caption": "Thank you for contacting us.",
+      "links": [{
+          "url": "/",
+          "label": "Go Back Home"
+        },
+        {
+          "url": "/buy-tickets/",
+          "label": "Buy Tickets"
+        }
+      ]
+    },
+    "formSubmissionNotice": []
+  },
+  {
+    "id": "top-of-the-rock-form",
+    "meta": {
+      "title": "Top of the Rock Inquiries | Rockefeller Center",
+      "description": "Questions or comments about Top of the Rock Observation Deck at Rockefeller Center? Contact us today and we'll glad to get you the information you need."
+    },
+    "name": "Top of the Rock",
+    "integrationId": "topOfTheRockInquiry",
+    "slug": "top-of-the-rock",
+    "description": {
+      "text": [],
+      "image": "../images/tor-inquiry.jpg"
+    },
+    "thankYouMessage": {
+      "title": "Thank you for your request.",
+      "caption": "Your message is important to us. We'll be in touch soon with answers or further information.",
+      "links": [{
+          "url": "/",
+          "label": "Go Back Home"
+        },
+        {
+          "url": "/buy-tickets/",
+          "label": "Buy Tickets"
+        }
+      ]
+    },
+    "formSubmissionNotice": []
+  },
+  {
+    "id": "newsstand-studio-inquiry-section-form",
+    "meta": {
+      "title": "",
+      "description": ""
+    },
+    "name": "Newsstand Studio Inquiry Section",
+    "integrationId": "newsStandStudioInquirySection",
+    "slug": "",
+    "description": {
+      "text": [],
+      "image": "../images/rainbow_room_iconic.jpg"
+    },
+    "thankYouMessage": {
+      "title": "Thank you for your request.",
+      "caption": "Your message is important to us. We'll be in touch soon with answers or further information.",
+      "links": [{
+          "url": "/",
+          "label": "Go Back Home"
+        },
+        {
+          "url": "/buy-tickets/",
+          "label": "Buy Tickets"
+        }
+      ]
+    }
+  }, {
+    "id": "partnership-inquiry-section-form",
+    "meta": {
+      "title": "",
+      "description": ""
+    },
+    "name": "Partnership Inquiry Section",
+    "integrationId": "partnershipInquirySection",
+    "slug": "",
+    "description": {
+      "text": [],
+      "image": "../images/rainbow_room_iconic.jpg"
+    },
+    "thankYouMessage": {
+      "title": "Thank you for your request.",
+      "caption": "Your message is important to us. We'll be in touch soon with answers or further information.",
+      "links": [{
+          "url": "/",
+          "label": "Go Back Home"
+        },
+        {
+          "url": "/buy-tickets/",
+          "label": "Buy Tickets"
+        }
+      ]
+    },
+    "formSubmissionNotice": []
+  },
+  {
+    "id": "film-photo-inquiry-section-form",
+    "meta": {
+      "title": "",
+      "description": ""
+    },
+    "name": "Film & Photo Inquiry Section",
+    "integrationId": "filmPhotoInquirySection",
+    "slug": "",
+    "description": {
+      "text": [],
+      "image": "../images/rainbow_room_iconic.jpg"
+    },
+    "thankYouMessage": {
+      "title": "Thank you for your request.",
+      "caption": "Your message is important to us. We'll be in touch soon with answers or further information.",
+      "links": [{
+          "url": "/",
+          "label": "Go Back Home"
+        },
+        {
+          "url": "/buy-tickets/",
+          "label": "Buy Tickets"
+        }
+      ]
+    },
+    "formSubmissionNotice": []
+  },
+  {
+    "id": "the-rocklist-newsletter-form",
+    "meta": {
+      "title": "Join The Center Newsletter & Stay Up-to-Date on NYC Happenings",
+      "description": "Always know what's happening in NYC. Join The Center newsletter to receive updates on events at Rockefeller Center."
+    },
+    "name": "The Rocklist Newsletter",
+    "integrationId": "theRocklistNewsletter",
+    "slug": "",
+    "description": {
+      "text": [],
+      "image": "../images/rainbow_room_iconic.jpg"
+    },
+    "thankYouMessage": {
+      "title": "Thank you",
+      "caption": "Thank you for signing up for the newsletter. We will see you in your inbox soon!",
+      "links": [{
+          "url": "/",
+          "label": "Go Back Home"
+        },
+        {
+          "url": "/buy-tickets/",
+          "label": "Buy Tickets"
+        }
+      ]
+    },
+    "formSubmissionNotice": []
+  },
+  {
+    "id": "rr-bar-sixtyfive-inquiry-form",
+    "meta": {
+      "title": "Rainbow Room & Bar SixtyFive Inquiries | Rockefeller Center",
+      "description": "Need information about private events at Rainbow Room or Bar Sixty Five? Contact us today with questions and we'll be glad to help."
+    },
+    "integrationId": "rrBarSixtyFiveInquiry",
+    "name": "Rainbow Room Inquiries",
+    "slug": "rainbow-room",
+    "description": {
+      "text": [],
+      "image": "../images/rainbow-inquiry.jpg"
+    },
+    "thankYouMessage": {
+      "title": "Thank you for your request.",
+      "caption": "Your message is important to us. We'll be in touch soon with answers or further information.",
+      "links": [{
+          "url": "/",
+          "label": "Go Back Home"
+        },
+        {
+          "url": "/buy-tickets/",
+          "label": "Buy Tickets"
+        }
+      ]
+    },
+    "formSubmissionNotice": []
+  },
+  {
+    "id": "group-sales-inquiry",
+    "integrationId": "groupSalesInquiry",
+    "name": "Group Sales Inquiry",
+    "slug": "",
+    "description": {
+      "text": [],
+      "image": "tba"
+    },
+    "thankYouMessage": {
+      "title": "Thank you for your request.",
+      "caption": "Your message is important to us. We'll be in touch soon with answers or further information.",
+      "links": [{
+          "url": "/",
+          "label": "Go Back Home"
+        },
+        {
+          "url": "/buy-tickets/group-sales",
+          "label": "Buy Tickets"
+        }
+      ]
+    },
+    "formSubmissionNotice": []
+  },
+  {
+    "id": "flag-project-form",
+    "integrationId": "flagProjectForm",
+    "name": "The Flag Project 2021",
+    "slug": "flag-project",
+    "meta": {
+      "title": "Contact Us | The Flag Project 2021 Submissions | Rockefeller Center",
+      "description": "Artists of all ages and skill levels can submit New York City-inspired photos for display on the Rockefeller Center Plaza. Send a design today to see it on a flag."
+    },
+    "description": {
+      "text": ["We want your submission to be eligible. Please make sure your photo meets the sizing specs found here."],
+      "image": "../images/flag-project-2021.jpg"
+    },
+    "thankYouMessage": {
+      "title": "Thank you so much for your submission to The Flag Project!",
+      "caption": "We will be announcing the winning selections shortly after the contest closes on February 26. Stay tuned to see if your photo has been selected! Sign up for The Center Newsletter and follow us on socials @RockefellerCenter for more updates on the project and news from Rockefeller Center. Thank you again for your participation.",
+      "links": [{
+          "url": "/",
+          "label": "Go Back Home"
+        },
+        {
+          "url": "/the-center-newsletter",
+          "label": "Subscribe To Our Newsletter"
+        }
+      ]
+    },
+    "formSubmissionNotice" : [
+      "In your consideration of my submission for this project, I hereby grant to RCPI Landmark Properties, L.L.C (Rockefeller Center) permission to photograph, reproduce, and use new and original Artwork/Photography that I have submitted for The Flag Project at Rockefeller Center, 2021 in digital and print format. I grant RCPI Landmark Properties, L.L.C permission for non-exclusive rights to use the work(s), image(s), art object(s) including any photograph(s) or audio-visual recording(s) of me to the extent included in any of these materials, in perpetuity, not limited to communication, promotional, commercial, or archival use, without compensation, in this and future editions of The Flag Project.",
+      "I understand that submission of Artwork/Photography does not guarantee display. I certify that no other individual or parties hold copyright interest in the Artwork/Photography, that I hold all rights to the works listed, and that the license granted herein does not violate any third-party rights or applicable laws. I certify that the subject matter and content of the Artwork/Photography will not cause damage or reputable harm to RCPI Landmark Properties L.L.C. and grant RCPI Landmark Properties, L.L.C the right to remove Artwork/Photography at any time for any reason.",
+      "I hereby certify and covenant that I am over 18 and of legal age (a parent or legal guardian must sign for a minor), or if applicable, that I am authorized to sign on behalf of the entity listed below."
+    ]
+  }
+]
+
+
+

@@ -1,0 +1,13 @@
+type DataJson implements Node @infer {
+  meta: Meta!
+  historyHero: HistoryHero!
+  history: History!
+  wideCta: WideCta!
+  imageCallout: ImageCallout!
+}
+
+type HistoryHero {
+  title: String!
+  caption: String!
+  image: ImageWithAlt!
+}

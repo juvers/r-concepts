@@ -1,0 +1,89 @@
+---
+name: Sponsor Grid
+menu: Rockefeller Center
+route: /rockefeller-center/sponsor-grid
+---
+
+import SponsorGrid from './index.tsx';
+import {getMockFluidImage} from '@tishman/docs';
+
+import {Props, Playground} from 'docz';
+
+# Sponsor Grid
+
+This component allows for creating a reusable grid to display sponsor logos
+
+The main difference between primary and secondary logos is the sizing of
+each logo
+
+Primary = two across + larger logos
+
+Secondary = three across + smaller logos
+
+### Props
+
+<Props of={SponsorGrid} />
+
+### Usage
+
+### Primary Sponsor Grid
+
+<Playground>
+  <SponsorGrid
+    title="Primary Sponsors"
+    isPrimary={true}
+    logos={[
+      {
+        fluid: getMockFluidImage({width: 240, height: 170}).childImageSharp
+          .fluid,
+        alt: 'first primary sponsor',
+      },
+      {
+        fluid: getMockFluidImage({width: 240, height: 170}).childImageSharp
+          .fluid,
+        alt: 'second primary sponsor',
+      },
+    ]}
+  />
+</Playground>
+
+### Secondary Sponsor Grid
+
+<Playground>
+  <SponsorGrid
+    title="Secondary Sponsors"
+    isPrimary={false}
+    logos={[
+      {
+        fluid: getMockFluidImage({width: 240, height: 170}).childImageSharp
+          .fluid,
+        alt: 'first primary sponsor',
+      },
+      {
+        fluid: getMockFluidImage({width: 240, height: 170}).childImageSharp
+          .fluid,
+        alt: 'second primary sponsor',
+      },
+      {
+        fluid: getMockFluidImage({width: 240, height: 170}).childImageSharp
+          .fluid,
+        alt: 'second primary sponsor',
+      },
+      {
+        fluid: getMockFluidImage({width: 240, height: 170}).childImageSharp
+          .fluid,
+        alt: 'second primary sponsor',
+      },
+      {
+        fluid: getMockFluidImage({width: 240, height: 170}).childImageSharp
+          .fluid,
+        alt: 'second primary sponsor',
+      },
+      {
+        fluid: getMockFluidImage({width: 240, height: 170}).childImageSharp
+          .fluid,
+        alt: 'second primary sponsor',
+      },
+    ]}
+  />
+</Playground>

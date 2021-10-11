@@ -1,0 +1,31 @@
+type DataJson implements Node @infer {
+  footerContactData: FooterContactData!
+  footerFollowUsData: FooterFollowUsData!
+  footerAppDownloadData: FooterAppDownloadData!
+  subNavLinks: [Link!]!
+  footerContactSubNavLinks: [Link!]!
+}
+
+type FooterContactData {
+  address: String!
+  copyright: String!
+  phoneNumberOne: String!
+  phoneNumberTwo: String!
+}
+
+type FooterFollowUsData {
+  instagram: String!
+  facebook: String!
+  twitter: String!
+  rocklistUrl: String!
+}
+
+type FooterAppDownloadData {
+  appStore: AppStoreLink!
+  googlePlay: AppStoreLink!
+}
+
+type AppStoreLink {
+  link: String!
+  image: Image! @imageByRelativePath
+}

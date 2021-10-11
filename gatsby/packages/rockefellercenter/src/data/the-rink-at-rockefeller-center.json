@@ -1,0 +1,261 @@
+{
+  "id": "the-rink-at-rockefeller-center",
+  "hero": {
+    "links": [
+      {
+        "url": "/the-center-newsletter/",
+        "label": "Subscribe Now"
+      },
+      {
+        "url": "/contact/rink-private-events",
+        "label": "Plan an Event"
+      }
+    ],
+    "contactLinkUrl": "/contact/rink-inquiries"
+  },
+  "ticketOfferings": [
+    {
+      "image": {
+        "src": "../images/daily_admission.jpg",
+        "alt": "Outdoor ice skating at Rockefeller Center's rink."
+      },
+      "title": "Daily Admission",
+      "description": "Take a spin on The Rink at Rockefeller Center this upcoming season. Your General Admission ticket guarantees your spot on the ice on the date and time you select.",
+      "price": "$10 - $50",
+      "link": {
+        "url": "https://tickets.skatingatrockcenter.com/webstore/shop/viewItems.aspx?cg=consumer&c=Tickets#38",
+        "label": "Buy Tickets"
+      }
+    },
+    {
+      "image": {
+        "src": "../images/warm-drink.jpg",
+        "alt": "A warm drink"
+      },
+      "title": "VIP",
+      "description": "Elevate your experience with VIP access, which includes skating followed by a drink and small plate at City Winery’s rink-side bar.",
+
+      "price": "$85 - $110",
+      "link": {
+        "url": "https://tickets.skatingatrockcenter.com/webstore/shop/viewItems.aspx?cg=consumer&c=Tickets#73",
+        "label": "Buy Tickets"
+      }
+    },
+    {
+      "image": {
+        "src": "../images/2000x2000_0012_5Q5A7627.jpg",
+        "alt": "Ice skaters at the Rockefeller Center Rink"
+      },
+      "title": "First and Last Skate",
+      "description": "For early risers and night owls, our first and last skate sessions offer discounts on both admission and skate rental. ",
+
+      "price": "$5 - $25",
+      "link": {
+        "url": "https://tickets.skatingatrockcenter.com/webstore/shop/viewItems.aspx?cg=consumer&c=Tickets#41",
+        "label": "Buy Tickets"
+      }
+    }
+  ],
+  "wideCta": {
+    "title": "Group Sales",
+    "caption": "The more the merrier. We have special rates for groups of 10 or more.",
+    "link": {
+      "url": "/contact/rink-inquiries",
+      "label": "Learn about group sales"
+    }
+  },
+  "calloutGrid": {
+    "title": "Unique Experiences at The Rink",
+    "cards": [
+      {
+        "image": {
+          "src": "../images/Geno-and-Nicolette.jpg",
+          "alt": "Marriage proposal at NYC's most romatic places to propose, the Rock Center rink."
+        },
+        "title": "Special Moments",
+        "description": "Getting engaged? Celebrating a special occasion? We have packages that will help you make memories at The Rink at Rockefeller Center that will last a lifetime.",
+        "links": [
+          {
+            "url": "/documents/rink-package.pdf",
+            "label": "Get package information"
+          }
+        ],
+        "customCardType": "RINK_TOP",
+        "width": 475,
+        "height": 502
+      },
+      {
+        "image": {
+          "src": "../images/2000x2000_0011_5Q5A7629.jpg",
+          "alt": "Skate School"
+        },
+        "title": "Skating Safely",
+        "description": "The Rink is operating at a limited capacity and skate times are limited to 50-minutes from your scheduled arrival time to allow for social distancing both inside and on the ice. Your experience here will be mostly outdoors, but all guests are admitted through the indoor skate house. As with all public areas at Rockefeller Center, masks are required at all times.",
+        "links": [{"url": "/documents/CovidPledge.pdf", "label": "Learn More"}],
+        "width": 379,
+        "height": 717
+      },
+      {
+        "image": {
+          "src": "../images/group-tree.jpg",
+          "alt": "Groups and Events"
+        },
+        "title": "Events",
+        "description": "The Rink is available to host private events with restricted capacity this upcoming winter season. Get in touch with us to begin planning your event.",
+        "links": [
+          {"url": "/contact/rink-private-events", "label": "Contact us"}
+        ],
+        "customCardType": "RINK_BOTTOM",
+        "width": 379,
+        "height": 533
+      }
+    ]
+  },
+  "faqTitle": "FAQs",
+  "crossLinks": [
+    {
+      "title": "Top of the Rock",
+      "image": {
+        "src": "../images/nyc-buildings.jpg",
+        "alt": "Sunlight hitting the skyscrapers of Manhattan at sunset."
+      },
+      "caption": "3 decks, 360-degree must see views, a city that's all yours.",
+      "link": {
+        "label": "Buy Tickets",
+        "url": "/buy-tickets#top-of-the-rock"
+      }
+    },
+    {
+      "title": "The Holidays",
+      "image": {
+        "src": "../images/rockefeller-christmas-tree-horizontal.jpg",
+        "alt": "The famous Rockefeller Center Christmas Tree and Prometheus scupture by The Rink."
+      },
+      "caption": "Celebrate the holidays with us. It's a tradition that's become as familiar as 'ho, ho, ho!'",
+      "link": {
+        "label": "Explore the Holidays",
+        "url": "/holidays"
+      }
+    }
+  ],
+  "history": {
+    "title": "History",
+    "caption": "Legend has it that the idea for The Rink was inspired by a Depression-era skate salesman who demonstrated his product by skating on the frozen water of the Rockefeller Center fountain. However the idea came about, The Rink was the perfect fit for the sunken plaza, which was struggling to attract shoppers as the entrance to the high-end retailers in the underground concourse. The Rink, or “skating pond” as it was first known, officially opened on Christmas Day 1936. Originally planned as a temporary exhibit, The Rink was so popular it became a permanent addition, with the Prometheus Statue and the Christmas Tree providing one of the most familiar backdrops in the world.",
+    "cards": [
+      {
+        "type": "PORTRAIT",
+        "title": "Dec. 1931",
+        "caption": "The First Tree—Depression-era construction workers decorated a small 20-foot tree with strings of cranberries and garlands of paper on Christmas Eve, Dec. 24, 1931, marking the beginning of the annual festive tradition.",
+        "image": {
+          "src": "../images/rink-1931-min.jpg",
+          "alt": "The First Tree"
+        }
+      },
+      {
+        "type": "PORTRAIT",
+        "title": "Dec. 1932",
+        "caption": "Center Theatre Opens––Center Theatre, a 3,500-seat performance space, opens on the southeast corner of 49th Street and Sixth Avenue. Site of popular “Icetravaganza” skating shows, it’s the only building from the original Rockefeller Center plan that has been torn down.",
+        "image": {
+          "src": "../images/rink-1932-min.jpg",
+          "alt": "Center Theatre Opens"
+        }
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "1934",
+        "caption": "The Original Plan—the sunken plaza prior to the development of the “skating pond” in late 1936, featuring entrance ways into the concourse shopping areas.",
+        "image": {
+          "src": "../images/rink-1934-min.jpg",
+          "alt": "The Original Plan"
+        }
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "1936",
+        "caption": "Rink Construction, Opening Day, & Two Trees—the “skating pond,” as it was officially called upon opening, was first made available to the public on Christmas Day, 1936, and featured two Christmas Trees.",
+        "image": {
+          "src": "../images/rink-1936-min.jpg",
+          "alt": "Rink Construction"
+        }
+      },
+      {
+        "type": "PORTRAIT",
+        "title": "1939",
+        "caption": "Sonja Henie & the “Icestravaganzas”—Norwegian figure skater and film star Sonja Henie would entertain onlookers in the 1930s and ’40s. She was also featured in the Center Theatre’s “icetravaganzas.”",
+        "image": {
+          "src": "../images/rink-1939-min.jpg",
+          "alt": "Sonja Henie & the Icestravaganzas"
+        },
+        "didYouKnow": "The Rink features in the NBC shows taped at 30 Rock—having made cameos on Saturday Night Live's Christmas shows and during NBC News’ coverage of past presidential elections."
+      },
+      {
+        "type": "PORTRAIT",
+        "title": "1940",
+        "caption": "A Seal Named Sharkey—the famous trained seal, Sharkey,  appeared as the guest of honor at The Rink at Rockefeller Center with the Specialty Dancing Girls who are wearing roller skates instead of ice skates.",
+        "image": {
+          "src": "../images/rink-1940-min.jpg",
+          "alt": "A Seal Named Sharkey"
+        },
+        "didYouKnow": "Sharkey, the trained seal, appeared alongside Jack Haley, Marta Eggert and Shirley Ross in the musical comedy “Higher and Higher” at the Shubert Theatre in August 1940."
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "Jan. 1956",
+        "caption": "Tourists and locals celebrate the beginning of 1956 in this overhead photograph of The Rink and Tree on New Years Day, 1956.",
+        "image": {
+          "src": "../images/retro-rink.jpg",
+          "alt": "New Years Day, 1956."
+        },
+        "didYouKnow": "In 1959, writer Truman Capote was shown getting some ice time in the pages of LIFE Magazine."
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "1968",
+        "caption": "The Kennedys & A Good Cause—beginning in 1965 Senator Robert F. Kennedy and his wife Ethel held an annual skating party at Rockefeller Center at which 120 children were invited to join them on the famous outdoor rink.",
+        "image": {
+          "src": "../images/rink-1968-min.jpg",
+          "alt": "The Kennedys & A Good Cause"
+        },
+        "didYouKnow": "The children that were guests at the Kennedy’s skating parties were from Brooklyn’s Bedford-Stuyvesent neighborhood."
+      },
+      {
+        "type": "PORTRAIT",
+        "title": "1988",
+        "caption": "The End of the Cold War—Through the 1980s, visitors continued to flock to The Rink, even in an uncertain world. A little less than a year after this photo was taken, the Berlin Wall was torn down.",
+        "image": {
+          "src": "../images/rink-1988-min.jpg",
+          "alt": "The End of the Cold War"
+        }
+      },
+      {
+        "type": "PORTRAIT",
+        "title": "1997",
+        "caption": "The Rink & Tuba Christmas—Over 500 tuba players perform at the 24th annual Tuba Christmas play in front of the beautiful red Rockefeller Center Christmas Tree.",
+        "image": {
+          "src": "../images/rink-1997-min.jpg",
+          "alt": "The Rink & Tuba Christmas"
+        }
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "1999",
+        "caption": "The Tallest Tree Ever—donated by Cathy and Jim Thomson, and hailing from Killingworth, Connecticut, this enormous Norway Spruce was the tallest Christmas Tree ever at Rockefeller Center, standing at 100 ft.",
+        "image": {
+          "src": "../images/rink-1999-min.jpg",
+          "alt": "The Tallest Tree Ever"
+        },
+        "didYouKnow": "While heights vary, the average size of The Rock Center Christmas Tree is between 80–100 feet, and is almost always a Norway Spruce."
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "2014",
+        "caption": "Olympians—Harlem students with Sochi Olympic dancing gold medalists Meryl Davis and Charlie White, the first Americans to ever win the title.",
+        "image": {
+          "src": "../images/rink-2014-min.jpg",
+          "alt": "Olympians"
+        },
+        "didYouKnow": "Many other Olympians have glided across The Rink’s ice, such as Kristi Yamaguchi, Scott Hamilton, Sarah Hughes, and Eileen Seigh."
+      }
+    ]
+  }
+}

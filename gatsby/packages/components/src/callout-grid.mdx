@@ -1,0 +1,257 @@
+---
+name: Callout Grids
+menu: Components
+route: /components/callout-grid
+---
+
+import {Props, Playground} from 'docz';
+import {getMockFluidImage} from '@tishman/docs';
+import {
+  CalloutGrid,
+  CalloutGridCard,
+  CalloutGridCardFull,
+} from '@tishman/components';
+
+# Callout Grid
+
+```ts
+import {CalloutGrid} from '@tishman/components';
+```
+
+### Properties
+
+<Props of={CalloutGrid} />
+
+### Default layout
+
+This is the default layout where nothing is manipulated
+
+The callout grid is offset on desktop by 220px
+
+and each card is sized the same based on design.
+
+<Playground>
+  <CalloutGrid>
+    <CalloutGridCard
+      index={0}
+      fluid={getMockFluidImage({width: 490, height: 520}).childImageSharp.fluid}
+      title={'Maps & Directions'}
+      caption={
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      }
+      links={[{url: '#', label: 'learn more'}]}
+    />
+    <CalloutGridCard
+      index={1}
+      fluid={getMockFluidImage({width: 490, height: 520}).childImageSharp.fluid}
+      title={'Maps & Directions'}
+      caption={
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      }
+      links={[{url: '#', label: 'learn more'}]}
+    />
+    <CalloutGridCard
+      index={2}
+      fluid={getMockFluidImage({width: 490, height: 520}).childImageSharp.fluid}
+      title={'Maps & Directions'}
+      caption={
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      }
+      links={[{url: '#', label: 'learn more'}]}
+    />
+    <CalloutGridCard
+      index={3}
+      fluid={getMockFluidImage({width: 490, height: 520}).childImageSharp.fluid}
+      title={'Maps & Directions'}
+      caption={
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      }
+      links={[{url: '#', label: 'learn more'}]}
+    />
+
+  </CalloutGrid>
+</Playground>
+
+### With Title Block
+
+Some of the designs have a grid with a title and caption block.
+
+To add a title block to the grid, you must pass title and caption props,
+
+directly into the CalloutGrid.
+
+Nice thing about the TitleBlock is we will use javascript to calculate
+
+the offset so no matter the content, it will calulate the offset automatically.
+
+<Playground>
+  <CalloutGrid title={'Callout Grid Title'} caption={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}>
+    <CalloutGridCard
+      index={0}
+      fluid={getMockFluidImage({width: 490, height: 520}).childImageSharp.fluid}
+      title={'Maps & Directions'}
+      caption={
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      }
+      links={[{url: '#', label: 'learn more'}]}
+    />
+    <CalloutGridCard
+      index={1}
+      fluid={getMockFluidImage({width: 490, height: 520}).childImageSharp.fluid}
+      title={'Maps & Directions'}
+      caption={
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      }
+      links={[{url: '#', label: 'learn more'}]}
+    />
+    <CalloutGridCard
+      index={2}
+      fluid={getMockFluidImage({width: 490, height: 520}).childImageSharp.fluid}
+      title={'Maps & Directions'}
+      caption={
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      }
+      links={[{url: '#', label: 'learn more'}]}
+    />
+    <CalloutGridCard
+      index={3}
+      fluid={getMockFluidImage({width: 490, height: 520}).childImageSharp.fluid}
+      title={'Maps & Directions'}
+      caption={
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      }
+      links={[{url: '#', label: 'learn more'}]}
+    />
+
+  </CalloutGrid>
+</Playground>
+
+### With Full width CalloutGridCard
+
+Some of the designs have an added full width grid card.
+
+To add a full width grid card to the callout grid,
+
+add it outside of the `<CalloutGrid>` but inside the same block
+
+See [Callout Grid Card Full](/components/callout-grid-cards#callout-grid-card-full)
+
+<Playground>
+   <CalloutGridCardFull
+    fluid={getMockFluidImage({width: 1140, height: 490}).childImageSharp.fluid}
+    title={'Maps & Directions'}
+    caption={
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    }
+    links={[{url: '#', label: 'learn more'}]}
+  />
+  <CalloutGrid>
+    <CalloutGridCard
+      index={0}
+      fluid={getMockFluidImage({width: 490, height: 520}).childImageSharp.fluid}
+      title={'Maps & Directions'}
+      caption={
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      }
+      links={[{url: '#', label: 'learn more'}]}
+    />
+    <CalloutGridCard
+      index={1}
+      fluid={getMockFluidImage({width: 490, height: 520}).childImageSharp.fluid}
+      title={'Maps & Directions'}
+      caption={
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      }
+      links={[{url: '#', label: 'learn more'}]}
+    />
+    <CalloutGridCard
+      index={2}
+      fluid={getMockFluidImage({width: 490, height: 520}).childImageSharp.fluid}
+      title={'Maps & Directions'}
+      caption={
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      }
+      links={[{url: '#', label: 'learn more'}]}
+    />
+    <CalloutGridCard
+      index={3}
+      fluid={getMockFluidImage({width: 490, height: 520}).childImageSharp.fluid}
+      title={'Maps & Directions'}
+      caption={
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      }
+      links={[{url: '#', label: 'learn more'}]}
+    />
+
+  </CalloutGrid>
+</Playground>
+
+### Unique layout (holiday lp example)
+
+Lastly some of our layouts are more custom with different width cards and different grid styling
+
+We can change the offset of the grid by adding an offset prop `offset={360}`
+
+as well as extra styling on the CalloutGrid to achieve the layout `sx={{mb: [0, null, 150]`
+
+Lastly we also need to apply custom styling to each CalloutGridCard to acheive the unique layout
+
+See [Tall Narrow Callout Grid Card](/components/callout-grid-cards#tall-narrow-card-with-extra-margin)
+
+See [Wide Callout Grid Card](/components/callout-grid-cards#wide-card-with-no-margin-on-desktop)
+
+for examples of different custom card styling
+
+<Playground>
+  <CalloutGrid  offset={360} sx={{mb: [0, null, 150]}}>
+    <CalloutGridCard
+      index={0}
+      sx={{mr: [4, 0]}}
+      ratio={539 / 529}
+      maxWidth={539}
+      fluid={getMockFluidImage({width: 539, height: 529}).childImageSharp.fluid}
+      title={'Maps & Directions'}
+      caption={
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      }
+      links={[{url: '#', label: 'learn more'}]}
+    />
+    <CalloutGridCard
+      index={1}
+      sx={{ml: 6}}
+      ratio={410 / 524}
+      maxWidth={410}
+      fluid={getMockFluidImage({width: 410, height: 524}).childImageSharp.fluid}
+      title={'Maps & Directions'}
+      caption={
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      }
+      links={[{url: '#', label: 'learn more'}]}
+    />
+    <CalloutGridCard
+      index={2}
+      sx={{mr: 7}}
+      ratio={303 / 529}
+      maxWidth={303}
+      fluid={getMockFluidImage({width: 303, height: 529}).childImageSharp.fluid}
+      title={'Maps & Directions'}
+      caption={
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      }
+      links={[{url: '#', label: 'learn more'}]}
+    />
+    <CalloutGridCard
+      index={3}
+      sx={{ml: [4, 0]}}
+      ratio={529 / 350}
+      maxWidth={529}
+      fluid={getMockFluidImage({width: 529, height: 350}).childImageSharp.fluid}
+      title={'Maps & Directions'}
+      caption={
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      }
+      links={[{url: '#', label: 'learn more'}]}
+    />
+
+  </CalloutGrid>
+</Playground>

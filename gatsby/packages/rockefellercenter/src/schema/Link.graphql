@@ -1,0 +1,9 @@
+"""
+A generic link.
+
+This should be used to type most JSON fields that represent links.
+"""
+type Link @infer {
+  label: String!
+  url: String!
+}

@@ -1,0 +1,31 @@
+{
+  "name": "@tishman/netlify-plugin",
+  "version": "1.0.0",
+  "description": "Netlify Build plugin - Lint and Typecheck Tishman apps",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "build": "netlify-build",
+    "lint": "eslint .",
+    "fix": "eslint --fix .",
+    "test": "jest",
+    "watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hzdg/tishman",
+    "directory": "gatsby/packages/docs"
+  },
+  "bugs": {
+    "url": "https://github.com/hzdg/tishman/issues"
+  },
+  "publishConfig": {
+    "access": "restricted",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "@octokit/rest": "18.0.11",
+    "strip-ansi": "6.0.0"
+  }
+}

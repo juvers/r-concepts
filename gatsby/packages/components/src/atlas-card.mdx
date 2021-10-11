@@ -1,0 +1,48 @@
+---
+name: Atlas Card
+menu: Components
+route: /components/atlas-card
+---
+
+import {Props, Playground} from 'docz';
+
+import {AtlasCard} from '@tishman/components';
+import {getMockFluidImage} from '@tishman/docs';
+import useSize from '@hzdg/use-size';
+
+# Atlas Block
+
+```ts
+import {AtlasCard} from '@tishman/components';
+```
+
+### Properties
+
+<Props of={AtlasCard} />
+
+<Playground>
+  {() => {
+    // useHoverAnimation relies on window width
+    // the code surrounding the <AtlasCard/> in this Playground
+    // is just to mock up the way useHoveranimation boolean
+    // is set. 
+    // This boolean is usually passed down from Atlas/index.tsx
+    // Logic
+    // if window width > 832 (tablet breakpoint)
+    // use Hover animation, else show image always (mobile)
+    const [{width: sectionWidth}, sectionRef] = useSize();
+    const useHoverAnimation = sectionWidth > 832;
+    return (
+      <div ref={sectionRef}>
+        <AtlasCard
+          url="#"
+          title="Art in Focus: Vanessa German"
+          excerpt="A liberating vision at Rockefeller Center"
+          fluid={getMockFluidImage({width: 468, height: 500}).childImageSharp.fluid}
+          useHoverAnimation={useHoverAnimation}
+        />
+      </div>
+    );
+  }}
+
+</Playground>

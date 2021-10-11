@@ -1,0 +1,37 @@
+{
+  "id": "newsstand-studios",
+  "meta": {
+    "title": "NYC Recording & Podcast Studio | Newsstand Studios",
+    "description": "Record and sponsor unique and compelling featured podcasts and related music and educational programming at Newsstand Studios."
+  },
+  "heroCluster": {
+    "image": {
+      "src": "../images/newsstand_hero.jpg",
+      "alt": "On Air"
+    },
+    "title": "On Air at RC",
+    "caption": "Rockefeller Center continues its storied legacy in broadcasting with Newsstand Studios, a state-of-the-art podcast studio for contemporary content creators. Built out of a retrofitted 1940s newsstand, the studio is home to a growing local community of podcasters exploring and celebrating New York–centric narratives with global resonance."
+  },
+  "podcastIntroTitle": "Press Play.",
+  "podcastIntroCaption": "We are artists, educators, and creators. Our podcasts are as diverse as the people of New York City and are a dazzling reflection of the interests and beliefs that energize the city.",
+  "calloutGrid": {
+    "cards": [
+      {
+        "image": {
+          "src": "../images/newsstand_create.jpg",
+          "alt": "studio engineering"
+        },
+        "title": "Create it here.",
+        "description": "Do you have a story to tell? Newsstand Studios at Rockefeller Center could be your next destination. The studio is available to new and established podcasters, or to partners interested in shaping the dialogue with us."
+      },
+      {
+        "image": {
+          "src": "../images/newsstand_produce.jpg",
+          "alt": "mic and headphones"
+        },
+        "title": "People who produce.",
+        "description": "Our experienced in-house studio team ensures your experience is first class. Offering multi-track recording with the latest equipment, full editing and production services, and flexible studio hours, recording at Newsstand Studios ensures that your focus can remain on your interview and subject."
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "business-list",
+  "dineIntroText": {
+    "title": "A delicious destination.",
+    "caption": "At Rockefeller Center, we believe that every dining opportunity should be memorable. From the bite grabbed on-the-go, to the multiple-course occasion with the city skyline as your backdrop, to the “where-the-locals-eat” outdoor hot spot, we’ve curated the finest New York culinary talent to bring you the best bars and restaurants found in Midtown Manhattan this spring."
+  },
+  "shopIntroText": {
+    "title": "An iconic shopping experience.",
+    "caption": "Rockefeller Center is a shopping experience unlike any other. You’ll find beloved New York brands, international names, and up-and-coming designers. This is the best shopping destination in Midtown Manhattan for spring fashions, and where you come to rediscover that shopping is as much about where you are as about what you find."
+  },
+  "amenityIntroText": {
+    "title": "So much more.",
+    "caption": "For every day, for whatever you need, Rockefeller Center has the amenities and services for you to be at your best. With everything from a classic shoe shine establishment that harkens back to turn-of-the-century New York to a modern gym that sets the standard for modern fitness, you’ll find everything you need to do more and to be more, right here."
+  }
+}

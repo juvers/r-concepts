@@ -1,0 +1,176 @@
+{
+  "id": "rockefeller-center-christmas-tree-lighting",
+  "treeLightingFaqTitle": "The Christmas Tree FAQs",
+  "hero": {
+    "contactLinkUrl": "/contact/general-inquiries/"
+  },
+  "history": {
+    "title": "History of the Tree",
+    "caption": "For more than eight decades, the Rockefeller Center Christmas Tree has stood as a holiday beacon for New Yorkers and visitors alike. While the lights, decorations, and stars have changed through the years, visiting the Tree remains a quintessential New York experience.",
+    "cards": [
+      {
+        "type": "PORTRAIT",
+        "title": "December 1931",
+        "caption": "Workers at Rockefeller Center pooled their money together to buy a Christmas tree. The men decorated the 20-foot high balsam fir with handmade garlands made by their families. This photo, taken on Christmas Eve, shows the men lined up to receive their wages.",
+        "image": {
+          "src": "../images/Tree_1931.jpg",
+          "alt": "December 1931"
+        }
+      },
+      {
+        "type": "PORTRAIT",
+        "title": "December 1933",
+        "caption": "Rockefeller Center decided to make the Christmas Tree an annual tradition, and held the very first tree lighting ceremony.",
+        "image": {
+          "src": "../images/Tree_1933.jpg",
+          "alt": "December 1933"
+        }
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "December 1936",
+        "caption": "Two trees were erected at Rockefeller Center, and a skating pageant was held at the newly opened ice skating rink on the Plaza.",
+        "image": {
+          "src": "../images/Tree_1936.jpg",
+          "alt": "December 1936"
+        }
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "December 1942",
+        "caption": "World War II ushered in an era of simple and patriotic designs, including red, white, and blue unlit globes and painted wooden stars. In 1942, no materials essential to the war effort were used to decorate Rockefeller Center, and instead of one large tree, three more modest trees were raised. From 1942 until the end of the war, the Tree went unlit each year due to blackout regulations.",
+        "image": {
+          "src": "../images/Tree_1942.jpg",
+          "alt": "December 1942"
+        }
+      },
+      {
+        "type": "PORTRAIT",
+        "title": "November 1951",
+        "caption": "Santa and friends watch as the Tree is raised.",
+        "image": {
+          "src": "../images/Tree_1951.jpg",
+          "alt": "November 1951"
+        }
+      },
+      {
+        "type": "PORTRAIT",
+        "title": "December 1955",
+        "caption": "In the 1950s, workers began using scaffolding to aid in decorating the trees. Before the decade was over, the process had grown to require 20 men and a period of nine days.",
+        "image": {
+          "src": "../images/Tree_1955.jpg",
+          "alt": "December 1955"
+        }
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "December 1969",
+        "caption": "Sculptor Valerie Clarebout’s triumphant and towering wire angel figures debuted in the Channel Gardens. She created the 12 sculptures using 75 points of metal wire each. Clarebout passed away in 1982 at the age of 74, but her legacy lives on in her resplendent gift to New York City.",
+        "image": {
+          "src": "../images/Tree_1969.jpg",
+          "alt": "December 1969"
+        }
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "November 1997",
+        "caption": "This Tree traveled down the Hudson River by barge from its home in Stony Point, New York.",
+        "image": {
+          "src": "../images/Tree_1997.jpg",
+          "alt": "November 1997"
+        }
+      },
+      {
+        "type": "PORTRAIT",
+        "title": "November 1998",
+        "caption": "A tree from Richfield, Ohio, was flown to New York City on the world’s largest transport plane, the Anatov An-124 Ruslan.",
+        "image": {
+          "src": "../images/Tree_1998.jpg",
+          "alt": "November 1998"
+        }
+      },
+      {
+        "type": "PORTRAIT",
+        "title": "December 1999",
+        "caption": "Christmas of 1999 hosted the largest Tree in Rockefeller Center’s history. Hailing from Killingworth, Connecticut, the Tree stood at 100 feet tall.",
+        "image": {
+          "src": "../images/Tree_1999.jpg",
+          "alt": "December 1999"
+        }
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "December 2001",
+        "caption": "Following the tragedies of September 11, 2001, the Tree was decorated in a patriotic red, white, and blue. People from around the world visited the Plaza to see the Tree.",
+        "image": {
+          "src": "../images/Tree_2001.jpg",
+          "alt": "December 2001"
+        }
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "December 2004",
+        "caption": "The first 550-pound Swarovski Star adorned the top of the Tree in 2004. It featured 25,000 crystals and 1 million facets and was 9.5 feet in diameter. The following year, the addition of LED lights made the star look as if it were radiating light from its core to its tips.",
+        "image": {
+          "src": "../images/Tree_2004.jpg",
+          "alt": "December 2004"
+        }
+      },
+      {
+        "type": "PORTRAIT",
+        "title": "December 2018",
+        "caption": "A new Swarovski Star, designed by famed architect Daniel Libeskind, adorned the 72-foot-tall Christmas Tree. The 9-foot-4-inch topper, backlit by LEDs, features 3 million dazzling Swarovski crystals across 70 triangular spikes.",
+        "image": {
+          "src": "../images/Tree_2018.jpg",
+          "alt": "December 2018"
+        }
+      }
+    ]
+  },
+  "calloutGrid": {
+    "fullCard": {
+      "image": {
+        "src": "../images/Tree_donate_mod.jpg",
+        "alt": "Donate Your Tree"
+      },
+      "title": "Donate Your Tree",
+      "description": "Traditionally we've selected a Norway spruce in the later years of its life cycle, measuring at least 75 feet tall and 45 feet in diameter. If you have a Norway spruce you would like us to consider as the centerpiece for this historic Rockefeller Center tradition, we would love to hear from you.",
+      "links": [{"url": "/contact/submit-your-tree", "label": "Submit a Tree"}]
+    },
+    "cards": [
+      {
+        "image": {
+          "src": "../images/Tree_holidays_mod.jpg",
+          "alt": "Holidays"
+        },
+        "title": "Holidays",
+        "description": "Rockefeller Center and its iconic Christmas Tree are the epicenter of holiday celebrations in New York.",
+        "links": [
+          {"url": "/holidays", "label": "Experience the Holidays in NYC"}
+        ]
+      },
+      {
+        "image": {
+          "src": "../images/Tree_habitat_mod.jpg",
+          "alt": "Habitat for Humanity—A Gift that Keeps on Giving"
+        },
+        "title": "Habitat for Humanity—A Gift that Keeps on Giving",
+        "description": "Continuing a longstanding holiday tradition, the 2020 Christmas Tree will be donated to Habitat for Humanity, milled, treated, and made into lumber that will be used for home building. A symbol of hope, the Rockefeller Center Christmas Tree inspired the children’s book, The Carpenter’s Gift, written by David Rubel and illustrated by Jim LaMarche in collaboration with Habitat for Humanity.",
+        "links": [
+          {
+            "url": "/magazine/events/rock-center-christmas-tree-donation-habitat-for-humanity-interview/",
+            "label": "Learn More"
+          }
+        ]
+      }
+    ]
+  },
+  "featuredStories": {
+    "title": "The Holidays in The Center Magazine",
+    "caption": "Featuring seemingly as many holiday happenings as there are lights on the Tree, our Holiday Stories cover past and future events here.",
+    "link": {
+      "url": "/magazine",
+      "label": "Read Our Stories"
+    }
+  }
+}

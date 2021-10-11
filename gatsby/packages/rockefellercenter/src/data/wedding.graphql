@@ -1,0 +1,22 @@
+type DataJson implements Node @infer {
+  hero: Hero!
+  weddingFeaturedGallery: WeddingFeaturedGallery!
+  imageGrid: ImageGrid!
+  weddingFeaturedGallery2: WeddingFeaturedGallery!
+  imageGrid2: ImageGrid!
+  imageCallout: ImageCallout!
+  calloutGrid: CalloutGrid!
+  featuredStories: FeaturedStories!
+}
+
+"""
+A WeddingFeaturedGallery object.
+
+This is essentially a FeaturedGallery object with introHeading and introCopy included
+"""
+type WeddingFeaturedGallery {
+  introHeading: String!
+  introCopy: String!
+  title: String!
+  content: [FeaturedGalleryContent!]!
+}

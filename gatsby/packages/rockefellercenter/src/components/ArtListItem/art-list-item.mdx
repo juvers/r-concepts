@@ -1,0 +1,46 @@
+---
+name: Art List Item
+menu: Rockefeller Center
+route: /rockefeller-center/art-list-item
+---
+
+import {Flex, Text} from '@tishman/components';
+import ArtListItem from '~components/ArtListItem';
+import {Props, Playground} from 'docz';
+import {getMockFluidImage} from '@tishman/docs';
+
+# Art List Item
+
+## Props
+
+<Props of={ArtListItem} />
+
+### Basic Usage
+
+<Playground>
+  <ArtListItem
+    category={'Sculpture'}
+    title={'Friendship Between America and France'}
+    slug={'friendship-between-america-and-france'}
+    author={[
+      {
+        name: 'Isamu Noguchi',
+        nationality: 'American',
+        birthYear: 1904,
+        deathYear: 1988
+      },
+      {
+        name: 'Alfred Janniot',
+        nationality: 'French',
+        birthYear: 1889,
+        deathYear: 1969
+      }
+    ]}
+    fluid={getMockFluidImage({width: 190, height: 270}).childImageSharp.fluid}
+    alt={'mock image'}
+    excerpt={
+      'Sparkling above the main entrance to La Maison Française, Friendship reads in narrative form from top to bottom.'
+    }
+    location={{title: 'Above the main entrance of 610 Fifth Avenue'}}
+  />
+</Playground>

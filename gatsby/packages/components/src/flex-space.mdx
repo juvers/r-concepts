@@ -1,0 +1,52 @@
+---
+name: Flex Space
+menu: Components
+route: /components/flex-space
+---
+
+import {Props, Playground} from 'docz';
+
+import {FlexSpace} from '@tishman/components';
+import {getMockFluidImage} from '@tishman/docs';
+
+# Flex Space
+
+Flex Space is used throughout the site.
+
+It is an option component section that displays two cards
+with a background image. Each card has a title, optional
+description and a link.
+
+```ts
+import {FlexSpace} from '@tishman/components';
+```
+
+### Properties
+
+<Props of={FlexSpace} />
+
+<Playground>
+  <FlexSpace
+    bgImage={
+      getMockFluidImage({width: 1920, height: 1080, usePhoto: true})
+        .childImageSharp.fluid
+    }
+    spaceOne={{
+      title: 'Flex space headline here…',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+      link: {
+        url: '#',
+        label: 'explore more retailers',
+      },
+    }}
+    spaceTwo={{
+      title: 'Pastel de Nata',
+      description: '$4 for 2 • Joey Bats',
+      link: {
+        url: '#',
+        label: 'Learn more',
+      },
+    }}
+  />
+</Playground>

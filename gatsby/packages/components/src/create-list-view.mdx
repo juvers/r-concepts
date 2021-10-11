@@ -1,0 +1,266 @@
+---
+name: createListView
+menu: Hooks
+route: /hooks/create-list-view
+---
+
+import {Props, Playground} from 'docz';
+import {jsx, Box, Flex, Form, Select} from '@tishman/components';
+import {createListView} from './createListView';
+
+# createListView
+
+`createListView` creates a [Zustand] state hook
+for managing a filterable list of items.
+
+## Usage
+
+```typescript
+import {createListView} from '@tishman/components';
+```
+
+> See the guide on [List Views] for more examples.
+
+### Creating the list view hook
+
+If the list data is known statically, you can create the hook
+statically, as well:
+
+```tsx
+const useListView = createListView({
+  /**
+   * Optional: the initial items to store for the list view.
+   *
+   * Items may also be provided via the `add` function returned by the hook,
+   * for situations where the items aren't known statically.
+   */
+  items: [
+    {color: 'White', attraction: 'Rock Center'},
+    {color: 'Black', attraction: 'Rock Center'},
+    {color: 'White', attraction: 'The Rink'},
+    {color: 'Navy', attraction: 'The Rink'},
+    {color: 'White', attraction: 'Top of the Rock'},
+    {color: 'Yellow', attraction: 'Top of the Rock'},
+    {color: 'Green', attraction: 'Top of the Rock'},
+  ],
+  /**
+   * Optional: the possible field names the list may be filtered by.
+   *
+   * This may be a field name, an array of field names,
+   * or an object that maps display names to dot-separated path strings.
+   *
+   * @example
+   * // As a field name:
+   * filterBy: 'title',
+   * // As an array of field names:
+   * filterBy: ['title', 'category'],
+   * // As a map of display names to path strings:
+   * filterBy: {type: 'category.subCategory'},
+   */
+  filterBy: ['color', 'attraction'],
+  /**
+   * Optional: the field name to group items by.
+   *
+   * This may be a field name or dot-separated path string.
+   *
+   * @example
+   * // As a field name:
+   * groupBy: 'title',
+   * // As a path string:
+   * groupBy: 'category.subCategory',
+   */
+  groupBy: 'color',
+  /**
+   * The group scale. Defaults to `'alpha'`.
+   *
+   * `'alpha'` means groups will be created for the range of sorted
+   * first characters of the values of the `groupBy` field.
+   *
+   * `'numeric'` means groups will be created for the range of sorted
+   * number values of the `groupBy` field.
+   *
+   * `'date'` means groups will be created for the range of dates
+   * that covers the values of the `groupBy` field.
+   */
+  groupScale: 'alpha',
+});
+```
+
+## Loading items
+
+When data is not known statically, you have a couple of options:
+
+You can create the hook statically, and then use the `add` function
+to add items to the list:
+
+```tsx
+const useListData = createListView(/* ... */);
+
+const ListView = () => {
+  const add = useListData((state) => state.add);
+  // Handwaving: this represents some kind of data loading effect.
+  const data = useSomeAsyncDataSource();
+
+  // Add the items from the data whenever they load.
+  useEffect(() => {
+    // Assuming data is a list of items...
+    add(...data);
+  }, [add, data]);
+  // ...
+};
+```
+
+## Querying items in Gatsby
+
+Or, if all the data will be loaded via a Gatsby query,
+you might opt to create the hook as state on initialization:
+
+```tsx
+const ListView = () => {
+  // Data loaded via Gatsby query will be available on first render,
+  // so there is no need for any async effect.
+  const data = useStaticQuery(/* ... */);
+  // Notice we wrapped this in a `useState`initializer
+  // so we only create the`useListData` hook once.
+  const [useListData] = useState(() => createListView({items: data /* ... */}));
+  // ...
+};
+```
+
+> The hook created by `createListView` is a [Zustand] state hook that returns
+> some useful data and setter functions.
+>
+> The below sections assume creating a hook from `createListView` like:
+>
+> ```tsx
+> const useListView = createListView(/* ... */);
+> ```
+
+## items
+
+The list of items to display in the list view. If the list view has been
+configured with any filters, and if any of those filters have been applied,
+then this list will reflect that state.
+
+```tsx
+const items = useListView((state) => state.items);
+```
+
+You can use this list to render a flat list of items.
+
+```tsx
+// `id` and `name` would be fields on every item in the data set.
+items.map((item) => <li key={item.id}>{item.name}</li>);
+```
+
+## groups
+
+The list of items, grouped by the field specified in the `groupBy` [config].
+If `groupBy` has not been configured, this will be a list of one anonymous
+group that contains all items.
+
+```tsx
+const groups = useListView((state) => state.groups);
+```
+
+Each group in the list is an object:
+
+### group.name
+
+The list of names derived from the unique values of the `groupBy` field.
+
+```ts
+const groupNames = groups.map((group) => group.name);
+```
+
+### group.hasItems
+
+A boolean indicating that `group.items` is not empty. Empty groups are possible
+when there are no items in the filtered state that belong to the group.
+
+```ts
+const groupsWithItems = groups.filter((group) => group.hasItems);
+```
+
+### group.items
+
+The list of items that belong to the group.
+
+```ts
+// Don't do this, lol. Just use `items` from the hook state.
+const allItems = groups.reduce((all, group) => [...all, ...group.items], []);
+```
+
+## options
+
+The list of options derived from the `filterBy` [config]. This is useful
+(along with the [filter] setter) for creating form fields for filtering
+the list of items.
+
+```ts
+const options = useListView((state) => state.options);
+```
+
+Each option is a tuple containing the filter field name
+and the list of possible values:
+
+```ts
+options.map(([fieldName, values]) => (
+  <label key={fieldName}>
+    {fieldName}
+    <select>
+      {values.map((value) => (
+        <option key={value}>{value}</option>
+      ))}
+    </select>
+  </label>
+));
+```
+
+## filter
+
+A setter that applies a filter for the given field name and value.
+
+```ts
+const filter = useListView((state) => state.filter);
+```
+
+Calling filter with a field name and a value will apply that filter
+such that the next state's [items] will only include items that pass
+the filter (and any other filters that are currently applied):
+
+```ts
+<button onClick={() => filter('color', 'Green')}>Only Green</button>
+```
+
+## reset
+
+A setter that resets the filter for the given field name, or **all**
+filters, if no filter name is given.
+
+```ts
+const reset = useListView((state) => state.reset);
+
+<button onClick={() => reset('color')}>All Colors</button>
+<button onClick={() => reset()}>Clear all filters</button>
+```
+
+## add
+
+A setter that adds items to the list view. This is useful in scenarios
+where the list of items is not known ahead of time, or might grow over time.
+
+```ts
+const add = useListView((state) => state.add);
+
+// Neat! A theoretical hook that loads more data whenever you call next!
+const next = useSomeCoolPaginatingDataLoaderHook((data) => add(...data));
+
+<button onClick={next}>Thank U</button>;
+```
+
+[zustand]: https://github.com/pmndrs/zustand
+[list views]: /guides/list-views
+[config]: #creating-the-list-view-hook
+[filter]: #filter
+[items]: #items

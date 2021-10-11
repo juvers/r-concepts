@@ -1,0 +1,45 @@
+type DataJson implements Node @infer {
+  general: RockGroupSalesGeneral!
+  travelProfessionals: RockGroupSalesTravelProfessionals!
+  studentGroups: RockGroupSalesStudentGroups!
+  corporateGroups: RockGroupSalesCorporateGroups!
+}
+
+type RockGroupSalesGeneral {
+  formIntro: RockGroupSalesTextBlock!
+  contactInformation: RockGroupSalesGeneralContactInformation!
+}
+
+type RockGroupSalesGeneralContactInformation {
+  title: String!
+  caption: String!
+  phone: String!
+  tollFree: String!
+  fax: String!
+  email: String!
+}
+
+type RockGroupSalesTravelProfessionals {
+  title: String!
+  caption: String!
+  link: Link!
+}
+
+type RockGroupSalesStudentGroups {
+  title: String!
+  captionOne: String!
+  captionTwo: String!
+  link: Link!
+  pdf: Link!
+}
+
+type RockGroupSalesCorporateGroups {
+  title: String!
+  captionOne: String!
+  captionTwo: String!
+}
+
+type RockGroupSalesTextBlock {
+  title: String!
+  caption: String!
+}

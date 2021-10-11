@@ -1,0 +1,10 @@
+"""
+A Featured Stories object.
+
+This should be used to type most JSON fields that represent a generic Featured Stories component.
+"""
+type FeaturedStories {
+  title: String!
+  caption: String!
+  link: Link!
+}

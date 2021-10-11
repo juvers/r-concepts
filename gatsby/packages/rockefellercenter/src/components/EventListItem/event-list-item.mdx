@@ -1,0 +1,81 @@
+---
+name: Event List Item
+menu: Rockefeller Center
+route: /rockefeller-center/event-list-item
+---
+
+import {Flex, Text} from '@tishman/components';
+import EventListItem from '~components/EventListItem';
+import {Props, Playground} from 'docz';
+import {getMockFluidImage} from '@tishman/docs';
+
+# Event List Item
+
+## Props
+
+<Props of={EventListItem} />
+
+### Basic Usage
+
+#### Free Event
+
+<Playground>
+  <EventListItem
+    freeEvent={true}
+    ongoingEvent={false}
+    category={'Happy Hour'}
+    title={'Happy Hour Art Party with Justin Teodoro'}
+    formattedStartTime={'8pm'}
+    formattedEndTime={'11pm'}
+    formattedEndDate={'11.31.2020'}
+    excerpt={
+      'Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.'
+    }
+    location={{title: 'Bar SixtyFive'}}
+    fluid={getMockFluidImage({width: 190, height: 270}).childImageSharp.fluid}
+    alt={'mock image'}
+    url={'#'}
+  />
+</Playground>
+
+#### Ongoing Event
+
+<Playground>
+  <EventListItem
+    freeEvent={false}
+    ongoingEvent={true}
+    category={'Happy Hour'}
+    title={'Dine at The Rink'}
+    formattedStartTime={'8pm'}
+    formattedEndTime={'11pm'}
+    formattedEndDate={'11.31.2020'}
+    excerpt={
+      'Join Frenchette and Estela in a one-off outdoor dining experience at The Rink at Rockefeller Center through the month of September. Both restaurants have curated exclusive prix fixe picnic baskets filled with seasonal menu items.'
+    }
+    location={{title: 'North Plaza'}}
+    fluid={getMockFluidImage({width: 190, height: 270}).childImageSharp.fluid}
+    alt={'mock image'}
+    url={'#'}
+  />
+</Playground>
+
+#### Free Ongoing Event
+
+<Playground>
+  <EventListItem
+    freeEvent={true}
+    ongoingEvent={true}
+    category={'Happy Hour'}
+    title={'The Gauntlet'}
+    formattedStartTime={'8pm'}
+    formattedEndTime={'11pm'}
+    formattedEndDate={'11.31.2020'}
+    excerpt={
+      'Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.'
+    }
+    location={{title: 'Bar SixtyFive'}}
+    fluid={getMockFluidImage({width: 190, height: 270}).childImageSharp.fluid}
+    alt={'mock image'}
+    url={'#'}
+  />
+</Playground>

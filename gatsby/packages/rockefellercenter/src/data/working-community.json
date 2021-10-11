@@ -1,0 +1,144 @@
+{
+  "id": "working-community",
+  "meta": {
+    "title": "Working Community | Rockefeller Center",
+    "description": "Working at Rockefeller Center brings with it special perks to enjoy. Learn about our unique Community and see how you can help create it everyday."
+  },
+  "workingCommunityHero": {
+    "title": "Working at RC",
+    "caption": "The heart of Rockefeller Center is its community of creators and innovators. Your success is our business. We offer robust on-site benefits designed to facilitate wellbeing, networking, and productivity, including the ZO. app for fitness, Studio Gather for events, and programming that always engages.",
+    "image": {
+      "src": "../images/communityPage_RCCommunity_resized.jpg",
+      "alt": "Colleagues in communal work spaces."
+    }
+  },
+  "workingCommunityFullCard": {
+    "image": {
+      "src": "../images/outdoor-patio.jpg",
+      "alt": "People sitting outside at tables on a sunny patio surrounded by plants."
+    },
+    "title": "ZO.",
+    "description": "ZO. is a workplace community platform, available exclusively to people who come to work at Rockefeller Center. It provides access to building information, custom experiences, and  exclusive discounts to help you always be at your best.",
+    "links": [
+      {"url": "https://app.findyourzo.com/login", "label": "Log in to Zo."},
+      {
+        "url": "https://app.findyourzo.com/register",
+        "label": "Not a Member? Sign Up Here."
+      }
+    ]
+  },
+  "workingCommunityCalloutGrid": {
+    "cards": [
+      {
+        "image": {
+          "src": "../images/trumpet-jazz.jpg",
+          "alt": "Man playing trumpet with jazz band for bar patrons."
+        },
+        "title": "From A to ZO.",
+        "description": "Use ZO. to help with every facet of your life. From wellness, to social events, to even arranging for easy lunch delivery."
+      },
+      {
+        "image": {
+          "src": "../images/colleagues-on-terrace.jpg",
+          "alt": "Colleagues enjoy an outdoor meeting on a terrace overlooking St. Patrick's cathedral."
+        },
+        "title": "Perks & Privilege Card.",
+        "description": "Save on shopping and dining at select retailers and restaurants when you show your Perks & Privilege Card."
+      }
+    ],
+    "appDownloadCard": {
+      "title": "Get the ZO. App.",
+      "caption": "Download ZO. today and take advantage of being a part of the Rockefeller Center community.",
+      "downloadText": "DOWNLOAD FROM",
+      "link": {
+        "url": "https://app.findyourzo.com/login",
+        "label": "Already a member? Log in."
+      },
+      "appDownloadData": {
+        "appStore": {
+          "link": "https://apps.apple.com/us/app/find-your-zo/id1240934279",
+          "image": {
+            "src": "../images/app_store.png",
+            "alt": "Download the app from the apple app store"
+          }
+        },
+        "googlePlay": {
+          "link": "https://play.google.com/store/apps/details?id=com.findyourzo.zomobile&hl=en_US&gl=US",
+          "image": {
+            "src": "../images/play_store.png",
+            "alt": "Download the app from the google play store"
+          }
+        }
+      }
+    }
+  },
+  "workingCommunityFeaturedGallery": {
+    "title": "ZO. Spaces",
+    "content": [
+      {
+        "category": "The Clubhouse",
+        "image": {
+          "src": "../images/TS16b.jpg",
+          "alt": "Zo co-working space at Rockefeller Center. "
+        },
+        "caption": "Designed exclusively for Rockefeller Center tenants, the ZO. Clubhouse is a place to gather, connect, and re-energize. Located in 1 Rockefeller Plaza on the 33rd Floor, The Clubhouse is open to all ZO. Members at no cost. Stop by for a tour, a bite to eat, a quick meeting, or just to relax in one of the indoor or outdoor lounge spaces.",
+        "links": [
+          {"url": "https://clubhouse.findyourzo.com/", "label": "Learn more"}
+        ]
+      },
+      {
+        "category": "The Lounge",
+        "image": {
+          "src": "../images/_MG_4311_1-Edit.jpg",
+          "alt": "Zo co-working space at Rockefeller Center."
+        },
+        "caption": "Visit the ZO. Lounge at 30 Rockefeller Plaza for access to some of our convenient amenities, from on-site medical and beauty services to afternoon yoga. Or, simply enjoy a change of scenery and a view of Rockefeller Plaza on your lunch break.",
+        "links": [{"url": "https://www.findyourzo.com/", "label": "Learn more"}]
+      },
+      {
+        "category": "The Library",
+        "image": {
+          "src": "../images/ZOLibrary_9.5.18-0089.jpg",
+          "alt": "View from the mezzanine level of 45 Rockefeller Plaza."
+        },
+        "caption": "Enjoy elevated views at the ZO. Library on the mezzanine level of 45 Rockefeller Plaza. Meet a coworker for a cold brew coffee, step out of the office to take a call, or clear your head in this exclusive and conveniently located space.",
+        "links": [{"url": "https://www.findyourzo.com/", "label": "Learn more"}]
+      },
+      {
+        "category": "The Bike Stop",
+        "image": {
+          "src": "../images/bike-stop.jpg",
+          "alt": "Photo of Rockefeller Center Garage bike storage"
+        },
+        "caption": "ZO. Members enjoy access to the ZO. Bike Stop in the Rockefeller Center Garage. With monthly registration, ZO. Members receive complimentary access to a secure bike storage room equipped with air compressor, bike tools, and a water fountain.",
+        "links": [{"url": "https://www.findyourzo.com/", "label": "Learn more"}]
+      }
+    ]
+  },
+  "crossLinks": [
+    {
+      "title": "Magazine",
+      "image": {
+        "src": "../images/wc-centermag-crosslink.jpg",
+        "alt": "Man in an apron standing in front of counter at Hombre Taco."
+      },
+      "caption": "Exploring the style, food, and culture from the heart of New York City.",
+      "link": {
+        "label": "Read the stories",
+        "url": "/magazine"
+      }
+    },
+    {
+      "title": "Shop & Dine",
+      "image": {
+        "src": "../images/wc-shopdine-crosslink.jpg",
+        "alt": "Woman shopping at a store at Rockefeller Center."
+      },
+      "caption": "What will you discover today? Take advantage of incredible shopping and dining choices.",
+      "link": {
+        "label": "Learn More",
+        "url": "/shop-dine"
+      }
+    }
+  ]
+}

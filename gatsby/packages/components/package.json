@@ -1,0 +1,53 @@
+{
+  "name": "@tishman/components",
+  "description": "Shared components and styles for Tishman projects",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "lint": "eslint .",
+    "fix": "eslint --fix .",
+    "typecheck": "tsc --noEmit --pretty"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hzdg/tishman",
+    "directory": "gatsby/packages/components"
+  },
+  "bugs": {
+    "url": "https://github.com/hzdg/tishman/issues"
+  },
+  "publishConfig": {
+    "access": "restricted",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "@emotion/core": "10.0.28",
+    "@emotion/styled": "10.0.27",
+    "@hzdg/dom-utils": "2.0.3",
+    "@hzdg/focus-scope": "1.2.11",
+    "@hzdg/scroll-monitor": "4.0.14",
+    "@hzdg/use-debounced-callback": "1.0.5",
+    "@hzdg/use-hover": "0.0.9",
+    "@hzdg/use-intersection": "2.0.5",
+    "@hzdg/use-size": "4.0.15",
+    "@reach/visually-hidden": "0.10.4",
+    "@react-stately/overlays": "3.0.2",
+    "@sanity/image-url": "0.140.19",
+    "@theme-ui/color": "0.4.0-rc.13",
+    "fontfaceobserver": "2.1.0",
+    "gatsby-image": "2.4.7",
+    "gatsby-plugin-react-svg": "3.0.0",
+    "gatsby-plugin-theme-ui": "0.3.0",
+    "immer": "7.0.9",
+    "react-helmet": "6.0.0",
+    "react-spring": "9.0.0-rc.3",
+    "theme-ui": "0.4.0-rc.13",
+    "zustand": "3.1.2"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.21.17",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}

@@ -1,0 +1,36 @@
+type DataJson implements Node @infer {
+  hero: Hero!
+  history: History!
+  wideCta: WideCta!
+  tourThreeColGrid: TourThreeColGrid!
+}
+
+type TourThreeColGrid {
+  rows: [TourThreeColGridRow!]!
+}
+
+type TourThreeColGridRow {
+  gridOrder: [String]!
+  textCard: TourThreeColGridTextCard!
+  imageCard: TourThreeColGridImageCard!
+  didYouKnowCard: TourThreeColGridDidYouKnowCard!
+}
+
+type TourThreeColGridTextCard {
+  title: String!
+  caption: String!
+}
+
+type TourThreeColGridImageCard {
+  image: ImageWithAlt!
+  height: Int!
+  width: Int!
+}
+
+type TourThreeColGridDidYouKnowCard {
+  image: ImageWithAlt!
+  height: Int!
+  width: Int!
+  title: String!
+  caption: String!
+}

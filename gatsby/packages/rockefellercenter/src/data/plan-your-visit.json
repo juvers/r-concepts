@@ -1,0 +1,33 @@
+{
+  "id": "plan-your-visit",
+  "meta": {
+    "title": "Plan Your Spring Visit to Rockefeller Center | Things To Do in NYC",
+    "description": "We can help you plan the perfect spring visit to Rockefeller Center. With Top of the Rock, The Rink, great shopping and dining, and more, there's something here for everyone."
+  },
+  "crossLinks": [
+    {
+      "title": "The Holidays",
+      "image": {
+        "src": "../images/rockefeller-christmas-tree-horizontal.jpg",
+        "alt": "tbd"
+      },
+      "caption": "Celebrate the holidays with us. With a full slate of family events and activities, including the Tree Lighting and skating at The Rink, you’ll be a part of cherished traditions that attract visitors from around the world.",
+      "link": {
+        "label": "Learn More",
+        "url": "https://www.rockefellercenter.com/holidays"
+      }
+    },
+    {
+      "title": "Public Art",
+      "image": {
+        "src": "../images/behind-the-walls-min.jpg",
+        "alt": "tbd"
+      },
+      "caption": "Rockefeller Center brings art to everyone with installations throughout our campus.",
+      "link": {
+        "label": "Explore Public Art",
+        "url": "/art/"
+      }
+    }
+  ]
+}

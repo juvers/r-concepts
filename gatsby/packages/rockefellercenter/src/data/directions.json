@@ -1,0 +1,135 @@
+{
+  "id": "directions",
+  "meta": {
+    "title": "Rockefeller Center Concourse Map & Directions",
+    "description": "Easily find your way at Rockefeller Center and the Concourse. Use our Map & Directions for finding attractions, concourse restaurants, entrances, restrooms, and more."
+  },
+  "directionHero": {
+    "title": "Everything leads to the Center.",
+    "bodyCopy": "Rockefeller Center is located in midtown Manhattan, between 48th and 51st Streets and Fifth and Sixth Avenues. Map your route below.",
+    "location": {
+      "address1": "45 Rockfeller Plaza",
+      "address2": "New York, NY 10111"
+    },
+    "links": [
+      {
+        "url": "https://www.google.com/maps/dir/?api=1&destination=Rockefeller+Center%2C+New+York%2C+NY",
+        "label": "Get Directions"
+      }
+    ],
+    "contactsInfo": [
+      {
+        "type": "phone",
+        "value": "212.588.8601"
+      }
+    ],
+    "contactLinkUrl": "/contact"
+  },
+  "directionSubwayGrid": {
+    "title": "Subways",
+    "routes": [
+      {
+        "name": "B D F M Trains",
+        "directions": "Take the B, D, F, or M train to the 47-50th Street Rockefeller Center stop."
+      },
+      {
+        "name": "1 Train",
+        "directions": "Take the 1 train to the 50th Street stop and walk East on 50th Street to Rockefeller Center between Fifth and Sixth Avenues."
+      },
+      {
+        "name": "6 Train",
+        "directions": "Take the 6 train to the 51st Street stop and walk West on 50th Street to Rockefeller Center between Fifth and Sixth Avenues."
+      },
+      {
+        "name": "N Q R Trains",
+        "directions": "Take the N, Q, or R train to the 49th Street stop and walk East on 49th Street to Rockefeller Center between Fifth and Sixth Avenues."
+      }
+    ],
+    "image": {
+      "src": "../images/subway-station-rock-center-1.jpg",
+      "alt": "Subway Station At Rock center"
+    }
+  },
+  "directionBusGrid": {
+    "title": "Buses",
+    "routes": [
+      {
+        "name": "Fifth Avenue (Going South) or Madison Avenue (Going North)",
+        "directions": "Take the M1, M2, M3, M4 or M5 bus to 50th Street. Buses run north and south."
+      },
+      {
+        "name": "From Broadway",
+        "directions": "Take the M7 bus. Exit at 50th Street and walk east to Rockefeller Center. Buses run north and south."
+      },
+      {
+        "name": "From 49th Street",
+        "directions": "Take the M50 bus. Exit anywhere between Fifth Avenue and Sixth Avenue. Buses run east and west."
+      }
+    ],
+    "image": {
+      "src": "../images/buses-rock-center-1.jpg",
+      "alt": "Buses at Rock Center"
+    }
+  },
+  "directionCitiBikeGrid": {
+    "title": "Citi Bike",
+    "description": "Citibike is NYC's official bike sharing system and is a fun, easy, affordable way to explore the city. You can get a day pass or annual membership and dock at Rockefeller Center on 51st Street or 48th Street between Fifth and Sixth Avenues. Learn more and sign up for Citibike here. https://www.citibikenyc.com/",
+    "image": {
+      "src": "../images/citybikes-rockefeller-center-1.jpg",
+      "alt": "City Bikes at Rockefeller center"
+    }
+  },
+  "directionStaticIllustration": {
+    "image": {
+      "src": "../images/Rockefeller-Center-Map.jpg",
+      "alt": "Static Illustration of Rockefeller Center"
+    }
+  },
+  "crossLinks": [
+    {
+      "title": "Community",
+      "image": {
+        "src": "../images/private-event-rainbow-room.jpg",
+        "alt": "Private Events at Rainbow room"
+      },
+      "caption": "Each day is an opportunity to celebrate the diverse and vibrant people who make Rockefeller Center great––including you.",
+      "link": {
+        "label": "Join Our Community",
+        "url": "/community"
+      }
+    },
+    {
+      "title": "Culture",
+      "image": {
+        "src": "../images/Rockefeller.Spring.Art.Sundae314.jpg",
+        "alt": "Kids Activities"
+      },
+      "caption": "Experience the best of New York’s art and entertainment in an atmosphere where community and creativity collide.",
+      "link": {
+        "label": "Explore Art & Culture",
+        "url": "/culture"
+      }
+    }
+  ],
+  "subNavigationTabs": [
+    {"label": "Directions", "slug": "#directions"},
+    {"label": "Map of Rock Center", "slug": "#map"}
+  ],
+  "rockefellerCenterMap": [
+    {
+      "mapType": "Street Level",
+      "pdfImage": {
+        "src": "../images/street_level.jpg",
+        "alt": "Street Level view of Rockefeller Center"
+      }
+    },
+    {
+      "mapType": "Concourse Level",
+      "pdfImage": {
+        "src": "../images/concourse_level.jpg",
+        "alt": "Concourse Level view of Rockefeller Center"
+      }
+    }
+  ],
+  "directionFaqTitle": "You can get here from there."
+}

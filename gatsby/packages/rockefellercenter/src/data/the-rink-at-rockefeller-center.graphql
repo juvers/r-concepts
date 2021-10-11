@@ -1,0 +1,8 @@
+type DataJson implements Node @infer {
+  hero: Hero!
+  ticketOfferings: [TicketOfferingCard!]!
+  wideCta: WideCta!
+  history: History!
+  calloutGrid: CalloutGrid!
+  crossLinks: [CrossLink!]!
+}

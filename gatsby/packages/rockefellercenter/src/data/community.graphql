@@ -1,0 +1,11 @@
+type DataJson implements Node @infer {
+  communityHero: CommunityHero!
+  imageCallout: ImageCallout!
+  calloutGrid: CalloutGrid!
+}
+
+type CommunityHero {
+  title: String!
+  caption: String!
+  image: ImageWithAlt!
+}

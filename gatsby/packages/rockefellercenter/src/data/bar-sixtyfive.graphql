@@ -1,0 +1,7 @@
+type DataJson implements Node @infer {
+  hero: Hero!
+  calloutGrid: CalloutGrid!
+  imageCallout: ImageCallout!
+  featuredStories: FeaturedStories!
+  crossLinks: [CrossLink!]!
+}

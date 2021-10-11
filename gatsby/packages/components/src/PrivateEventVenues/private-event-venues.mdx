@@ -1,0 +1,277 @@
+---
+name: Private Event Venues
+menu: Components
+route: /components/private-event-venues
+---
+
+import {Props, Playground} from 'docz';
+import {
+  PrivateEventGallery,
+  PrivateEventFloorPlan,
+  PrivateEventPdfViewer,
+  PrivateEventComparisonTable,
+} from '@tishman/components';
+import {getMockFluidImage} from '@tishman/docs';
+
+# Private Event Venues
+
+The components below are used to display information specific
+to the private event venues.
+
+## Private Event Gallery
+
+### Properties
+
+<Props of={PrivateEventGallery} />
+
+### Example
+
+<Playground>
+  <PrivateEventGallery
+    images={[
+      {
+        fluid: {
+          src:
+            'https://images.unsplash.com/photo-1521727284875-14f6b020d1d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
+        },
+        caption: 'Optional image 1 Caption',
+        alt: 'Mock image 1 alt',
+      },
+      {
+        fluid: {
+          src:
+            'https://images.unsplash.com/photo-1592654365675-f3c799bf0196?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
+        },
+        caption: 'Optional image 2 Caption',
+        alt: 'Mock image 2 alt',
+      },
+      {
+        fluid: {
+          src:
+            'https://images.unsplash.com/photo-1544820517-f8180b6fc88d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1036&q=80',
+        },
+        caption: 'Optional image 3 Caption',
+        alt: 'Mock image 3 alt',
+      },
+      {
+        fluid: {
+          src:
+            'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1074&q=80',
+        },
+        caption: 'Optional image 4 Caption',
+        alt: 'Mock image 4 alt',
+      },
+      {
+        fluid: {
+          src:
+            'https://images.unsplash.com/photo-1568304603980-85ff55550db2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1085&q=80',
+        },
+        caption: 'Optional image 5 Caption',
+        alt: 'Mock image 5 alt',
+      },
+    ]}
+  />
+</Playground>
+
+## Private Event Floor Plan
+
+### Properties
+
+<Props of={PrivateEventFloorPlan} />
+
+### Example
+
+<Playground>
+  <PrivateEventFloorPlan
+    link={{
+      label: 'Plan an event',
+      url: '#',
+    }}
+    fluid={getMockFluidImage({width: 1280, height: 680}).childImageSharp.fluid}
+    info="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
+    squareFeet={3493}
+    ceilings="12’-3”"
+    capacity={[
+      {
+        capacityType: 'Cocktail Reception',
+        value: 190,
+      },
+      {
+        capacityType: 'Seated Dinner',
+        value: 130,
+      },
+      {
+        capacityType: 'Semi-Private Event',
+        value: 50,
+      },
+      {
+        capacityType: 'Theater',
+        value: 350,
+      },
+    ]}
+  />
+</Playground>
+
+## Private Event PDF Viewer With Gallery
+
+Download a pdf, view images of the pdf and optional gallery images.
+
+### Properties
+
+<Props of={PrivateEventPdfViewer} />
+
+### Example
+
+<Playground>
+  <PrivateEventPdfViewer
+    pdf={{
+      label: 'Download Menu',
+      url:
+        'https://cdn.sanity.io/files/bs9rmafh/production/aa17544f7aaa11875eae8c187c13db09d94d0a20.pdf',
+    }}
+    pdfPhotos={[
+      {
+        fluid: {
+          src:
+            'https://cdn.sanity.io/images/bs9rmafh/production/b5eda2ab21fdfdd332ef55dfa4d10d484abd6a4b-1275x1650.jpg?w=800&h=1035&fit=crop',
+        },
+        alt: 'Menu image 1',
+      },
+    ]}
+    gallery={[
+      {
+        fluid: {
+          src:
+            'https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+        },
+        alt: 'Menu gallery image 1',
+        caption: 'Three course special',
+      },
+      {
+        fluid: {
+          src:
+            'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+        },
+        alt: 'Menu gallery image 2',
+        caption: 'Dinner',
+      },
+      {
+        fluid: {
+          src:
+            'https://images.unsplash.com/photo-1579027989536-b7b1f875659b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+        },
+        alt: 'Menu gallery image 3',
+        caption: 'Outside seating',
+      },
+    ]}
+  />
+</Playground>
+
+## Private Event PDF Viewer
+
+Download a pdf, view images of the pdf and optional gallery images.
+
+### Properties
+
+<Props of={PrivateEventPdfViewer} />
+
+### Example
+
+<Playground>
+  <PrivateEventPdfViewer
+    pdf={{
+      label: 'Download Vendor list',
+      url:
+        'https://cdn.sanity.io/files/bs9rmafh/production/aa17544f7aaa11875eae8c187c13db09d94d0a20.pdf',
+    }}
+    pdfPhotos={[
+      {
+        fluid: {
+          src:
+            'https://cdn.sanity.io/images/bs9rmafh/production/b5eda2ab21fdfdd332ef55dfa4d10d484abd6a4b-1275x1650.jpg?w=800&h=1035&fit=crop',
+        },
+        alt: 'Menu image 1',
+      },
+    ]}
+  />
+</Playground>
+
+## Private Event Comparison Table
+
+### Properties
+
+<Props of={PrivateEventComparisonTable} />
+
+### Example
+
+<Playground>
+  <PrivateEventComparisonTable
+    specs={[
+      {
+        squareFeet: 4464,
+        ceilings: '18’',
+        dimensions: '72x62',
+      },
+      {
+        squareFeet: 3463,
+        ceilings: `12'3"`,
+        dimensions: '38x54',
+      },
+      {
+        squareFeet: 360,
+        ceilings: `8'6"`,
+        dimensions: '24x15',
+      },
+      {
+        squareFeet: 2530,
+        ceilings: `8'6"`,
+        dimensions: '110x23',
+      },
+      {
+        squareFeet: 3300,
+      },
+    ]}
+    capacity={[
+      {
+        title: 'Rainbow Room | The Gallery | Bar SixtyFive',
+        capacities: [{label: 'Full Floor Event', value: 500}],
+      },
+      {
+        title: 'Rainbow Room | The Gallery',
+        capacities: [
+          {label: 'Reception', value: 400},
+          {label: 'Reception & Sit Down Dinner', value: 300},
+          {label: 'Reception & Dinner with Dancing', value: 250},
+        ],
+      },
+      {
+        title: 'Rainbow Room',
+        capacities: [
+          {label: 'Theater Style', value: 300},
+          {label: 'Classroom Style (3 per 6’)', value: 225},
+          {label: 'Crescent Style', value: 180},
+          {label: 'Classroom Style (2 per 6’)', value: 150},
+        ],
+      },
+      {
+        title: 'The Gallery',
+        capacities: [{label: 'Reception & Sit Down Dinner', value: 60}],
+      },
+      {
+        title: 'Bar SixtyFive',
+        capacities: [
+          {label: 'Reception', value: 190},
+          {label: 'Seated Dinner', value: 130},
+        ],
+      },
+      {
+        title: 'Private Dining Room',
+        capacities: [
+          {label: 'Reception', value: 25},
+          {label: 'Seated Dinner (2 rounds)', value: 24},
+          {label: 'Seated Dinner (1 rectangular table)', value: 12},
+        ],
+      },
+    ]}
+  />
+</Playground>

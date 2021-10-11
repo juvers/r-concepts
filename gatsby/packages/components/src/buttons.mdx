@@ -1,0 +1,105 @@
+---
+name: Buttons
+menu: Components
+route: /components/buttons
+---
+
+import {Props, Playground} from 'docz';
+import {jsx, Box, Flex, Text, Button} from 'theme-ui';
+import VisuallyHidden from '@reach/visually-hidden';
+import {ArrowSvg} from './icons';
+
+# Buttons
+
+Buttons are built using the [ThemeUI Button] component and variants.
+In most cases, the Button component should be used with a [Button variant].
+In cases where a button needs specific design elements (for example,
+the [MenuToggleButton]), The button component should be built on top of the
+Button component.
+
+## Button
+
+This is the [ThemeUI Button] component.
+Below are some examples of button variants.
+
+<Props of={Button} />
+
+```tsx
+import {Button} from 'theme-ui';
+```
+
+<Playground>
+  <Button>Button</Button>
+</Playground>
+
+### As inverted variant
+
+<Playground>
+  <Button variant="inverted">Button</Button>
+</Playground>
+
+### As footer variant
+
+<Playground>
+  <Button variant="footer">Button</Button>
+</Playground>
+
+### As navToggle variant
+
+<Playground>
+  <Button variant="navToggle">Button</Button>
+</Playground>
+
+### As icon variant
+
+<Playground>
+  <Button variant="icon">
+    <Text mr={2}>Button</Text>
+    <ArrowSvg aria-hidden />
+  </Button>
+</Playground>
+
+### As icon variant (no label)
+
+<Playground>
+  <Button variant="icon">
+    <VisuallyHidden>Button</VisuallyHidden>
+    <ArrowSvg aria-hidden />
+  </Button>
+</Playground>
+
+### As iconUnderline variant
+
+<Playground>
+  <Button variant="iconUnderline">
+    <VisuallyHidden>Button</VisuallyHidden>
+    <ArrowSvg aria-hidden />
+  </Button>
+</Playground>
+
+### As circle variant
+
+<Playground>
+  <Button variant="circle">
+    <VisuallyHidden>Button</VisuallyHidden>
+    <ArrowSvg aria-hidden strokeWidth={1} />
+  </Button>
+</Playground>
+
+### As menuHeading variant
+
+<Playground>
+  <Button variant="menuHeading">
+    <Text>Button</Text>
+    <ArrowSvg aria-hidden />
+  </Button>
+</Playground>
+
+## MenuToggleButton
+
+See [MenuToggleButton]
+
+[themeui button]: https://theme-ui.com/components/button
+[button variant]: #button
+[searchbutton]: #searchbutton
+[menutogglebutton]: ./menu-toggle-button

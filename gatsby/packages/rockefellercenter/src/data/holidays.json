@@ -1,0 +1,142 @@
+{
+  "id": "holidays",
+  "hero": {
+    "contactLinkUrl": "/contact"
+  },
+  "imageCallout": {
+    "title": "The Christmas Tree",
+    "description": "It's more than a tree. It's a symbol of the spirit of the city and the people who create its traditions.",
+    "link": {
+      "url": "/holidays/rockefeller-center-christmas-tree-lighting",
+      "label": "Learn About the Christmas Tree"
+    },
+    "image": {
+      "src": "../images/tuba-christmas-rock-center.jpg",
+      "alt": "Tubachristmas music concert under the Rockefeller Center Christmas Tree in NYC."
+    }
+  },
+  "calloutGrid": {
+    "fullCard": {
+      "image": {
+        "src": "../images/night-skating-christmas.jpg",
+        "alt": "Outdoor nightime ice skating under the lights of the Christmas Tree and Prometheus statue in NYC."
+      },
+      "title": "Christmas in Rockefeller Center",
+      "description": "Celebrate the Christmas season in New York by spending a day at Rockefeller Center. With incredible shopping, dining, attractions, and events, you’ll find it’s the most festive place in town.",
+      "links": []
+    },
+    "cards": [
+      {
+        "image": {
+          "src": "../images/2000x2000_0002_RockIceSkatingEvent.2019.20.jpg",
+          "alt": "Ice skating at the Rock Center rink as a NYC winter tradition."
+        },
+        "title": "The Rink",
+        "description": "Nothing says “Holidays in New York” quite like a trip around the iconic rink underneath the Christmas Tree and the Prometheus statue.",
+        "links": [
+          {
+            "url": "/attractions/the-rink-at-rockefeller-center",
+            "label": "Skate the Rink"
+          }
+        ],
+        "customCardType": "HOLIDAY_MR",
+        "width": 539,
+        "height": 529
+      },
+      {
+        "image": {
+          "src": "../images/holiday-store-display-window.jpg",
+          "alt": "Shop display window showcasing unique holiday gifts at the Rockefeller Center."
+        },
+        "title": "Shop & Dine",
+        "description": "You'll find over 100 shopping and dining options here, giving you plenty of opportunities to get into the spirit of the season while you find something for everyone on your list.",
+        "links": [{"url": "/shop-dine", "label": "Let’s Shop & Dine"}],
+        "customCardType": "HOLIDAY_ML",
+        "width": 410,
+        "height": 524
+      },
+      {
+        "image": {
+          "src": "../images/nyc-skyline-view-binoculars.jpg",
+          "alt": "Visitor taking in the Manhattan sklyline view with the coin-operated binoculars at TOR."
+        },
+        "title": "Top of the Rock",
+        "description": "Get a reindeer’s-eye view of New York during the holidays with 360 degrees of the skyline and indoor and outdoor viewing decks.",
+        "links": [
+          {
+            "url": "/attractions/top-of-the-rock-observation-deck",
+            "label": "Visit Top of the Rock"
+          }
+        ],
+        "customCardType": "HOLIDAY_NARROW",
+        "width": 303,
+        "height": 529
+      },
+      {
+        "image": {
+          "src": "../images/christmas-angels-rock-center.jpg",
+          "alt": "The Rockefeller Center Christmas Tree and Christmas Angles are a beloved NYC holiday tradition."
+        },
+        "title": "Channel Gardens",
+        "description": "Sit, relax, shop, and enjoy the season, all in the company of the iconic Clarabout angels.",
+        "customCardType": "HOLIDAY_MR",
+
+        "width": 529,
+        "height": 350
+      },
+      {
+        "image": {
+          "src": "../images/rockettes-christmas-performance.jpg",
+          "alt": "The Rockettes performing at the Rockefeller Center Christmas Tree lighting ceremony."
+        },
+        "title": "Christmas Spectacular Starring the Radio City Rockettes",
+        "description": "There’s only one––this dazzling show, featuring the world famous Rockettes, is a holiday tradition for families everywhere. And the grandeur of the newly restored Radio City Music Hall, with its Art Deco interiors, creates an atmosphere that is as festive as it is breathtaking.",
+        "links": [
+          {"url": "/holidays/radio-city-music-hall", "label": "Learn more"}
+        ],
+        "customCardType": "HOLIDAY_FULL_WIDTH_NARROW",
+        "width": 791,
+        "height": 280
+      }
+    ]
+  },
+  "wideCta": {
+    "title": "Gift Shop",
+    "caption": "Special Rockefeller Center gifts that make your home, tree, or holiday one-of-a-kind.",
+    "link": {
+      "url": "https://topoftherockshop.com/",
+      "label": "Visit Our Gift Shop"
+    }
+  },
+  "featuredStories": {
+    "title": "The Center Magazine",
+    "caption": "Explore the fashion, food, and culture in the heart of New York City.",
+    "link": {"url": "/magazine", "label": "Read the Stories"}
+  },
+  "crossLinks": [
+    {
+      "title": "Plan Your Visit",
+      "image": {
+        "src": "../images/holidays_onlyhere.jpg",
+        "alt": "The famous Rockefeller Center Christmas Tree and Prometheus sculpture by The Rink."
+      },
+      "caption": "All the info you need to create the perfect Rockefeller Center holiday memories.",
+      "link": {
+        "label": "Let’s Plan Your Visit",
+        "url": "/plan-visit"
+      }
+    },
+    {
+      "title": "Newsletter",
+      "image": {
+        "src": "../images/private-events-entertainment.jpg",
+        "alt": "Performance at a luxury private event venue in Rockefeller Center."
+      },
+      "caption": "Receive important seasonal news and updates, follow the latest about the Christmas Tree, learn about store openings, and get special offers.",
+      "link": {
+        "label": "Subscribe",
+        "url": "/the-center-newsletter"
+      }
+    }
+  ]
+}

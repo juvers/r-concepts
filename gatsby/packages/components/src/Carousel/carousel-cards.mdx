@@ -1,0 +1,262 @@
+---
+name: Carousel Cards
+menu: Components
+route: /components/carousel-cards
+---
+
+import {Props, Playground} from 'docz';
+import {Box} from 'theme-ui';
+import {TicketCarouselCard} from './TicketCarouselCard';
+import {EventCarouselCard} from './EventCarouselCard';
+import {IconicExperiencesCarouselCard} from './IconicExperiencesCarouselCard';
+import {ImageCarouselCard} from './ImageCarouselCard';
+import {DetailImageCarouselCard} from './DetailImageCarouselCard';
+import {SocialCarouselCard} from './SocialCarouselCard';
+import {GalleryCarouselCard} from './GalleryCarouselCard';
+import {ReviewCarouselCard} from './ReviewCarouselCard';
+import {TicketComparisonCard} from './TicketComparisonCard';
+import {PressCarouselCard} from './PressCarouselCard';
+import {getMockFluidImage} from '@tishman/docs';
+import {CheckmarkSvg} from '@tishman/components';
+
+# Carousel Cards
+
+[Card] items for a [Carousel].
+
+## TicketCarouselCard
+
+`TicketCarouselCard` displays details about a Tishman attraction
+ticket or package in a 'card' format. It can be used as an item
+in a [Carousel], or by itself.
+
+<Props of={TicketCarouselCard} />
+
+### With price and href
+
+<Playground>
+  <TicketCarouselCard
+    src={getMockFluidImage({width: 290, height: 263}).childImageSharp.fluid}
+    title="General Admission"
+    description="Strap on some sakes and take a spin on The Rink at Rockefeller Center. By selecting a day and time and purchasing online, you're guaranteed to get on the ice. Ticket availability on site is not guaranteed."
+    label="Buy Tickets"
+    price="$39"
+    href="#"
+  />
+</Playground>
+
+### Without href
+
+<Playground>
+  <TicketCarouselCard
+    src={getMockFluidImage({width: 290, height: 263}).childImageSharp.fluid}
+    title="General Admission"
+    description="Strap on some sakes and take a spin on The Rink at Rockefeller Center. By selecting a day and time and purchasing online, you're guaranteed to get on the ice. Ticket availability on site is not guaranteed."
+    label="Buy Tickets"
+    price="$39"
+  />
+</Playground>
+
+## EventCarouselCard
+
+`EventCarouselCard` displays details about an upcoming event at a
+Tishman location in a 'card' format. It can be used as an item
+in a [Carousel], or by itself.
+
+<Props of={EventCarouselCard} />
+
+<Playground>
+  <EventCarouselCard
+    fluid={getMockFluidImage({width: 276, height: 388}).childImageSharp.fluid}
+    category="Kids"
+    title="Rock Center Kid's Dress Up"
+    date="April 4"
+    time="2pm"
+    location={{title: '30 Rockefeller'}}
+    url="#"
+  />
+</Playground>
+
+## TicketComparisonCard
+
+`TicketComparisonCard` displays ticket details with a list of features. It can be used as an item
+in a [Carousel], or by itself.
+
+<Props of={TicketComparisonCard} />
+
+<Playground>
+  <TicketComparisonCard
+    src={getMockFluidImage({width: 316, height: 212}).childImageSharp.fluid}
+    title="Top of the Rock General Admission"
+    label="Buy Tickets"
+    price="$39"
+    ticketFeatures={{
+      admission: true,
+      views: true,
+      levels: true,
+      timeLimit: true,
+    }}
+    featureList={{
+      admission: 'Admission to Top of the Rock.',
+      views: '360-degree unobstructed views.',
+      levels: '3 levels of indoor and outdoor observation decks.',
+      timeLimit:
+        'No time limit––stay as long as you like during operating hours.',
+      entry: 'Immediate entry, even if sold out.',
+      elevator: 'Priority elevator access.',
+      merchandise: '20% Off Top of the Rock merchandise.',
+      schedule: 'Schedule your date, come anytime.',
+      visit:
+        'Visit 6 NYC attractions, including Top of the Rock Observation Deck.',
+      save: 'Save 42%.',
+      valid: 'Valid for 30 days.',
+      choice:
+        'Have your choice of 3 out of 12 top NYC attractions, including Top of the Rock Observation Deck, to visit over a 9-day period.',
+      saveUpTo: 'Save up to 30%.',
+    }}
+  />
+</Playground>
+
+## IconicExperiencesCarouselCard
+
+`IconicExperiencesCarouselCard` displays details about a Tishman attraction
+or experience in a 'card' format. It can be used as an item
+in a [Carousel], or by itself.
+
+<Props of={IconicExperiencesCarouselCard} />
+
+<Playground>
+  <IconicExperiencesCarouselCard
+    fluid={getMockFluidImage({width: 320, height: 450}).childImageSharp.fluid}
+    alt={'alt text'}
+    title={'Top of the Rock'}
+    description={'Take in 360-degree views of the NYC skyline'}
+    url="#"
+  />
+</Playground>
+
+## ImageCarouselCard
+
+`ImageCarouselCard` is a generic card that contains an image, a title,
+a desription and an optional link.
+
+<Props of={ImageCarouselCard} />
+
+<Playground>
+  <ImageCarouselCard
+    fluid={getMockFluidImage({width: 320, height: 450}).childImageSharp.fluid}
+    alt={'alt text'}
+    title={'A generic title'}
+    description={
+      'You could provide more information with a description in this space.'
+    }
+    href="https://www.rockefellercenter.com"
+    ratio={0.71}
+  />
+</Playground>
+
+## DetailImageCarouselCard
+
+`DetailImageCarouselCard` is a generic card that contains an image, a title,
+a desription and an optional link.
+
+<Props of={DetailImageCarouselCard} />
+
+<Playground>
+  <DetailImageCarouselCard
+    fluid={getMockFluidImage({width: 320, height: 450}).childImageSharp.fluid}
+    alt={'alt text'}
+    title={'A generic title'}
+    description={
+      'You could provide more information with a description in this space.'
+    }
+    link={{label: 'Explore', url: '#'}}
+    ratio={0.71}
+  />
+</Playground>
+
+## SocialCarouselCard
+
+`SocialCarouselCard` displays a social media post as an image which links
+out to the social media post. It can be used as an item
+in a [Carousel], or by itself.
+
+<Props of={SocialCarouselCard} />
+
+<Playground>
+  <SocialCarouselCard
+    image={
+      getMockFluidImage({width: 320, height: 320}).childImageSharp.fluid.src
+    }
+    caption={'social media caption'}
+    url={'http://twitter.com/15949204/status/image-status'}
+  />
+</Playground>
+
+## GalleryCarouselCard
+
+`GalleryCarouselCard` displays either an image or video full width
+it can include captions that will be rendered in the bottom right corner
+of the card
+
+<Props of={GalleryCarouselCard} />
+
+### Image Example
+
+<Playground>
+  <GalleryCarouselCard
+    fluid={getMockFluidImage({width: 1280, height: 680}).childImageSharp.fluid}
+    caption={'Optional image 1 Caption'}
+    alt={'Mock image 1 alt'}
+  />
+</Playground>
+
+### Video Example
+
+<Playground>
+  <GalleryCarouselCard
+    // TODO: ADD A TISHMAN VIDEO
+    movieUrl={
+      'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4'
+    }
+    caption={'TODO: ADD A TISHMAN VIDEO'}
+  />
+</Playground>
+
+## ReviewCarouselCard
+
+`ReviewCarouselCard` displays a quote with author attribution
+
+<Props of={ReviewCarouselCard} />
+
+<Playground>
+  <ReviewCarouselCard
+    quote={
+      'Stunning views over the park and the city, with some good information on the way up about the building of the centre.'
+    }
+    author={'Amy M'}
+  />
+</Playground>
+
+## PressCarouselCard
+
+`PressCarouselCard` displays an excerpt with source attribution and a link
+
+<Props of={PressCarouselCard} />
+
+<Playground>
+  <PressCarouselCard
+    excerpt={
+      'Stunning views over the park and the city, with some good information on the way up about the building of the centre.'
+    }
+    source="Brides"
+    links={[
+      {
+        url: '#',
+        label: 'Read full article',
+      },
+    ]}
+  />
+</Playground>
+
+[card]: https://theme-ui.com/components/card
+[carousel]: /components/carousel

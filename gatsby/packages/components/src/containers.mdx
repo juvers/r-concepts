@@ -1,0 +1,31 @@
+---
+name: Containers
+menu: Components
+route: /components/containers
+---
+
+import {Playground} from 'docz';
+import {Container, Heading, Text} from 'theme-ui';
+
+# Container
+
+Container component wraps content with a div that has a maxWidth, margin auto, and padding to match designs.
+
+## Basic usage
+
+```ts
+import {Container} from 'theme-ui';
+
+<Container>{children}</Container>;
+```
+
+### Playground
+
+<Playground>
+  <Container>
+    <Heading variant="styles.h2">Container</Heading>
+    <Text>
+      This container component prevents children from expanding pass a container
+    </Text>
+  </Container>
+</Playground>

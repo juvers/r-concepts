@@ -1,0 +1,218 @@
+---
+name: Form
+menu: Components
+route: /components/form-full
+---
+
+import {Props, Playground} from 'docz';
+import {Grid} from 'theme-ui';
+import {
+  SubmitButton,
+  RequiredLabel,
+  Textarea,
+  Select,
+  Date,
+  Input,
+  Checkbox,
+  Form,
+} from './index.tsx';
+
+# Form Section
+
+This is a form that simply displays its children.
+
+---
+
+### Properties
+
+<Props of={Form} />
+
+### Basic usage
+
+```ts
+import {Form} from '@tishman/components';
+```
+
+<Playground>
+  <Form>
+    <Grid columns={[1, 2]} gap={4}>
+        <Input text="First Name" name="firstName"  placeholder="Joe" required/>
+        <Input text="Last Name" name="lastName" placeholder="Smith" required/>
+        <Input
+          text="Email"
+          name="email"
+          placeholder="jsmith@gmail.com"
+          required
+        />
+        <Input text="Phone" name="phone" placeholder="000.000.0000" required/>
+        <Input
+          text="Company"
+          name="company"
+          placeholder="Smith Development"
+          required
+        />
+        <Select
+          name="subject"
+          text="Subject"
+          required
+        >
+          <option disabled selected>I'm interested in...</option>
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </Select>
+    </Grid>
+          <Checkbox
+            defaultChecked={true}
+          />
+        <Textarea
+            text="Describe your idea"
+            name="describeYourIdea"
+            placeholder="Lorem ipsum dolor sit amet, consectetur adjipsicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        />
+        <RequiredLabel labelText="Required*" />
+  </Form>
+
+</Playground>
+
+# Input
+
+---
+
+### Properties
+
+<Props of={Input} />
+
+### Basic usage
+
+```ts
+import {Input} from '@tishman/components';
+```
+
+### Required is optional
+
+Applying required will add asterisk next to the text as well as error
+if on submit the input is empty.
+
+<Playground>
+  <Input name="firstName" text="First Name" placeholder="Joe" required />
+</Playground>
+
+# Date
+
+---
+
+### Properties
+
+<Props of={Date} />
+
+### Basic usage
+
+```ts
+import {Date} from '@tishman/components';
+```
+
+### Required is optional
+
+Applying required will add asterisk next to the text as well as error
+if on submit the input is empty.
+
+<Playground>
+  <Date name="dateOfEvent" text="Date of Event" />
+</Playground>
+
+# Select
+
+---
+
+### Properties
+
+<Props of={Select} />
+
+### Basic usage
+
+```ts
+import {Select} from '@tishman/components';
+```
+
+### Required is optional
+
+Applying required will add asterisk next to the text as well as error
+if on submit the input is empty.
+
+<Playground>
+  <Select name="subject" text="Subject" required>
+    <option disabled selected>
+      I'm interested in...
+    </option>
+    <option>Option 1</option>
+    <option>Option 2</option>
+    <option>Option 3</option>
+  </Select>
+</Playground>
+
+# Textarea
+
+---
+
+### Properties
+
+<Props of={Textarea} />
+
+### Basic usage
+
+```ts
+import {Textarea} from '@tishman/components';
+```
+
+### Required is optional
+
+Applying required will add asterisk next to the text as well as error
+if on submit the input is empty.
+
+<Playground>
+  <Textarea
+    text="Describe your idea"
+    placeholder="Lorem ipsum dolor sit amet, consectetur adjipsicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  />
+</Playground>
+
+# Required Label
+
+Marks fields as required.
+
+---
+
+### Properties
+
+<Props of={RequiredLabel} />
+
+### Basic usage
+
+```ts
+import {RequiredLabel} from '@tishman/components';
+```
+
+<Playground>
+  <RequiredLabel labelText="Required*" />
+</Playground>
+
+# Submit Button
+
+Submit Button for Forms
+
+---
+
+### Properties
+
+<Props of={RequiredLabel} />
+
+### Basic usage
+
+```ts
+import {SubmitButton} from '@tishman/components';
+```
+
+<Playground>
+  <SubmitButton text="Submit" disabled={true} />
+</Playground>

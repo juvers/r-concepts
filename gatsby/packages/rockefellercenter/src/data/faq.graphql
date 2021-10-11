@@ -1,0 +1,9 @@
+type DataJson implements Node @infer {
+  faqIntroText: FaqIntroText!
+  crossLinks: [CrossLink!]!
+}
+
+type FaqIntroText {
+  title: String!
+  caption: String!
+}

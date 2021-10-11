@@ -1,0 +1,51 @@
+---
+name: fluidFontSize
+menu: Components
+route: /components/fluid-font-size
+---
+
+import {Props, Playground} from 'docz';
+import {Text, fluidFontSize} from '@tishman/components';
+
+# `fluidFontSize`
+
+`fluidFontSize` works similarly to a [responsive value] array of font sizes,
+but linearly interpolates font size between the breakpoints.
+
+It returns a ThemeUI [functional value] that generates a [responsive value]
+that enforces min and max font sizes at the min and max breakpoints,
+respectively, and linearly interpolates the font size in between.
+
+> For more on responsive typography,
+> see https://madebymike.com.au/writing/precise-control-responsive-typography/
+
+```ts
+import {fluidFontSize} from '@tishman/components';
+```
+
+### With default options
+
+The default behavior is to scale font size between the first
+and last `fontSize` values defined in the Tishman theme,
+clamping at the first and last `breakpoints`, respectively.
+
+<Playground>
+  <Text sx={{fontSize: fluidFontSize()}}>resize me!</Text>
+</Playground>
+
+### With responsive array
+
+<Playground>
+  <Text sx={{fontSize: fluidFontSize([6, null, 8, 10])}}>resize me!</Text>
+</Playground>
+
+### With custom sizes
+
+<Playground>
+  <Text sx={{fontSize: fluidFontSize(['80px', null, null, null, '220px'])}}>
+    resize me!
+  </Text>
+</Playground>
+
+[functional value]: https://theme-ui.com/sx-prop/#functional-values
+[responsive value]: https://theme-ui.com/sx-prop/#responsive-values

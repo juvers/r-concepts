@@ -1,0 +1,5 @@
+type DataJson implements Node @infer {
+  wideCta: WideCta!
+  calloutGrid: CalloutGrid!
+  imageCallout: ImageCallout!
+}

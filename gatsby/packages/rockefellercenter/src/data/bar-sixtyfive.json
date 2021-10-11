@@ -1,0 +1,69 @@
+{
+  "id": "bar-sixtyfive",
+  "hero": {
+    "contactLinkUrl": "/contact/rainbow-room"
+  },
+  "calloutGrid": {
+    "cards": [
+      {
+        "image": {
+          "src": "../images/rainbow-room-cocktail.jpg",
+          "alt": "Unique cocktails at Rainbow Room's rooftop cocktail bar."
+        },
+        "title": "Cocktails",
+        "description": "Since opening in 1934, Rainbow Room has held a prominent place in American cocktail culture. Bar SixtyFive is where you discover why."
+      },
+      {
+        "image": {
+          "src": "../images/small-plate-drinks.jpg",
+          "alt": "Delicious light meals and drinks at Rainbow Room in Manhattan."
+        },
+        "title": "Dining",
+        "description": "Perfect for light bites and a few drinks, or a full dinner surrounded by views, the seasonal offerings from our culinary team never fail to inspire."
+      }
+    ]
+  },
+  "imageCallout": {
+    "title": "Private Events at Bar SixtyFive",
+    "description": "Raise the bar. An event hosted at Bar SixtyFive literally and figuratively elevates it above every expectation.",
+    "link": {
+      "url": "/private-events/bar-sixtyfive",
+      "label": "Learn About Private Events"
+    },
+    "image": {
+      "src": "../images/private-party-nyc.jpg",
+      "alt": "Guest at the private event space enjoying the NYC views."
+    }
+  },
+  "featuredStories": {
+    "title": "The Center Magazine",
+    "caption": "Explore the fashion, food, and culture in the heart of New York City.",
+    "link": {"url": "/magazine", "label": "Read the Stories"}
+  },
+  "crossLinks": [
+    {
+      "title": "Private Events",
+      "image": {
+        "src": "../images/garden-event-space.jpg",
+        "alt": "Private NYC event venue with an outdoor rooftop garden overlooking St. Patrick's Chathedral and Fifthe Avenue."
+      },
+      "caption": "Spaces and settings that are the perfect complement to your style.",
+      "link": {
+        "label": "Learn more",
+        "url": "/private-events"
+      }
+    },
+    {
+      "title": "Newsletter",
+      "image": {
+        "src": "../images/cocktails-party.jpg",
+        "alt": "Friends enjoying modern cocktails at the bar at Rockefeller Center."
+      },
+      "caption": "There’s always something to celebrate at Bar SixtyFive. Sign up for our newsletter.",
+      "link": {
+        "label": "Sign Up Now",
+        "url": "/rainbow-room-newsletter"
+      }
+    }
+  ]
+}

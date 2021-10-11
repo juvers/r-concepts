@@ -1,0 +1,57 @@
+type DataJson implements Node @infer {
+  meta: Meta!
+  directionHero: DirectionsHero!
+  directionSubwayGrid: DirectionsCommuteGrid!
+  directionBusGrid: DirectionsCommuteGrid!
+  directionCitiBikeGrid: DirectionsCitiBikeGrid!
+  directionStaticIllustration: DirectionsStaticIllustration!
+  crossLinks: [CrossLink!]!
+  subNavigationTabs: [Tabs!]!
+  rockefellerCenterMap: [RockefellerCenterMap!]!
+  directionFaqTitle: String!
+}
+
+type DirectionsHero {
+  title: String!
+  bodyCopy: String!
+  location: DirectionsLocation!
+  links: [Link!]
+  contactLinkUrl: String
+}
+
+type DirectionsLocation {
+  title: String
+  address1: String!
+  address2: String!
+}
+
+type DirectionsCommuteGrid {
+  title: String!
+  routes: [DirectionsRoute!]!
+  image: ImageWithAlt!
+}
+
+type DirectionsRoute {
+  name: String!
+  directions: String!
+}
+
+type DirectionsCitiBikeGrid {
+  title: String!
+  description: String!
+  image: ImageWithAlt!
+}
+
+type DirectionsStaticIllustration {
+  image: ImageWithAlt!
+}
+
+type Tabs {
+  label: String!
+  slug: String!
+}
+
+type RockefellerCenterMap {
+  mapType: String!
+  pdfImage: ImageWithAlt!
+}

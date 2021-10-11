@@ -1,0 +1,10 @@
+.cache
+package.json
+package-lock.json
+public
+.yarn
+.docz
+.vscode
+built-lambda
+static
+__generated__

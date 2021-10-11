@@ -1,0 +1,59 @@
+---
+name: ContactSelect
+menu: Rockefeller Center
+route: /rockefeller-center/contact-select
+---
+
+import {Playground, Props} from 'docz';
+import {ContactSelect} from './ContactSelect.tsx';
+import {useForm} from 'react-hook-form';
+
+# ContactSelect
+
+The `ContactSelect` component is used in all the Contact pages for all the select inputs. All inputs in these pages
+share some of the same properties which are added through this component and added to the `Select` input component.
+
+<Props of={ContactSelect} />
+
+## Usage
+
+### Example where the option items are used both as the text and the value
+<Playground>
+  {() => {
+    const {register, errors, getValues} = useForm();
+    return (
+      <form>
+        <ContactSelect
+          name="venue"
+          text="Select A Venue"
+          register={register}
+          errors={errors}
+          required={true}
+          defaultOptionText="Choose A Venue"
+          options={['Loft', 'Rainbow Room']}
+        />
+      </form>
+    )
+  }}
+</Playground>
+
+
+### Example where the option items have a name and value
+<Playground>
+  {() => {
+    const {register, errors, getValues} = useForm();
+    return (
+      <form>
+        <ContactSelect
+          name="venue"
+          text="Select A Venue"
+          register={register}
+          errors={errors}
+          required={true}
+          defaultOptionText="Choose A Venue"
+          options={[{name: 'loft', value: 'The Loft'}, {name: 'rr', value: 'Rainbow Room'}]}
+        />
+      </form>
+    )
+  }}
+</Playground>

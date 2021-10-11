@@ -1,0 +1,37 @@
+---
+name: Styled
+menu: Components
+route: /components/styled-components
+---
+
+# Styled Components
+
+These components are [styled] primitives that can be used to render
+rich text data, such as [MDX] content or [portable text].
+
+## TODO: Create/Document/figure out what this is
+
+Thoughts:
+
+- Should use [sectioning] components in all appropriate instances
+  - in particular, `h1`, `h2`, etc components should use corresponding variants,
+    but render an `H`, **not** a corresponding heading level.
+- Should be themeable like theme-ui's [styled] components
+- Should be used in place of theme-ui's [MDX] and docz's [components]
+- Should be used to render rich text from Sanity [portable text]
+- Most of them _could_ simply **be** theme-ui's components,
+  with only sectioning or other more custom versions swapped in.
+
+Other relevant links:
+
+- https://theme-ui.com/packages/gatsby-plugin#components
+- https://github.com/system-ui/theme-ui/blob/master/packages/mdx/src/index.js
+- https://github.com/system-ui/theme-ui/blob/master/packages/gatsby-plugin-theme-ui/src/components.js
+- https://hz-core.netlify.app/draftail-renderer
+- https://github.com/sanity-io/block-content-to-react
+
+[sectioning]: https://hz-core.netlify.app/sectioning
+[styled]: https://theme-ui.com/styled
+[mdx]: https://theme-ui.com/styling-mdx
+[components]: https://www.docz.site/docs/components-api
+[portable text]: https://www.sanity.io/docs/presenting-block-text#rendering-portable-text-in-react-c8e78c624f83

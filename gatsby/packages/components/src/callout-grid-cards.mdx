@@ -1,0 +1,119 @@
+---
+name: Callout Grid Cards
+menu: Components
+route: /components/callout-grid-cards
+---
+
+import {Props, Playground} from 'docz';
+import {getMockFluidImage} from '@tishman/docs';
+import {CalloutGrid} from '@tishman/components';
+import {CalloutGridCard, CalloutGridCardFull} from './CalloutGridCard';
+
+# Callout Grid Cards
+
+```ts
+import {CalloutGridCard} from '@tishman/components';
+```
+
+### Properties
+
+<Props of={CalloutGridCard} />
+
+### Basic Callout Grid Card example
+
+This is a basic callout grid card example with no custom styling
+
+<Playground>
+  <CalloutGridCard
+    index={0}
+    fluid={getMockFluidImage({width: 490, height: 520}).childImageSharp.fluid}
+    title={'Maps & Directions'}
+    caption={
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    }
+    links={[{url: '#', label: 'learn more'}]}
+  />
+</Playground>
+
+### Callout Grid Card Full
+
+Full width card used outside of the Callout Grid component but inside same block
+
+See [Callout Grid with full width callout grid card](/components/callout-grid#with-full-width-calloutgridcard)
+
+```ts
+import {CalloutGridCardFull} from '@tishman/components';
+```
+
+<Playground>
+  <CalloutGridCardFull
+    fluid={getMockFluidImage({width: 1140, height: 490}).childImageSharp.fluid}
+    title={'Maps & Directions'}
+    caption={
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    }
+    links={[{url: '#', label: 'learn more'}]}
+  />
+</Playground>
+
+### With custom styling
+
+#### Tall narrow card with extra margin
+
+Some designs have custom grid cards that break out of the default layout.
+
+we can manipulate Callout Grid Cards in a few ways
+
+adding sx object to overwrite default styling. `sx={{ml: 7}}`
+
+we can also overwrite default maxWidth and ratio to use different image styling
+
+`ratio={303 / 529}`
+
+`maxWidth={303}`
+
+See [Callout Grid with unique layout](/components/callout-grid#unique-layout-holiday-lp-example)
+
+<Playground>
+  <CalloutGridCard
+    index={1}
+    sx={{ml: 7}}
+    ratio={303 / 529}
+    maxWidth={303}
+    fluid={getMockFluidImage({width: 303, height: 529}).childImageSharp.fluid}
+    title={'Maps & Directions'}
+    caption={
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    }
+    links={[{url: '#', label: 'learn more'}]}
+  />
+</Playground>
+
+#### Wide card with no margin on desktop
+
+Fifferent example of overwriting default styling
+
+removing desktop margin `sx={{ml: [4, 0]}}`
+
+Making the image wider and adjusting its ratio
+
+`ratio={529 / 350}`
+
+`maxWidth={529}`
+
+See [Callout Grid with unique layout](/components/callout-grid#unique-layout-holiday-lp-example)
+
+<Playground>
+  <CalloutGridCard
+    index={1}
+    sx={{ml: [4, 0]}}
+    ratio={529 / 350}
+    maxWidth={529}
+    fluid={getMockFluidImage({width: 529, height: 350}).childImageSharp.fluid}
+    title={'Maps & Directions'}
+    caption={
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    }
+    links={[{url: '#', label: 'learn more'}]}
+  />
+</Playground>

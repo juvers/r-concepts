@@ -1,0 +1,50 @@
+{
+  "name": "tishman",
+  "private": true,
+  "version": "1.0.0",
+  "description": "mono repo for all things tishman top of the rock - rock center",
+  "main": "package.json",
+  "author": "HZ Webmaster <webmaster@hzdg.com>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "sanity start",
+    "test": "sanity check",
+    "add-access-control": "node ./scripts/addAccessControl.js"
+  },
+  "keywords": [
+    "sanity"
+  ],
+  "dependencies": {
+    "@sanity/base": "2.0.1",
+    "@sanity/cli": "2.0.9",
+    "@sanity/components": "2.0.1",
+    "@sanity/core": "2.0.1",
+    "@sanity/dashboard": "^2.0.5",
+    "@sanity/default-layout": "2.0.1",
+    "@sanity/default-login": "2.0.1",
+    "@sanity/desk-tool": "2.0.1",
+    "@sanity/google-maps-input": "2.0.1",
+    "@sanity/production-preview": "^2.0.1",
+    "@sanity/vision": "2.0.1",
+    "@u-wave/react-vimeo": "^0.8.3",
+    "csv-parse": "^4.13.0",
+    "csv-parser": "^2.3.3",
+    "get-youtube-id": "^1.0.1",
+    "lodash": "^4.17.15",
+    "p-queue": "^6.6.2",
+    "prop-types": "^15.6",
+    "react": "16.9.0",
+    "react-dom": "^16.9.0",
+    "react-icons": "^3.11.0",
+    "react-youtube": "^7.11.2",
+    "sanity-plugin-dashboard-widget-document-list": "^0.0.10",
+    "sanity-plugin-dashboard-widget-netlify": "^1.0.1",
+    "sanity-plugin-media": "^0.2.10",
+    "sanity-plugin-order-documents": "^0.0.11"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:hzdg/tishman.git"
+  }
+}

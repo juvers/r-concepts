@@ -1,0 +1,111 @@
+---
+name: Intro Text
+menu: Rockefeller Center
+route: /rockefeller-center/intro-text
+---
+
+import {Props, Playground} from 'docz';
+import IntroText from './index.tsx';
+
+# Intro Text
+
+Intro text blurb used on multiple pages. Caption/body text is required, but header and button can be hidden.
+
+## Properties
+
+<Props of={IntroText} />
+
+## Basic Usage
+
+```ts
+import IntroText from '~components/IntroText.tsx';
+```
+
+#### Default (Left Align)
+
+<Playground>
+  <IntroText
+    title="Lorem ipsum dolor sit amet"
+    caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    desktopOrientation="column"
+    maxWidth={730}
+  />
+</Playground>
+
+
+#### Center
+
+<Playground>
+  <IntroText
+    title="Lorem ipsum dolor sit amet"
+    caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    desktopOrientation="column"
+    maxWidth={730}
+    center={true}
+  />
+</Playground>
+
+
+#### Row
+
+<Playground>
+  <IntroText
+    title="Lorem ipsum dolor sit amet"
+    caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    desktopOrientation="row"
+    maxWidth={730}
+  />
+</Playground>
+
+
+#### With Button
+
+<Playground>
+  <IntroText
+    title="Lorem ipsum dolor sit amet"
+    caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    links={[{url: '/buy-tickets', label: 'Buy Tickets'}]}
+    desktopOrientation="column"
+    maxWidth={730}
+    center={true}
+  />
+</Playground>
+
+
+#### With Button (Row)
+
+<Playground>
+  <IntroText
+    title="Lorem ipsum dolor sit amet"
+    caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    links={[{url: '/buy-tickets', label: 'Buy Tickets'}]}
+    desktopOrientation="row"
+    maxWidth={730}
+  />
+</Playground>
+
+
+#### Multiple Buttons
+
+<Playground>
+  <IntroText
+    title="Lorem ipsum dolor sit amet"
+    caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    links={[{url: '/components/form-full', label: 'Buy Tickets'}, {url: '/buy-tickets', label: 'Click Here'}]}
+    desktopOrientation="column"
+    maxWidth={730}
+    center={false}
+  />
+</Playground>
+
+
+#### No Title
+
+<Playground>
+  <IntroText
+    caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    desktopOrientation="column"
+    maxWidth={730}
+    center={false}
+  />
+</Playground>

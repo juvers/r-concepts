@@ -1,0 +1,89 @@
+---
+name: AnchorSection
+menu: Components
+route: /components/anchor-section
+---
+
+import {AnchorSection, Box, Flex, Link, Text} from '@tishman/components';
+import {
+  createHistory,
+  createMemorySource,
+  LocationProvider,
+} from '@reach/router';
+import {Playground, Props} from 'docz';
+
+# AnchorSection
+
+`AnchorSection` is a special case of [Section] that binds its (required)
+`id` prop to the [location hash].
+
+This binding manifests in two ways:
+
+- when the hash changes to match `id`, the containing scrollport
+  will animatedly scroll to the `AnchorSection`.
+- when the `AnchorSection` intersects the scrollport,
+  (configurable via props that mirror [IntersectionObserver options]),
+  the location hash will be updated to match the `id`.
+
+`AnchorSection` can be paired with [Link] to create an anchor navigation.
+
+## Props
+
+<Props of={AnchorSection} />
+
+In addition to the same props that [Section] receives, `AnchorSection`
+accepts props for configuring the [IntersectionObserver] as well as
+the [navigate] behavior.
+
+### IntersectionObserver options
+
+`AnchorSection` accepts props that mirror [IntersectionObserver options].
+
+These props are all optional, but note that `rootMargin` has a default
+value of `"0px 0px -100% 0px"`, which triggers intersection updates
+when the section reaches the top of the scrollport.
+
+### Navigate options
+
+`AnchorSection` also accepts props that mirror @reach/router [navigate] options.
+
+These props are all optional, but note that `replace` has a default
+value of `true`, which prevents navigation changes from ending up in history.
+All props are passed to `navigate` as-is whenever the `AnchorSection`
+intersects the scrollport.
+
+## Usage
+
+```typescript
+import {AnchorSection} from '@tishman/components';
+```
+
+<Playground>
+  <Box sx={{position: 'relative', overflowY: 'scroll', height: '61.8vw'}}>
+    <Flex
+      as="nav"
+      bg="white"
+      sx={{p: 3, justifyContent: 'space-around', top: 0, position: 'sticky'}}
+    >
+      <Link variant="nav" to="#a" children="Section A" />
+      <Link variant="nav" to="#b" children="Section B" />
+      <Link variant="nav" to="#c" children="Section C" />
+    </Flex>
+    <AnchorSection id="a" theme="Rock Center Cream" sx={{height: '61.8vw'}}>
+      <Text>A</Text>
+    </AnchorSection>
+    <AnchorSection id="b" theme="Rock Center Black" sx={{height: '61.8vw'}}>
+      <Text>B</Text>
+    </AnchorSection>
+    <AnchorSection id="c" theme="Rock Center Navy" sx={{height: '61.8vw'}}>
+      <Text>C</Text>
+    </AnchorSection>
+  </Box>
+</Playground>
+
+[section]: /components/section
+[link]: /components/link
+[location hash]: https://developer.mozilla.org/en-US/docs/Web/API/Location/hash
+[intersectionobserver]: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+[intersectionobserver options]: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options
+[navigate]: https://reach.tech/router/api/navigate

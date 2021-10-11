@@ -1,0 +1,39 @@
+---
+name: Image Callout
+menu: Components
+route: /components/image-callout
+---
+
+import {Props, Playground} from 'docz';
+
+import {ImageCallout} from '@tishman/components';
+import {getMockFluidImage} from '@tishman/docs';
+
+# Image Callout
+
+Image Callout is used throughout the site.
+
+Desktop design is left aligned image with border
+and title, caption, link block on the right side.
+
+On mobile, the image and text blocks stack and
+border is removed from the image.
+
+All props are required to render
+
+```ts
+import {ImageCallout} from '@tishman/components';
+```
+
+### Properties
+
+<Props of={ImageCallout} />
+
+<Playground>
+  <ImageCallout
+    title={'620 Loft & Garden'}
+    caption="Expansive rooftop garden with up-close views of St. Patrick’s Cathedral and Fifth Avenue."
+    link={{url: '#', label: 'learn more'}}
+    fluid={getMockFluidImage({width: 635, height: 879}).childImageSharp.fluid}
+  />
+</Playground>

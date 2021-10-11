@@ -1,0 +1,24 @@
+type DataJson implements Node @infer {
+  meta: Meta!
+  confirmation: ConfirmationCopy!
+  printTickets: PrintTicket!
+  crossLinks: [CrossLink!]!
+}
+
+type PrintTicket {
+  image: ImageWithAlt!
+}
+
+type ConfirmationCopy {
+  deck: BuyTicketsSection!
+  tour: BuyTicketsSection!
+  vip: BuyTicketsSection!
+  rockPass: BuyTicketsSection!
+  cityPassRedemption: BuyTicketsSection!
+  refund: BuyTicketsSection!
+}
+
+type BuyTicketsSection {
+  title: String!
+  description: String
+}

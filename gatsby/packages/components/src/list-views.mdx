@@ -1,0 +1,161 @@
+---
+name: List Views
+menu: Guides
+route: /guides/list-views
+---
+
+import {Props, Playground} from 'docz';
+import {
+  jsx,
+  Box,
+  Flex,
+  Grid,
+  Select,
+  Section,
+  Text,
+  createListView,
+} from '@tishman/components';
+
+# List Views
+
+For displaying repeative content that maps to discernable types i.e., 'events',
+'amenities', 'articles', etc., @tishman/components includes a set of components
+and hooks that compose together to create filterable and navigable 'list views'.
+
+Some of the components or hooks that are useful for list views include:
+
+- [createListView]
+- [ListGroupNav]
+- [IntersectionSection]
+- [ListFilterBar]
+
+> For a 'complete' list view that is used on multiple pages, see [ListView].
+
+## Filtering
+
+Using a hook created by [createListView], it is simple to create a filterable
+list view:
+
+<Playground>
+  {() => {
+    // Create our hook using a state initializer so it is only created once.
+    const [useListView] = React.useState(() =>
+      createListView({
+        items: [
+          {color: 'White', attraction: 'Rock Center'},
+          {color: 'Black', attraction: 'Rock Center'},
+          {color: 'White', attraction: 'The Rink'},
+          {color: 'Navy', attraction: 'The Rink'},
+          {color: 'White', attraction: 'Top of the Rock'},
+          {color: 'Yellow', attraction: 'Top of the Rock'},
+          {color: 'Green', attraction: 'Top of the Rock'},
+        ],
+        filterBy: ['color', 'attraction'],
+      }),
+    );
+    /** ListView shows all of the items currently selected by the filters. */
+    const ListView = () => {
+      // Select the `items` list from our state hook.
+      const items = useListView((state) => state.items);
+      return (
+        <React.Fragment>
+          {items.map(({attraction, color}, index) => (
+            <Section key={index} theme={`${attraction} ${color}`}>
+              <Text p={4} children={`${attraction} ${color}`} />
+            </Section>
+          ))}
+        </React.Fragment>
+      );
+    };
+    /** ListFilterBar renders a form using the options and filter state. */
+    const ListFilterBar = () => {
+      // Select the `options` list from our state hook.
+      const options = useListView((state) => state.options);
+      // Also select the filter function from our state hook.
+      // Call this function with a field name and value to change the items.
+      const filter = useListView((state) => state.filter);
+      return (
+        <form>
+          {options.map(([field, values]) => (
+            <Select
+              key={field}
+              onChange={({target}) => filter(field, target.value)}
+            >
+              <option value="">{field}</option>
+              {values.map((value) => (
+                <option key={value}>{value}</option>
+              ))}
+            </Select>
+          ))}
+        </form>
+      );
+    };
+    return (
+      <React.Fragment>
+        <ListFilterBar />
+        <ListView />
+      </React.Fragment>
+    );
+  }}
+</Playground>
+
+## Grouping
+
+Lists created using a hook created by [createListView] can be grouped by a
+common field for an extra dimension of visual organization:
+
+<Playground>
+  {() => {
+    // Create our hook using a state initializer so it is only created once.
+    const [useListView] = React.useState(() =>
+      createListView({
+        items: [
+          {color: 'White', attraction: 'Rock Center'},
+          {color: 'Black', attraction: 'Rock Center'},
+          {color: 'White', attraction: 'The Rink'},
+          {color: 'Navy', attraction: 'The Rink'},
+          {color: 'White', attraction: 'Top of the Rock'},
+          {color: 'Yellow', attraction: 'Top of the Rock'},
+          {color: 'Green', attraction: 'Top of the Rock'},
+        ],
+        groupBy: 'attraction',
+      }),
+    );
+    // Select the `groups` list from our state hook,
+    // and filter out groups that don't have items.
+    const groups = useListView((state) =>
+      state.groups.filter(({hasItems}) => hasItems),
+    );
+    return (
+      <React.Fragment>
+        {groups.map(({name, items}) => (
+          <Section id={name} key={name} sx={{px: 4}}>
+            <Grid columns="50px 1fr">
+              <Text sx={{variant: 'styles.h1'}} children={name} />
+              <Box as="ol">
+                {items.map(({color, attraction}, index) => (
+                  <Section key={index} theme={`${attraction} ${color}`}>
+                    <Text p={4} children={`${attraction} ${color}`} />
+                  </Section>
+                ))}
+              </Box>
+            </Grid>
+          </Section>
+        ))}
+      </React.Fragment>
+    );
+  }}
+</Playground>
+
+## Navigation
+
+Some lists are very long, and an index navigation can be added to the
+view to make navigating the list easier. Check out [ListGroupNav],
+[IntersectionSection], and [ListView] for info and example of creating
+a navigable list view using [createListView].
+
+[createlistview]: /hooks/create-list-view
+[listgroupnav]: /components/list-group-nav
+[intersectionsection]: /components/intersection-section
+[listfilterbar]: /components/list-filter-bar
+[listview]: /components/list-view

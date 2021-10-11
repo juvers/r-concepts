@@ -1,0 +1,156 @@
+{
+  "id": "leasing",
+  "meta": {
+    "title": "NYC Commercial & Office Space for Rent | Leasing at Rockefeller Center",
+    "description": "Lease your commercial or office space, and create a workplace that taps into the energy of NYC. Be at the center of it all at Rockefeller Center."
+  },
+  "leasingIntro": {
+    "title": "Work in the center of it all",
+    "caption": "If you want to make it—make it here. Rockefeller Center is where community, creativity, and innovation collide, and our commercial spaces let you tap into this energy. Around every corner lies the potential for only-in-New York moments, and here, you can create a workplace in the center of everything that allows you and your employees to set the tone for the rest of the city. "
+  },
+  "featuredGallery": {
+    "title": "The Rockefeller Center Experience",
+    "content": [
+      {
+        "category": "The Spaces",
+        "image": {
+          "src": "../images/communal-work-space.jpg",
+          "alt": "Zo communal working space at Rockefeller Center"
+        },
+        "caption": "Rockefeller Center is more than a collection of buildings. It is a beloved place of culture, commerce, and community, and a place our tenants are proud to call headquarters. We offer pre-built, demolished, and built-to-suit spaces to meet all of your needs."
+      },
+      {
+        "category": "ZO.",
+        "image": {
+          "src": "../images/colleagues-on-terrace-2.png",
+          "alt": "Zo co-working space at Rockefeller Center."
+        },
+        "caption": "Introducing ZO., a workplace amenity program that provides companies and their employees at Rockefeller Center with convenient services, community events, lounges, and virtual programming. Company leaders can enjoy additional benefits with ZO. for Business, which covers a range of business services supporting employee wellness, childcare programs, medical offerings, and professional development."
+      },
+      {
+        "category": "Studio & Studio Gather",
+        "image": {
+          "src": "../images/Studio Rock Center Main Lounge.jpg",
+          "alt": "Studio Gather main lounge at Rockefeller Center"
+        },
+        "caption": "From flex desks to private offices to customized suites, Studio can create the perfect workspace for you and your team, all backed by Tishman Speyer's 40 years of expertise. Start today with move-in ready coworking, customize your own turnkey office space with Studio Private, and host conferences and events with Studio Gather. No matter what you're looking for, you'll find it with Studio's exceptional workspaces."
+      },
+      {
+        "category": "Dining & Cultural Events",
+        "image": {
+          "src": "../images/patio-at-the-rink.jpg",
+          "alt": "Patio at the Rink at Rockefeller Center"
+        },
+        "caption": "With a selection of award-winning restaurants, grab-and-go spots, and curated pop-ups—plus a programming slate stacked with the best of New York’s art and entertainment—a workplace at Rockefeller Center means your employees can take advantage of it all, in the heart of it all—right outside the office doors."
+      },
+      {
+        "category": "History",
+        "image": {
+          "src": "../images/men-on-a-beam.png",
+          "alt": "Men on a beam"
+        },
+        "caption": "Rockefeller Center was envisioned as a 24/7 mecca for work and play. Built by John D. Rockefeller, Jr. during the Great Depression, employing upwards of ​75,000 people​, the complex was a daring invitation to embrace the future even amid the uncertainty of the present—“a Depression-era version of building the pyramids​,” hailed The New York Times. By the 1950s, Rockefeller Center had become a cultural totem, thanks in part to NBC broadcasts. The Today Show was filmed here, and media icons like Time, Life, and The Associated Press were headquartered here. “Every informed man in the world knows about Rockefeller Center,” wrote one journalist."
+      }
+    ]
+  },
+  "leasingContactCallout": {
+    "title": "Contact us",
+    "caption": "Contact us today about commercial space leasing opportunities that will put you in the center of everything.",
+    "leasingContacts": [
+      {
+        "name": "Blythe Kinsler",
+        "email": "bkinsler@tishmanspeyer.com",
+        "phone": "212.588.8623"
+      },
+      {
+        "name": "Samantha Augarten",
+        "email": "saugarten@tishmanspeyer.com",
+        "phone": "212.588.8569"
+      },
+      {
+        "name": "Joshua L. McGuire",
+        "email": "jmcguire@tishmanspeyer.com",
+        "phone": "212.588.8696"
+      },
+      {
+        "name": "Alyssa Schwartz",
+        "email": "aschwartz@tishmanspeyer.com",
+        "phone": "212.588.8578"
+      }
+    ]
+  },
+  "crossLinks": [
+    {
+      "title": "Community",
+      "image": {
+        "src": "../images/leasing-community-crosslink.jpg",
+        "alt": "A band performs in front of a crowd at a small venue."
+      },
+      "caption": "When you work here, you’re part of an inclusive community giving you access to a host of great benefits and exciting events.",
+      "link": {
+        "label": "Join Our Community",
+        "url": "/working-community"
+      }
+    },
+    {
+      "title": "Shop & Dine",
+      "image": {
+        "src": "../images/leasing-shopdine-crosslink.jpg",
+        "alt": "Woman shopping for clothes at a store in Rockefeller Center."
+      },
+      "caption": "What will you discover today? Take advantage of incredible shopping and dining choices.",
+      "link": {
+        "label": "Let’s Shop & Dine",
+        "url": "/shop-dine"
+      }
+    }
+  ],
+  "wideCta": {
+    "title": "The Center Insider",
+    "caption": "The leasing news you need, including spaces, events and amenities, all in one place.",
+    "link": {
+      "url": "/leasing-newsletter",
+      "label": "Sign Up Now"
+    }
+  },
+  "calloutGrid": {
+    "cards": [
+      {
+        "image": {
+          "src": "../images/0S9A4143.jpg",
+          "alt": "Colleagues playing foosball on a patio"
+        },
+        "title": "ZO.",
+        "description": "The average workday is never average. From lunching to lounging, connect to a world of wellness through our ZO. app. You’ll have access to on-site doctors, wellness education, yoga classes, meditation practices, fitness programming, and more.",
+        "links": [
+          {
+            "url": "https://findyourzo.com/",
+            "label": "Learn More"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "../images/Studio.jpg",
+          "alt": "Studio Gather main lounge at Rockefeller Center."
+        },
+        "title": "Studio & Studio Gather",
+        "description": "From flex desks to private offices to customized suites, Studio can create the perfect workspace for you and your team, all backed by Tishman Speyer’s 40 years of expertise. Start today with move-in ready coworking, customize your own turnkey office space with Studio Private, and host conferences and events with Studio Gather. No matter what you’re looking for, you’ll find it with Studio’s exceptional workspaces.",
+        "links": [
+          {
+            "url": "https://yourstudio.com/locations/rock-center/",
+            "label": "Learn More"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "../images/summer.2020rockcenter-107.jpg",
+          "alt": "Man in a mask cleaning"
+        },
+        "title": "Health & Safety",
+        "description": "We’ve upgraded our stringent cleaning and disinfecting protocols for all common areas and tenant spaces at Rockefeller Center. To enhance air quality, we’ve set our HVAC systems to maximize fresh air intake and upgraded air filters to the maximum allowable filtration specifications."
+      }
+    ]
+  }
+}

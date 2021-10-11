@@ -1,0 +1,15 @@
+{
+  "extends": "@hzdg/eslint-config-typescript/tsconfig",
+  "exclude": [
+    "**/node_modules/*",
+    "**/public/*",
+    "**/.cache/*",
+    "**/.docz/*",
+    "**/.vscode/*",
+    "**/.yarn/*",
+    "**/patches/*",
+    "**/built-lambda/",
+    "**/static/"
+  ],
+  "include": ["**/*.js", ".eslintrc.js"]
+}

@@ -1,0 +1,9 @@
+type DataJson implements Node @infer {
+  meta: Meta!
+  title: String!
+  subTitle: String!
+  image: ImageWithAlt!
+  link: Link!
+  crossLinkTitle: String!
+  crossLinks: [CrossLink!]!
+}

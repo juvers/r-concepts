@@ -1,0 +1,47 @@
+{
+  "id": "art-detail",
+  "wideCta": {
+    "title": "The Center Newsletter",
+    "caption": "Receive news and updates about current and future exhibitions, learn about gallery openings, get special offers, and more.",
+    "link": {
+      "url": "/the-center-newsletter",
+      "label": "Subscribe"
+    }
+  },
+  "imageCallout": {
+    "title": "Rockefeller Center History",
+    "description": "Over 100 years ago, John D. Rockefeller Jr. had a vision to create a “city within a city,” and the story of how Rockefeller Center came to be is a fascinating one.",
+    "link": {"url": "/history", "label": "Learn About Our History"},
+    "image": {
+      "src": "../images/retro-artist.jpg",
+      "alt": "Black and white photo of wearing goggles sculpting metal works"
+    }
+  },
+  "calloutGrid": {
+    "cards": [
+      {
+        "image": {
+          "src": "../images/rockefeller.center.2020.summer.flagspart3-27.jpg",
+          "alt": "People admiring the Behind the Walls sculpture at Rockefeller Center"
+        },
+        "title": "Public Art",
+        "description": "Rockefeller Center brings art to everyone with installations throughout our campus.",
+        "links": [{"url": "/art", "label": "Explore Public Art"}]
+      },
+      {
+        "image": {
+          "src": "../images/CAMPUS_0225_ret_w1a.jpg",
+          "alt": "Zeus sculpture at the entrance of Rockefeller Center"
+        },
+        "title": "Rockefeller Center Tour",
+        "description": "Get a unique look at a place unlike any other. Learn about this historic landmark’s architecture, art, and more.",
+        "links": [
+          {
+            "url": "/attractions/rockefeller-center-tour/",
+            "label": "Explore the Tour"
+          }
+        ]
+      }
+    ]
+  }
+}

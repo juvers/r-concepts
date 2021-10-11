@@ -1,0 +1,26 @@
+type DataJson implements Node @infer {
+  meta: Meta!
+  leasingIntro: LeasingIntro!
+  featuredGallery: FeaturedGallery!
+  leasingContactCallout: LeasingContactCallout!
+  crossLinks: [CrossLink!]!
+  wideCta: WideCta!
+  calloutGrid: CalloutGrid!
+}
+
+type LeasingIntro {
+  title: String!
+  caption: String!
+}
+
+type LeasingContactCallout {
+  title: String!
+  caption: String!
+  leasingContacts: [LeasingContact!]!
+}
+
+type LeasingContact {
+  name: String!
+  email: String!
+  phone: String!
+}

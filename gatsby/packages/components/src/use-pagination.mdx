@@ -1,0 +1,181 @@
+---
+name: usePagination
+menu: Hooks
+route: /hooks/use-pagination
+---
+
+import {Props, Playground} from 'docz';
+import {Text, Label, Input, Button, Box, Flex, Grid} from 'theme-ui';
+import {usePagination} from './usePagination.tsx';
+
+# usePagination
+
+`usePagination` will return a [Pagination] object with page state
+and pagination callbacks for modifying page state.
+
+## Usage
+
+<Playground>
+  {() => {
+    const pagination = usePagination({pages: 10});
+    const {page, pages, setPages, hasNext, hasPrevious, goto} = pagination;
+    const {first, previous, next, last} = goto;
+    return (
+      <Flex sx={{flexDirection: 'column', alignItems: 'center'}}>
+        <Flex my={4}>
+          <Label>
+            Page
+            <Input
+              type="number"
+              mx={2}
+              min={1}
+              max={pages + 1}
+              value={page + 1}
+              onChange={(event) => goto(parseInt(event.target.value, 10) - 1)}
+            />
+          </Label>
+          <Label>
+            of
+            <Input
+              type="number"
+              mx={2}
+              value={pages}
+              onChange={(event) => setPages(parseInt(event.target.value, 10))}
+            />
+          </Label>
+        </Flex>
+        <Grid columns={[2, 4]}>
+          <Button children="first" onClick={first} disabled={page === 0} />
+          <Button children="prev" onClick={previous} disabled={!hasPrevious} />
+          <Button children="next" onClick={next} disabled={!hasNext} />
+          <Button children="last" onClick={last} disabled={page >= pages - 1} />
+        </Grid>
+      </Flex>
+    );
+  }}
+</Playground>
+
+## Advanced Usage
+
+For more complex scenarios, such as when page state must be synchronized with
+some other state, like scroll position, `usePagination` exposes a `setGoto`
+and `setPage` APIs for modifying how page state is updated.
+
+<Playground>
+  {() => {
+    const {
+      page,
+      pages,
+      hasNext,
+      hasPrevious,
+      goto,
+      setPage,
+      setGoto,
+    } = usePagination({pages: 5});
+    const {next, previous, first, last} = goto;
+    const scrollport = React.useRef();
+    React.useEffect(() => {
+      // Update scroll position instead of page state
+      // whenever goto (or any of its methods) is used.
+      return setGoto((page) => {
+        if (scrollport.current) {
+          scrollport.current.scrollTo({top: page * 500, behavior: 'smooth'});
+        }
+      });
+    }, []);
+    return (
+      <Box>
+        <Grid columns={[2, 4]} m={4}>
+          <Button children="first" onClick={first} disabled={page === 0} />
+          <Button children="prev" onClick={previous} disabled={!hasPrevious} />
+          <Button children="next" onClick={next} disabled={!hasNext} />
+          <Button children="last" onClick={last} disabled={page >= pages - 1} />
+        </Grid>
+        <Grid
+          ref={scrollport}
+          sx={{
+            height: 500,
+            gridGap: 0,
+            gridAutoFlow: 'row',
+            gridAutoRows: 500,
+            overflowY: 'scroll',
+            scrollSnapType: 'y mandatory',
+          }}
+          onScroll={(event) => {
+            setPage(Math.floor(event.target.scrollTop / 500));
+          }}
+        >
+          <Box sx={{scrollSnapAlign: 'start', bg: 'primary'}} />
+          <Box sx={{scrollSnapAlign: 'start', bg: 'accent'}} />
+          <Box sx={{scrollSnapAlign: 'start', bg: 'muted'}} />
+          <Box sx={{scrollSnapAlign: 'start', bg: 'secondary'}} />
+          <Box sx={{scrollSnapAlign: 'start', bg: 'accentSecondary'}} />
+        </Grid>
+      </Box>
+    );
+  }}
+</Playground>
+
+## Pagination
+
+`Pagination` stores page state values, such as an active `page`
+and total `pages` count, and also provides a number of callbacks
+for modifying the page state.
+
+```ts
+interface Pagination {
+  /** The currently active page. */
+  page: number;
+  /** The total number of pages. */
+  pages: number;
+  /** Whether there are more pages after the currently active page. */
+  hasNext: boolean;
+  /** Whether there are more pages before the currently active page. */
+  hasPrevious: boolean;
+  /**
+   * Go to the given page.
+   *
+   * Also has convenience methods:
+   * - `goto.first` - goto the first page.
+   * - `goto.previous` - goto the page before the current page.
+   * - `goto.next` - goto the page after the current page.
+   * - `goto.last` - goto the last page.
+   */
+  goto: {
+    (page: number): void;
+    /** Goto the page after the currently active page. */
+    next: () => void;
+    /** Goto the page before the currently active page. */
+    previous: () => void;
+    /** Goto the first page. */
+    first: () => void;
+    /** Goto the last page. */
+    last: () => void;
+  };
+  /** Set the total number of pages. */
+  setPages(pages: number): void;
+  /**
+   * Set the current of page, bypassing `goto`.
+   *
+   * This is normally not used directly, but is provided for cases
+   * where `goto` has been replaced. See `setGoto` for more.
+   */
+  setPage(pages: number): void;
+  /**
+   * Replace the goto implementation. This is mostly for internal use,
+   * but is exposed to facilitate use cases where immediate updates
+   * via `goto` are not desired (i.e., synchronizing page state
+   * with scrolling).
+   *
+   * Returns a 'cleanup' callback that will restore
+   * the previous goto implementation when called.
+   *
+   * @example
+   *
+   * useEffect(() => setGoto(page => { ... }), []);
+   */
+  setGoto: (goto: (page: number) => void) => () => void;
+}
+```
+
+[pagination]: #pagination

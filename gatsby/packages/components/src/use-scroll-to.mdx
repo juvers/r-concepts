@@ -1,0 +1,126 @@
+---
+name: useScrollTo
+menu: Hooks
+route: /hooks/use-scroll-to
+---
+
+import {Props, Playground} from 'docz';
+import {Text, Label, Input, Checkbox, Button, Box, Flex, Grid} from 'theme-ui';
+import {useScrollTo} from './useScrollTo.tsx';
+
+# useScrollTo
+
+`useScrollTo` will return a function that resembles the DOM Element's
+[native scrollTo] method, but with a few differences:
+
+- in addition to the [native scrollTo options], also accepts
+  an id string, a DOM Element, or a React ref object to a DOM Element.
+- polyfilled 'smooth' [scroll-behavior] animation
+  in browsers that don't support it, or when `forceAnimation` is true.
+- accepts [react-spring config] for configuring the polyfill animation.
+
+## Usage
+
+<Playground>
+  {() => {
+    const scrollport = React.useRef();
+    const ref = React.useRef();
+    const [forceAnimation, setForceAnimation] = React.useState(false);
+    const [animating, setAnimating] = React.useState(false);
+    const scrollTo = useScrollTo({
+      domTarget: scrollport,
+      behavior: 'smooth',
+      forceAnimation,
+      onStart: () => setAnimating(true),
+      onRest: () => setAnimating(false),
+      // Default react-spring config. Change these with `forceAnimation` on.
+      config: {mass: 1, tension: 170, friction: 26},
+    });
+    return (
+      <Box>
+        <Grid columns={[2, 4]} m={4}>
+          <Button onClick={() => scrollTo(0, 0)}>primary</Button>
+          <Button onClick={() => scrollTo('ex-0-accent')}>accent</Button>
+          <Button onClick={() => scrollTo(ref)}>muted</Button>
+          <Button onClick={() => scrollTo({top: 0, behavior: 'auto'})}>
+            jump to top
+          </Button>
+          <Label>
+            forceAnimation
+            <Checkbox
+              checked={forceAnimation}
+              onChange={({target}) => setForceAnimation(target.checked)}
+            />
+          </Label>
+          <Box sx={{position: 'relative', right: 0, bottom: 0}}>
+            Animating: {animating ? 'True' : 'False'}
+          </Box>
+        </Grid>
+        <Box ref={scrollport} sx={{height: 250, overflowY: 'scroll'}}>
+          <Grid gap={0} color="background" sx={{gridAutoRows: 250}}>
+            <Flex bg="primary" sx={{alignItems: 'center'}}>
+              <Text color="background" mx="auto" children="primary" />
+            </Flex>
+            <Flex id="ex-0-accent" bg="accent" sx={{alignItems: 'center'}}>
+              <Text color="background" mx="auto" children="accent" />
+            </Flex>
+            <Flex ref={ref} bg="muted" sx={{alignItems: 'center'}}>
+              <Text color="background" mx="auto" children="muted" />
+            </Flex>
+          </Grid>
+        </Box>
+      </Box>
+    );
+  }}
+</Playground>
+
+## Config
+
+```ts
+interface UseScrollToConfig {
+  /**
+   * The DOM Element (or ref to a DOM Element) within which to scroll.
+   * If this is not defined, the document element will be used.
+   */
+  domTarget?: HTMLElement | React.RefObject<HTMLElement>;
+  /**
+   * The scroll behavior to use when scrolling to a position.
+   * Note that this can be overridden via options to the provided
+   * `scrollTo` function.
+   *
+   * Defaults to 'auto'.
+   */
+  behavior?: 'smooth' | 'auto';
+  /**
+   * If `true`, then native smooth scrolling is disabled
+   * and a spring animation is used instead.
+   */
+  forceAnimation?: boolean;
+  /**
+   * Optional configuration for the polyfill spring animation.
+   * @see https://www.react-spring.io/docs/hooks/api
+   */
+  config?: SpringConfig;
+  /**
+   * Optional callback to be called whenever a `scrollTo`
+   * animation has started.
+   *
+   * Note that this is _global_ in nature; all `useScrollTo`
+   * hooks for the same `domTarget` will be notified.
+   */
+  onStart?: () => void;
+  /**
+   * Optional callback to be called whenever a `scrollTo`
+   * animation has finished or has been interrupted.
+   *
+   * Note that this is _global_ in nature; all `useScrollTo`
+   * hooks for the same `domTarget` will be notified.
+   */
+  onRest?: () => void;
+}
+```
+
+[scroll-behavior]: https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior
+[native scrollto]: https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollTo
+[native scrollto options]: https://developer.mozilla.org/en-US/docs/Web/API/ScrollToOptions
+[react-spring config]: https://www.react-spring.io/docs/hooks/api#configs

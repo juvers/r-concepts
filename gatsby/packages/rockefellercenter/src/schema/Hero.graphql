@@ -1,0 +1,10 @@
+"""
+A Hero object.
+
+This should be used to type most JSON fields that represent a generic Hero component.
+Note neither field is required, so you must validate the field exists before rendering
+"""
+type Hero {
+  links: [Link!]
+  contactLinkUrl: String
+}

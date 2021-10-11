@@ -1,0 +1,115 @@
+{
+  "id": "film-photo",
+  "meta": {
+    "title": "Film & Photo Shoot Locations | NYC Film Production at Rock Center",
+    "description": "Rockefeller Center is one of New York's most iconic and recognizable locations. We offer film and photo locations that enhance the production of every New York story."
+  },
+  "filmPhotoHero": {
+    "title": "Tell your New York story here",
+    "caption": "Location is everything. Rockefeller Center, rich in unique history and breathtaking artistry, is one of New York’s most recognizable locations, inspiring filmmakers, photographers, and artists alike to captivate audiences all over the world.",
+    "image": {
+      "src": "../images/fallon-hero.png",
+      "alt": "tbd"
+    }
+  },
+  "filmPhotoCalloutGrid": {
+    "title": "Film & Photo Locations",
+    "caption": "If scouting in New York for a film production location, Rockefeller Center has an incredible variety of settings and architecture. From small, intimate, character-filled spaces to sweeping, grand panoramas and iconic terraces, our venues are quintessentially New York.",
+    "links": [
+      {
+        "url": "/documents/film-and-photo-opportunities.pdf",
+        "label": "Download PDF"
+      }
+    ],
+    "cards": [
+      {
+        "image": {
+          "src": "../images/tor-manhattan-view.jpg",
+          "alt": "tbd"
+        },
+        "caption": "tbd"
+      },
+      {
+        "image": {
+          "src": "../images/rainbow-room-filming-location.jpg",
+          "alt": "tbd"
+        },
+        "caption": "tbd"
+      },
+      {
+        "image": {
+          "src": "../images/620-loft-garden-st-patricks-cathedral.jpg",
+          "alt": "tbd"
+        },
+        "caption": "tbd"
+      }
+    ]
+  },
+  "featuredGallery": {
+    "title": "Our Portfolio",
+    "content": [
+      {
+        "category": "Film Production",
+        "image": {
+          "src": "../images/poi-gallery-film-photo.png",
+          "alt": "Spiderman and Mary Jane from Spiderman 2 on the Rooftop Garden"
+        },
+        "caption": "The Adjustment Bureau | Sex & The City 2 | John Wick | The Other Guys | The Avengers | Ninja Turtles | Morning Glory | Friends with Benefits | Respect | Spiderman | The Secret Life of Walter Mitty | Respect | Marry Me",
+        "links": [
+          {
+            "url": "/documents/film-and-photo-opportunities.pdf",
+            "label": "Download PDF"
+          }
+        ]
+      },
+      {
+        "category": "Television Production",
+        "image": {
+          "src": "../images/Film_tv prod_gall.jpg",
+          "alt": "Saturday Night Live past and present stars"
+        },
+        "caption": "The Tonight Show with Jimmy Fallon | Late Night with Seth Meyers | The TODAY Show | Saturday Night Live | Law & Order SVU | NBC Nightly News | The Real Housewives of New York City | American’s Got Talent | The Marvelous Mrs. Maisel | Broad City | Ellen | Smash | Billions | Flesh & Bone | Succession | Project Runway | Sneaky Pete | Golden Globes Award | Marvel Hawkeye | Younger | Dateline | Power Book ll: Ghost | BBC",
+        "links": [
+          {
+            "url": "/documents/film-and-photo-opportunities.pdf",
+            "label": "Download PDF"
+          }
+        ]
+      },
+      {
+        "category": "Photo Shoot Production",
+        "image": {
+          "src": "../images/Photo_FallonEsquire.jpg",
+          "alt": "Jimmy Fallon photoshoot for Esquire"
+        },
+        "caption": "Diane Von Furstenberg | Jimmy Choo | Tiffany & Co. | Harper’s Bazaar | Ann Taylor | Industry Magazine | Esquire | Elle | Vogue | Town & Country | Coach | Men's Health | Citizen Watch",
+        "links": [
+          {
+            "url": "/documents/film-and-photo-opportunities.pdf",
+            "label": "Download PDF"
+          }
+        ]
+      }
+    ]
+  },
+  "imageCallout": {
+    "title": "Partnerships",
+    "description": "Be seen. Rockefeller Center offers a variety of marketing and branding opportunities that provide the exposure brands are looking for.",
+    "link": {
+      "url": "/sponsorship",
+      "label": "Learn More"
+    },
+    "image": {
+      "src": "../images/film-photo-sponsor.png",
+      "alt": "tbd"
+    }
+  },
+  "wideCta": {
+    "title": "Film & Photo Newsletter",
+    "caption": "Stay up-to-date on the latest film and photo oppurtunities at Rockefeller Center.",
+    "link": {
+      "url": "/film-and-photo-newsletter",
+      "label": "Subscribe"
+    }
+  }
+}

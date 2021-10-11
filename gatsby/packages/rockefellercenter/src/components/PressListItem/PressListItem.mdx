@@ -1,0 +1,54 @@
+---
+name: Press List Item
+menu: Rockefeller Center
+route: /rockefeller-center/press-list-item
+---
+
+import Podcast from '~components/podcast';
+import {Props, Playground} from 'docz';
+import {getMockFluidImage} from '@tishman/docs';
+
+# Press List Item
+
+## NOTE: WIP - this is mostly a copy of PODCAST, including these docs
+
+The Podcast component is used in a few pages on RC, so it is a generic component
+to allow usage in multiple places.
+There are a lot of props needed to create the component and most currently come directly from
+sanity.
+In addition to sanity data, we also need to get the logo images that create the links to the
+podcast sources. These currently come from our local file system.
+
+To see an example of data validation, look at
+`/rockefellercenter/src/blocks/EventPodcastBlock.tsx`
+
+### Props
+
+<Props of={Podcast} />
+
+### Usage
+
+```typescript
+import Podcast from '~components/podcast';
+```
+
+<Playground>
+  <Podcast
+    category={'Category'}
+    title={'Podcast Name'}
+    authors={['Jane Doe', 'John Doe']}
+    excerpt={`
+      Perspiciatis unde omnis iste natus error sit voluptatem accusantium
+      doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+      inventore veritatis et quasi architecto beatae vitae dicta sunt
+      explicabo.
+    `}
+    poster={{
+      fluid: getMockFluidImage({width: 190, height: 270}).childImageSharp.fluid,
+      alt: 'poster',
+    }}
+    appleLink={'https://www.apple.com'}
+    spotifyLink={'https://www.spotify.com'}
+    audibleLink={'https://www.audible.com'}
+  />
+</Playground>

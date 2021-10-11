@@ -1,0 +1,39 @@
+---
+name: useResponsiveValue
+menu: Hooks
+route: /hooks/use-responsive-value
+---
+
+import {Props, Playground} from 'docz';
+import {Text, Label, Input, Button, Box, Flex, Grid} from 'theme-ui';
+import {useResponsiveValue} from './useResponsiveValue.ts';
+
+# useResponsiveValue
+
+`useResponsiveValue` will compute a responsive value based on
+the active theme breakpoint.
+
+This is very similar to the hook defined by @theme-ui/match-media,
+except it takes an optional reference node argument. This argument
+lets the hook work in nested contexts (like iframes).
+
+## Usage
+
+```typescript
+import {useResponsiveValue} from '@tishman/components';
+```
+
+<Playground>
+  {() => {
+    const [element, setElement] = React.useState(null);
+    const fg = useResponsiveValue(['red', 'yellow', 'blue'], {node: element});
+    const bg = useResponsiveValue(['white', 'purple', 'orange'], {
+      node: element,
+    });
+    return (
+      <Text variant="styles.h1" ref={setElement} sx={{color: fg, bg}}>
+        fg: {fg}, bg: {bg}
+      </Text>
+    );
+  }}
+</Playground>

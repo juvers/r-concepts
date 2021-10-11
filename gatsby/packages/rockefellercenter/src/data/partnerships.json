@@ -1,0 +1,175 @@
+{
+  "id": "partnerships",
+  "meta": {
+    "title": "Brand Activation & Partnership Opportunities | Rockefeller Center",
+    "description": "Put your brand where it should be–in the center of it all. Take advantage of incredible brand activation and partnership opportunities in NYC at Rockefeller Center."
+  },
+  "partnershipIntroText": {
+    "title": "Get the world's attention",
+    "caption": "Through contemporary cultural programming, dynamic partnerships, and engaging artistic initiatives, along with our evolving retail landscape, we create memorable and inclusive experiences for our community. Rockefeller Center is “the people’s place,” and tens of thousands of visitors and New Yorkers alike converge here daily. We are a civic space in the heart of NYC, on a global platform with limitless reach. We strive to represent all of New York’s incredible diversity through our programming and partnerships — democratizing our venues, celebrating civic space, and creating community, connection, and a sense of belonging for everyone we serve.",
+    "image": {
+      "src": "../images/rockefeller-plaza.jpg",
+      "alt": "Channel Gardens Promenade"
+    }
+  },
+  "partnershipCalloutGrid": {
+    "title": "Programming & Partnerships",
+    "caption": "For partners seeking cultural diversity and high-level engagement, Rockefeller Center is a location unlike any other, with infinite partnership opportunities for brand integration and excellence. From sponsoring one of our existing programs to collaborating on something new, or utilizing one of our spaces to showcase your brand, the opportunities are boundless.",
+    "links": [
+      {
+        "url": "https://cdn.sanity.io/files/bs9rmafh/production/ea3c207b28a60d7d81e0d5e89e836a863c9f2468.pdf",
+        "label": "Download PDF"
+      }
+    ],
+    "cards": [
+      {
+        "image": {
+          "src": "../images/950×896px_CS Rockefeller 1.jpg",
+          "alt": "Christian Siriano runway model wearing purple dress at Top of the Rock."
+        },
+        "title": "Christian Siriano",
+        "description": "Christian Siriano’s stunning Fall/Winter 2019 Runway show at Top of the Rock with New York City skyline as the backdrop.",
+        "height": 502,
+        "width": 475
+      },
+      {
+        "image": {
+          "src": "../images/virgin-hyperloop.jpg",
+          "alt": "Virgin Hyperloop event"
+        },
+        "title": "Virgin Hyperloop One",
+        "description": "The single most sustainable form of mass transportation. The Virgin Hyperloop One was showcased on Center Plaza during UN Climate Week.",
+        "height": 502,
+        "width": 475
+      },
+      {
+        "image": {
+          "src": "../images/spheres-vr.jpg",
+          "alt": "Spheres VR event"
+        },
+        "title": "Spheres",
+        "description": "After breaking records at Sundance in 2018, the cosmic virtual reality series SPHERES made its NYC public premiere in collaboration with Rockefeller Center.",
+        "customCardType": "LAST_CARD",
+        "height": 502,
+        "width": 475
+      }
+    ]
+  },
+  "partnershipImageCallout": {
+    "title": "Film & Photo",
+    "description": "Rockefeller Center has a variety of spaces and locations available for film & photo shoots. And a long history of partnering with studios and networks to enhance every production.",
+    "link": {
+      "url": "/partnerships/film-photo-locations",
+      "label": "Learn More"
+    },
+    "image": {
+      "src": "../images/john-wick-close-up.jpg",
+      "alt": "John Wick close-up"
+    }
+  },
+  "partnershipThreeColGrid": {
+    "rows": [
+      {
+        "cards": [
+          {
+            "cardType": "text",
+            "title": "Plaza Rentals, Retail & Experiential Pop-ups",
+            "caption": "We have a wealth of spaces for branded activations. From high-visibility to high-traffic, outdoor plazas to interior spaces, these opportunities are sure to meet your criteria for on-trend consumer experiences."
+          },
+          {
+            "cardType": "image",
+            "image": {
+              "src": "../images/GameofThrones_RockCenter.png",
+              "alt": "Iron Throne from Game of Thrones at Rockefeller Center Plaza."
+            },
+            "imageHeight": 492,
+            "imageWidth": 350
+          },
+          {
+            "cardType": "image",
+            "image": {
+              "src": "../images/FriezeSculpture_RockCenter.png",
+              "alt": "Frieze Sculpture at Channel Gardens in Rockefeller Center."
+            },
+            "imageHeight": 358,
+            "imageWidth": 255
+          }
+        ]
+      },
+      {
+        "cards": [
+          {
+            "cardType": "image",
+            "image": {
+              "src": "../images/newsstand_create.jpg",
+              "alt": "Soundboard"
+            },
+            "imageHeight": 492,
+            "imageWidth": 350
+          },
+          {
+            "cardType": "image",
+            "image": {
+              "src": "../images/newsstand_produce.jpg",
+              "alt": "Mic stand"
+            },
+            "imageHeight": 358,
+            "imageWidth": 255
+          },
+          {
+            "cardType": "text",
+            "title": "Newsstand Studios",
+            "caption": "Newsstand Studios is a premium podcast studio offering multi-track recording and a full suite of editing and production services. Do you have a story to tell? The studio is available to podcasters, or to partners interested in shaping the dialogue with us.",
+            "links": [
+              {
+                "url": "/newsstand-studios",
+                "label": "Learn More"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "cards": [
+          {
+            "cardType": "text",
+            "title": "Holidays & The Rink",
+            "caption": "Rockefeller Center is the epicenter of New York City’s holiday celebrations. The most famous ice-skating rink in the world, The Rink welcomes skaters from October through April each season. We have a number of ways for your brand to get involved and join in on the festivities.",
+            "links": [
+              {
+                "url": "/holidays",
+                "label": "Learn More"
+              }
+            ]
+          },
+          {
+            "cardType": "image",
+            "image": {
+              "src": "../images/santa_and_elves.jpg",
+              "alt": "Santa and Elves"
+            },
+            "imageHeight": 492,
+            "imageWidth": 350
+          },
+          {
+            "cardType": "image",
+            "image": {
+              "src": "../images/KEH_3456_510x716.jpg",
+              "alt": "Christmas Tree and Lights at Rockefeller Center Plaza."
+            },
+            "imageHeight": 358,
+            "imageWidth": 255
+          }
+        ]
+      }
+    ]
+  },
+  "wideCta": {
+    "title": "The Center Newsletter",
+    "caption": "Receive important seasonal news and updates, learn about store openings, and get special offers.",
+    "link": {
+      "url": "/the-center-newsletter",
+      "label": "Subscribe"
+    }
+  }
+}

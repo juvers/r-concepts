@@ -1,0 +1,27 @@
+type DataJson implements Node @infer {
+  meta: Meta!
+  shopAndDineCalloutGridOne: ShopAndDineCalloutGrid!
+  wideCta: WideCta!
+}
+
+type ShopAndDineHero {
+  title: String!
+  caption: String!
+}
+
+type ShopAndDineCard {
+  image: ImageWithAlt!
+  caption: String!
+  url: String!
+  width: Int
+  height: Int
+}
+
+type ShopAndDineCallout {
+  cards: [ShopAndDineCard!]!
+}
+
+type ShopAndDineCalloutGrid {
+  fullCard: CalloutGridCard!
+  cards: [CalloutGridCard!]!
+}

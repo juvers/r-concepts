@@ -1,0 +1,352 @@
+---
+name: PageTransition
+menu: Components
+route: /components/page-transition
+---
+
+import {Props, Playground} from 'docz';
+import {animated} from 'react-spring';
+import {
+  Box,
+  Button,
+  Flex,
+  Grid,
+  Text,
+  usePagination,
+} from '@tishman/components';
+import {PageTransition} from './PageTransition';
+import {usePageTransition} from './usePageTransition';
+
+# PageTransition
+
+`PageTransition` is an animation library, built on [react-spring],
+focusing on transitioning between 'pages' of content. The library
+consists of two main concepts:
+
+- A `PageTransition` component, which acts as the orchestrating 'container'
+  for displaying paginated content. The `PageTransition` can have zero
+  or **one child only** (called a [Page] in this document).
+- Arbitrarily deeply nested descendent components that participate in
+  page transitions via [usePageTransition]
+
+`PageTransition` provides the context in which page transitions
+are managed. A [Page] (and its descendants) may participate in
+the transition via [usePageTransition].
+
+Multiple transitions may co-exist; transitions will have distinct
+states within each. If they are nested, the innermost transition
+will completely mask any outer transition states.
+
+```ts
+import {PageTransition} from '@tishman/components';
+```
+
+## Props
+
+> **Note:** `PageTransition` accepts zero or one child only!
+
+<Props of={PageTransition} />
+
+### Page
+
+A "Page" is simply the child node of the `PageTransition` component.
+When the child node changes, the `PageTransition` orchestrates _concurrent_
+[enter] and [leave] animations defined by [usePageTransition]
+for the page that has been added and removed, respectively.
+
+### Page keys
+
+Often times, different 'pages' are rendered by same component
+with different props. For cases like this, `PageTransition` will check
+for a key to determine the identity of the page:
+
+- If the page has a `pageTransitionKey` prop, that value is used.
+- If the page has a [React key], that value is used.
+
+## usePageTransition
+
+`usePageTransition` configures `enter` and `leave` react-spring
+animations to be run when an ancestor React element is added or removed
+as a child of a `PageTransition`.
+
+If no `PageTransition` ancestor is present, the `enter` animation
+will be run when the React element using this hook mounts.
+
+> Any deeply nested descendant of a `PageTransition` may use this hook!
+
+### Usage
+
+```ts
+import {usePageTransition} from '@tishman/components';
+```
+
+`usePageTransition` can be used two ways:
+
+#### Example: with a [usePageTransition props] object
+
+`usePageTransition` will return an object of animated values
+similar to [useSpring].
+
+This example also shows how [Page keys] can be used to render multiple
+pages from the same component.
+
+<Playground>
+  {() => {
+    const pages = ['left', 'center', 'right'];
+    const colors = ['accent', 'primary', 'accentSecondary'];
+    const Page = ({page}) => {
+      const style = usePageTransition({
+        initial: (previous) => ({
+          x: previous && parseInt(previous.key, 10) > page ? '-100%' : '100%',
+        }),
+        leave: (next) => ({
+          x: next && parseInt(next.key, 10) > page ? '-100%' : '100%',
+        }),
+        enter: {x: '0%'},
+      });
+      return (
+        <Grid
+          as={animated.div}
+          style={style}
+          sx={{
+            height: '25vw',
+            placeItems: 'center',
+            color: 'background',
+            bg: colors[page],
+          }}
+          children={pages[page]}
+        />
+      );
+    };
+    const {page, goto} = usePagination({pages: pages.length});
+    return (
+      <Box>
+        <Flex>
+          {pages.map((p, i) => (
+            <Button key={i} onClick={() => goto(i)} children={p} />
+          ))}
+        </Flex>
+        <PageTransition sx={{height: '25vw', overflow: 'hidden'}}>
+          <Page key={page} page={page} />
+        </PageTransition>
+      </Box>
+    );
+  }}
+</Playground>
+
+#### Example: with a count followed by a [usePageTransition props] object
+
+`usePageTransition` will return an array of animated values
+similar to [useTrail].
+
+This example also shows how to show and hide a single page of content.
+
+<Playground>
+  {() => {
+    const [show, setShow] = React.useState(false);
+    const Page = () => (
+      <Grid sx={{height: '25vw'}}>
+        {usePageTransition(3, {
+          leave: {opacity: 0, y: 20},
+          enter: {opacity: 1, y: 0},
+        }).map((style, i) => (
+          <Box as={animated.div} key={i} style={style} bg="accent" />
+        ))}
+      </Grid>
+    );
+    return (
+      <Box>
+        <Button onClick={() => setShow((t) => !t)}>
+          {show ? 'hide' : 'show'}
+        </Button>
+        <PageTransition sx={{height: '25vw'}}>
+          {show ? <Page /> : null}
+        </PageTransition>
+      </Box>
+    );
+  }}
+</Playground>
+
+## usePageTransition Props
+
+### enter
+
+A page 'enters' when it is added as the child of the `PageTransition`.
+If the page _or any of its descendants_ uses the [usePageTransition] hook,
+then the animations defined by the `enter` props will be run _concurrently_
+with any [leave] animations for the previous page.
+
+The `enter` prop may be a function that returns props. The function will
+receive a [PageTransitionRecord] of the previous page that this page
+is replacing, or `null` if there is no previous page.
+
+### leave
+
+A page 'leaves' when it is removed or replaced as the child of the
+`PageTransition`. If the page _or any of its descendants_ uses the
+[usePageTransition] hook, then the animations defined by the `leave` props
+will be run _concurrently_ with any [enter] animations for page
+that has been added.
+
+The `leave` prop may be a function that returns props. The function will
+receive a [PageTransitionRecord] of the next page that is replacing
+this page, or `null` if there is no next page.
+
+### initial (optional)
+
+A page 'initializes' when it is first mounted as the child of the
+`PageTransition`. If the page _or any of its descendants_ uses thes
+[usePageTransition] hook, then any animations defined by the hook will be
+initialized with the optional `initial` props.
+
+Note that if `initial` is not provided, then animations will be initialized
+with `leave` props instead.
+
+The `initial` prop may be a function that returns props. The function will
+receive a [PageTransitionRecord] of the previous page this this page
+is replacing, or `null` if there was no previous page.
+
+### config (optional)
+
+A default react [spring config] to use if none is provided
+on [enter] or [leave] props.
+
+The `config` prop may be a function that returns config. The function will
+receive a [PageTransitionRecord] of the page that is either replacing this page,
+if this page is leaving, or being replaced by this page,
+if this page is mounting or entering, or `null` if there is no page.
+
+### immediate (optional)
+
+Run transitions immediately by default. May be be overriden on [enter]
+and [leave] props.
+
+The `immediate` prop may be a function that returns a `boolean`.
+The function will receive a [PageTransitionRecord] of the page
+that is either replacing this page, if this page is leaving,
+or being replaced by this page, if this page is mounting or entering,
+or `null` if there is no page.
+
+#### Example: Multiple layers of page transitions
+
+<Playground>
+  {() => {
+    const [show, setShow] = React.useState(false);
+    const Container = ({children}) => {
+      const backgroundStyle = usePageTransition({
+        leave: {opacity: 0, delay: 300},
+        enter: {opacity: 1},
+      });
+      const containerStyle = usePageTransition({
+        leave: {scaleY: 0, config: {tension: 260, friction: 26}, delay: 250},
+        enter: {scaleY: 1, config: {tension: 240, friction: 24}},
+      });
+      return (
+        <React.Fragment>
+          <Box
+            as={animated.div}
+            style={backgroundStyle}
+            sx={{bg: 'backgroundOverlay', width: '100%', height: '100%'}}
+          ></Box>
+          <Box
+            as={animated.div}
+            style={containerStyle}
+            sx={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              bg: 'background',
+              transformOrigin: 'center top',
+            }}
+          ></Box>
+          <Grid
+            columns={2}
+            sx={{position: 'absolute', p: 5, top: 0, left: 0, right: 0}}
+          >
+            {children}
+          </Grid>
+        </React.Fragment>
+      );
+    };
+    const Items = ({children}) => {
+      const items = usePageTransition(React.Children.count(children), {
+        leave: {opacity: 0, y: -5, config: {tension: 460, friction: 30}},
+        enter: {opacity: 1, y: 0, config: {tension: 360, friction: 26}},
+      });
+      return items.map((style, index) => (
+        <animated.div key={index} style={style}>
+          {children[index]}
+        </animated.div>
+      ));
+    };
+    const Page = React.useCallback(() => {
+      return (
+        <Container>
+          <Items>
+            <Text>Item One</Text>
+            <Text>Item Two</Text>
+            <Text>Item Three</Text>
+            <Text>Item Four</Text>
+            <Text>Item Five</Text>
+            <Text>Item Six</Text>
+          </Items>
+        </Container>
+      );
+    }, []);
+    return (
+      <Box sx={{overflow: 'hidden'}}>
+        <Button onClick={() => setShow((t) => !t)}>
+          {show ? 'hide' : 'show'}
+        </Button>
+        <PageTransition sx={{bg: 'accent', height: '25vw'}}>
+          {show ? <Page key="page" /> : null}
+        </PageTransition>
+      </Box>
+    );
+  }}
+</Playground>
+
+## PageTransitionRecord
+
+`PageTransitionRecord` is a data object representing a transition for a page.
+It is mostly meant for internal use, but is passed to any
+[usePageTransition props] that are functions.
+
+It has the following properties:
+
+### key
+
+A unique key identifying this page. If the component child of `PageTransition`
+has a [React key] or `pageTransitionKey` prop, this key will reflect that value.
+
+### element
+
+The [React element] for the page. This is the child element of `PageTransition`.
+
+### transitions
+
+A [Set] of transition "handles" that are used to update transitions. This is
+really for internal usage.
+
+### phase
+
+The current transition phase the page is in. May be one of `"MOUNT"`, `"ENTER"`,
+or `"LEAVE"`
+
+[react-spring]: https://www.react-spring.io/
+[react key]: https://reactjs.org/docs/lists-and-keys.html#keys
+[react element]: https://reactjs.org/docs/rendering-elements.html
+[spring config]: https://www.react-spring.io/docs/hooks/api
+[usespring]: https://www.react-spring.io/docs/hooks/use-spring
+[usetrail]: https://www.react-spring.io/docs/hooks/use-trail
+[set]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
+[pagetransition]: #pagetransition
+[page]: #page
+[page keys]: #page-keys
+[enter]: #enter
+[leave]: #leave
+[usepagetransition props]: #usepagetransition-props
+[usepagetransition]: #usepagetransition
+[pagetransitionrecord]: #pagetransitionrecord

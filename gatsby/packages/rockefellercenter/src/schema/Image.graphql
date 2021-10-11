@@ -1,0 +1,52 @@
+"""
+An image file.
+
+This type is a union of the `File` and `ImageSharp` types,
+but with the `ImageSharp` fields required.
+
+It can be used to type file fields that represent images, i.e.
+
+  `image: Image! @imageByRelativePath`
+
+Note: When using `Image` to type a JSON field, it is necessary
+to extend the field with `@imageByRelativePath`. This is because
+the original type of the field is just a string path
+(i.e., `{"image": "../images/image.jpg"}`).
+"""
+type Image implements Node @dontInfer @childOf(type: "File") {
+  sourceInstanceName: String! @proxyFile
+  absolutePath: String! @proxyFile
+  relativePath: String! @proxyFile
+  extension: String! @proxyFile
+  size: Int! @proxyFile
+  prettySize: String! @proxyFile
+  modifiedTime: Date! @proxyFile @dateformat
+  accessTime: Date! @proxyFile @dateformat
+  changeTime: Date! @proxyFile @dateformat
+  birthTime: Date! @proxyFile @dateformat
+  root: String! @proxyFile
+  dir: String! @proxyFile
+  base: String! @proxyFile
+  ext: String! @proxyFile
+  name: String! @proxyFile
+  relativeDirectory: String! @proxyFile
+  dev: Int! @proxyFile
+  mode: Int! @proxyFile
+  nlink: Int! @proxyFile
+  uid: Int! @proxyFile
+  gid: Int! @proxyFile
+  rdev: Int! @proxyFile
+  ino: Float! @proxyFile
+  atimeMs: Float! @proxyFile
+  mtimeMs: Float! @proxyFile
+  ctimeMs: Float! @proxyFile
+  atime: Date! @proxyFile @dateformat
+  mtime: Date! @proxyFile @dateformat
+  ctime: Date! @proxyFile @dateformat
+
+  # These fields are also defined. See `createResolvers`.
+  # fixed(...args): ImageSharpFixed!
+  # fluid(...args): ImageSharpFluid!
+  # original: ImageSharpOriginal!
+  # resize(...args): ImageSharpResize!
+}

@@ -1,0 +1,17 @@
+{
+  "folders": [
+    { "path": "." },
+    { "path": "gatsby" },
+    { "path": "sanity" },
+    { "path": "crm" }
+  ],
+  "settings": {
+    "workbench.editor.labelFormat": "medium",
+    "jest.disabledWorkspaceFolders": ["tishman", "sanity"],
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+    "typescript.tsdk": "gatsby/node_modules/typescript/lib"
+  },
+  "extensions": {
+    "recommendations": ["EditorConfig.EditorConfig", "vsls-contrib.codetour"]
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "id": "private-events",
+  "meta": {
+    "title": "",
+    "description": ""
+  },
+  "hero": {
+    "links": [
+      {
+        "url": "/contact/private-events",
+        "label": "Plan an event"
+      }
+    ]
+  },
+  "imageCallout": {
+    "title": "620 Loft & Garden",
+    "description": "Expertly manicured rooftop garden with up-close views of St. Patrick’s Cathedral and Fifth Avenue.",
+    "link": {"url": "/private-events/620-loft-garden", "label": "learn more"},
+    "image": {
+      "src": "../images/private-event-nyc-view.jpg",
+      "alt": "Guest at the private event space enjoying the NYC views."
+    }
+  },
+  "calloutGrid": {
+    "fullCard": {
+      "image": {
+        "src": "../images/private-event-entertainment.jpg",
+        "alt": "Entertainment at a private event in Rock Center's Rainbow Room."
+      },
+      "title": "Rainbow Room",
+      "description": "Created to be in a class of its own, Rainbow Room is the epitome of New York Style and glamour. A place where the food, the setting, the service, the skyline, and the stars all come together to create incomparable, unforgettable private events.",
+      "links": [{"url": "/private-events/rainbow-room", "label": "Explore"}]
+    },
+    "cards": [
+      {
+        "image": {
+          "src": "../images/light-through-window.jpg",
+          "alt": "Light pours in through an art deco window at the Rainbow Room."
+        },
+        "title": "The Gallery",
+        "description": "Adjacent to the Rainbow Room, The Gallery is an intimate event space with south facing windows filled with views of Manhattan and the Empire State Building.",
+        "links": [{"url": "/private-events/the-gallery", "label": "Learn More"}]
+      },
+      {
+        "image": {
+          "src": "../images/dining-nyc-view-1.jpg",
+          "alt": "Dining at Rockefeller Center with Manhattan sklyine views."
+        },
+        "title": "Private Dining Room",
+        "description": "With walls of windows that afford sweeping views of Midtown Manhattan, the Private Dining Room never fails to impress for meetings or special occasions.",
+        "links": [
+          {"url": "/private-events/private-dining-room", "label": "Learn more"}
+        ]
+      },
+      {
+        "image": {
+          "src": "../images/rooftop-bar-nyc-views.jpg",
+          "alt": "Night skyline views on Manhattan from Rockefeller Center's rooftop bar."
+        },
+        "title": "Bar SixtyFive",
+        "description": "A rooftop bar above the rest. Where cocktails and views create the perfect mix for memorable events.",
+        "links": [
+          {"url": "/private-events/bar-sixtyfive", "label": "Learn more"}
+        ]
+      }
+    ]
+  },
+  "capacity": [
+    {
+      "title": "Rainbow Room | The Gallery | Bar SixtyFive",
+      "capacities": [{"label": "Full Floor Event", "value": 500}]
+    },
+    {
+      "title": "Rainbow Room | The Gallery",
+      "capacities": [
+        {"label": "Reception", "value": 400},
+        {"label": "Reception & Sit Down Dinner", "value": 300},
+        {"label": "Reception & Dinner with Dancing", "value": 250}
+      ]
+    },
+    {
+      "title": "Rainbow Room",
+      "capacities": [
+        {"label": "Theater Style", "value": 300},
+        {"label": "Classroom Style (3 per 6’)", "value": 225},
+        {"label": "Crescent Style", "value": 180},
+        {"label": "Classroom Style (2 per 6’)", "value": 150}
+      ]
+    },
+    {
+      "title": "The Gallery",
+      "capacities": [{"label": "Reception & Sit Down Dinner", "value": 60}]
+    },
+    {
+      "title": "Bar SixtyFive",
+      "capacities": [
+        {"label": "Reception", "value": 190},
+        {"label": "Seated Dinner", "value": 130}
+      ]
+    },
+    {
+      "title": "Private Dining Room",
+      "capacities": [
+        {"label": "Reception", "value": 25},
+        {"label": "Seated Dinner (2 rounds)", "value": 24},
+        {"label": "Seated Dinner (1 rectangular table)", "value": 12}
+      ]
+    }
+  ],
+  "subNavigationTabs": [
+    {"label": "Photo Gallery", "slug": "#photo-gallery"},
+    {"label": "Floor Plan & Capacities", "slug": "#floor-plan-capacities"},
+    {"label": "Sample Menus", "slug": "#sample-menus"},
+    {"label": "Vendors", "slug": "#vendors"},
+    {"label": "Compare", "slug": "#compare"}
+  ],
+  "imageCallout2": {
+    "image": {
+      "src": "../images/PE_Rink.jpg",
+      "alt": "Ice skaters on the rink at Rockefeller Center"
+    },
+    "title": "The Rink",
+    "description": "Let one of New York’s most iconic, and playful, settings lend its magic to your event.",
+    "link": {
+      "url": "/attractions/the-rink-at-rockefeller-center",
+      "label": "Visit The Rink"
+    }
+  },
+  "featuredStories": {
+    "title": "The Center Magazine.",
+    "caption": "See the style, the details, and the smiles from events across Rockefeller Center.",
+    "link": {"url": "/magazine", "label": "Read Our Stories"}
+  },
+  "crossLinks": [
+    {
+      "title": "Weddings",
+      "image": {
+        "src": "../images/weddings_crosslnk.jpg",
+        "alt": "Weddings"
+      },
+      "caption": "Settings that truly match the significance of your occasion.",
+      "link": {
+        "label": "Plan Your Wedding",
+        "url": "/weddings"
+      }
+    },
+    {
+      "title": "Newsletter",
+      "image": {
+        "src": "../images/spons_crosslnk.jpg",
+        "alt": "Newsletter"
+      },
+      "caption": "Get updates on event spaces, tailoring capabilities, style trends and more. Sign up for our Private Events Newsletter.",
+      "link": {
+        "label": "Sign up",
+        "url": "/private-event-newsletter"
+      }
+    }
+  ]
+}

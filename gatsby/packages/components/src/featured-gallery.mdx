@@ -1,0 +1,60 @@
+---
+name: Featured Gallery
+menu: Components
+route: /components/featured-gallery
+---
+
+import {Props, Playground} from 'docz';
+
+import {FeaturedGallery} from '@tishman/components';
+import {getMockFluidImage} from '@tishman/docs';
+
+# Featured Gallery
+
+```ts
+import {FeaturedGallery} from '@tishman/components';
+```
+
+### Properties
+
+<Props of={FeaturedGallery} />
+
+<Playground>
+  {() => {
+    const content = [
+      {
+        category: 'Rainbow Room',
+        fluid: getMockFluidImage({width: 1140, height: 490}).childImageSharp
+          .fluid,
+        caption:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        links: [
+          {url: '#', label: 'learn more'},
+          {url: '#', label: 'plan your visit'},
+        ],
+      },
+      {
+        category: 'The Gallery',
+        fluid: getMockFluidImage({width: 1140, height: 490}).childImageSharp
+          .fluid,
+        caption:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.',
+        links: [{url: '#', label: 'learn more'}],
+      },
+      {
+        category: 'Private Dining Room',
+        fluid: getMockFluidImage({width: 1140, height: 490}).childImageSharp
+          .fluid,
+        caption:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.',
+      },
+    ];
+    return (
+      <FeaturedGallery
+        title={'Event Spaces'}
+        getCategories={() => content.map(({category}) => category)}
+        content={content}
+      />
+    );
+  }}
+</Playground>

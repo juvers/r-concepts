@@ -1,0 +1,33 @@
+{
+	"id": "faq",
+	"faqIntroText": {
+		"title": "Let’s get you answers.",
+		"caption": "Rockefeller Center is a big place full of incredible experiences and things to do. And it can generate a lot of questions. Here you’ll find some of the most frequently asked questions on a variety of topics. If these don’t address your specific need, don’t hesitate to contact us directly."
+	},
+	"crossLinks": [
+		{
+			"title": "Top of the Rock",
+			"image": {
+        "src": "../images/top-rock-at-night.jpg",
+        "alt": "Night time view from Top of the Rock with the Empire State Building in the distance."
+      },
+			"caption": "Top of the Rock––3 decks, 360-degree must see views, a city that’s all yours.",
+			"link": {
+				"label": "Buy tickets",
+				"url": "/buy-tickets/#top-of-the-rock"
+			}
+		},
+		{
+			"title": "Plan your Visit",
+			"image": {
+        "src": "../images/rockefeller-plaza-winter.jpg",
+        "alt": "Rockefeller Center Tree and ice skating rink during winter in NYC."
+      },
+			"caption": "All the info you need to create the perfect Rockefeller Center holiday memories.",
+			"link": {
+				"label": "Let’s Plan Your Visit",
+				"url": "/plan-visit"
+			}
+		}
+	]
+}

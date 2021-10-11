@@ -1,0 +1,11 @@
+{
+  "id": "story",
+  "wideCta": {
+    "title": "The Center Newsletter",
+    "caption": "Receive important seasonal news and updates, learn about store openings, and get special offers.",
+    "link":{ 
+      "url": "/the-center-newsletter",
+      "label": "Learn More"
+    }
+  }
+}

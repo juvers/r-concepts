@@ -1,0 +1,33 @@
+---
+name: Add to Calendar Button
+menu: Components
+route: /components/add-to-calendar-button
+---
+
+import {AddToCalendarButton} from '@tishman/components';
+
+import {Props, Playground} from 'docz';
+
+# Add to Calendar Button
+
+When clicked displays a list of calendar platforms to add an RC event.
+
+### Properties
+
+<Props of={AddToCalendarButton} />
+
+###
+
+<Playground>
+  {() => {
+    const event = {
+      title: 'Sample Event',
+      description: 'This is the sample event provided as an example only',
+      location: 'Portland, OR',
+      startDateTime: '2021-10-14T15:00:00.000Z',
+      endDateTime: '2021-11-30T16:59:00.000Z'
+    }
+    return <AddToCalendarButton {...event} />
+}}
+
+</Playground>

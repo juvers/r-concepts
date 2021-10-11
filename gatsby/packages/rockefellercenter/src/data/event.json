@@ -1,0 +1,56 @@
+{
+  "id": "event",
+  "intro": "Intriguing. Fun. Unusual. Creative. These spring events bring the best of New York to Midtown Manhattan. And you’ll find them here at Rockefeller Center.",
+  "crossLinks": [
+    {
+      "title": "Shop & Dine",
+      "image": {
+        "src": "../images/shop-and-dine-crosslink.jpg",
+        "alt": "A woman wearing a mask looks at clothes in a shop at Rockefeller Center."
+      },
+      "caption": "Great places to shop and eat before or after an event.",
+      "link": {
+        "label": "Learn more",
+        "url": "/shop-dine"
+      }
+    },
+    {
+      "title": "Public Art",
+      "image": {
+        "src": "../images/behind-the-walls-min.jpg",
+        "alt": "Jaume Plensa's Behind the Walls sculpture on display at Rockefeller Center."
+      },
+      "caption": "Rockefeller Center brings art to everyone with installations throughout our campus.",
+      "link": {
+        "label": "Explore Public Art",
+        "url": "/art"
+      }
+    }
+  ],
+  "crossLinks2": [
+    {
+      "title": "Partnerships",
+      "image": {
+        "src": "../images/community-flags.png",
+        "alt": "Flags flying over Rockefeller Plaza."
+      },
+      "caption": "Put your brand on our event calendar—utilize one of our spaces to showcase your brand on a global platform in the heart of NYC.",
+      "link": {
+        "label": "See ways to partner",
+        "url": "/partnerships"
+      }
+    },
+    {
+      "title": "Newsletter",
+      "image": {
+        "src": "../images/atlas-statue-rockefeller-center.jpg",
+        "alt": "Statue of the Greek titan Atlas at Rockefeller Center, holding the heavens above his shoulders."
+      },
+      "caption": "Subscribe to The Center Newsletter to receive updates on everything happening at Rockefeller Center.",
+      "link": {
+        "label": "Join now",
+        "url": "/the-center-newsletter"
+      }
+    }
+  ]
+}

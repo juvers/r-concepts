@@ -1,0 +1,71 @@
+---
+name: MenuToggleButton
+menu: Components
+route: /components/menu-toggle-button
+---
+
+import {Props, Playground} from 'docz';
+import {Box, Text, Button} from 'theme-ui';
+import {FocusScope} from '@hzdg/focus-scope';
+import {MenuToggleButton} from './MenuToggleButton';
+
+# MenuToggleButton
+
+An accessible, controllable toggle button that animates
+between closed, hovered, and open states.
+
+The button uses [aria-expanded] to indicate that it reveals a hidden menu.
+
+## Props
+
+<Props of={MenuToggleButton} />
+
+## Usage
+
+<Playground>
+  <MenuToggleButton />
+</Playground>
+
+### With `label`
+
+<Playground>
+  <MenuToggleButton label="Click Me!" />
+</Playground>
+
+### With `defaultOpen` (uncontrolled)
+
+<Playground>
+  <MenuToggleButton defaultOpen />
+</Playground>
+
+### With `isOpen` (controlled)
+
+<Playground>
+  <MenuToggleButton isOpen />
+</Playground>
+
+## Example
+
+<Playground>
+  {() => {
+    const [isOpen, setIsOpen] = React.useState(false);
+    return (
+      <FocusScope
+        as={Box}
+        trap={isOpen}
+        sx={{minHeight: 300}}
+        onKeyPress={({key}) => key === 'Escape' && setIsOpen(false)}
+      >
+        <MenuToggleButton isOpen={isOpen} onOpenChange={setIsOpen} />
+        {isOpen ? (
+          <FocusScope autoFocus restoreFocus>
+            <Text>open for business!</Text>
+            <Button onClick={() => setIsOpen(false)}>close</Button>
+          </FocusScope>
+        ) : null}
+      </FocusScope>
+    );
+  }}
+</Playground>
+
+[aria-expanded]: https://www.accessibility-developer-guide.com/examples/sensible-aria-usage/expanded/

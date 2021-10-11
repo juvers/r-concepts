@@ -1,0 +1,12 @@
+type DataJson implements Node @infer {
+  meta: Meta!
+  cultureHero: CultureHero!
+  calloutGrid: CalloutGrid!
+  featuredStories: FeaturedStories!
+}
+
+type CultureHero {
+  title: String!
+  caption: String!
+  image: ImageWithAlt!
+}

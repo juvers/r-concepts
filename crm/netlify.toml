@@ -1,0 +1,5 @@
+# This toml file is only used to specify the built functions folder. 
+# Never actually used in the actual app that uses this service
+
+[build]
+  functions = "built-lambda"

@@ -1,0 +1,28 @@
+---
+name: Section
+menu: Components
+route: /components/section
+---
+
+import {Section} from './Section';
+import {Heading, Text} from 'theme-ui';
+
+import {Playground, Props} from 'docz';
+
+# Section
+
+## Props
+
+<Props of={Section} />
+
+## Playground
+
+<Playground>
+  <Section id="section-id" theme="The Rink" sx={{p: 4}}>
+    <Heading>This is a section</Heading>
+    <Text>It creates a section element with</Text>
+    <Text>a theme provider</Text>
+    <Text>an id</Text>
+    <Text>and any extra styling needed at section root</Text>
+  </Section>
+</Playground>

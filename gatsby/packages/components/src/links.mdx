@@ -1,0 +1,121 @@
+---
+name: Links
+menu: Components
+route: /components/links
+---
+
+import {Props, Playground} from 'docz';
+import {jsx, Box, Flex} from 'theme-ui';
+import {Link} from './Link.tsx';
+import ArrowSvg from './icons/arrow.svg';
+import ArrowLink from './ArrowLink.tsx';
+
+# Intro
+
+Box components are only there to make the background dark
+
+Both links are variants of the Link component provided by theme-ui
+
+using variant "underline", "arrow" or "button" will add the proper styling to the link
+
+## Properties
+
+<Props of={Link} />
+
+```ts
+ import {Link} from '@tishman/components';
+
+<Link variant='underline' href='#'>Buy Tickets</Link>
+
+<Link variant='arrow' href='#'>Contact Us<ArrowSvg /></Link>
+
+<Link variant='button' href='#'>Plan an Event</Link>
+
+<Link variant='card' href='#'>Plan an Event</Link>
+
+<Link variant='footer' href='#'>Footer Link</Link>
+```
+
+## Underline Link
+
+<Playground>
+  <Link variant="underline" href="#underline-link">
+    Buy Tickets
+  </Link>
+</Playground>
+
+## Arrow Link
+
+Special case since there is an included svg
+
+```ts
+import {ArrowLink} from '@tishman/components';
+```
+
+### Props
+
+<Props of={ArrowLink} />
+
+### Examples
+
+<Playground>
+  <ArrowLink href="#arrow-link" label="Contact Us" />
+</Playground>
+
+<Playground>
+  <ArrowLink reverse href="#back" label="Back" />
+</Playground>
+
+## Button Link
+
+<Playground>
+  {/* Box only to add padding in preview */}
+  <Box sx={{py: 4}}>
+    <Link variant="button" href="#button-link">
+      Plan an Event
+    </Link>
+  </Box>
+</Playground>
+
+## Card Link
+
+<Playground>
+  <Link variant="card" href="#card-link">
+    Plan an Event
+  </Link>
+</Playground>
+
+## Footer Link
+
+<Playground>
+  {/* Box only to add padding/bgcolor in preview */}
+  <Box sx={{p: 4, bg: 'background'}}>
+    <Link variant="footer" href="#footer-link">
+      Terms & Conditions
+    </Link>
+  </Box>
+</Playground>
+
+## Nav Link
+
+<Playground>
+  <Link variant="nav" href="#nav-link">
+    Ticket Packages
+  </Link>
+</Playground>
+
+## Menu Link
+
+<Playground>
+  <Link variant="menu" href="#menu-link">
+    Accessibility &amp; Inclusion
+  </Link>
+</Playground>
+
+## Menu Secondary Link
+
+<Playground>
+  <Link variant="menuSecondary" href="#menu-link">
+    Map &amp; Directions
+  </Link>
+</Playground>

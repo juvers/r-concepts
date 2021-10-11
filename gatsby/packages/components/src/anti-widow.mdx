@@ -1,0 +1,69 @@
+---
+name: antiWidow
+menu: Components
+route: /components/anti-widow
+---
+
+import {Props, Playground} from 'docz';
+import {Box, Text, antiWidow} from '@tishman/components';
+
+# `antiWidow`
+
+`antiWidow` prevents inline content from 'widowing' a single word
+on the last line when wrapping.
+
+It does this by inserting a [non-breaking space] between
+the last two words of the block.
+
+It also works on complex (rich text) content by walking
+the last branch of React nodes until it finds text to apply.
+
+```ts
+import {antiWidow} from '@tishman/components';
+```
+
+<Playground>
+  <Text>with antiWidow</Text>
+  <Text variant="heroTitle">{antiWidow("resize me, I'm a long title!")}</Text>
+  <Text>without antiWidow</Text>
+  <Text variant="heroTitle">resize me, I'm a long title!</Text>
+</Playground>
+
+### Rich Text
+
+<Playground>
+  <Box
+    sx={{
+      fontSize: 6,
+      '& i': {fontStyle: 'italic'},
+      '& b': {fontWeight: 'bold'},
+    }}
+  >
+    <Text>with antiWidow</Text>
+    <Text>
+      {antiWidow(
+        <React.Fragment>
+          this is some <i>rich text</i>, <b>don't you agree?</b>
+        </React.Fragment>,
+      )}
+    </Text>
+    <Text>without antiWidow</Text>
+    <Text>
+      this is some <i>rich text</i>, <b>don't you agree?</b>
+    </Text>
+  </Box>
+</Playground>
+
+### Pitfalls
+
+Really long words at the end of the block can really muck things up:
+
+<Playground>
+  <Text variant="heroTitle">
+    {antiWidow(
+      "If you make the container small enough, you'll see the solution is intrinsically rudimentary.",
+    )}
+  </Text>
+</Playground>
+
+[non-breaking space]: https://en.wikipedia.org/wiki/Non-breaking_space

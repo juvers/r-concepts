@@ -1,0 +1,198 @@
+---
+name: ListView
+menu: Components
+route: /components/list-view
+---
+
+import {Props, Playground} from 'docz';
+import {
+  ListView,
+  Box,
+  Grid,
+  Text,
+  Section,
+  IntersectionSection,
+} from '@tishman/components';
+
+# ListView
+
+A [Render prop] component that renders a list with a [ListFilterBar]
+and [ListGroupNav]. The `ListView` component gives you flexibility
+in rendering your list, but does most of the heavy lifting of wiring up
+the filtering, grouping, and navigation.
+
+## Props
+
+<Props of={ListView} />
+
+## Usage
+
+```typescript
+import {ListView} from '@tishman/components';
+```
+
+<Playground>
+  {() => {
+    // Note: wrapped in `useState` to avoid recreating the list of items.
+    const [items] = React.useState(() => [
+      {color: 'White', attraction: 'Rock Center'},
+      {color: 'Black', attraction: 'Rock Center'},
+      {color: 'Green', attraction: 'Rock Center'},
+      {color: 'Navy', attraction: 'Rock Center'},
+      {color: 'Cream', attraction: 'Rock Center'},
+      {color: 'White', attraction: 'The Rink'},
+      {color: 'Navy', attraction: 'The Rink'},
+      {color: 'Blue', attraction: 'The Rink'},
+      {color: 'White', attraction: 'Top of the Rock'},
+      {color: 'Yellow', attraction: 'Top of the Rock'},
+      {color: 'Blue', attraction: 'Top of the Rock'},
+      {color: 'Olive', attraction: 'Top of the Rock'},
+      {color: 'Navy', attraction: 'Top of the Rock'},
+      {color: 'Green', attraction: 'Top of the Rock'},
+    ]);
+    const domTarget = React.useRef(null);
+    return (
+      <Box sx={{overflowY: 'scroll', height: '61.8vw'}} ref={domTarget}>
+        <ListView
+          items={items}
+          filterBy={['attraction']}
+          groupBy="color"
+          domTarget={domTarget}
+        >
+          {({groups, activeGroup, setActiveGroup, activeGroupRef}) => (
+            <Box sx={{flex: 1}}>
+              {groups.map((group) =>
+                group.name ? (
+                  <IntersectionSection
+                    root={domTarget.current}
+                    key={group.name}
+                    ref={group === activeGroup ? activeGroupRef : null}
+                    key={group.name}
+                    onIntersection={() => setActiveGroup(group)}
+                    sx={{px: 4}}
+                  >
+                    <Grid columns="50px 1fr">
+                      <Text sx={{variant: 'styles.h1'}} children={group.name} />
+                      {group.items ? (
+                        <Box as="ol">
+                          {group.items.map(({color, attraction}, index) => (
+                            <Section
+                              key={index}
+                              theme={`${attraction} ${color}`}
+                            >
+                              <Text p={6}>
+                                {attraction} {color}
+                              </Text>
+                            </Section>
+                          ))}
+                        </Box>
+                      ) : (
+                        <Section key={group.name} sx={{px: 4}}>
+                          <Text
+                            sx={{variant: 'styles.h1', color: 'muted'}}
+                            children={group.name}
+                          />
+                        </Section>
+                      )}
+                    </Grid>
+                  </IntersectionSection>
+                ) : null,
+              )}
+            </Box>
+          )}
+        </ListView>
+      </Box>
+    );
+  }}
+</Playground>
+
+## Render props
+
+The [Render prop] children function accepts an object that contains list filter
+state, including state from [createListView] (used internally):
+
+```typescript
+{
+  /** The filtered items to display in the view. */
+  readonly items: ReadonlyArray<Item>;
+  /**
+   * An array of tuples, each containing a field name and possible values.
+   *
+   * This may be used to build a form of `select` style inputs, i.e.
+   *
+   * @example
+   * <form onSubmit={...}>
+   *   {options.map(([field, values]) => (
+   *     <label key={field}>
+   *       {field}
+   *       <select onChange={...}>
+   *         {values.map((value) => (
+   *           <option key={value} name={value} />
+   *         ))}
+   *       </select>
+   *     </label>
+   *   ))}
+   * </form>
+   */
+  readonly options: ReadonlyArray<
+    [ListViewFilterName<Item, Config>, ReadonlyArray<string>]
+  >;
+  /**
+   * An array of item groups, each containing a group name and an array of
+   * items belonging to that group. If no `groupBy` field has been configured,
+   * this array will be empty.
+   */
+  readonly groups: ReadonlyArray<ItemGroup<Item>>;
+  /**
+   * The currently 'active' group, for list views
+   * that implement list group nav behavior.
+   *
+   * This could be used to update an active state, scroll position, etc.
+   */
+  readonly activeGroup: ItemGroup<Item> | null;
+  /** Set the active group to one of the list view groups. */
+  setActiveGroup: (group: ItemGroup<Item> | null) => void;
+  /** Add items to the list view. */
+  add: (...items: Item[]) => void;
+  /** Apply the named filter for the given value. */
+  filter: (filterName: ListViewFilterName<Item, Config>, value: string) => void;
+  /** Reset the given filter, or all filters, if no filter name is passed. */
+  reset: (filterName?: ListViewFilterName<Item, Config>) => void;
+  /**
+   * A ref to pass to the active group element.
+   * If this ref has a value when the active group has changed,
+   * `ListView` will attempt to scroll to the position of the element.
+   */
+  activeGroupRef: RefObject<HTMLElement>;
+}
+```
+
+## Usage with IntersectionSection
+
+A common pattern is to bind the scroll position in the list back to the active
+group (as indicated in the `ListView`'s embedded [ListGroupNav])
+via [IntersectionSection].
+
+It is easily done in the render prop, for example:
+
+```tsx
+<ListView items={[...]} groupBy="...">
+  {({groups, activeGroup, setActiveGroup, activeGroupRef}) =>
+    groups.map((group) => (
+      <IntersectionSection
+        key={group.name}
+        ref={group === activeGroup ? activeGroupRef : null}
+        onIntersection={() => setActiveGroup(group)}
+      >
+        {...}
+      </IntersectionSection>
+    ))
+  }
+</ListView>
+```
+
+[render prop]: https://reactjs.org/docs/render-props.html
+[createlistview]: /hooks/create-list-view
+[listfilterbar]: /components/list-filter-bar
+[listgroupnav]: /components/list-group-nav
+[intersectionsection]: /components/intersection-section

@@ -1,0 +1,105 @@
+---
+name: useTradableBits
+menu: Hooks
+route: /hooks/use-tradable-bits
+---
+
+import {Props, Playground} from 'docz';
+import {Box, Spinner, Text} from 'theme-ui';
+
+import {useTradableBits} from './useTradableBits.tsx';
+
+# useTradableBits Hook
+
+Rockefeller Center has been using tradablebits as their third party social media aggregator.
+
+They are able to take in all posts with a certain hashtags and make a custom list of approved
+posts. These lists are sorted by labels. most labels are the hashtag with the `#` removed and
+downcased. `#TopOfTheRock` => `topoftherock` but be careful, this is not a certain thing.
+I ran into issue where they decided to add `-` to the label and spent an entire night debugging
+
+Their API is pretty straight forward and can be broken down into three basic arugments
+labels, maxItems, network. We can now have access to tradablebits data through this hook.
+
+### Default Usage
+
+Including no arguments will fetch the default config seen below.
+
+```typescript
+const data = useTradableBits();
+```
+
+### Custom arguments
+
+Or we can overwrite the config and request, for example, 4 items with label `rainbowroom` for a grid on its landing page
+
+```typescript
+const data = useTradableBits({maxItems: 4, labels: ['rainbowroom']});
+```
+
+### Add an error boundary
+
+Inside hook if the api fetch fails, it will throw an error. For any component that is using
+this hook, you should wrap it in an `<ErrorBoundary />` that will catch that error gracefully.
+Check out their github page to see how it works. [react-error-boundary github page](https://github.com/bvaughn/react-error-boundary)
+
+```typescript
+import {ErrorBoundary} from 'react-error-boundary';
+```
+
+This is very important as it can handle any errors gracefully with out taking down the entire page.
+
+<br />
+
+## Props
+
+<Props of={useTradableBits} />
+
+## Default Usage
+
+<Playground>
+  {() => {
+    const data = useTradableBits();
+    return (
+      <Box>
+        {data ? (
+          <Box sx={{height: 400, overflow: 'scroll'}}>
+            <pre>{JSON.stringify(data, null, 2)}</pre>
+          </Box>
+        ) : (
+          <Spinner />
+        )}
+      </Box>
+    );
+  }}
+</Playground>
+
+## Example with custom arguments
+
+```typescript
+const maxItems = 4;
+const data = useTradableBits({maxItems});
+```
+
+```typescript
+const data = useTradableBits({maxItems: 4});
+```
+
+<Playground>
+  {() => {
+    const maxItems = 4;
+    const data = useTradableBits({maxItems});
+    return (
+      <Box>
+        {data ? (
+          <Box sx={{height: 400, overflow: 'scroll'}}>
+            <pre>{JSON.stringify(data, null, 2)}</pre>
+          </Box>
+        ): (
+          <Spinner />
+        )}
+      </Box>
+    );
+}}
+
+</Playground>

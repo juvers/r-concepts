@@ -1,0 +1,193 @@
+{
+  "id": "art-and-history",
+  "meta": {
+    "title": "Art & History at Rockefeller Center | Public Art in NYC",
+    "description": "Explore Rock Center's remarkable collection of Art Deco motifs and sculptures. Take a tour and learn about the history, architecture, and vision over the years."
+  },
+  "artHistoryHero": {
+    "title": "Sparking the imagination",
+    "bodyCopy": "John D. Rockefeller Jr's vision was for Rockefeller Center to be a place where New Yorkers could come and surround themselves with art and motifs that celebrated the best of the human spirit. Today, his vision has been spectacularly realized, giving you the opportunity to come visit this spring and discover and be inspired by it all, from outdoor art installations to historic public art.",
+    "cards": [
+      {
+        "image": {
+          "src": "../images/news-closeup.jpg",
+          "alt": "Art deco relief sculpture above 50 Rockefeller Plaza entrance"
+        },
+        "caption": "\"News\" at 50 Rock Plaza"
+      },
+      {
+        "image": {
+          "src": "../images/arthistory_makingnews_hero.jpg",
+          "alt": "Black and white photo of artist wearing goggles sculpting metal works"
+        },
+        "caption": "Noguchi works on \"News\"-1938"
+      }
+    ]
+  },
+  "artHistoryFeaturedGallery": {
+    "introHeading": "Art at Rockefeller Center",
+    "introCopy": "Rockefeller Center is a masterpiece of composition. The varied public art collection of murals, reliefs, sculptures, carving, architectural styles, and modern-day installations provides endless opportunities to explore, stop and reflect, and appreciate the beauty and creativity that surrounds you.",
+    "introLinks": [
+      {
+        "url": "/art",
+        "label": "Explore All Art"
+      }
+    ],
+    "title": "Featured Works",
+    "content": [
+      {
+        "category": "Intelligence Awakening Mankind",
+        "caption": "Over one million small glass tiles in over 250 colors make up this mosaic depicting the triumph of knowledge over ignorance. Each tile was hand-cut and hand-set to create this incredible work that resides in the loggia of 1250 Avenue of the Americas.",
+        "image": {
+          "src": "../images/intelligence-awakening.jpg",
+          "alt": "Close-up of Intelligence Awakening mosaic"
+        },
+        "links": [
+          {"url": "/art/intelligence-awakening-mankind", "label": "learn more"}
+        ]
+      },
+      {
+        "category": "The History of Transportation",
+        "caption": "Post World War Two, with commercial air travel becoming the norm, Dean Cornwell was commissioned to create a mural depicting the ever-evolving and -advancing forms of transportation. Located in the main lobby of 10 Rockefeller Plaza the mural was awarded a gold medal by the Architectural League of New York.",
+        "image": {
+          "src": "../images/Hein.Signage.RockCenter.2019.3.jpg",
+          "alt": "History of transportation mural"
+        },
+        "links": [
+          {"url": "/art/the-history-of-transportation", "label": "learn more"}
+        ]
+      },
+      {
+        "category": "Winged Mercury",
+        "caption": "This example of gilded intaglio relief, a classic Art Deco architectural embellishment where no part of the carving is higher than the surrounding stone, portrays the Roman god Mercury flying over blue-green waves. It’s found above the entrance to the Channel Gardens of 620 Fifth Avenue.",
+        "image": {
+          "src": "../images/winged-mercury.jpg",
+          "alt": "Photograph of Winged Mercury relief from Channel Gardens of 620 Fifth Avenue"
+        },
+        "links": [{"url": "/art/winged-mercury", "label": "learn more"}]
+      }
+    ]
+  },
+  "imageGrid": {
+    "cards": [
+      {
+        "image": {
+          "src": "../images/paul-manship-prometheus.jpg",
+          "alt": "Paul Manships Prometheus statue overlooking the Rink at Rockefeller Center."
+        },
+        "caption": "Paul Manship's \"Prometheus\""
+      },
+      {
+        "image": {
+          "src": "../images/drama.jpg",
+          "alt": "Closeup of Paul Manship's Prometheus"
+        },
+        "caption": "Paul Manship's \"Prometheus\""
+      }
+    ]
+  },
+  "wideCta": {
+    "title": "Sponsorship Opportunities",
+    "caption": "Be seen. Rockefeller Center offers a variety of sponsorship opportunities that provide the exposure brands are looking for.",
+    "link": {
+      "url": "/sponsorship",
+      "label": "learn more"
+    }
+  },
+  "imageCallout": {
+    "title": "Rockefeller Center Tour",
+    "description": "Get a unique look at a place unlike any other. Learn about Rockefeller Center’s historic landmarks, architecture, art, and more.",
+    "link": {
+      "url": "/attractions/rockefeller-center-tour",
+      "label": "Take the tour"
+    },
+    "image": {
+      "src": "../images/rc-tour-crosslink.jpg",
+      "alt": "Atlas statue at Rockefeller Center."
+    }
+  },
+  "featuredGallery": {
+    "title": "Public Art Program",
+    "content": [
+      {
+        "category": "The Flag Project",
+        "caption": "To celebrate the spirit of this city and the world, we asked everyone, including famous designers and artists, to create and submit flag designs to be flown around the flagpoles that surround The Rink when New York on Pause comes to an end.",
+        "image": {
+          "src": "../images/flag_Public art gall.jpg",
+          "alt": "Photograph of flags created by people around the world flying over the Rink."
+        },
+        "links": [
+          {
+            "url": "/magazine/arts-culture/rockefeller-center-flag-project/",
+            "label": "Explore The Flag Project"
+          }
+        ]
+      },
+      {
+        "category": "Frieze Sculpture",
+        "caption": "For the second year in a row, this major public art initiative, Frieze Sculpture, is presented at Rockefeller Center in partnership with Frieze New York and Tishman Speyer. You can explore sculptures across the Rockefeller Center campus by leading artists including Ghada Amer, Beatriz Cortez, Andy Goldsworthy, Lena Henke, Camille Henrot, and Thaddeus Mosley.",
+        "image": {
+          "src": "../images/Frieze_Public art gall.jpg",
+          "alt": "Sculpture from the Frieze exhibit"
+        },
+        "links": [{"url": "/art/frieze-sculpture", "label": "Explore Frieze Sculpture 2020"}]
+      },
+      {
+        "category": "Art in Focus",
+        "caption": "This series of public art pop-ups will take place in unique and unexpected locations throughout Rockefeller Center. Presented in partnership with Art Production Fund, this multidisciplinary program will showcase installations inspired by the landscape and life of New York City.",
+        "image": {
+          "src": "../images/focus_Public art gall.jpg",
+          "alt": "A series of photos by the photographer Genevieve Gaignard"
+        },
+        "links": [{"url": "/events/art-in-focus/", "label": "Explore Art in Focus"}]
+      },
+      {
+        "category": "Art Sundae",
+        "caption": "Art Sundae is a public program designed to build confidence in children through art. This free program, presented in partnership with Art Production Fund, offers children the opportunity to work with a contemporary artist to create a public art project. The program is accessible to all and highlights the positive impact art has across all communities.",
+        "image": {
+          "src": "../images/sunday_Public art gall.jpg",
+          "alt": "Photograph of an art instructor working with a child on their drawing"
+        },
+        "links": [
+          {
+            "url": "/art/art-sundae",
+            "label": "Explore Art Sundae"
+          }
+        ]
+      }
+    ]
+  },
+  "history": {
+    "title": "History",
+    "caption": "Over 100 years ago, John D. Rockefeller Jr. had a vision to create a “city within a city,” and the story of how Rockefeller Center came to be is a fascinating one.",
+    "cards": [
+      {
+        "type": "PORTRAIT",
+        "title": "Oct. 1, 1928",
+        "caption": "John D. Rockefeller leases land from Columbia University for the future site of Rockefeller Center. The land covered nearly all of the area in the three square blocks bordered by Fifth Avenue, the Avenue of the Americas (Sixth Avenue), and 48th and 51st Streets.",
+        "image": {
+          "src": "../images/1928.jpg",
+          "alt": "Future Site od Rockefeller Center"
+        }
+      },
+      {
+        "type": "PORTRAIT",
+        "title": "Dec. 1931",
+        "caption": "The first Rockefeller Center Christmas Tree. During the Great Depression, workers at Rockefeller Center pooled their money to purchase the original Rockefeller Center Christmas Tree, a 20-foot balsam fir, adorned it with home-made garlands, and stood it at the Rockefeller Center construction site as a symbol of hope and optimism. Two years later, in 1933, Rockefeller Center made the tree an annual tradition.",
+        "image": {
+          "src": "../images/1931.jpg",
+          "alt": "The First Tree"
+        }
+      },
+      {
+        "type": "LANDSCAPE",
+        "title": "Mar. 1932",
+        "caption": "Construction begins at 30 Rockefeller Plaza. Construction on Radio City Music Hall was also underway.",
+        "image": {
+          "src": "../images/1932.jpg",
+          "alt": "Construction at 30 Rockefeller Plaza and Radio City Music Hall"
+        }
+      }
+    ]
+  }
+}

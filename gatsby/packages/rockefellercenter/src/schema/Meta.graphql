@@ -1,0 +1,4 @@
+type Meta @infer {
+  title: String!
+  description: String!
+}

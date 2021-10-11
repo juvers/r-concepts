@@ -1,0 +1,35 @@
+---
+name: useBreakpointIndex
+menu: Hooks
+route: /hooks/use-breakpoint-index
+---
+
+import {Props, Playground} from 'docz';
+import {Text, Label, Input, Button, Box, Flex, Grid} from 'theme-ui';
+import {useBreakpointIndex} from './useBreakpointIndex.ts';
+
+# useBreakpointIndex
+
+`useBreakpointIndex` will return the index of the currently active breakpoint.
+
+This is very similar to the hook defined by @theme-ui/match-media,
+except it takes an optional reference node argument. This argument
+lets the hook work in nested contexts (like iframes).
+
+## Usage
+
+```typescript
+import {useBreakpointIndex} from '@tishman/components';
+```
+
+<Playground>
+  {() => {
+    const [element, setElement] = React.useState(null);
+    const breakpoint = useBreakpointIndex({node: element});
+    return (
+      <Text variant="styles.h1" ref={setElement}>
+        breakpoint index: {breakpoint}
+      </Text>
+    );
+  }}
+</Playground>

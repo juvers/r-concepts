@@ -1,0 +1,15 @@
+type DataJson implements Node @infer {
+  contactPageData: ContactPageData!
+  crossLinks: [CrossLink!]!
+}
+
+type ContactPageData {
+  slut: String!
+  intro: String!
+  forms: ContactPageFormsData!
+}
+
+type ContactPageFormsData {
+  title: String!
+  options: [String!]!
+}
